@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand-red: #E31C25;
+  --color-brand-black: #1D1D1B;
+  --color-brand-white: #FFFFFF;
+  --color-brand-gray: #F5F5F5;
+  --color-brand-dark: #111111;
+  --font-montserrat: var(--font-montserrat);
+  --font-inter: var(--font-inter);
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #1D1D1B;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1D1D1B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E31C25;
+  border-radius: 3px;
+}
+
+/* Red underline animation for nav links */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #E31C25;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+
+/* Ensure all clickable elements show the pointer cursor */
+a, button, select, [role="button"], input[type="submit"], input[type="button"] {
+  cursor: pointer;
+}
