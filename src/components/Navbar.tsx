@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-    { href: '/#sluzby', label: 'Služby' },
+    { href: '/sluzby', label: 'Služby' },
     { href: '/#o-nas', label: 'O nás' },
     { href: '/cennik', label: 'Cenník' },
     { href: '/#recenzie', label: 'Recenzie' },
@@ -80,14 +80,17 @@ export default function Navbar() {
                         transition={{ delay: 0.6 }}
                         className="hidden md:flex flex-1 justify-end"
                     >
-                        <Link
-                            href="/nacenenie"
+                        <a
+                            href="tel:+421944236257"
                             className="relative inline-flex items-center gap-2 bg-[#E31C25] hover:bg-[#c0151d] text-white font-bold text-sm px-6 py-3 rounded-sm tracking-widest uppercase transition-all duration-300 hover:shadow-lg hover:shadow-[#E31C25]/40 hover:-translate-y-0.5 group overflow-hidden"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            <span className="relative z-10">OBJEDNAŤ SA</span>
+                            <svg className="w-4 h-4 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span className="relative z-10">+421 944 236 257</span>
                             <span className="absolute inset-0 bg-white/10 translate-x-full group-hover:translate-x-0 transition-transform duration-300 skew-x-12" />
-                        </Link>
+                        </a>
                     </motion.div>
 
                     {/* Mobile Hamburger */}
@@ -134,14 +137,14 @@ export default function Navbar() {
                                     {link.label}
                                 </Link>
                             ))}
-                            <Link
-                                href="/nacenenie"
+                            <a
+                                href="tel:+421944236257"
                                 onClick={() => setMenuOpen(false)}
                                 className="mt-2 text-center bg-[#E31C25] hover:bg-[#c0151d] text-white font-bold text-sm px-6 py-3 rounded-sm tracking-widest uppercase transition-colors"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                OBJEDNAŤ SA
-                            </Link>
+                                +421 944 236 257
+                            </a>
                         </div>
                     </motion.div>
                 )}

@@ -4,10 +4,6 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useTransform, type Variants } from 'framer-motion';
 
-const SlashDecor = () => (
-    <span className="text-[#E31C25] font-black mr-2 select-none">{'// '}</span>
-);
-
 export default function HeroSection() {
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
@@ -70,9 +66,8 @@ export default function HeroSection() {
                     className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 tracking-tight"
                     style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
-                    RODINNÉ HODNOTY.{' '}
-                    <span className="block text-[#E31C25]">PRÉMIOVÁ</span>
-                    PRECÍZNOSŤ.
+                    AUTOSERVIS{' '}
+                    <span className="block text-[#E31C25]">BRATISLAVA</span>
                 </motion.h1>
 
                 {/* Sub-headline */}
@@ -81,30 +76,29 @@ export default function HeroSection() {
                     className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed"
                     style={{ fontFamily: 'var(--font-inter)' }}
                 >
-                    Poctivá starostlivosť o vozidlá všetkých značiek a modelov.
-                    Zažite rozdiel v dôveryhodnom rodinnom servise.
+                    Rodinné hodnoty. Poctivá starostlivosť o vozidlá všetkých značiek a modelov.
+                    Vaše auto je u nás v dobrých rukách.
                 </motion.p>
 
                 {/* CTAs */}
                 <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link
-                        href="/nacenenie"
+                    <a
+                        href="tel:+421944236257"
                         className="group relative inline-flex items-center justify-center gap-3 bg-[#E31C25] hover:bg-[#c0151d] text-white font-bold px-8 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300 hover:shadow-xl hover:shadow-[#E31C25]/40 hover:-translate-y-1 overflow-hidden"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        <span className="relative z-10">OBJEDNAŤ SA</span>
-                        <svg className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        <svg className="w-4 h-4 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
+                        <span className="relative z-10">+421 944 236 257</span>
                         <span className="absolute inset-0 bg-white/10 translate-x-full group-hover:translate-x-0 transition-transform duration-300 skew-x-12" />
-                    </Link>
+                    </a>
                     <Link
-                        href="#sluzby"
+                        href="/nacenenie"
                         className="inline-flex items-center justify-center gap-3 border border-white/30 hover:border-[#E31C25] text-white hover:text-[#E31C25] font-semibold px-8 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        <SlashDecor />
-                        NAŠE SLUŽBY
+                        OBJEDNAŤ SA
                     </Link>
                 </motion.div>
 
