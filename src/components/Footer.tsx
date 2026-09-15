@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const navLinks = [
-    { href: '/#sluzby', label: 'Služby' },
+    { href: '/sluzby', label: 'Služby' },
     { href: '/#o-nas', label: 'O nás' },
     { href: '/cennik', label: 'Cenník' },
     { href: '/#recenzie', label: 'Recenzie' },
@@ -88,9 +88,16 @@ export default function Footer() {
                             <span className="text-[#E31C25]">//</span> Kontakt
                         </h4>
                         <ul className="space-y-3 text-white/50 text-sm" style={{ fontFamily: 'var(--font-inter)' }}>
+                            <li className="text-white font-semibold">
+                                Ludato Family Autoservis
+                            </li>
                             <li className="flex items-center gap-2">
                                 <span className="text-[#E31C25]">✆</span>
                                 <a href="tel:+421944236257" className="hover:text-[#E31C25] transition-colors">+421 944 236 257</a>
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-[#E31C25]">✉</span>
+                                <a href="mailto:ludato.recepcia@gmail.com" className="hover:text-[#E31C25] transition-colors">ludato.recepcia@gmail.com</a>
                             </li>
                             <li className="flex items-start gap-2">
                                 <span className="text-[#E31C25] mt-0.5">📍</span>
@@ -107,7 +114,7 @@ export default function Footer() {
                             <li className="flex items-start gap-2">
                                 <span className="text-[#E31C25] mt-0.5">🕐</span>
                                 <span>
-                                    Po–Št: 9:00–19:00<br />
+                                    Pondelok–Štvrtok: 9:00–19:00<br />
                                     Pia: 7:00–16:00<br />
                                     So–Ne: Zatvorené
                                 </span>
@@ -122,7 +129,7 @@ export default function Footer() {
                         className="text-white/30 text-xs text-center sm:text-left"
                         style={{ fontFamily: 'var(--font-inter)' }}
                     >
-                        © {new Date().getFullYear()} Prevádzkovateľ: LUDATO FAMILY, s.r.o., Karpatské námestie 10/A, Bratislava. Všetky práva vyhradené.
+                        © {new Date().getFullYear()} LUDATO FAMILY, s.r.o. — sídlo: Karpatské námestie 10/A, Bratislava. Prevádzka (autoservis): Odborárska 52, 831 02 Bratislava. Všetky práva vyhradené.
                     </p>
                     <a
                         href="https://byforma.eu"

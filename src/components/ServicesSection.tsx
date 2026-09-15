@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-const services = [
+const autoservisServices = [
     {
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
@@ -52,7 +52,36 @@ const services = [
     },
 ];
 
-function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
+const pneuservisServices = [
+    {
+        icon: (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="2.5" />
+                <path strokeLinecap="round" d="M12 3v3M12 18v3M21 12h-3M6 12H3M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M18.4 18.4l-2.1-2.1M7.7 7.7L5.6 5.6" />
+            </svg>
+        ),
+        title: 'PNEUSERVIS A PREZUTIE',
+        description:
+            'Sezónne prezutie pneumatík vrátane vyváženia kolies pre všetky bežné veľkosti diskov. Rýchlo, presne a bez zbytočného čakania.',
+        detail: '12" – 19" • Vyváženie • Kontrola tlaku',
+    },
+    {
+        icon: (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 12a8 8 0 0113.5-5.7M20 12a8 8 0 01-13.5 5.7M17 4v3h-3M7 20v-3h3" />
+            </svg>
+        ),
+        title: 'VÝMENA KOLIES NA DISKOCH',
+        description:
+            'Rýchla výmena kolies už namontovaných na diskoch — ideálne riešenie pri sezónnej výmene bez nutnosti prezúvania pneumatík.',
+        detail: 'Bez čakania • Kontrola dezénu',
+    },
+];
+
+type Service = typeof autoservisServices[number];
+
+function ServiceCard({ service, index }: { service: Service; index: number }) {
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -128,9 +157,32 @@ function SectionHeader({ children }: { children: React.ReactNode }) {
     );
 }
 
+function GroupLabel({ children }: { children: React.ReactNode }) {
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+    return (
+        <motion.div
+            ref={ref}
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="flex items-center gap-3 mb-6"
+        >
+            <span className="w-6 h-px bg-[#E31C25]" />
+            <h3
+                className="text-white/80 text-xs font-bold tracking-[0.3em] uppercase"
+                style={{ fontFamily: 'var(--font-montserrat)' }}
+            >
+                {children}
+            </h3>
+        </motion.div>
+    );
+}
+
 export { SectionHeader };
 
-export default function ServicesSection() {
+export default function ServicesSection({ hideCta = false }: { hideCta?: boolean }) {
     return (
         <section id="sluzby" className="bg-[#111111] py-24 lg:py-32">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -159,29 +211,40 @@ export default function ServicesSection() {
                     </div>
                 </SectionHeader>
 
-                {/* Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {services.map((service, i) => (
+                {/* Autoservis group */}
+                <GroupLabel>Autoservis</GroupLabel>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    {autoservisServices.map((service, i) => (
+                        <ServiceCard key={service.title} service={service} index={i} />
+                    ))}
+                </div>
+
+                {/* Pneuservis group */}
+                <GroupLabel>Pneuservis</GroupLabel>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {pneuservisServices.map((service, i) => (
                         <ServiceCard key={service.title} service={service} index={i} />
                     ))}
                 </div>
 
                 {/* Bottom CTA */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    className="text-center mt-14"
-                >
-                    <a
-                        href="/cennik"
-                        className="text-white/70 hover:text-[#E31C25] text-sm font-semibold tracking-widest uppercase transition-colors duration-300"
-                        style={{ fontFamily: 'var(--font-montserrat)' }}
+                {!hideCta && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                        className="text-center mt-14"
                     >
-                        Pozrieť kompletný cenník →
-                    </a>
-                </motion.div>
+                        <a
+                            href="/sluzby"
+                            className="text-white/70 hover:text-[#E31C25] text-sm font-semibold tracking-widest uppercase transition-colors duration-300"
+                            style={{ fontFamily: 'var(--font-montserrat)' }}
+                        >
+                            Zobraziť všetky služby →
+                        </a>
+                    </motion.div>
+                )}
             </div>
         </section>
     );
