@@ -7,8 +7,9 @@ const navLinks = [
     { href: '/sluzby', label: 'Služby' },
     { href: '/#o-nas', label: 'O nás' },
     { href: '/cennik', label: 'Cenník' },
+    { href: '/kde-posobime', label: 'Kde pôsobíme' },
     { href: '/#recenzie', label: 'Recenzie' },
-    { href: '/#kontakt', label: 'Kontakt' },
+    { href: '/kontakt', label: 'Kontakt' },
 ];
 
 export default function Footer() {
@@ -129,7 +130,7 @@ export default function Footer() {
                         className="text-white/30 text-xs text-center sm:text-left"
                         style={{ fontFamily: 'var(--font-inter)' }}
                     >
-                        © {new Date().getFullYear()} LUDATO FAMILY, s.r.o. — sídlo: Karpatské námestie 10/A, Bratislava. Prevádzka (autoservis): Odborárska 52, 831 02 Bratislava. Všetky práva vyhradené.
+                        © {new Date().getFullYear()} LUDATO FAMILY, s.r.o., Odborárska 52, 831 02 Bratislava. Všetky práva vyhradené.
                     </p>
                     <a
                         href="https://byforma.eu"

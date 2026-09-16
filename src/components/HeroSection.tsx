@@ -76,8 +76,8 @@ export default function HeroSection() {
                     className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed"
                     style={{ fontFamily: 'var(--font-inter)' }}
                 >
-                    Rodinné hodnoty. Poctivá starostlivosť o vozidlá všetkých značiek a modelov.
                     Vaše auto je u nás v dobrých rukách.
+                    Riešime problémy, ktoré iné servisy nezvládli vyriešiť.
                 </motion.p>
 
                 {/* CTAs */}

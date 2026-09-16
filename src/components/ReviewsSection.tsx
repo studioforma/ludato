@@ -5,22 +5,22 @@ import { motion, useInView } from 'framer-motion';
 
 const reviews = [
     {
-        name: 'Martin Kováčik',
+        name: 'Henrieta T.',
         rating: 5,
-        text: 'Super servis, diagnostiku mali hotovú za hodinu. Férové ceny, odporúčam.',
-        initials: 'MK',
+        text: '... poruchu rýchlo identifikovali, zabezpečili potrebný náhradný diel a auto dali do poriadku približne do 2 hodín...',
+        initials: 'HT',
     },
     {
-        name: 'Jana Novotná',
+        name: 'Ema F.',
         rating: 5,
-        text: 'Konečne servis kde mi všetko vysvetlili dopredu. Žiadne prekvapenia na faktúre.',
-        initials: 'JN',
+        text: '... všetko mi vysvetlili a informovali telefónom aj cez sms. Komunikácia 10/10, výmena bŕzd a STK boli priam bleskové...',
+        initials: 'EF',
     },
     {
-        name: 'Tomáš Blaho',
+        name: 'Pavel P.',
         rating: 5,
-        text: 'Prišiel som s chybou čo inde nevedeli nájsť, tu ju odhalili hneď. Paráda.',
-        initials: 'TB',
+        text: '... auto po servise funguje bez problémov, motor beží hladko a spojka pracuje výborne. Použili kvalitné náhradné diely...',
+        initials: 'PP',
     },
 ];
 

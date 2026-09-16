@@ -27,7 +27,6 @@ const servicesOptions = [
 export default function QuotePage() {
     const [step, setStep] = useState(1);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
     const [error, setError] = useState('');
 
     const [formState, setFormState] = useState({
@@ -78,7 +77,7 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
             });
             const result = await response.json();
             if (result.success) {
-                setIsSuccess(true);
+                window.location.href = '/dakujeme';
             } else {
                 setError('Nastala chyba. Skúste to prosím znova.');
             }
@@ -134,47 +133,12 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                 </div>
 
                 {/* Progress bar */}
-                {!isSuccess && (
-                    <div className="mb-10 flex gap-2 max-w-xs mx-auto">
-                        <div className={`h-1 flex-1 rounded-full transition-colors duration-500 ${step >= 1 ? 'bg-[#E31C25]' : 'bg-white/10'}`} />
-                        <div className={`h-1 flex-1 rounded-full transition-colors duration-500 ${step >= 2 ? 'bg-[#E31C25]' : 'bg-white/10'}`} />
-                    </div>
-                )}
+                <div className="mb-10 flex gap-2 max-w-xs mx-auto">
+                    <div className={`h-1 flex-1 rounded-full transition-colors duration-500 ${step >= 1 ? 'bg-[#E31C25]' : 'bg-white/10'}`} />
+                    <div className={`h-1 flex-1 rounded-full transition-colors duration-500 ${step >= 2 ? 'bg-[#E31C25]' : 'bg-white/10'}`} />
+                </div>
 
                 <AnimatePresence mode="wait">
-                    {isSuccess ? (
-                        <motion.div
-                            key="success"
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            className="text-center py-10"
-                        >
-                            <div className="w-20 h-20 rounded-full bg-[#E31C25] flex items-center justify-center mb-6 shadow-lg shadow-[#E31C25]/40 mx-auto">
-                                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <h3
-                                className="text-3xl font-black text-white mb-3"
-                                style={{ fontFamily: 'var(--font-montserrat)' }}
-                            >
-                                Ďakujeme!
-                            </h3>
-                            <p
-                                className="text-white/60 text-base mb-6"
-                                style={{ fontFamily: 'var(--font-inter)' }}
-                            >
-                                Vaša žiadosť o objednávku bola prijatá. Čoskoro sa vám ozveme na potvrdenie a nacenenie.
-                            </p>
-                            <Link
-                                href="/"
-                                className="inline-block border border-white/20 hover:border-[#E31C25] text-white hover:text-[#E31C25] font-semibold px-8 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300"
-                                style={{ fontFamily: 'var(--font-montserrat)' }}
-                            >
-                                Návrat na domovskú stránku
-                            </Link>
-                        </motion.div>
-                    ) : (
                         <motion.form
                             key={step}
                             initial={{ opacity: 0, x: step === 1 ? -20 : 20 }}
@@ -361,7 +325,6 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                 </div>
                             )}
                         </motion.form>
-                    )}
                 </AnimatePresence>
             </div>
         </div>
