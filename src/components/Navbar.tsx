@@ -7,10 +7,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
     { href: '/sluzby', label: 'Služby' },
-    { href: '/#o-nas', label: 'O nás' },
     { href: '/cennik', label: 'Cenník' },
-    { href: '/#recenzie', label: 'Recenzie' },
-    { href: '/#kontakt', label: 'Kontakt' },
+    { href: '/kde-posobime', label: 'Kde pôsobíme' },
+    { href: '/kontakt', label: 'Kontakt' },
 ];
 
 export default function Navbar() {

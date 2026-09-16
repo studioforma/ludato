@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 
 export default function ContactSection() {
     const [formData, setFormData] = useState({
@@ -11,7 +11,6 @@ export default function ContactSection() {
         message: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
     const [error, setError] = useState('');
 
     const ref = useRef<HTMLDivElement>(null);
@@ -40,8 +39,7 @@ export default function ContactSection() {
             });
             const result = await response.json();
             if (result.success) {
-                setIsSuccess(true);
-                setFormData({ name: '', email: '', phone: '', message: '' });
+                window.location.href = '/dakujeme';
             } else {
                 setError('Nastala chyba. Skúste to prosím znova.');
             }
@@ -93,124 +91,51 @@ export default function ContactSection() {
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <AnimatePresence mode="wait">
-                            {isSuccess ? (
-                                <motion.div
-                                    key="success"
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.9 }}
-                                    transition={{ duration: 0.5, type: 'spring', bounce: 0.35 }}
-                                    className="flex flex-col items-center justify-center h-full min-h-[400px] text-center"
-                                >
-                                    <motion.div
-                                        initial={{ scale: 0 }}
-                                        animate={{ scale: 1 }}
-                                        transition={{ delay: 0.2, type: 'spring', bounce: 0.5 }}
-                                        className="w-20 h-20 rounded-full bg-[#E31C25] flex items-center justify-center mb-6 shadow-lg shadow-[#E31C25]/40"
-                                    >
-                                        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <motion.path
-                                                initial={{ pathLength: 0 }}
-                                                animate={{ pathLength: 1 }}
-                                                transition={{ delay: 0.4, duration: 0.6 }}
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2.5}
-                                                d="M5 13l4 4L19 7"
-                                            />
-                                        </svg>
-                                    </motion.div>
-                                    <motion.h3
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.5 }}
-                                        className="text-3xl font-black text-white mb-3"
-                                        style={{ fontFamily: 'var(--font-montserrat)' }}
-                                    >
-                                        Ďakujeme!
-                                    </motion.h3>
-                                    <motion.p
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.6 }}
-                                        className="text-white/60 text-base mb-2"
-                                        style={{ fontFamily: 'var(--font-inter)' }}
-                                    >
-                                        Vaša správa bola odoslaná.
-                                    </motion.p>
-                                    <motion.p
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ delay: 0.8 }}
-                                        className="text-lg text-[#E31C25] font-semibold"
-                                        style={{ fontFamily: 'var(--font-inter)' }}
-                                    >
-                                        Ozveme sa vám čoskoro!
-                                    </motion.p>
-                                    <motion.button
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ delay: 1 }}
-                                        onClick={() => setIsSuccess(false)}
-                                        className="mt-8 text-white/40 hover:text-white text-sm underline transition-colors"
-                                        style={{ fontFamily: 'var(--font-inter)' }}
-                                    >
-                                        Odoslať ďalšiu správu
-                                    </motion.button>
-                                </motion.div>
-                            ) : (
-                                <motion.form
-                                    key="form"
-                                    onSubmit={handleSubmit}
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    className="space-y-4"
-                                    style={{ fontFamily: 'var(--font-inter)' }}
-                                >
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                        <div>
-                                            <label className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                                Meno *
-                                            </label>
-                                            <input type="text" name="name" required value={formData.name} onChange={handleChange} placeholder="Vaše meno" className={inputClass} />
-                                        </div>
-                                        <div>
-                                            <label className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                                Telefón
-                                            </label>
-                                            <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+421 9XX XXX XXX" className={inputClass} />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                            Email *
-                                        </label>
-                                        <input type="email" name="email" required value={formData.email} onChange={handleChange} placeholder="vas@email.sk" className={inputClass} />
-                                    </div>
-                                    <div>
-                                        <label className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                            Správa *
-                                        </label>
-                                        <textarea name="message" required rows={5} value={formData.message} onChange={handleChange} placeholder="Opíšte váš problém alebo otázku..." className={`${inputClass} resize-none`} />
-                                    </div>
-                                    {error && <p className="text-[#E31C25] text-sm">{error}</p>}
-                                    <button
-                                        type="submit"
-                                        disabled={isSubmitting}
-                                        className="w-full bg-[#E31C25] hover:bg-[#c0151d] disabled:opacity-60 text-white font-black py-4 rounded-sm tracking-widest uppercase text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#E31C25]/40 hover:-translate-y-0.5 group relative overflow-hidden"
-                                        style={{ fontFamily: 'var(--font-montserrat)' }}
-                                    >
-                                        <span className="relative z-10">{isSubmitting ? 'Odosiela sa...' : 'ODOSLAŤ SPRÁVU'}</span>
-                                        <span className="absolute inset-0 bg-white/10 translate-x-full group-hover:translate-x-0 transition-transform duration-300 skew-x-12" />
-                                    </button>
-                                    <p className="text-white/30 text-xs text-center" style={{ fontFamily: 'var(--font-inter)' }}>
-                                        * Povinné polia. Vaše údaje sú v bezpečí.
-                                    </p>
-                                </motion.form>
-                            )}
-                        </AnimatePresence>
+                        <form
+                            onSubmit={handleSubmit}
+                            className="space-y-4"
+                            style={{ fontFamily: 'var(--font-inter)' }}
+                        >
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                        Meno *
+                                    </label>
+                                    <input type="text" name="name" required value={formData.name} onChange={handleChange} placeholder="Vaše meno" className={inputClass} />
+                                </div>
+                                <div>
+                                    <label className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                        Telefón
+                                    </label>
+                                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+421 9XX XXX XXX" className={inputClass} />
+                                </div>
+                            </div>
+                            <div>
+                                <label className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                    Email *
+                                </label>
+                                <input type="email" name="email" required value={formData.email} onChange={handleChange} placeholder="vas@email.sk" className={inputClass} />
+                            </div>
+                            <div>
+                                <label className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                    Správa *
+                                </label>
+                                <textarea name="message" required rows={5} value={formData.message} onChange={handleChange} placeholder="Opíšte váš problém alebo otázku..." className={`${inputClass} resize-none`} />
+                            </div>
+                            {error && <p className="text-[#E31C25] text-sm">{error}</p>}
+                            <button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className="w-full bg-[#E31C25] hover:bg-[#c0151d] disabled:opacity-60 text-white font-black py-4 rounded-sm tracking-widest uppercase text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#E31C25]/40 hover:-translate-y-0.5 group relative overflow-hidden"
+                                style={{ fontFamily: 'var(--font-montserrat)' }}
+                            >
+                                <span className="relative z-10">{isSubmitting ? 'Odosiela sa...' : 'ODOSLAŤ SPRÁVU'}</span>
+                                <span className="absolute inset-0 bg-white/10 translate-x-full group-hover:translate-x-0 transition-transform duration-300 skew-x-12" />
+                            </button>
+                            <p className="text-white/30 text-xs text-center" style={{ fontFamily: 'var(--font-inter)' }}>
+                                * Povinné polia. Vaše údaje sú v bezpečí.
+                            </p>
+                        </form>
                     </motion.div>
 
                     {/* Map & Info */}

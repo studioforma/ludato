@@ -446,7 +446,7 @@ export default function CennikPage() {
                         className="text-white/30 text-xs text-center leading-relaxed border border-white/8 rounded-sm p-4"
                         style={{ fontFamily: 'var(--font-inter)' }}
                     >
-                        * Ceny sú orientačné a môžu sa líšiť v závislosti od značky, modelu a stavu vozidla. Konečná cena bude vždy odsúhlasená pred zahájením prác. Uvedené ceny sú bez materiálu, pokiaľ nie je uvedené inak.
+                        * Ceny sú orientačné a môžu sa líšiť v závislosti od značky, modelu a stavu vozidla. Konečná cena bude vždy odsúhlasená pred zahájením prác. Uvedené ceny sú bez materiálu, pokiaľ nie je uvedené inak. Sme platitelia DPH, k uvedeným cenám je potrebné pripočítať DPH.
                     </p>
                 </motion.div>
 
@@ -513,11 +513,6 @@ export default function CennikPage() {
                                 <div>
                                     Odborárska 52<br />
                                     <span className="text-[#E31C25] font-semibold">831 02 Bratislava</span>
-                                    <div className="text-white/40 text-xs mt-2" style={{ fontFamily: 'var(--font-inter)' }}>
-                                        Fakturačné údaje:<br />
-                                        LUDATO FAMILY, s.r.o<br />
-                                        Karpatské námestie 10/A
-                                    </div>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">

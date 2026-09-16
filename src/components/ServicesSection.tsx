@@ -74,7 +74,7 @@ const pneuservisServices = [
         ),
         title: 'VÝMENA KOLIES NA DISKOCH',
         description:
-            'Rýchla výmena kolies už namontovaných na diskoch — ideálne riešenie pri sezónnej výmene bez nutnosti prezúvania pneumatík.',
+            'Rýchla výmena kolies už namontovaných na diskoch, ideálne riešenie pri sezónnej výmene bez nutnosti prezúvania pneumatík.',
         detail: 'Bez čakania • Kontrola dezénu',
     },
 ];

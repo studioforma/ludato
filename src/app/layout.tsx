@@ -37,6 +37,49 @@ export const metadata: Metadata = {
   },
 };
 
+const servicesOffered = [
+  {
+    name: "Diagnostika a opravy",
+    description:
+      "Spoľahlivá počítačová diagnostika všetkých systémov vozidla. Presná identifikácia závad a poctivý prístup pri hľadaní riešenia bez zbytočných výmien.",
+  },
+  {
+    name: "Servisné prehliadky",
+    description:
+      "Kompletné STK-prípravné prehliadky a pravidelný servis podľa servisných intervalov výrobcu. Váš voz vždy v perfektnom stave.",
+  },
+  {
+    name: "Oprava bŕzd a podvozkov",
+    description:
+      "Výmena brzdových platničiek, kotúčov a hydrauliky. Geometria, tlmiče, ramená, kompletná starostlivosť o podvozok vašeho vozidla.",
+  },
+  {
+    name: "Servis klimatizácie",
+    description:
+      "Dopĺňanie chladiva, čistenie a dezinfekcia systémov klimatizácie. Certifikovaný servis pre príjemné cestovanie počas celého roka.",
+  },
+  {
+    name: "Pneuservis a prezutie",
+    description:
+      "Sezónne prezutie pneumatík vrátane vyváženia kolies pre všetky bežné veľkosti diskov. Rýchlo, presne a bez zbytočného čakania.",
+  },
+  {
+    name: "Výmena kolies na diskoch",
+    description:
+      "Rýchla výmena kolies už namontovaných na diskoch, ideálne riešenie pri sezónnej výmene bez nutnosti prezúvania pneumatík.",
+  },
+];
+
+const areasServed = [
+  "Bratislava - Nové Mesto",
+  "Bratislava - Rača",
+  "Bratislava - Vajnory",
+  "Bratislava - Staré Mesto",
+  "Bratislava - Ružinov",
+  "Bratislava - Karlová Ves",
+  "Bratislava - Dúbravka",
+];
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
@@ -44,6 +87,8 @@ const localBusinessSchema = {
   telephone: "+421944236257",
   email: "ludato.recepcia@gmail.com",
   url: "https://www.ludato.sk/",
+  image: "https://www.ludato.sk/logo.png",
+  logo: "https://www.ludato.sk/logo.png",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Odborárska 52",
@@ -57,6 +102,8 @@ const localBusinessSchema = {
     latitude: 48.17825271232653,
     longitude: 17.139108691302297,
   },
+  hasMap: "https://maps.app.goo.gl/xaKkcTPLukbzixYB6",
+  sameAs: ["https://maps.app.goo.gl/xaKkcTPLukbzixYB6"],
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -72,6 +119,32 @@ const localBusinessSchema = {
     },
   ],
   priceRange: "€€",
+  currenciesAccepted: "EUR",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+421944236257",
+    contactType: "customer service",
+    email: "ludato.recepcia@gmail.com",
+    areaServed: "SK",
+    availableLanguage: ["Slovak"],
+  },
+  areaServed: [
+    { "@type": "City", name: "Bratislava" },
+    ...areasServed.map((name) => ({ "@type": "Place", name })),
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Služby autoservisu Ludato Family Autoservis",
+    itemListElement: servicesOffered.map((service, i) => ({
+      "@type": "Offer",
+      position: i + 1,
+      itemOffered: {
+        "@type": "Service",
+        name: service.name,
+        description: service.description,
+      },
+    })),
+  },
 };
 
 export const viewport: Viewport = {

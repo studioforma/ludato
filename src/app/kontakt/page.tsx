@@ -1,20 +1,20 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
-import ServicesSection from '@/components/ServicesSection';
+import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'Všetky služby | Ludato Family Autoservis',
+    title: 'Kontakt | Ludato Family Autoservis',
     description:
-        'Kompletný prehľad služieb autoservisu Ludato Family: diagnostika, servisné prehliadky, brzdy, podvozok, klimatizácia, pneuservis a výmena kolies.',
+        'Kontaktujte Ludato Family Autoservis - Odborárska 52, Bratislava - Nové Mesto. Telefón, email, otváracie hodiny a mapa.',
 };
 
-export default function Sluzby() {
+export default function Kontakt() {
     return (
         <main className="relative overflow-x-hidden w-full bg-[#111111]">
             <Navbar />
             <div className="pt-20">
-                <ServicesSection hideCta />
+                <ContactSection />
             </div>
             <Footer />
         </main>
