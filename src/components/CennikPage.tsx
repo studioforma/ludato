@@ -446,7 +446,7 @@ export default function CennikPage() {
                         className="text-white/30 text-xs text-center leading-relaxed border border-white/8 rounded-sm p-4"
                         style={{ fontFamily: 'var(--font-inter)' }}
                     >
-                        * Ceny sú orientačné a môžu sa líšiť v závislosti od značky, modelu a stavu vozidla. Konečná cena bude vždy odsúhlasená pred zahájením prác. Uvedené ceny sú bez materiálu, pokiaľ nie je uvedené inak.
+                        * Ceny sú orientačné a môžu sa líšiť v závislosti od značky, modelu a stavu vozidla. Konečná cena bude vždy odsúhlasená pred zahájením prác. Uvedené ceny sú bez materiálu, pokiaľ nie je uvedené inak. Sme platitelia DPH — k uvedeným cenám je potrebné pripočítať DPH.
                     </p>
                 </motion.div>
 
