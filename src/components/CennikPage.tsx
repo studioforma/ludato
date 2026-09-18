@@ -119,6 +119,14 @@ const pricingCategories: PricingCategory[] = [
         ],
     },
     {
+        category: 'USKLADNENIE A OPRAVA PNEUMATÍK',
+        items: [
+            { service: 'Sezónne uskladnenie pneumatík', price: '40', unit: '/sezóna' },
+            { service: 'Oprava defektu', price: null },
+        ],
+        footnote: '* Oprava defektu – individuálne nacenenie podľa stavu pneumatiky',
+    },
+    {
         category: 'STK A EK',
         items: [
             { service: 'Sprostredkovanie kontroly STK + EK', price: '150', highlight: true },
@@ -302,7 +310,7 @@ function CategorySection({
 const TABS = [
     { id: 'diagnostika', label: 'Diagnostika & STK', categories: ['NORMOHODINY', 'KONTROLY VOZIDLA', 'STK A EK', 'DEZINFEKCIA'] },
     { id: 'podvozok', label: 'Podvozok & Brzdy', categories: ['GEOMETRIA', 'BRZDY', 'PODVOZOK'] },
-    { id: 'pneuservis', label: 'Pneuservis', categories: ['KOMPLETNÉ PREZUTIE', 'PREVÁŽENIE A PREHODENIE KOLIES NA DISKU'] },
+    { id: 'pneuservis', label: 'Pneuservis', categories: ['KOMPLETNÉ PREZUTIE', 'PREVÁŽENIE A PREHODENIE KOLIES NA DISKU', 'USKLADNENIE A OPRAVA PNEUMATÍK'] },
     { id: 'kvapaliny', label: 'Kvapaliny & Servis', categories: ['OLEJOVÝ SERVIS', 'PREVODOVKY', 'KLIMATIZÁCIA', 'PREVÁDZKOVÉ KVAPALINY', 'ĎALŠIE SLUŽBY'] },
 ];
 

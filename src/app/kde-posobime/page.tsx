@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FaqAccordion from '@/components/FaqAccordion';
+import CtaBanner from '@/components/CtaBanner';
 
 export const metadata: Metadata = {
     title: 'Kde nás nájdete | Ludato Family Autoservis',
@@ -301,7 +302,18 @@ export default function KdePosobime() {
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
 
+                <CtaBanner
+                    question="Čas na sezónne prezutie?"
+                    subtext="Objednajte sa ešte dnes, kým nie je plný kalendár."
+                    secondaryHref="/nacenenie"
+                    secondaryLabel="Objednať sa"
+                />
+
+                <div className="pt-16">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         {/* Why us cards */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                             {whyNoveMesto.map((item) => (
