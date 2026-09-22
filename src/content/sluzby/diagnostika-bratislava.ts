@@ -81,6 +81,36 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'breakdown',
+        heading: 'Najčastejšie kontrolky a čo znamenajú',
+        items: [
+            {
+                title: 'Kontrolka motora (check engine)',
+                text: 'Oranžová kontrolka motora hlási, že riadiaca jednotka zaznamenala odchýlku v systéme motora alebo emisií. Ak svieti trvalo a auto ide normálne, nie je to dôvod na paniku, no diagnostiku odporúčame nechať spraviť v najbližších dňoch.',
+            },
+            {
+                title: 'Tlak oleja',
+                text: 'Červená kontrolka tlaku oleja je najvážnejšia zo všetkých. Znamená, že motor nemusí byť dostatočne mazaný, a v takom prípade odporúčame bezpečne zastaviť a motor vypnúť, nie pokračovať do servisu vlastnou silou.',
+            },
+            {
+                title: 'Teplota chladiacej kvapaliny',
+                text: 'Červená kontrolka teploty signalizuje prehrievanie motora. Aj tu platí, že je lepšie zastaviť a nechať motor vychladnúť, prehriaty motor sa vie poškodiť v priebehu pár minút jazdy.',
+            },
+            {
+                title: 'ABS a ESP',
+                text: 'Kontrolka ABS alebo ESP znamená, že tieto asistenčné systémy sú vyradené z činnosti. Auto zostáva pojazdné a brzdy fungujú, ale pri prudkom brzdení alebo na klzkom povrchu nemáte k dispozícii pomoc, na ktorú ste zvyknutí.',
+            },
+            {
+                title: 'Airbag',
+                text: 'Svietiaca kontrolka airbagu znamená, že systém zaznamenal poruchu a airbagy sa v prípade nehody nemusia aktivovať. Navonok sa na jazde neprejaví nič, o to dôležitejšie je nechať to skontrolovať.',
+            },
+            {
+                title: 'Dobíjanie batérie',
+                text: 'Kontrolka batérie zvyčajne neznamená chybu samotnej batérie, ale problém s dobíjaním, najčastejšie alternátor alebo jeho remeň. Vozidlo vtedy ide na zvyšok energie v batérii a po čase sa jednoducho zastaví.',
+            },
+        ],
+    },
+    {
         type: 'text',
         heading: 'Na čo si dať pozor',
         paragraphs: [
@@ -94,6 +124,14 @@ const content: ServiceContent = [
         paragraphs: [
             'Diagnostiku často robíme ako prvý krok pred väčšou opravou, napríklad pred zásahom do turbodúchadla, vstrekovačov alebo prevodovky. Presné vyhodnotenie chýb nám povie, ktorým smerom sa má oprava uberať, a šetrí čas aj peniaze, keďže sa vyhneme skúšaniu dielov "na slepo".',
             'Rovnako diagnostiku využívame aj pri sťažnostiach, ktoré sa navonok javia ako drobnosť, napríklad nepravidelný chod motora pri studenom starte. Aj takéto príznaky totiž vedia mať pôvod v elektronike, nie len v mechanike.',
+        ],
+    },
+    {
+        type: 'text',
+        heading: 'Čo si pripraviť pred návštevou',
+        paragraphs: [
+            'Pri diagnostike nám najviac pomôže, keď viete popísať okolnosti. Kedy sa problém objavuje, či za studena alebo až po zahriatí motora, pri akej rýchlosti, či pri zrýchľovaní alebo brzdení, a či sa deje zakaždým alebo len občas. Prerušované poruchy sú najťažšie na odhalenie a práve tieto detaily vedia hľadanie výrazne skrátiť.',
+            'Ak už na vozidle niekto nedávno niečo menil alebo opravoval, povedzte nám to rovno. Nie preto, aby sme hľadali vinníka, ale preto, že nová porucha často súvisí s posledným zásahom, napríklad s nesprávne zapojeným konektorom alebo dielom, ktorý nesedí do špecifikácie.',
         ],
     },
     {

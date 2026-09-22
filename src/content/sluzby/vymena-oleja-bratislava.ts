@@ -85,6 +85,14 @@ const content: ServiceContent = [
     },
     {
         type: 'text',
+        heading: 'Čo znamenajú označenia ako 5W30',
+        paragraphs: [
+            'Označenie typu 5W30 hovorí o viskozite oleja, teda o tom, ako olej tečie pri rôznych teplotách. Číslo pred písmenom W (z anglického winter, zima) opisuje správanie oleja za studena. Čím je nižšie, tým je olej pri studenom štarte redší a rýchlejšie sa dostane ku všetkým častiam motora, čo je práve moment, kedy motor trpí najviac.',
+            'Číslo za písmenom W udáva viskozitu pri prevádzkovej teplote motora. Vyššie číslo znamená hustejší olej, ktorý si udrží mazací film aj pri vysokej záťaži. Neplatí však, že vyššie číslo je automaticky lepšie, moderné motory s úzkymi mazacími kanálikmi potrebujú presne tú viskozitu, ktorú predpísal výrobca, inak sa mazanie zhorší namiesto toho, aby sa zlepšilo.',
+        ],
+    },
+    {
+        type: 'text',
         heading: 'Ako často meniť olej',
         paragraphs: [
             'Interval výmeny oleja predpisuje výrobca vozidla, bežne ide o rozsah 10 000 až 15 000 km alebo raz ročne, podľa toho, čo nastane skôr. Olej totiž starne aj časom, nielen prejdenými kilometrami, jeho mazacie vlastnosti sa postupne znižujú, aj keď auto stojí v garáži.',

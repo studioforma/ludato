@@ -45,6 +45,14 @@ const content: ServiceContent = [
     },
     {
         type: 'text',
+        heading: 'Ako klimatizácia funguje',
+        paragraphs: [
+            'Klimatizácia vzduch nevyrába chladný, ale odoberá z neho teplo a odvádza ho von z vozidla. Kľúčovým prvkom je chladivo, ktoré v uzavretom okruhu neustále mení skupenstvo. Kompresor ho stlačí a zohriate ho pošle do kondenzátora vpredu pri chladiči, kde odovzdá teplo do okolia a skvapalní sa.',
+            'Odtiaľ putuje k výparníku, ktorý je ukrytý v palubnej doske. Tam chladivo prudko expanduje, odoberie teplo vzduchu prúdiacemu do interiéru a vráti sa späť ku kompresoru. Práve pri výparníku zároveň kondenzuje vlhkosť zo vzduchu, čo je dôvod, prečo pod zaparkovaným autom s puštenou klímou býva mláčka vody, a zároveň prečo je výparník ideálnym miestom pre baktérie a zápach.',
+        ],
+    },
+    {
+        type: 'text',
         heading: 'Prečo klimatizácia potrebuje pravidelný servis',
         paragraphs: [
             'Aj úplne tesný okruh klimatizácie časom stráca malé množstvo chladiva prirodzenou difúziou cez hadice a tesnenia. Keď chladiva ubudne pod potrebné množstvo, kompresor sa namáha viac a klíma chladí slabšie, aj keď si to na prvý pohľad nemusíte všimnúť hneď.',
@@ -80,6 +88,14 @@ const content: ServiceContent = [
         paragraphs: [
             'Pri dlhých cestách v lete odporúčame nastaviť klimatizáciu na recirkuláciu vzduchu z interiéru, chladí rýchlejšie a šetrí palivo, no na kratšie úseky je lepšie prepínať aj na privádzanie vzduchu zvonku, aby sa v interiéri nehromadila vlhkosť.',
             'Servis klimatizácie sa oplatí naplánovať ešte pred letnou špičkou, na jar. Vtedy je jednoduchšie získať termín a problém odhalíte skôr, než vás nechladenie prekvapí počas najhorúcejších dní.',
+        ],
+    },
+    {
+        type: 'text',
+        heading: 'Klimatizácia a spotreba paliva',
+        paragraphs: [
+            'Zapnutá klimatizácia zaťažuje motor, keďže kompresor je poháňaný remeňom od neho, a podľa podmienok zvýši spotrebu rádovo o niekoľko percent. V meste, pri nízkych rýchlostiach a častom státí, je tento podiel najvyšší.',
+            'Pri vyšších rýchlostiach však platí opak, než by človek čakal. Otvorené okná výrazne zhoršia aerodynamiku vozidla a odpor vzduchu vtedy stojí viac paliva než chod klimatizácie. Na diaľnici je teda ekonomickejšie zavrieť okná a nechať bežať klímu. A ak kompresor pracuje v systéme s nedostatkom chladiva, namáha sa zbytočne viac, takže zanedbaný servis vás v konečnom dôsledku stojí aj na palive.',
         ],
     },
     {
@@ -141,6 +157,18 @@ const content: ServiceContent = [
             {
                 q: 'Skontrolujete klímu aj bez objednaného servisu?',
                 a: 'Áno, základnú kontrolu funkčnosti a chladenia vieme urobiť aj samostatne, bez toho, aby ste si museli objednať celý servis.',
+            },
+            {
+                q: 'Prečo mi pod autom tečie voda, keď mám zapnutú klímu?',
+                a: 'To je úplne normálne. Na výparníku klimatizácie kondenzuje vlhkosť zo vzduchu a tá odteká hadičkou pod vozidlo. Čistá voda pod zaparkovaným autom v lete teda nie je porucha.',
+            },
+            {
+                q: 'Môže klimatizácia bežať súčasne s kúrením?',
+                a: 'Áno a v zime to dokonca odporúčame. Klimatizácia odoberá vzduchu vlhkosť, takže v kombinácii s kúrením rýchlejšie zbavíte okná zahmlievania.',
+            },
+            {
+                q: 'Dá sa staršie vozidlo prerobiť na nové chladivo?',
+                a: 'Okruhy pre R134a a R1234yf nie sú vzájomne zameniteľné a chladivá sa nesmú miešať. Vozidlo preto plníme vždy tým chladivom, ktoré preň predpísal výrobca.',
             },
         ],
     },

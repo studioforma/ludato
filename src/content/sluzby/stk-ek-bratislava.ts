@@ -55,6 +55,36 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'breakdown',
+        heading: 'Čo sa na STK kontroluje',
+        items: [
+            {
+                title: 'Brzdová sústava',
+                text: 'Na valcovej skúšobni sa meria účinnosť bŕzd a rovnomernosť brzdenia medzi ľavou a pravou stranou. Kontroluje sa aj stav kotúčov, platničiek, hadíc a funkčnosť parkovacej brzdy.',
+            },
+            {
+                title: 'Riadenie a podvozok',
+                text: 'Posudzuje sa vôľa v riadení, stav čapov, ramien a silentblokov, tlmiče a celkový stav náprav. Práve tu sa najčastejšie ukáže opotrebenie, ktoré vodič pri bežnej jazde ani nevníma.',
+            },
+            {
+                title: 'Osvetlenie a elektrika',
+                text: 'Kontroluje sa funkčnosť všetkých svetiel a ich správne nastavenie. Zle nasmerované svetlomety po výmene žiarovky alebo dielu sú bežný a pritom rýchlo odstrániteľný dôvod neúspechu.',
+            },
+            {
+                title: 'Pneumatiky a kolesá',
+                text: 'Sleduje sa hĺbka dezénu, rovnomernosť opotrebenia, poškodenie bočníc a či rozmer zodpovedá tomu, čo je uvedené v technickom preukaze.',
+            },
+            {
+                title: 'Karoséria a výfuk',
+                text: 'Kontroluje sa korózia nosných častí, stav karosérie a tesnosť výfukového systému vrátane hlučnosti.',
+            },
+            {
+                title: 'Doklady a výbava',
+                text: 'Overuje sa zhoda vozidla s technickým preukazom, platné poistenie a povinná výbava.',
+            },
+        ],
+    },
+    {
         type: 'text',
         heading: 'Najčastejšie dôvody neúspešnej STK',
         paragraphs: [
@@ -66,6 +96,14 @@ const content: ServiceContent = [
         heading: 'Emisná kontrola pri dieselových vozidlách',
         paragraphs: [
             'Dieselové vozidlá majú pri emisnej kontrole prísnejšie limity, hlavne v súvislosti s filtrom pevných častíc (DPF). Upchatý alebo poškodený DPF filter je bežný dôvod, prečo diesel na emisnej kontrole neprejde, a odporúčame ho riešiť ešte pred samotnou kontrolou, nie po neúspešnom pokuse.',
+        ],
+    },
+    {
+        type: 'text',
+        heading: 'Lehoty STK a EK',
+        paragraphs: [
+            'Pri bežnom osobnom vozidle platí, že prvá technická aj emisná kontrola sa absolvuje štyri roky od prvého prihlásenia vozidla do evidencie, a potom sa opakuje každé dva roky. Pri vozidlách používaných na podnikanie, napríklad v taxislužbe alebo autoškole, sú lehoty kratšie.',
+            'Keďže lehoty sa odvíjajú od kategórie a spôsobu používania vozidla a legislatíva sa môže meniť, najspoľahlivejšie je riadiť sa dátumom na kontrolnej nálepke a údajmi v technickom preukaze. Ak si nie ste istí, kedy máte ísť, pokojne sa ozvite a termín vám podľa technického preukazu overíme.',
         ],
     },
     {
@@ -151,6 +189,18 @@ const content: ServiceContent = [
             {
                 q: 'Zabezpečíte aj odvoz vozidla na stanicu?',
                 a: 'Áno, pri sprostredkovaní vozidlo na stanicu aj z nej dopravíme sami, vy si ho vyzdvihnete u nás s hotovým výsledkom.',
+            },
+            {
+                q: 'Čo ak mám na vozidle ťažné zariadenie alebo iné úpravy?',
+                a: 'Akákoľvek úprava vozidla musí byť zapísaná v technickom preukaze. Ak zapísaná nie je, býva to dôvod na neúspech, preto to odporúčame overiť ešte pred kontrolou.',
+            },
+            {
+                q: 'Musí byť auto pred kontrolou umyté?',
+                a: 'Umyté vozidlo nie je podmienkou, ale pomáha. Pri zanesenom podvozku alebo zablatenej karosérii sa horšie posudzuje korózia a stav jednotlivých dielov.',
+            },
+            {
+                q: 'Rieši sa na emisnej kontrole aj kvalita paliva?',
+                a: 'Priamo nie, meria sa zloženie výfukových plynov. Dlhodobé tankovanie nekvalitného paliva sa však na výsledku prejaví nepriamo, cez zanesené vstrekovače alebo filter pevných častíc.',
             },
         ],
     },

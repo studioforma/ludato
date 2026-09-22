@@ -86,6 +86,36 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'breakdown',
+        heading: 'Čo vám brzdy hovoria zvukom',
+        items: [
+            {
+                title: 'Pískanie pri brzdení',
+                text: 'Vysoký pískavý zvuk býva najčastejšie signalizačný jazýček na platničke, ktorý sa pri dosiahnutí hranice opotrebenia začne obtierať o kotúč. Niekedy ide len o brzdový prach alebo vlhkosť po daždi, ak však pískanie pretrváva aj po pár zabrzdeniach, platničky treba skontrolovať.',
+            },
+            {
+                title: 'Kovové škrípanie',
+                text: 'Drsné kovové škrípanie znamená, že trecí materiál platničky je dojazdený a o kotúč sa trie holý kov. V tomto stave sa každým brzdením ničí aj kotúč, ktorý by inak ešte vydržal, preto odporúčame prísť čo najskôr.',
+            },
+            {
+                title: 'Vibrácie v pedáli alebo volante',
+                text: 'Pravidelné chvenie, ktoré cítite pri brzdení a so stúpajúcou rýchlosťou sa zvýrazňuje, poukazuje na nerovnomerne opotrebovaný alebo teplom zdeformovaný kotúč.',
+            },
+            {
+                title: 'Hučanie, ktoré sa mení v zákrute',
+                text: 'Hučanie, ktoré zosilnie pri zatáčaní na jednu stranu a pri brzdení sa nemení, spravidla nepochádza z bŕzd, ale z ložiska kolesa. Aj to vieme skontrolovať a vymeniť.',
+            },
+        ],
+    },
+    {
+        type: 'text',
+        heading: 'Ako dlho vydržia brzdy',
+        paragraphs: [
+            'Životnosť brzdových platničiek sa nedá povedať jedným číslom, pri bežnej jazde ide o desiatky tisíc kilometrov, no rozptyl je veľký. Najviac ju ovplyvňuje štýl jazdy, prudké a neskoré brzdenie opotrebuje platničky výrazne rýchlejšie než plynulé spomaľovanie s predstihom.',
+            'Svoju rolu hrá aj to, kde jazdíte. Mestská prevádzka s neustálym rozbiehaním a brzdením v kolóne zaťažuje brzdy oveľa viac než diaľnica, kde môžete prejsť desiatky kilometrov takmer bez zabrzdenia. Rovnako platí, že ťažšie vozidlo alebo pravidelné ťahanie prívesu znamená kratšiu životnosť bŕzd. Práve preto brzdy kontrolujeme pri každej väčšej servisnej návšteve, namiesto toho, aby sme sa spoliehali na pevný interval.',
+        ],
+    },
+    {
         type: 'text',
         heading: 'Na čo si dať pozor',
         paragraphs: [
@@ -153,6 +183,10 @@ const content: ServiceContent = [
             {
                 q: 'Odporúčate kontrolu bŕzd aj pri výmene pneumatík?',
                 a: 'Áno, pri prezutí máme kolesá dole, takže je to ideálna príležitosť skontrolovať aj stav kotúčov a platničiek bez samostatného úkonu.',
+            },
+            {
+                q: 'Môžem ešte jazdiť, keď brzdy pískajú?',
+                a: 'Krátkodobo áno, pískanie býva signál, že sa platničky blížia k hranici. Ak však počujete drsné kovové škrípanie, trie sa už kov o kov a každým brzdením sa ničí aj kotúč, vtedy odporúčame prísť čo najskôr.',
             },
         ],
     },
