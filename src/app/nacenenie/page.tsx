@@ -67,7 +67,7 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
                 body: JSON.stringify({
-                    subject: `Nová žiadosť o cenovú ponuku od ${formState.name} — LUDATO Cars Services`,
+                    subject: `Nová žiadosť o cenovú ponuku od ${formState.name} – LUDATO Cars Services`,
                     name: formState.name,
                     email: formState.email,
                     phone: formState.phone,

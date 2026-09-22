@@ -36,7 +36,7 @@ const autoservisServices = [
         ),
         title: 'OPRAVA BŔZD A PODVOZKOV',
         description:
-            'Výmena brzdových platničiek, kotúčov a hydrauliky. Geometria, tlmiče, ramená — kompletná starostlivosť o podvozok vašeho vozidla.',
+            'Výmena brzdových platničiek, kotúčov a hydrauliky. Geometria, tlmiče, ramená, kompletná starostlivosť o podvozok vášho vozidla.',
         detail: 'Geometria • Tlmiče • Ramená',
     },
     {
@@ -205,7 +205,7 @@ export default function ServicesSection({ hideCta = false }: { hideCta?: boolean
                             className="text-white/50 max-w-xl mx-auto text-base"
                             style={{ fontFamily: 'var(--font-inter)' }}
                         >
-                            Od rýchlej diagnostiky po komplexné opravy — poskytujeme plnú
+                            Od rýchlej diagnostiky po komplexné opravy, poskytujeme plnú
                             paletu autoservisných služieb pod jednou strechou.
                         </p>
                     </div>

@@ -51,7 +51,7 @@ const servicesOffered = [
   {
     name: "Oprava bŕzd a podvozkov",
     description:
-      "Výmena brzdových platničiek, kotúčov a hydrauliky. Geometria, tlmiče, ramená, kompletná starostlivosť o podvozok vašeho vozidla.",
+      "Výmena brzdových platničiek, kotúčov a hydrauliky. Geometria, tlmiče, ramená, kompletná starostlivosť o podvozok vášho vozidla.",
   },
   {
     name: "Servis klimatizácie",
