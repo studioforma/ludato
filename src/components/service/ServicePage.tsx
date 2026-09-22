@@ -356,31 +356,42 @@ export default function ServicePage({
                     ))}
 
                     <div className="mb-4 max-w-3xl mx-auto">
-                        <Heading>Súvisiace služby</Heading>
-                        <div className="flex flex-wrap gap-x-6 gap-y-3">
-                            {related.map((r) => (
-                                <Link
-                                    key={r.slug}
-                                    href={`/sluzby/${r.slug}`}
-                                    className="text-[#E31C25] hover:text-white text-sm font-bold tracking-widest uppercase transition-colors duration-300"
-                                    style={{ fontFamily: 'var(--font-montserrat)' }}
-                                >
-                                    {r.name} →
-                                </Link>
-                            ))}
+                        {related.length > 0 && (
+                            <>
+                                <Heading>Súvisiace služby</Heading>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    {related.map((r) => (
+                                        <Link
+                                            key={r.slug}
+                                            href={`/sluzby/${r.slug}`}
+                                            className="group flex items-center justify-between gap-4 py-3 px-5 rounded-sm border border-white/10 bg-white/3 hover:border-[#E31C25]/50 hover:bg-white/5 transition-colors duration-300"
+                                        >
+                                            <span
+                                                className="text-white/80 group-hover:text-white text-sm font-semibold transition-colors duration-300"
+                                                style={{ fontFamily: 'var(--font-montserrat)' }}
+                                            >
+                                                {r.name}
+                                            </span>
+                                            <span className="text-[#E31C25] flex-shrink-0">→</span>
+                                        </Link>
+                                    ))}
+                                </div>
+                            </>
+                        )}
+
+                        <div
+                            className={
+                                related.length > 0
+                                    ? 'mt-6 pt-5 border-t border-white/8'
+                                    : 'pt-2'
+                            }
+                        >
                             <Link
                                 href="/sluzby"
-                                className="text-[#E31C25] hover:text-white text-sm font-bold tracking-widest uppercase transition-colors duration-300"
+                                className="text-white/45 hover:text-[#E31C25] text-xs font-bold tracking-widest uppercase transition-colors duration-300"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                Všetky služby →
-                            </Link>
-                            <Link
-                                href="/cennik"
-                                className="text-[#E31C25] hover:text-white text-sm font-bold tracking-widest uppercase transition-colors duration-300"
-                                style={{ fontFamily: 'var(--font-montserrat)' }}
-                            >
-                                Cenník →
+                                Zobraziť všetky služby →
                             </Link>
                         </div>
                     </div>
