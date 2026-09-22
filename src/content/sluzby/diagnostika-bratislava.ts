@@ -46,7 +46,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Čo diagnostika vie a čo nie',
         paragraphs: [
-            'Diagnostika vie povedať, ktorý systém a ktorý senzor nahlásil odchýlku od normálu, a v akých podmienkach sa to stalo. Nevie ale vždy povedať presnú príčinu, tá istá chyba môže mať viacero rôznych vyvolávateľov.',
+            'Diagnostika vie povedať, ktorý systém a ktorý senzor nahlásil odchýlku od bežných hodnôt, a v akých podmienkach sa to stalo. Nevie ale vždy povedať presnú príčinu, tá istá chyba môže mať viacero rôznych príčin.',
             'Chybový kód "porucha snímača" napríklad nemusí znamenať, že je snímač pokazený, môže ísť aj o poškodenú kabeláž k nemu, uvoľnený konektor alebo problém v úplne inej časti systému, ktorá snímač len ovplyvňuje. Presne preto k diagnostike vždy pristupujeme ako k prvému kroku, nie k finálnej odpovedi.',
         ],
     },
@@ -60,7 +60,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Vyhodnotenie',
-                text: 'Chyby vyhodnotíme v kontexte toho, čo ste nám popísali, a podľa toho navrhneme, čo je potrebné skontrolovať ďalej.',
+                text: 'Chyby vyhodnotíme v kontexte toho, čo ste nám opísali, a podľa toho navrhneme, čo je potrebné skontrolovať ďalej.',
             },
             {
                 title: 'Overenie príčiny',
@@ -84,7 +84,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Na čo si dať pozor',
         paragraphs: [
-            'Blikajúca kontrolka motora je vážnejší signál než trvalo svietiaca, zvyčajne znamená aktívnu poruchu, napríklad vynechávanie zapaľovania, pri ktorej sa odporúča prestať jazdiť vyššími otáčkami a nechať vozidlo skontrolovať čo najskôr.',
+            'Blikajúca kontrolka motora je vážnejší signál než trvalo svietiaca, zvyčajne znamená aktívnu poruchu, napríklad vynechávanie zapaľovania. V takom prípade odporúčame prestať jazdiť vyššími otáčkami a nechať vozidlo skontrolovať čo najskôr.',
             'Vymazanie chyby bez zistenia príčiny je len dočasné riešenie, kontrolka sa po čase rozsvieti znova a niekedy sa medzitým problém ešte zhorší. Rovnako platí, že jedna chyba môže spôsobiť "reťaz" ďalších chybových hlášok v iných systémoch, preto pri diagnostike vždy hľadáme pôvodnú príčinu, nie len najnovšiu hlášku.',
         ],
     },
@@ -112,7 +112,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Účtujete diagnostiku, aj keď sa nič nenájde?',
-                a: 'Diagnostika je samostatný úkon s vlastnou prácou, účtujeme ju bez ohľadu na výsledok, keďže vyhodnotenie čistého výsledku je rovnako dôležité ako nájdenie chyby.',
+                a: 'Diagnostika je samostatný úkon s vlastnou prácou, účtujeme ju bez ohľadu na výsledok, keďže aj výsledok bez nálezu si vyžaduje rovnakú prácu.',
             },
             {
                 q: 'Vymažete mi kontrolku?',
@@ -148,7 +148,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Ovplyvňuje diagnostika prípravu na STK?',
-                a: 'Áno, diagnostika riadiacej jednotky je bežnou súčasťou kontroly pred STK a EK, hlavne pri novších vozidlách s viac elektronikou.',
+                a: 'Áno, diagnostika riadiacej jednotky je bežnou súčasťou kontroly pred STK a EK, hlavne pri novších vozidlách s väčším podielom elektroniky.',
             },
             {
                 q: 'Viete diagnostikovať aj staršie vozidlá bez OBD II?',

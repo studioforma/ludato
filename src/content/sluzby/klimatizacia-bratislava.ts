@@ -40,7 +40,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Rozdiel medzi chladivom R134a a R1234yf',
         paragraphs: [
-            'R134a je staršie chladivo, ktoré sa používalo v drvivej väčšine vozidiel do začiatku 2010-tych rokov. R1234yf je novšie chladivo, predpísané pre novšie modely, ktoré je ekologickejšie, ale zároveň výrazne drahšie na dopĺňanie. Presne preto sa cena servisu klimatizácie líši podľa toho, aké chladivo vaše vozidlo používa, nie podľa toho, aký servis si vyberiete.',
+            'R134a je staršie chladivo, ktoré sa používalo vo väčšine vozidiel vyrobených do polovice minulého desaťročia. R1234yf je novšie chladivo, predpísané pre novšie modely, ktoré je ekologickejšie, ale zároveň výrazne drahšie na dopĺňanie. Presne preto sa cena servisu klimatizácie líši podľa toho, aké chladivo vaše vozidlo používa, nie podľa toho, aký servis si vyberiete.',
         ],
     },
     {
@@ -78,7 +78,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Na čo si dať pozor',
         paragraphs: [
-            'Pri dlhých cestách v lete odporúčame nastaviť klimatizáciu na recirkuláciu vzduchu z interiéru, chladí rýchlejšie a šetrí palivo, no na kratšie úseky je lepšie prepínať aj na privádzanie vzduchu z vonku, aby sa v interiéri nehromadila vlhkosť.',
+            'Pri dlhých cestách v lete odporúčame nastaviť klimatizáciu na recirkuláciu vzduchu z interiéru, chladí rýchlejšie a šetrí palivo, no na kratšie úseky je lepšie prepínať aj na privádzanie vzduchu zvonku, aby sa v interiéri nehromadila vlhkosť.',
             'Servis klimatizácie sa oplatí naplánovať ešte pred letnou špičkou, na jar. Vtedy je jednoduchšie získať termín a problém odhalíte skôr, než vás nechladenie prekvapí počas najhorúcejších dní.',
         ],
     },
@@ -86,7 +86,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Lokálny kontext',
         paragraphs: [
-            'V lete, keď auto stojí celý deň na priamom slnku na sídlisku alebo pri práci, sa interiér vie zohriať na desiatky stupňov a klimatizácia musí odviesť podstatne väčšiu záťaž než pri jazde na chladiacom systéme v dobrom stave. Práve v tomto období sa najviac prejaví, ak chladiva postupne ubúdalo počas celého roka.',
+            'V lete, keď auto stojí celý deň na priamom slnku na sídlisku alebo pri práci, sa interiér vie zohriať na desiatky stupňov a klimatizácia musí vynaložiť podstatne viac energie, aby ho ochladila. Práve v tomto období sa najviac prejaví, ak chladiva postupne ubúdalo počas celého roka.',
         ],
     },
     {
@@ -112,7 +112,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Súvisí servis klímy s výmenou peľového filtra?',
-                a: 'Nie je to ten istý úkon, ale odporúčame ich riešiť spolu, zanesený filter zápach a slabší výkon klimatizácie ešte zhoršuje.',
+                a: 'Nie je to ten istý úkon, ale odporúčame ich riešiť spolu, zanesený filter ešte zhoršuje zápach aj výkon klimatizácie.',
             },
             {
                 q: 'Aké chladivo má moje vozidlo?',

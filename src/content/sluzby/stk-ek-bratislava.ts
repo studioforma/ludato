@@ -4,7 +4,7 @@ const content: ServiceContent = [
     {
         type: 'intro',
         paragraphs: [
-            'STK a emisná kontrola sú pre väčšinu vodičov najmenej obľúbená povinnosť roka, hlavne keď auto neprejde na prvý pokus a treba znova. V Bratislave, Novom Meste, vám vieme vozidlo pripraviť tak, aby prešlo na prvýkrát, alebo vám celú kontrolu aj sprostredkovať.',
+            'STK a emisná kontrola sú pre väčšinu vodičov najmenej obľúbená povinnosť roka, hlavne keď auto neprejde na prvý pokus a musíte prísť znova. V Bratislave, Novom Meste, vám vieme vozidlo pripraviť tak, aby prešlo na prvýkrát, alebo vám celú kontrolu aj sprostredkovať.',
             'Ponúkame dve úrovne, kontrolu pred STK a EK, kde vám povieme presne, čo treba opraviť, alebo kompletné sprostredkovanie, kde sa o všetko postaráme za vás.',
         ],
     },
@@ -58,7 +58,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Najčastejšie dôvody neúspešnej STK',
         paragraphs: [
-            'Medzi najčastejšie dôvody, prečo vozidlo neprejde na prvý pokus, patrí opotrebovaný brzdový systém, nefunkčné alebo nesprávne nastavené osvetlenie, opotrebovaná geometria a podvozok alebo netesnosti v okruhu klimatizácie či motora. Väčšina z toho sa dá zistiť a opraviť vopred, práve to je zmyslom kontroly pred STK.',
+            'Medzi najčastejšie dôvody, prečo vozidlo neprejde na prvý pokus, patrí opotrebovaný brzdový systém, nefunkčné alebo nesprávne nastavené osvetlenie, opotrebovaný podvozok, nesprávne nastavená geometria alebo úniky prevádzkových kvapalín. Väčšina z toho sa dá zistiť a opraviť vopred, práve to je zmyslom kontroly pred STK.',
         ],
     },
     {
@@ -72,14 +72,14 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Čo si pripraviť',
         paragraphs: [
-            'Na STK a EK budete potrebovať technický preukaz vozidla, doklad o poistení a povinnú výbavu (náhradné koleso alebo súprava na opravu defektu, lekárničku, výstražný trojuholník a reflexnú vestu). Pri sprostredkovaní si toto všetko overíme za vás ešte pred odovzdaním na stanicu.',
+            'Na STK a EK budete potrebovať technický preukaz vozidla, doklad o poistení a povinnú výbavu (náhradné koleso alebo súpravu na opravu defektu, lekárničku, výstražný trojuholník a reflexnú vestu). Pri sprostredkovaní si toto všetko overíme za vás ešte pred odovzdaním na stanicu.',
         ],
     },
     {
         type: 'text',
         heading: 'Na čo si dať pozor',
         paragraphs: [
-            'Bežná chyba je nechať kontrolu na posledný týždeň platnosti známky, kedy sú termíny na staniciach najviac obsadené. Odporúčame prísť na kontrolu aspoň dva až tri týždne vopred, aby ste mali čas prípadné nedostatky opraviť bez stresu.',
+            'Bežná chyba je nechať kontrolu na posledný týždeň platnosti známky, keď sú termíny na staniciach najviac obsadené. Odporúčame prísť na kontrolu aspoň dva až tri týždne vopred, aby ste mali čas prípadné nedostatky opraviť bez stresu.',
             'Ak ste na vozidle nedávno robili väčšiu opravu, napríklad výmenu tlmičov alebo svetiel, oplatí sa nechať si to skontrolovať ešte pred STK, nesprávne nastavené svetlá po výmene sú bežný a ľahko odstrániteľný dôvod neúspechu.',
         ],
     },

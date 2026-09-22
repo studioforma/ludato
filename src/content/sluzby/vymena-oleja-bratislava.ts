@@ -4,7 +4,7 @@ const content: ServiceContent = [
     {
         type: 'intro',
         paragraphs: [
-            'Výmena oleja a filtrov je najčastejší servisný úkon, ktorý u nás zákazníci riešia, a zároveň najlepšia investícia do životnosti motora. Olej mazňuje, chladí a čistí motor od nečistôt, bez neho by sa kovové časti motora za pár minút jazdy zadreli.',
+            'Výmena oleja a filtrov je najčastejší servisný úkon, ktorý u nás zákazníci riešia, a zároveň najlepšia investícia do životnosti motora. Olej maže, chladí a čistí motor od nečistôt, bez neho by sa kovové časti motora za pár minút jazdy zadreli.',
             'V Bratislave, Novom Meste, vám olej a filtre vymeníme podľa presnej špecifikácie výrobcu vášho vozidla, nie univerzálnym olejom naslepo. Súčasťou je aj vizuálna kontrola motora a ostatných kvapalín, aby sme prípadný problém zachytili skôr, než sa prejaví na ceste.',
         ],
     },
@@ -30,7 +30,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Olejový filter',
-                text: 'Olejový filter zachytáva kovové čiastočky a nečistoty z motora. Meníme ho pri každej výmene oleja, staré, upchaté vedie k horšiemu mazaniu a rýchlejšiemu opotrebovaniu motora.',
+                text: 'Olejový filter zachytáva kovové čiastočky a nečistoty z motora. Meníme ho pri každej výmene oleja, starý a upchatý filter vedie k horšiemu mazaniu a rýchlejšiemu opotrebovaniu motora.',
             },
             {
                 title: 'Vzduchový filter',
@@ -42,7 +42,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Palivový filter',
-                text: 'Palivový filter chráni vstrekovače a čerpadlo od nečistôt v palive. Je súčasťou nášho kompletného servisného balíka, keďže sa mení v dlhších intervaloch než ostatné filtre.',
+                text: 'Palivový filter chráni vstrekovače a čerpadlo pred nečistotami v palive. Je súčasťou nášho kompletného servisného balíka, keďže sa mení v dlhších intervaloch než ostatné filtre.',
             },
         ],
     },
@@ -72,8 +72,8 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Typy motorových olejov',
         paragraphs: [
-            'Motorové oleje sa delia na minerálne, polosyntetické a syntetické. Minerálny olej je najlevnejší, ale najrýchlejšie stráca svoje vlastnosti a hodí sa len pre staršie, jednoduchšie motory. Polosyntetický olej je kompromisom medzi cenou a odolnosťou, syntetický olej si najdlhšie udrží správnu viskozitu aj pri vysokých teplotách a extrémnom zaťažení, preto ho predpisuje väčšina novších motorov.',
-            'Pri výbere oleja pre vaše vozidlo sa neriadime len touto deľbou, ale hlavne normou a viskozitou, ktorú predpisuje výrobca. Použitie oleja, ktorý normu nespĺňa, môže aj pri "lepšom" oleji viesť k problémom, napríklad s filtrom pevných častíc pri naftových motoroch.',
+            'Motorové oleje sa delia na minerálne, polosyntetické a syntetické. Minerálny olej je najlacnejší, ale najrýchlejšie stráca svoje vlastnosti a hodí sa len pre staršie, jednoduchšie motory. Polosyntetický olej je kompromisom medzi cenou a odolnosťou, syntetický olej si najdlhšie udrží správnu viskozitu aj pri vysokých teplotách a extrémnom zaťažení, preto ho predpisuje väčšina novších motorov.',
+            'Pri výbere oleja pre vaše vozidlo sa neriadime len týmto delením, ale hlavne normou a viskozitou, ktorú predpisuje výrobca. Použitie oleja, ktorý normu nespĺňa, môže aj pri "lepšom" oleji viesť k problémom, napríklad s filtrom pevných častíc pri naftových motoroch.',
         ],
     },
     {
@@ -87,7 +87,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Ako často meniť olej',
         paragraphs: [
-            'Interval výmeny oleja predpisuje výrobca vozidla, bežne ide o rozsah 10 000 až 15 000 km alebo raz ročne, podľa toho, čo nastane skôr. Olej totiž starne aj časom, nielen prejdenými kilometrami, jeho mazacie vlastnosti sa postupne znižujú aj keď auto stojí v garáži.',
+            'Interval výmeny oleja predpisuje výrobca vozidla, bežne ide o rozsah 10 000 až 15 000 km alebo raz ročne, podľa toho, čo nastane skôr. Olej totiž starne aj časom, nielen prejdenými kilometrami, jeho mazacie vlastnosti sa postupne znižujú, aj keď auto stojí v garáži.',
             'Mestská jazda s krátkymi trasami a častým zastavovaním, typická pre Nové Mesto a okolité časti Bratislavy, zaťažuje olej viac než rovnomerná jazda po diaľnici. Motor sa nestíha poriadne zahriať, do oleja sa dostáva viac kondenzátu a nespálených splodín, preto pri prevažne mestskej jazde odporúčame držať sa skôr kratšieho intervalu.',
         ],
     },
@@ -104,7 +104,7 @@ const content: ServiceContent = [
         heading: 'Na čo si dať pozor',
         paragraphs: [
             'Bežná chyba je odkladať výmenu oleja "ešte o kúsok ďalej", najmä pri aute, ktoré jazdí málo. Ako sme spomínali, olej starne aj časom, takže prekročenie ročného intervalu je rizikové aj pri nízkom počte kilometrov.',
-            'Miešanie rôznych typov alebo výrobcov oleja pri dolievaní medzi servisami sa vo väčšine prípadov nič nestane, no pri väčšom úbytku oleja odporúčame nechať si poradiť, aby ste dolievali kompatibilný olej a nie len "čo bolo doma v garáži".',
+            'Pri dolievaní rôznych typov alebo výrobcov oleja medzi servismi sa vo väčšine prípadov nič nestane, no pri väčšom úbytku oleja odporúčame nechať si poradiť, aby ste dolievali kompatibilný olej a nie len "čo bolo doma v garáži".',
             'Zabudnutý alebo nevymenený vzduchový filter je tichý zlodej výkonu a paliva, motor totiž musí cez zanesený filter nasávať vzduch s väčšou námahou. Odporúčame ho kontrolovať pri každej väčšej servisnej návšteve, nielen pri výmene oleja.',
         ],
     },

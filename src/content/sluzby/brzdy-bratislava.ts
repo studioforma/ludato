@@ -4,7 +4,7 @@ const content: ServiceContent = [
     {
         type: 'intro',
         paragraphs: [
-            'Brzdy sú jediný bezpečnostný prvok vo vozidle, ktorý pracuje pri každej jednej jazde a jeho zlyhanie odpustenie nemá. V Bratislave, Novom Meste, riešime kontrolu, výmenu kotúčov a platničiek aj výmenu brzdovej kvapaliny, na oboch nápravách.',
+            'Brzdy sú bezpečnostný prvok, ktorý používate pri každej jednej jazde, a zlyhanie si tu jednoducho nemôžete dovoliť. V Bratislave, Novom Meste, riešime kontrolu bŕzd, výmenu kotúčov a platničiek aj výmenu brzdovej kvapaliny, na oboch nápravách.',
             'Brzdový systém kontrolujeme ako celok, nielen tú časť, ktorú si zákazník sám všimol. Opotrebovaná platnička na jednej náprave je totiž často znak, že podobne je opotrebovaná aj druhá strana, len sa to ešte neprejavilo zvukom.',
         ],
     },
@@ -26,15 +26,15 @@ const content: ServiceContent = [
         items: [
             {
                 title: 'Brzdové kotúče',
-                text: 'Brzdové kotúče sa opotrebúvajú aj deformujú teplom, čo sa prejaví vibráciami v pedáli alebo volante pri brzdení. Meníme ich vždy spolu s platničkami, keďže opotrebené platničky na novom kotúči by ho rýchlo poškodili nerovnomerne.',
+                text: 'Brzdové kotúče sa opotrebúvajú aj deformujú teplom, čo sa prejaví vibráciami v pedáli alebo volante pri brzdení. Meníme ich vždy spolu s platničkami, keďže opotrebované platničky na novom kotúči by ho rýchlo poškodili nerovnomerne.',
             },
             {
                 title: 'Brzdové platničky',
-                text: 'Platničky sú tá časť, ktorá sa trením o kotúč postupne minie úplne najviac. Bežný signál, že sú na hranici, je pískanie pri brzdení alebo dlhšia brzdná dráha než ste zvyknutí.',
+                text: 'Platničky sú časť brzdového systému, ktorá sa trením o kotúč opotrebuje najrýchlejšie. Bežný signál, že sú na hranici, je pískanie pri brzdení alebo dlhšia brzdná dráha, než ste zvyknutí.',
             },
             {
                 title: 'Brzdová kvapalina',
-                text: 'Brzdová kvapalina počas času nasáva vlhkosť zo vzduchu, čo znižuje jej bod varu. Pri intenzívnom brzdení sa potom môže v okruhu vytvoriť vzduchová bublina a pedál zmäkne práve vtedy, keď to najmenej potrebujete.',
+                text: 'Brzdová kvapalina časom nasáva vlhkosť zo vzduchu, čo znižuje jej bod varu. Pri intenzívnom brzdení sa potom môže v okruhu vytvoriť vzduchová bublina a pedál zmäkne práve vtedy, keď to najmenej potrebujete.',
             },
             {
                 title: 'Kontrola celého systému',
@@ -79,10 +79,10 @@ const content: ServiceContent = [
     },
     {
         type: 'text',
-        heading: 'Ako spoznáte opotrebené brzdy',
+        heading: 'Ako spoznáte opotrebované brzdy',
         paragraphs: [
             'Pískanie alebo škrípanie pri brzdení je najčastejší prvý signál, že platničky sú na hranici opotrebenia. Vibrácie v pedáli alebo volante počas brzdenia zvyčajne znamenajú deformovaný alebo opotrebovaný kotúč.',
-            'Dlhšia brzdná dráha než ste zvyknutí a mäkký, "hubovitý" pocit v pedáli sú signály, ktoré sa oplatí riešiť čo najskôr, môžu súvisieť s brzdovou kvapalinou alebo vzduchom v systéme. V oboch prípadoch odporúčame nečakať na najbližší plánovaný servis.',
+            'Dlhšia brzdná dráha, než ste zvyknutí, a mäkký, "hubovitý" pocit v pedáli sú signály, ktoré sa oplatí riešiť čo najskôr, môžu súvisieť s brzdovou kvapalinou alebo vzduchom v systéme. V oboch prípadoch odporúčame nečakať na najbližší plánovaný servis.',
         ],
     },
     {
@@ -91,14 +91,14 @@ const content: ServiceContent = [
         paragraphs: [
             'Bežná chyba je riešiť len nápravu, na ktorej sa problém prejavil, a druhú nechať bez kontroly. Brzdový systém pracuje ako celok, nerovnomerné opotrebenie medzi nápravami alebo stranami vie ovplyvniť stabilitu vozidla pri núdzovom brzdení.',
             'Kombinovanie rôznych značiek alebo typov platničiek na jednej náprave nie je vhodné, keďže majú rôzne trecie vlastnosti. Pri výmene odporúčame použiť rovnaký typ na oboch stranách nápravy.',
-            'Dolievanie starej brzdovej kvapaliny "len aby bola hladina v poriadku" problém s vlhkosťou v systéme nevyriešime, kvapalinu treba pri prekročení intervalu vymeniť celú, nie len doplniť.',
+            'Dolievaním starej brzdovej kvapaliny "len aby bola hladina v poriadku" problém s vlhkosťou v systéme nevyriešite, kvapalinu treba pri prekročení intervalu vymeniť celú, nie len doplniť.',
         ],
     },
     {
         type: 'text',
         heading: 'Lokálny kontext',
         paragraphs: [
-            'Kopcovitý terén smerom na Kramáre a Kolibu zaťažuje brzdy výraznejšie než rovinatá jazda, časté brzdenie do klesania platničky aj kotúče opotrebúva rýchlejšie. Ak bývate alebo pravidelne jazdíte touto oblasťou, oplatí sa brzdy kontrolovať o čosi častejšie, než je bežný interval.',
+            'Kopcovitý terén smerom na Kramáre a Kolibu zaťažuje brzdy výraznejšie než rovinatá jazda, časté brzdenie v klesaní opotrebúva platničky aj kotúče rýchlejšie. Ak bývate alebo pravidelne jazdíte touto oblasťou, oplatí sa brzdy kontrolovať o čosi častejšie, než je bežný interval.',
         ],
     },
     {
@@ -116,7 +116,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Musím meniť kotúče spolu s platničkami?',
-                a: 'Ak sú kotúče v poriadku, stačí vymeniť len platničky. Ak sú kotúče opotrebené alebo deformované, odporúčame vymeniť oboje naraz.',
+                a: 'Ak sú kotúče v poriadku, stačí vymeniť len platničky. Ak sú kotúče opotrebované alebo deformované, odporúčame vymeniť oboje naraz.',
             },
             {
                 q: 'Prečo pískajú aj nové brzdy?',
@@ -143,7 +143,7 @@ const content: ServiceContent = [
                 a: 'Áno, pri práci na brzdách vizuálne skontrolujeme aj blízke časti podvozku, keďže sú na náprave vedľa seba.',
             },
             {
-                q: 'Prejde auto s opotrebenými brzdami STK?',
+                q: 'Prejde auto s opotrebovanými brzdami STK?',
                 a: 'Nie, opotrebenie bŕzd pod predpísanú hranicu je jeden z najčastejších dôvodov neúspešnej STK. Odporúčame nechať brzdy skontrolovať ešte pred termínom.',
             },
             {
@@ -152,7 +152,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Odporúčate kontrolu bŕzd aj pri výmene pneumatík?',
-                a: 'Áno, pri prezutí máme kolesá dole, takže je to ideálna príležitosť skontrolovať aj stav kotúčov a platničiek bez zvyšného úkonu.',
+                a: 'Áno, pri prezutí máme kolesá dole, takže je to ideálna príležitosť skontrolovať aj stav kotúčov a platničiek bez samostatného úkonu.',
             },
         ],
     },
