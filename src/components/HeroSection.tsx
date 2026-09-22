@@ -68,6 +68,7 @@ export default function HeroSection() {
                 >
                     AUTOSERVIS{' '}
                     <span className="block text-[#E31C25]">BRATISLAVA</span>
+                    <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl">NOVÉ MESTO</span>
                 </motion.h1>
 
                 {/* Sub-headline */}
@@ -76,8 +77,8 @@ export default function HeroSection() {
                     className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed"
                     style={{ fontFamily: 'var(--font-inter)' }}
                 >
-                    Vaše auto je u nás v dobrých rukách.
                     Riešime problémy, ktoré iné servisy nezvládli vyriešiť.
+                    Zavolajte, objednajte sa a vyriešte problém ešte dnes.
                 </motion.p>
 
                 {/* CTAs */}
