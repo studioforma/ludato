@@ -55,7 +55,7 @@ export const services: ServiceMeta[] = [
     },
     {
         slug: 'vymena-oleja-bratislava',
-        name: 'Výmena oleja a filtrov',
+        name: 'Výmena oleja',
         h1: 'VÝMENA OLEJA A FILTROV BRATISLAVA – NOVÉ MESTO',
         h1Accent: 'BRATISLAVA',
         title: 'Výmena oleja Bratislava – Nové Mesto | Servis od 35 € | Ludato Family Autoservis',
@@ -63,7 +63,7 @@ export const services: ServiceMeta[] = [
             'Výmena oleja a filtrov v Bratislave, Novom Meste. Motorový olej podľa špecifikácie výrobcu, olejový, vzduchový, kabínový aj palivový filter. Ceny od 35 €.',
         teaser: 'Motorový olej a filtre presne podľa špecifikácie výrobcu, s vizuálnou kontrolou motora.',
         category: 'motor',
-        related: ['diagnostika-bratislava', 'stk-ek-bratislava'],
+        related: ['pocitacova-diagnostika-bratislava', 'stk-ek-bratislava'],
         cta: {
             question: 'Blíži sa vám servisná výmena oleja?',
             subtext: 'Objednajte sa a dajte motoru čerstvý olej ešte dnes.',
@@ -90,7 +90,7 @@ export const services: ServiceMeta[] = [
         },
     },
     {
-        slug: 'diagnostika-bratislava',
+        slug: 'pocitacova-diagnostika-bratislava',
         name: 'Počítačová diagnostika',
         h1: 'POČÍTAČOVÁ DIAGNOSTIKA BRATISLAVA – NOVÉ MESTO',
         h1Accent: 'BRATISLAVA',
@@ -108,7 +108,7 @@ export const services: ServiceMeta[] = [
         },
     },
     {
-        slug: 'klimatizacia-bratislava',
+        slug: 'servis-klimatizacie-bratislava',
         name: 'Servis klimatizácie',
         h1: 'SERVIS KLIMATIZÁCIE BRATISLAVA – NOVÉ MESTO',
         h1Accent: 'BRATISLAVA',
@@ -135,7 +135,7 @@ export const services: ServiceMeta[] = [
             'Príprava a sprostredkovanie STK a EK v Bratislave, Novom Meste. Kontrola pred STK od 50 €, kompletné sprostredkovanie za 150 €.',
         teaser: 'Kontrola pred STK aj kompletné sprostredkovanie, aby ste na kontrolu prešli na prvýkrát.',
         category: 'specialne',
-        related: ['kontrola-pred-kupou-bratislava', 'brzdy-bratislava', 'podvozok-bratislava', 'diagnostika-bratislava'],
+        related: ['kontrola-pred-kupou-bratislava', 'brzdy-bratislava', 'podvozok-bratislava', 'pocitacova-diagnostika-bratislava'],
         cta: {
             question: 'Blíži sa vám STK?',
             subtext: 'Pripravíme vaše auto tak, aby prešlo na prvýkrát, bez zbytočného stresu.',
