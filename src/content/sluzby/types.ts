@@ -16,8 +16,12 @@ export type Section =
           paragraphs: string[];
           outcomes?: string[];
       }
-    /** Pulls rows straight from the cennik so numbers are never copied by hand. */
-    | { type: 'prices'; heading: string; categories: string[] }
+    /**
+     * Pulls rows straight from the cennik so numbers are never copied by hand.
+     * `only`, when given, keeps just those service names out of the listed
+     * categories (for when a cennik category mixes in unrelated items).
+     */
+    | { type: 'prices'; heading: string; categories: string[]; only?: string[] }
     | { type: 'faq'; heading: string; items: { q: string; a: string }[] };
 
 export type ServiceContent = Section[];

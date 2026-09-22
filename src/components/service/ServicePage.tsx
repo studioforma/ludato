@@ -161,9 +161,14 @@ function SectionBlock({ section }: { section: Section }) {
             );
 
         case 'prices': {
+            const only = section.only;
             const categories = section.categories
                 .map((name) => getCategory(name))
-                .filter((c): c is PricingCategory => c !== undefined);
+                .filter((c): c is PricingCategory => c !== undefined)
+                .map((cat) =>
+                    only ? { ...cat, items: cat.items.filter((item) => only.includes(item.service)) } : cat
+                )
+                .filter((cat) => cat.items.length > 0);
 
             return (
                 <div className="mb-14">
