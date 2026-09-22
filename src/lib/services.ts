@@ -53,6 +53,24 @@ export const services: ServiceMeta[] = [
             secondaryLabel: 'Objednať sa',
         },
     },
+    {
+        slug: 'vymena-oleja-bratislava',
+        name: 'Výmena oleja a filtrov',
+        h1: 'VÝMENA OLEJA A FILTROV BRATISLAVA – NOVÉ MESTO',
+        h1Accent: 'BRATISLAVA',
+        title: 'Výmena oleja Bratislava – Nové Mesto | Servis od 35 € | Ludato Family Autoservis',
+        description:
+            'Výmena oleja a filtrov v Bratislave, Novom Meste. Motorový olej podľa špecifikácie výrobcu, olejový, vzduchový, kabínový aj palivový filter. Ceny od 35 €.',
+        teaser: 'Motorový olej a filtre presne podľa špecifikácie výrobcu, s vizuálnou kontrolou motora.',
+        category: 'motor',
+        related: ['diagnostika-bratislava', 'stk-ek-bratislava'],
+        cta: {
+            question: 'Blíži sa vám servisná výmena oleja?',
+            subtext: 'Objednajte sa a dajte motoru čerstvý olej ešte dnes.',
+            secondaryHref: '/nacenenie',
+            secondaryLabel: 'Objednať sa',
+        },
+    },
 ];
 
 export function getService(slug: string): ServiceMeta | undefined {
