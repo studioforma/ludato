@@ -28,7 +28,7 @@ const extras = [
         title: 'PNEUSERVIS',
         description:
             'Sezónne prezutie aj vyváženie kolies pre všetky bežné veľkosti diskov, rýchlo a bez zbytočného čakania.',
-        href: '/sluzby/pneuservis',
+        href: '/sluzby/pneuservis-bratislava',
         linkLabel: 'Viac o pneuservise',
     },
     {
@@ -40,7 +40,7 @@ const extras = [
         title: 'USKLADNENIE PNEUMATÍK',
         description:
             'Sezónnu sadu pneumatík vám medzi prezutiami radi uskladníme, aby ste sa o ne nemuseli starať doma.',
-        href: '/sluzby/pneuservis',
+        href: '/sluzby/pneuservis-bratislava',
         linkLabel: 'Viac o uskladnení',
     },
 ];
