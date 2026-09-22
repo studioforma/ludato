@@ -1,14 +1,27 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
-import ServicesSection from '@/components/ServicesSection';
 import Footer from '@/components/Footer';
+import CtaBanner from '@/components/CtaBanner';
+import Breadcrumbs from '@/components/service/Breadcrumbs';
 import { serviceCategories, services } from '@/lib/services';
 
+const SITE = 'https://www.ludato.sk';
+
 export const metadata: Metadata = {
-    title: 'Všetky služby | Ludato Family Autoservis',
+    title: 'Služby autoservisu Bratislava – Nové Mesto | Ludato Family Autoservis',
     description:
-        'Kompletný prehľad služieb autoservisu Ludato Family: diagnostika, servisné prehliadky, brzdy, podvozok, klimatizácia, pneuservis a výmena kolies.',
+        'Prehľad služieb autoservisu Ludato Family v Bratislave, Novom Meste: diagnostika, výmena oleja, brzdy, klimatizácia, pneuservis, STK a EK. Ku každej službe nájdete ceny aj postup.',
+    alternates: { canonical: `${SITE}/sluzby` },
+};
+
+const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Domov', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Služby', item: `${SITE}/sluzby` },
+    ],
 };
 
 export default function Sluzby() {
@@ -21,43 +34,73 @@ export default function Sluzby() {
 
     return (
         <main className="relative overflow-x-hidden w-full bg-[#111111]">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             <Navbar />
-            <div className="pt-20">
-                <ServicesSection hideCta />
-            </div>
 
-            <section className="bg-[#1D1D1B] py-20">
+            <div className="pt-32 pb-20">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
+                    <Breadcrumbs items={[{ label: 'Domov', href: '/' }, { label: 'Služby' }]} />
+
+                    <div className="text-center mb-14 max-w-3xl mx-auto">
                         <p
                             className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            <span className="font-black">//</span> Podrobne
+                            <span className="font-black">//</span> Čo robíme
                         </p>
-                        <h2
-                            className="text-3xl md:text-4xl font-black text-white"
+                        <h1
+                            className="text-4xl md:text-5xl font-black text-white mb-6"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            PODROBNÉ STRÁNKY <span className="text-[#E31C25]">SLUŽIEB</span>
-                        </h2>
+                            SLUŽBY AUTOSERVISU <span className="text-[#E31C25]">BRATISLAVA</span> – NOVÉ MESTO
+                        </h1>
+                        <div
+                            className="text-white/60 text-base leading-relaxed space-y-4"
+                            style={{ fontFamily: 'var(--font-inter)' }}
+                        >
+                            <p>
+                                V Ludato Family Autoservis na Odborárskej 52 sa staráme o vozidlá
+                                všetkých značiek, od bežnej údržby až po zložitejšie opravy, ktoré
+                                inde nevyriešili. Pracujeme ako rodinný tím, takže o vašom aute sa
+                                bavíte priamo s tým, kto na ňom robí.
+                            </p>
+                            <p>
+                                Ku každej službe nižšie nájdete samostatnú stránku s orientačnými
+                                cenami, postupom a odpoveďami na najčastejšie otázky. Ak si neviete
+                                vybrať alebo neviete, čo presne vaše auto potrebuje, pokojne
+                                zavolajte a prejdeme to spolu.
+                            </p>
+                        </div>
                     </div>
 
                     <div className="space-y-12">
                         {populated.map((cat) => (
                             <div key={cat.id}>
-                                <p
-                                    className="text-white/50 text-xs tracking-[0.3em] uppercase font-bold mb-5"
-                                    style={{ fontFamily: 'var(--font-montserrat)' }}
-                                >
-                                    {cat.label}
-                                </p>
+                                <div className="flex items-center gap-3 mb-5">
+                                    <span
+                                        className="text-[#E31C25] font-black text-xs"
+                                        style={{ fontFamily: 'var(--font-montserrat)' }}
+                                    >
+                                        //
+                                    </span>
+                                    <h2
+                                        className="text-white/60 text-xs tracking-[0.3em] uppercase font-bold"
+                                        style={{ fontFamily: 'var(--font-montserrat)' }}
+                                    >
+                                        {cat.label}
+                                    </h2>
+                                    <div className="flex-1 h-px bg-white/8" />
+                                </div>
+
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                     {cat.items.map((s) => (
                                         <Link
                                             key={s.slug}
                                             href={`/sluzby/${s.slug}`}
-                                            className="block bg-[#111111] border border-white/10 rounded-sm p-6 hover:border-[#E31C25]/50 transition-colors duration-300 group"
+                                            className="group block bg-[#1D1D1B] border border-white/10 rounded-sm p-6 hover:border-[#E31C25]/50 transition-colors duration-300"
                                         >
                                             <h3
                                                 className="font-black text-white text-lg mb-2"
@@ -84,8 +127,29 @@ export default function Sluzby() {
                             </div>
                         ))}
                     </div>
+
+                    <p
+                        className="text-white/40 text-sm mt-12 text-center"
+                        style={{ fontFamily: 'var(--font-inter)' }}
+                    >
+                        Kompletné ceny všetkých služieb nájdete na{' '}
+                        <Link
+                            href="/cennik"
+                            className="text-[#E31C25] hover:text-white transition-colors underline"
+                        >
+                            stránke cenníka
+                        </Link>
+                        .
+                    </p>
                 </div>
-            </section>
+            </div>
+
+            <CtaBanner
+                question="Neviete, čo presne vaše auto potrebuje?"
+                subtext="Zavolajte nám, poradíme vám a rovno sa dohodneme na termíne."
+                secondaryHref="/nacenenie"
+                secondaryLabel="Objednať sa"
+            />
 
             <Footer />
         </main>
