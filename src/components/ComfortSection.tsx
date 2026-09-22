@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 
 export default function ComfortSection() {
@@ -43,10 +44,26 @@ export default function ComfortSection() {
                         initial={{ opacity: 0, x: 60 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.7, delay: 0.15 }}
-                        className="grid grid-cols-2 gap-4"
+                        className="grid grid-cols-1 gap-4"
                     >
-                        <div className="aspect-[3/4] rounded-sm bg-gradient-to-br from-[#242422] to-[#0a0a0a] border border-white/10" />
-                        <div className="aspect-[3/4] rounded-sm bg-gradient-to-br from-[#242422] to-[#0a0a0a] border border-white/10 mt-8" />
+                        <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-white/10">
+                            <Image
+                                src="/cakaren-1.webp"
+                                alt="Čakáreň autoservisu Ludato Family s pohodlným sedením a stolíkom, Odborárska 52, Bratislava"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                className="object-cover"
+                            />
+                        </div>
+                        <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-white/10">
+                            <Image
+                                src="/cakaren-2.webp"
+                                alt="Interiér čakárne Ludato Family Autoservis s televízorom a akváriom, Bratislava Nové Mesto"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                className="object-cover"
+                            />
+                        </div>
                     </motion.div>
                 </div>
             </div>
