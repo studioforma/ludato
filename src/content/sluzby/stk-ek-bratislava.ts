@@ -85,6 +85,12 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'image',
+        src: '/sluzby/dielna-ludato-bratislava.webp',
+        alt: 'Dielňa autoservisu Ludato Family s dvomi zdvihákmi na Odborárskej v Bratislave, Novom Meste',
+        caption: 'Kontrolu pred STK robíme na zdviháku u nás na Odborárskej 52, takže vidíme aj to, čo je zospodu.',
+    },
+    {
         type: 'text',
         heading: 'Najčastejšie dôvody neúspešnej STK',
         paragraphs: [

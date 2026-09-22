@@ -37,6 +37,12 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'image',
+        src: '/sluzby/plnenie-klimatizacie-ludato-bratislava.webp',
+        alt: 'Mechanik pripája plničku klimatizácie k vozidlu v autoservise Ludato Family na Odborárskej v Bratislave, Novom Meste',
+        caption: 'Plnenie klimatizácie u nás na Odborárskej 52. Okruh najprv vyprázdnime a natlakujeme, až potom plníme chladivom.',
+    },
+    {
         type: 'text',
         heading: 'Rozdiel medzi chladivom R134a a R1234yf',
         paragraphs: [

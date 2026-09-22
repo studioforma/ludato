@@ -87,6 +87,10 @@ export const services: ServiceMeta[] = [
             'Servis bŕzd v Bratislave, Novom Meste: kontrola, výmena kotúčov a platničiek na oboch nápravách, výmena brzdovej kvapaliny. Ceny od 45 €.',
         teaser: 'Kontrola aj výmena kotúčov, platničiek a brzdovej kvapaliny na oboch nápravách.',
         category: 'podvozok',
+        heroImage: {
+            src: '/sluzby/brzdy-kotuc-strmen-ludato-bratislava.webp',
+            alt: 'Nový brzdový kotúč a strmeň na prednej náprave Suzuki Swift v autoservise Ludato Family, Bratislava Nové Mesto',
+        },
         related: ['podvozok-bratislava', 'geometria-bratislava', 'stk-ek-bratislava', 'pneuservis-bratislava'],
         cta: {
             question: 'Ozývajú sa vám brzdy?',
@@ -105,6 +109,10 @@ export const services: ServiceMeta[] = [
             'Počítačová diagnostika vozidiel v Bratislave, Novom Meste. OBD II, ESP, ABS, airbag, riadiaca jednotka, elektronika a osvetlenie. Cena od 30 €.',
         teaser: 'Načítanie chýb, ESP, ABS, airbag aj elektronika, so skutočným vyhodnotením príčiny.',
         category: 'motor',
+        heroImage: {
+            src: '/sluzby/diagnostika-ludato-bratislava.webp',
+            alt: 'Vozidlo s otvorenou kapotou pripravené na počítačovú diagnostiku v autoservise Ludato Family, Bratislava Nové Mesto',
+        },
         related: ['zlozita-diagnostika-bratislava', 'autoelektrika-bratislava', 'vstrekovace-bratislava', 'stk-ek-bratislava'],
         cta: {
             question: 'Svieti vám kontrolka na palubovke?',
@@ -123,6 +131,10 @@ export const services: ServiceMeta[] = [
             'Servis klimatizácie v Bratislave, Novom Meste: kontrola, tlakovanie a preplnenie chladivom R134a aj R1234yf, riešenie zápachu z ventilácie.',
         teaser: 'Kontrola tesnosti, doplnenie chladiva R134a aj R1234yf, riešenie zápachu z ventilácie.',
         category: 'komfort',
+        heroImage: {
+            src: '/sluzby/servis-klimatizacie-ludato-bratislava.webp',
+            alt: 'Plnička klimatizácie s výberom chladiva R134a a R1234yf v autoservise Ludato Family, Bratislava Nové Mesto',
+        },
         related: ['ozonova-dezinfekcia-bratislava', 'vymena-oleja-bratislava', 'servis-elektromobilov-bratislava', 'kontrola-pred-dovolenkou-bratislava'],
         cta: {
             question: 'Nechladí vám klimatizácia, ako by mala?',
