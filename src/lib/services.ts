@@ -16,6 +16,8 @@ export type ServiceMeta = {
     /** One-line summary for the hub card. */
     teaser: string;
     category: ServiceCategoryId;
+    /** Real Ludato photo shown beside the H1. Stock photos do not belong here. */
+    heroImage?: { src: string; alt: string };
     /** Slugs of related services rendered at the bottom of the page. */
     related: string[];
     cta: {
@@ -63,6 +65,10 @@ export const services: ServiceMeta[] = [
             'Výmena oleja a filtrov v Bratislave, Novom Meste. Motorový olej podľa špecifikácie výrobcu, olejový, vzduchový, kabínový aj palivový filter. Ceny od 35 €.',
         teaser: 'Motorový olej a filtre presne podľa špecifikácie výrobcu, s vizuálnou kontrolou motora.',
         category: 'motor',
+        heroImage: {
+            src: '/sluzby/vymena-oleja-ludato-bratislava.webp',
+            alt: 'Výmena motorového oleja na zdvihnutom vozidle v autoservise Ludato Family na Odborárskej v Bratislave, Novom Meste',
+        },
         related: ['pocitacova-diagnostika-bratislava', 'stk-ek-bratislava'],
         cta: {
             question: 'Blíži sa vám servisná výmena oleja?',

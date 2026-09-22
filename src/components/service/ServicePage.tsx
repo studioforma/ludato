@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CtaBanner from '@/components/CtaBanner';
@@ -231,6 +232,35 @@ function SectionBlock({ section }: { section: Section }) {
             );
         }
 
+        case 'image':
+            return (
+                <figure className="mb-14 max-w-3xl mx-auto">
+                    <div
+                        className={`relative rounded-sm overflow-hidden border border-white/10 ${
+                            section.orientation === 'portrait'
+                                ? 'aspect-[3/4] max-w-md mx-auto'
+                                : 'aspect-[16/10]'
+                        }`}
+                    >
+                        <Image
+                            src={section.src}
+                            alt={section.alt}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 768px"
+                            className="object-cover"
+                        />
+                    </div>
+                    {section.caption && (
+                        <figcaption
+                            className="text-white/40 text-xs mt-3 text-center"
+                            style={{ fontFamily: 'var(--font-inter)' }}
+                        >
+                            {section.caption}
+                        </figcaption>
+                    )}
+                </figure>
+            );
+
         case 'faq':
             return (
                 <div className="mb-14 max-w-3xl mx-auto">
@@ -322,31 +352,52 @@ export default function ServicePage({
                         ]}
                     />
 
-                    <div className="text-center mb-14 max-w-3xl mx-auto">
-                        <p
-                            className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
-                            style={{ fontFamily: 'var(--font-montserrat)' }}
-                        >
-                            <span className="font-black">//</span> Služby
-                        </p>
-                        <h1
-                            className="text-4xl md:text-5xl font-black text-white mb-6"
-                            style={{ fontFamily: 'var(--font-montserrat)' }}
-                        >
-                            {beforeAccent}
-                            <span className="text-[#E31C25]">{meta.h1Accent}</span>
-                            {afterAccent}
-                        </h1>
-                        {intro && intro.type === 'intro' && (
-                            <div
-                                className="text-white/60 text-base leading-relaxed space-y-4"
-                                style={{ fontFamily: 'var(--font-inter)' }}
+                    <div
+                        className={
+                            meta.heroImage
+                                ? 'grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-12 items-center mb-14'
+                                : 'text-center mb-14 max-w-3xl mx-auto'
+                        }
+                    >
+                        <div className={meta.heroImage ? 'text-left' : ''}>
+                            <p
+                                className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                                style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                {intro.paragraphs.map((p, i) => (
-                                    <p key={i}>
-                                        <RichText text={p} />
-                                    </p>
-                                ))}
+                                <span className="font-black">//</span> Služby
+                            </p>
+                            <h1
+                                className="text-4xl md:text-5xl font-black text-white mb-6"
+                                style={{ fontFamily: 'var(--font-montserrat)' }}
+                            >
+                                {beforeAccent}
+                                <span className="text-[#E31C25]">{meta.h1Accent}</span>
+                                {afterAccent}
+                            </h1>
+                            {intro && intro.type === 'intro' && (
+                                <div
+                                    className="text-white/60 text-base leading-relaxed space-y-4"
+                                    style={{ fontFamily: 'var(--font-inter)' }}
+                                >
+                                    {intro.paragraphs.map((p, i) => (
+                                        <p key={i}>
+                                            <RichText text={p} />
+                                        </p>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+
+                        {meta.heroImage && (
+                            <div className="relative w-full max-w-sm mx-auto lg:mx-0 lg:w-80 aspect-[3/4] rounded-sm overflow-hidden border border-white/10">
+                                <Image
+                                    src={meta.heroImage.src}
+                                    alt={meta.heroImage.alt}
+                                    fill
+                                    priority
+                                    sizes="(max-width: 1024px) 100vw, 320px"
+                                    className="object-cover"
+                                />
                             </div>
                         )}
                     </div>

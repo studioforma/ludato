@@ -22,6 +22,15 @@ export type Section =
      * categories (for when a cennik category mixes in unrelated items).
      */
     | { type: 'prices'; heading: string; categories: string[]; only?: string[] }
-    | { type: 'faq'; heading: string; items: { q: string; a: string }[] };
+    | { type: 'faq'; heading: string; items: { q: string; a: string }[] }
+    /** Photo from the workshop. Only real Ludato photos belong here. */
+    | {
+          type: 'image';
+          src: string;
+          alt: string;
+          caption?: string;
+          /** Defaults to landscape; use 'portrait' for tall shots. */
+          orientation?: 'landscape' | 'portrait';
+      };
 
 export type ServiceContent = Section[];
