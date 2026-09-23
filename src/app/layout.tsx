@@ -21,13 +21,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title:
-    "NAJLEPŠÍ Autoservis Bratislava – Nové Mesto | Ak hľadáte - Diagnostika, Opravy, Brzdy, Rozvody, Podvozok, Klimatizácia, Pneuservis, blízko mňa - Ludato Family Autoservis je to správne miesto",
+    "NAJLEPŠÍ Autoservis Bratislava – Nové Mesto | Ak hľadáte - Diagnostika, Brzdy, Rozvody, Podvozok, Klimatizácia, Pneuservis, blízko mňa - Ludato Family Autoservis a Pneuservis je to správne miesto",
   description:
     "Autoservis Bratislava – Nové Mesto: komplexná starostlivosť o vozidlá všetkých značiek a modelov. Diagnostika, opravy, servisné prehliadky, brzdy, podvozok, klimatizácia, pneuservis. Zažite rozdiel v dôveryhodnom rodinnom autoservise LUDATO.",
   keywords:
     "autoservis bratislava, autoservis nové mesto, pneuservis bratislava, diagnostika auta bratislava, oprava bŕzd bratislava, servis klimatizácie bratislava, LUDATO, rodinný autoservis",
   openGraph: {
-    title: "Ludato Family Autoservis – Autoservis Bratislava, Nové Mesto",
+    title: "Ludato Family Autoservis a Pneuservis – Autoservis Bratislava, Nové Mesto",
     description: "Autám rozumieme a prácu na nich berieme osobne. Poctivá práca bez kompromisov.",
     locale: "sk_SK",
     type: "website",
