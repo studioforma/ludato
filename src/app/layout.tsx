@@ -83,7 +83,7 @@ const areasServed = [
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
-  name: "Ludato Family Autoservis",
+  name: "Ludato Family Autoservis a pneuservis",
   telephone: "+421944236257",
   email: "ludato.recepcia@gmail.com",
   url: "https://www.ludato.sk/",

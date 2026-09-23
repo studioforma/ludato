@@ -202,7 +202,7 @@ export default function ContactSection() {
                                 allowFullScreen
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                title="LUDATO FAMILY Cars Services – Odborárska 52, Bratislava"
+                                title="LUDATO FAMILY Cars Services a pneuservis – Odborárska 52, Bratislava"
                             />
                         </div>
 
