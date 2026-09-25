@@ -56,7 +56,7 @@ export default function CookieBanner() {
                                 >
                                     Tato stránka používa súbory cookies pre zabezpečenie základných funkcií
                                     (ako je napríklad Google Mapa) a analýzu návštevnosti. Rešpektujeme
-                                    vaše súkromie — môžete nastavenia prijať alebo odmietnuť.
+                                    vaše súkromie, môžete nastavenia prijať alebo odmietnuť.
                                 </p>
                             </div>
 

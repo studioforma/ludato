@@ -43,7 +43,7 @@ const values = [
     {
         icon: <ChatIcon />,
         title: 'Transparentnosť',
-        desc: 'Pred každou opravou vás informujeme o nákladoch. Žiadne skryté poplatky — iba úprimná komunikácia.',
+        desc: 'Pred každou opravou vás informujeme o nákladoch. Žiadne skryté poplatky, iba úprimná komunikácia.',
     },
 ];
 
@@ -96,8 +96,8 @@ export default function AboutSection() {
                         >
                             <p>
                                 LUDATO FAMILY Cars Services je splneným snom jedného mechanika
-                                s vášňou pre autá. Názov servisu nesie v sebe to najdôležitejšie
-                                — prvé slabiky mien mojej rodiny: <strong>Lu</strong>cia, <strong>Da</strong>mian
+                                s vášňou pre autá. Názov servisu nesie v sebe to najdôležitejšie,
+                                prvé slabiky mien mojej rodiny: <strong>Lu</strong>cia, <strong>Da</strong>mian
                                 a <strong>To</strong>máš.
                             </p>
                             <p>
@@ -120,7 +120,7 @@ export default function AboutSection() {
                             className="text-2xl text-[#E31C25] mt-6"
                             style={{ fontFamily: 'var(--font-dancing)' }}
                         >
-                            — Lucia, Damian, Tomáš
+                            – Lucia, Damian, Tomáš
                         </motion.p>
 
                         {/* Values */}
@@ -229,7 +229,7 @@ export default function AboutSection() {
                                 className="mt-8 text-white/30 text-sm leading-relaxed italic"
                                 style={{ fontFamily: 'var(--font-inter)' }}
                             >
-                                &ldquo;Rodina je to, čo nás ženie vpred — a preto nesie aj náš servis ich mená.&rdquo;
+                                &ldquo;Rodina je to, čo nás ženie vpred, a preto nesie aj náš servis ich mená.&rdquo;
                             </p>
                         </div>
                     </motion.div>

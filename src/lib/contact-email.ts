@@ -113,7 +113,7 @@ export function buildContactEmailText({ eyebrow, title, name, email, phone, mess
         'Správa:',
         message,
         '',
-        '— Odoslané z kontaktného formulára na ludato.sk',
+        'Odoslané z kontaktného formulára na ludato.sk',
     ]
         .filter(Boolean)
         .join('\n');

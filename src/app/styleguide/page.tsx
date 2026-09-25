@@ -151,7 +151,7 @@ export default function StyleguidePage() {
                                     </p>
                                     <div className="text-xs text-white/30 mb-1 mt-4">Signature - Text 2xl (24px)</div>
                                     <p className="text-2xl text-[#E31C25]" style={{ fontFamily: 'var(--font-dancing)' }}>
-                                        — Lucia, Damian, Tomáš
+                                        – Lucia, Damian, Tomáš
                                     </p>
                                 </div>
                             </div>

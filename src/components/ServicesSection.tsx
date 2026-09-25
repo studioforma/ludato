@@ -36,7 +36,7 @@ const autoservisServices = [
         ),
         title: 'OPRAVA BŔZD A PODVOZKOV',
         description:
-            'Výmena brzdových platničiek, kotúčov a hydrauliky. Geometria, tlmiče, ramená — kompletná starostlivosť o podvozok vašeho vozidla.',
+            'Výmena brzdových platničiek, kotúčov a hydrauliky. Geometria, tlmiče, ramená, kompletná starostlivosť o podvozok vášho vozidla.',
         detail: 'Geometria • Tlmiče • Ramená',
     },
     {
@@ -182,7 +182,7 @@ function GroupLabel({ children }: { children: React.ReactNode }) {
 
 export { SectionHeader };
 
-export default function ServicesSection({ hideCta = false }: { hideCta?: boolean }) {
+export default function ServicesSection() {
     return (
         <section id="sluzby" className="bg-[#111111] py-24 lg:py-32">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -205,7 +205,7 @@ export default function ServicesSection({ hideCta = false }: { hideCta?: boolean
                             className="text-white/50 max-w-xl mx-auto text-base"
                             style={{ fontFamily: 'var(--font-inter)' }}
                         >
-                            Od rýchlej diagnostiky po komplexné opravy — poskytujeme plnú
+                            Od rýchlej diagnostiky po komplexné opravy, poskytujeme plnú
                             paletu autoservisných služieb pod jednou strechou.
                         </p>
                     </div>
@@ -228,23 +228,21 @@ export default function ServicesSection({ hideCta = false }: { hideCta?: boolean
                 </div>
 
                 {/* Bottom CTA */}
-                {!hideCta && (
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.6 }}
-                        className="text-center mt-14"
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                    className="text-center mt-14"
+                >
+                    <a
+                        href="/sluzby"
+                        className="text-white/70 hover:text-[#E31C25] text-sm font-semibold tracking-widest uppercase transition-colors duration-300"
+                        style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        <a
-                            href="/sluzby"
-                            className="text-white/70 hover:text-[#E31C25] text-sm font-semibold tracking-widest uppercase transition-colors duration-300"
-                            style={{ fontFamily: 'var(--font-montserrat)' }}
-                        >
-                            Zobraziť všetky služby →
-                        </a>
-                    </motion.div>
-                )}
+                        Zobraziť všetky služby →
+                    </a>
+                </motion.div>
             </div>
         </section>
     );

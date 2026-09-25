@@ -71,3 +71,9 @@ body {
 a, button, select, [role="button"], input[type="submit"], input[type="button"] {
   cursor: pointer;
 }
+/* FAQ accordion uses native <details> so answers stay in the HTML for search
+   engines. Tailwind does not emit an [open] variant here, so the toggle
+   rotation lives as plain CSS. */
+details[open] > summary .faq-toggle {
+  rotate: 45deg;
+}

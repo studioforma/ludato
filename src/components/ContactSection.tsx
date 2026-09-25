@@ -33,7 +33,7 @@ export default function ContactSection() {
                     email: formData.email,
                     phone: formData.phone,
                     message: formData.message,
-                    subject: `Nová správa od ${formData.name} — LUDATO Cars Services`,
+                    subject: `Nová správa od ${formData.name} – LUDATO Cars Services`,
                     formType: 'contact',
                 }),
             });
@@ -192,7 +192,7 @@ export default function ContactSection() {
                             ))}
                         </div>
 
-                        {/* Google Map embed — correct location, no fake overlay pin */}
+                        {/* Google Map embed, correct location, no fake overlay pin */}
                         <div className="rounded-sm overflow-hidden border border-white/10 h-64">
                             <iframe
                                 src="https://maps.google.com/maps?q=Ludato+Family+Autoservis,Odbor%C3%A1rska%2052,%20831%2002%20Bratislava&t=&z=16&ie=UTF8&iwloc=&output=embed"
@@ -202,7 +202,7 @@ export default function ContactSection() {
                                 allowFullScreen
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                title="LUDATO FAMILY Cars Services — Odborárska 52, Bratislava"
+                                title="LUDATO FAMILY Cars Services – Odborárska 52, Bratislava"
                             />
                         </div>
 
