@@ -69,7 +69,7 @@ const content: ServiceContent = [
         heading: 'Prípad z našej dielne',
         vehicle: 'Suzuki Swift, kompletná predná náprava',
         paragraphs: [
-            'Pri servise prednej nápravy na Suzuki Swift sme okrem tlmičov a tyčiek stabilizátora riešili aj kompletnú výmenu predných brzdových kotúčov a platničiek. Opotrebenie bŕzd sa totiž pri práci na náprave prejavilo rovnako výrazne ako opotrebenie tlmičov, obe časti spolu totiž nesú zaťaženie pri brzdení.',
+            'Pri [servise prednej nápravy](/sluzby/podvozok-bratislava) na Suzuki Swift sme okrem tlmičov a tyčiek stabilizátora riešili aj kompletnú výmenu predných brzdových kotúčov a platničiek. Opotrebenie bŕzd sa pri práci na náprave prejavilo rovnako výrazne ako opotrebenie tlmičov, obe časti totiž spolu nesú zaťaženie pri brzdení.',
         ],
         outcomes: [
             'Výmena predných brzdových kotúčov',
@@ -112,7 +112,7 @@ const content: ServiceContent = [
         heading: 'Ako dlho vydržia brzdy',
         paragraphs: [
             'Životnosť brzdových platničiek sa nedá povedať jedným číslom, pri bežnej jazde ide o desiatky tisíc kilometrov, no rozptyl je veľký. Najviac ju ovplyvňuje štýl jazdy, prudké a neskoré brzdenie opotrebuje platničky výrazne rýchlejšie než plynulé spomaľovanie s predstihom.',
-            'Svoju rolu hrá aj to, kde jazdíte. Mestská prevádzka s neustálym rozbiehaním a brzdením v kolóne zaťažuje brzdy oveľa viac než diaľnica, kde môžete prejsť desiatky kilometrov takmer bez zabrzdenia. Rovnako platí, že ťažšie vozidlo alebo pravidelné ťahanie prívesu znamená kratšiu životnosť bŕzd. Práve preto brzdy kontrolujeme pri každej väčšej servisnej návšteve, namiesto toho, aby sme sa spoliehali na pevný interval.',
+            'Svoju rolu hrá aj to, kde jazdíte. Mestská prevádzka s neustálym rozbiehaním a brzdením v kolóne zaťažuje brzdy oveľa viac než diaľnica, kde môžete prejsť desiatky kilometrov takmer bez zabrzdenia. Rovnako platí, že ťažšie vozidlo alebo pravidelné ťahanie prívesu znamená kratšiu životnosť bŕzd. Práve preto brzdy kontrolujeme pri každej väčšej servisnej návšteve, napríklad pri [výmene oleja](/sluzby/vymena-oleja-bratislava) alebo [príprave na STK](/sluzby/stk-ek-bratislava), namiesto toho, aby sme sa spoliehali na pevný interval.',
         ],
     },
     {

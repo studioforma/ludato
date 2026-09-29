@@ -94,14 +94,14 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Najčastejšie dôvody neúspešnej STK',
         paragraphs: [
-            'Medzi najčastejšie dôvody, prečo vozidlo neprejde na prvý pokus, patrí opotrebovaný brzdový systém, nefunkčné alebo nesprávne nastavené osvetlenie, opotrebovaný podvozok, nesprávne nastavená geometria alebo úniky prevádzkových kvapalín. Väčšina z toho sa dá zistiť a opraviť vopred, práve to je zmyslom kontroly pred STK.',
+            'Medzi najčastejšie dôvody, prečo vozidlo neprejde na prvý pokus, patrí opotrebovaný [brzdový systém](/sluzby/brzdy-bratislava), nefunkčné alebo nesprávne nastavené osvetlenie, opotrebovaný [podvozok](/sluzby/podvozok-bratislava), nesprávne nastavená [geometria](/sluzby/geometria-bratislava) alebo úniky prevádzkových kvapalín. Väčšina z toho sa dá zistiť a opraviť vopred, práve to je zmyslom kontroly pred STK.',
         ],
     },
     {
         type: 'text',
         heading: 'Emisná kontrola pri dieselových vozidlách',
         paragraphs: [
-            'Dieselové vozidlá majú pri emisnej kontrole prísnejšie limity, hlavne v súvislosti s filtrom pevných častíc (DPF). Upchatý alebo poškodený DPF filter je bežný dôvod, prečo diesel na emisnej kontrole neprejde, a odporúčame ho riešiť ešte pred samotnou kontrolou, nie po neúspešnom pokuse.',
+            'Dieselové vozidlá majú pri emisnej kontrole prísnejšie limity, hlavne v súvislosti s filtrom pevných častíc (DPF). Upchatý alebo poškodený DPF filter je bežný dôvod, prečo diesel na emisnej kontrole neprejde, a odporúčame ho riešiť ešte pred samotnou kontrolou, nie po neúspešnom pokuse. Chyby v emisnom systéme odhalí [počítačová diagnostika](/sluzby/pocitacova-diagnostika-bratislava) ešte skôr, než sa prejavia na meraní.',
         ],
     },
     {
