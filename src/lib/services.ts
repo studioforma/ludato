@@ -247,6 +247,10 @@ export const services: ServiceMeta[] = [
             'Náhradné vozidlo počas opravy v Bratislave, Novom Meste: 35 € na deň, pri servise nad 1000 € zadarmo, pri poistnej udalosti ho hradí poisťovňa.',
         teaser: '35 € na deň, pri servise nad 1000 € zadarmo a pri poistnej udalosti ho hradí poisťovňa.',
         category: 'specialne',
+        heroImage: {
+            src: '/sluzby/nahradne-vozidlo-skoda-fabia-ludato-bratislava.webp',
+            alt: 'Náhradné vozidlá Škoda Fabia pre zákazníkov autoservisu Ludato Family, Bratislava Nové Mesto',
+        },
         related: ['rozvody-bratislava', 'podvozok-bratislava', 'pocitacova-diagnostika-bratislava'],
         cta: {
             question: 'Čaká vás dlhšia oprava?',

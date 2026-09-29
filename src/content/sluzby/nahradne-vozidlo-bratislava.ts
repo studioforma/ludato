@@ -15,6 +15,7 @@ const content: ServiceContent = [
             'Náhradné vozidlo počas opravy za 35 € na deň',
             'Náhradné vozidlo zadarmo pri servise nad 1000 €',
             'Náhradné vozidlo pri poistnej udalosti, hradené poisťovňou',
+            'Škoda Fabia II. generácie s benzínovým motorom',
             'Možnosť kombinácie s vyzdvihnutím vášho auta (pickup)',
         ],
     },
@@ -33,6 +34,10 @@ const content: ServiceContent = [
             {
                 title: 'Pri poistnej udalosti',
                 text: 'Ak ide o opravu v rámci poistnej udalosti, náhradné vozidlo hradí poisťovňa. Rozsah krytia sa riadi podmienkami vašej poistky, pri objednaní vám pomôžeme zistiť, na čo máte nárok.',
+            },
+            {
+                title: 'Aké autá požičiavame',
+                text: 'Náhradnými vozidlami sú Škody Fabia II. generácie s benzínovým motorom. Malé, úsporné autá, s ktorými sa v Bratislave ľahko zaparkuje a ktoré zvládnu dennú dochádzku, nákupy aj vozenie detí. Spoznáte ich podľa červenej farby a nášho loga na zadnom skle.',
             },
         ],
     },
@@ -57,6 +62,12 @@ const content: ServiceContent = [
                 text: 'Po dokončení opravy vrátite náhradné vozidlo a odchádzate vo vlastnom aute.',
             },
         ],
+    },
+    {
+        type: 'image',
+        src: '/sluzby/nahradne-vozidlo-skoda-fabia-prevadzka-ludato-bratislava.webp',
+        alt: 'Dve červené náhradné vozidlá Škoda Fabia pred autoservisom Ludato Family na Odborárskej 52, Bratislava Nové Mesto',
+        caption: 'Náhradné vozidlá Škoda Fabia pred našou prevádzkou na Odborárskej.',
     },
     {
         type: 'text',
@@ -155,6 +166,10 @@ const content: ServiceContent = [
             {
                 q: 'Dostanem náhradné vozidlo aj pri poistnej udalosti?',
                 a: 'Áno, pri poistnej udalosti náhradné vozidlo poskytujeme a hradí ho poisťovňa. Rozsah krytia závisí od podmienok vašej poistky.',
+            },
+            {
+                q: 'Aké auto dostanem?',
+                a: 'Náhradnými vozidlami sú Škody Fabia II. generácie s benzínovým motorom.',
             },
             {
                 q: 'Ako si náhradné vozidlo rezervujem?',
