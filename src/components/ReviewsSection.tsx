@@ -52,7 +52,7 @@ export default function ReviewsSection() {
     const isInView = useInView(ref, { once: true, margin: '-100px' });
 
     return (
-        <section id="recenzie" className="bg-white py-24 lg:py-32">
+        <section id="recenzie" className="bg-white pt-24 lg:pt-32">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <motion.div
@@ -174,6 +174,18 @@ export default function ReviewsSection() {
                         </div>
                     </a>
                 </motion.div>
+
+                {/* Divider before the white About section */}
+                <div className="flex items-center gap-4 max-w-4xl mx-auto mt-20 lg:mt-24" aria-hidden="true">
+                    <span className="flex-1 h-px bg-gradient-to-r from-transparent to-black/15" />
+                    <span
+                        className="text-[#E31C25] font-black text-sm"
+                        style={{ fontFamily: 'var(--font-montserrat)' }}
+                    >
+                        //
+                    </span>
+                    <span className="flex-1 h-px bg-gradient-to-l from-transparent to-black/15" />
+                </div>
             </div>
         </section>
     );
