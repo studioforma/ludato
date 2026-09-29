@@ -70,6 +70,12 @@ const content: ServiceContent = [
         caption: 'Náhradné vozidlá Škoda Fabia pred našou prevádzkou na Odborárskej.',
     },
     {
+        type: 'image',
+        src: '/sluzby/nahradne-vozidlo-vw-passat-2022-ludato-bratislava.webp',
+        alt: 'Modrý VW Passat Variant z roku 2022, náhradné vozidlo pre zákazníkov autoservisu Ludato Family v Bratislave',
+        caption: 'VW Passat z roku 2022, jedno z našich náhradných vozidiel.',
+    },
+    {
         type: 'text',
         heading: 'Pri akých opravách má náhradné vozidlo zmysel',
         paragraphs: [
@@ -108,6 +114,12 @@ const content: ServiceContent = [
             'Pri oprave na jeden deň si niektorí zákazníci vystačia s hromadnou dopravou alebo taxíkom. Pri niekoľkodňovej oprave však jazdy tam a späť, nákupy a vozenie detí rýchlo narastú a náhradné vozidlo za 35 € na deň často vyjde lacnejšie a hlavne pohodlnejšie.',
             'Náhradné auto máte k dispozícii celý deň, bez čakania na odvoz a bez plánovania trás podľa cestovných poriadkov. Keď sa k tomu pridá vyzdvihnutie vášho auta priamo z domu alebo z práce, opravu vybavíte takmer bez toho, aby ste ju pocítili.',
         ],
+    },
+    {
+        type: 'image',
+        src: '/sluzby/nahradne-vozidlo-vw-passat-2019-ludato-bratislava.webp',
+        alt: 'Strieborný VW Passat Variant z roku 2019, náhradné vozidlo pre zákazníkov autoservisu Ludato Family v Bratislave',
+        caption: 'VW Passat z roku 2019, priestranné náhradné auto pre rodinu aj na dlhšie cesty.',
     },
     {
         type: 'text',
