@@ -7,6 +7,7 @@ export const metadata: Metadata = {
     title: 'Kontakt | Ludato Family Autoservis',
     description:
         'Kontaktujte Ludato Family Autoservis a pneuservis - Odborárska 52, Bratislava - Nové Mesto. Telefón, email, otváracie hodiny a mapa.',
+    alternates: { canonical: '/kontakt' },
 };
 
 export default function Kontakt() {

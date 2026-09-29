@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     title: 'Kde nás nájdete | Ludato Family Autoservis',
     description:
         'Ludato Family Autoservis a pneuservis sídli na Odborárskej v Bratislave - Novom Meste a autom k nám chodia zákazníci z celej Bratislavy: Rača, Vajnory, Staré Mesto, Ružinov, Karlová Ves a Dúbravka.',
+    alternates: { canonical: '/kde-posobime' },
 };
 
 type Area = {

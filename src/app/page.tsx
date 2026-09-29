@@ -9,6 +9,13 @@ import ReviewsSection from '@/components/ReviewsSection';
 import ContactSection from '@/components/ContactSection';
 import StudioFormaAd from '@/components/StudioFormaAd';
 import Footer from '@/components/Footer';
+import type { Metadata } from 'next';
+
+// Google Ads clicks land on /?gclid=..., so the homepage needs an explicit
+// canonical or every tracking variant looks like a duplicate.
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 export default function Home() {
   return (

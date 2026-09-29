@@ -21,6 +21,8 @@ const inter = Inter({
 
 
 export const metadata: Metadata = {
+  // Resolves relative canonicals to the one production host (https + www).
+  metadataBase: new URL("https://www.ludato.sk"),
   title:
     "NAJLEPŠÍ Autoservis Bratislava – Nové Mesto | Ak hľadáte - Diagnostika, Brzdy, Rozvody, Podvozok, Klimatizácia, Pneuservis, blízko mňa - Ludato Family Autoservis a Pneuservis je to správne miesto",
   description:
