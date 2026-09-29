@@ -20,16 +20,15 @@ const extras = [
     {
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
-                <circle cx="12" cy="12" r="9" />
-                <circle cx="12" cy="12" r="2.5" />
-                <path strokeLinecap="round" d="M12 3v3M12 18v3M21 12h-3M6 12H3" />
+                <circle cx="11" cy="11" r="7" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M20 20l-3.5-3.5M8.5 11h5M11 8.5v5" />
             </svg>
         ),
-        title: 'PNEUSERVIS',
+        title: 'KEĎ INÝ SERVIS NEVEDEL',
         description:
-            'Sezónne prezutie aj vyváženie kolies pre všetky bežné veľkosti diskov, rýchlo a bez zbytočného čakania.',
-        href: '/sluzby/pneuservis-bratislava',
-        linkLabel: 'Viac o pneuservise',
+            'Kontrolka sa stále vracia alebo chybu inde nenašli? Hľadáme skutočnú príčinu, nie prvý diel, ktorý ukáže diagnostika.',
+        href: '/sluzby/zlozita-diagnostika-bratislava',
+        linkLabel: 'Viac o zložitej diagnostike',
     },
     {
         icon: (
