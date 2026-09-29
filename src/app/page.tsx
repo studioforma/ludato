@@ -22,6 +22,7 @@ export default function Home() {
         secondaryHref="/nacenenie"
         secondaryLabel="Objednať sa"
       />
+      <ReviewsSection />
       <AboutSection />
       <ComfortSection />
       <MoreServicesSection />
@@ -32,7 +33,6 @@ export default function Home() {
         secondaryLabel="Pozrieť cenník"
         variant="red"
       />
-      <ReviewsSection />
       <ContactSection />
       <StudioFormaAd />
       <Footer />
