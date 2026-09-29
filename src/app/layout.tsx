@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
+import { services } from "@/lib/services";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -37,38 +38,9 @@ export const metadata: Metadata = {
   },
 };
 
-const servicesOffered = [
-  {
-    name: "Diagnostika a opravy",
-    description:
-      "Spoľahlivá počítačová diagnostika všetkých systémov vozidla. Presná identifikácia závad a poctivý prístup pri hľadaní riešenia bez zbytočných výmien.",
-  },
-  {
-    name: "Servisné prehliadky",
-    description:
-      "Kompletné STK-prípravné prehliadky a pravidelný servis podľa servisných intervalov výrobcu. Váš voz vždy v perfektnom stave.",
-  },
-  {
-    name: "Oprava bŕzd a podvozkov",
-    description:
-      "Výmena brzdových platničiek, kotúčov a hydrauliky. Geometria, tlmiče, ramená, kompletná starostlivosť o podvozok vášho vozidla.",
-  },
-  {
-    name: "Servis klimatizácie",
-    description:
-      "Dopĺňanie chladiva, čistenie a dezinfekcia systémov klimatizácie. Certifikovaný servis pre príjemné cestovanie počas celého roka.",
-  },
-  {
-    name: "Pneuservis a prezutie",
-    description:
-      "Sezónne prezutie pneumatík vrátane vyváženia kolies pre všetky bežné veľkosti diskov. Rýchlo, presne a bez zbytočného čakania.",
-  },
-  {
-    name: "Výmena kolies na diskoch",
-    description:
-      "Rýchla výmena kolies už namontovaných na diskoch, ideálne riešenie pri sezónnej výmene bez nutnosti prezúvania pneumatík.",
-  },
-];
+const SITE = "https://www.ludato.sk";
+// Service pages reference this node by @id, so Google ties them to one business.
+const BUSINESS_ID = `${SITE}/#autoservis`;
 
 const areasServed = [
   "Bratislava - Nové Mesto",
@@ -82,13 +54,21 @@ const areasServed = [
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "AutoRepair",
-  name: "Ludato Family Autoservis a pneuservis",
+  "@type": ["AutoRepair", "TireShop"],
+  "@id": BUSINESS_ID,
+  name: "Ludato Family Autoservis a Pneuservis",
+  alternateName: ["LUDATO FAMILY Cars Services", "Ludato"],
+  description:
+    "Rodinný autoservis a pneuservis v Bratislave, Novom Meste. Diagnostika, výmena oleja, brzdy, podvozok, geometria, rozvody, turbodúchadlá, klimatizácia, STK a EK, pneuservis aj servis veteránov pre autá všetkých značiek.",
   telephone: "+421944236257",
   email: "ludato.recepcia@gmail.com",
-  url: "https://www.ludato.sk/",
-  image: "https://www.ludato.sk/logo.png",
-  logo: "https://www.ludato.sk/logo.png",
+  url: `${SITE}/`,
+  image: [
+    `${SITE}/prevadzka-1.webp`,
+    `${SITE}/prevadzka-2.webp`,
+    `${SITE}/logo.png`,
+  ],
+  logo: `${SITE}/logo.png`,
   address: {
     "@type": "PostalAddress",
     streetAddress: "Odborárska 52",
@@ -134,17 +114,28 @@ const localBusinessSchema = {
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Služby autoservisu Ludato Family Autoservis",
-    itemListElement: servicesOffered.map((service, i) => ({
+    name: "Služby autoservisu Ludato Family Autoservis a Pneuservis",
+    itemListElement: services.map((service, i) => ({
       "@type": "Offer",
       position: i + 1,
       itemOffered: {
         "@type": "Service",
         name: service.name,
         description: service.description,
+        url: `${SITE}/sluzby/${service.slug}`,
       },
     })),
   },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE}/#website`,
+  name: "Ludato Family Autoservis a Pneuservis",
+  url: `${SITE}/`,
+  inLanguage: "sk",
+  publisher: { "@id": BUSINESS_ID },
 };
 
 export const viewport: Viewport = {
@@ -178,6 +169,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         {children}
         <CookieBanner />

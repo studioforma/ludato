@@ -290,18 +290,50 @@ export default function ServicePage({
 
     const [beforeAccent, afterAccent] = meta.h1.split(meta.h1Accent);
 
+    // Same rows the price section shows, so the schema never promises a price
+    // the page does not.
+    const offers = content.flatMap((s) =>
+        s.type !== 'prices'
+            ? []
+            : s.categories
+                  .map((name) => getCategory(name))
+                  .filter((c): c is PricingCategory => c !== undefined)
+                  .flatMap((cat) =>
+                      cat.items
+                          .filter((item) => !s.only || s.only.includes(item.service))
+                          .map((item) => ({ item, category: cat.category }))
+                  )
+                  .filter(({ item }) => item.price !== null)
+                  .map(({ item, category }) => ({
+                      '@type': 'Offer',
+                      // Rows like '15" – 16"' only make sense with their category.
+                      name: /^\d/.test(item.service)
+                          ? `${category.charAt(0)}${category.slice(1).toLowerCase()} ${item.service}`
+                          : item.service,
+                      priceCurrency: 'EUR',
+                      priceSpecification: {
+                          '@type': item.unit ? 'UnitPriceSpecification' : 'PriceSpecification',
+                          priceCurrency: 'EUR',
+                          ...(item.prefix ? { minPrice: Number(item.price) } : { price: Number(item.price) }),
+                          ...(item.unit ? { unitText: item.unit.replace('/', '') } : {}),
+                      },
+                  }))
+    );
+
     const serviceSchema = {
         '@context': 'https://schema.org',
         '@type': 'Service',
+        '@id': `${url}#sluzba`,
         serviceType: meta.name,
-        name: `${meta.name} Ludato Family Autoservis`,
+        name: `${meta.name} Bratislava – Ludato Family Autoservis a Pneuservis`,
         description: meta.description,
-        provider: {
-            '@type': 'AutoRepair',
-            name: 'Ludato Family Autoservis',
-            url: `${SITE}/`,
-        },
-        areaServed: 'Bratislava',
+        provider: { '@id': `${SITE}/#autoservis` },
+        areaServed: [
+            { '@type': 'City', name: 'Bratislava' },
+            { '@type': 'Place', name: 'Bratislava - Nové Mesto' },
+        ],
+        ...(meta.heroImage ? { image: `${SITE}${meta.heroImage.src}` } : {}),
+        ...(offers.length > 0 ? { offers } : {}),
         url,
     };
 
