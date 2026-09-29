@@ -33,9 +33,9 @@ export default function Navbar() {
                 : 'bg-transparent'
                 }`}
         >
-            {/* NAP strip, collapses once the page is scrolled */}
+            {/* NAP strip, desktop only, collapses once the page is scrolled */}
             <div
-                className={`bg-[#111111] border-b border-white/10 overflow-hidden transition-all duration-500 ${scrolled ? 'max-h-0 opacity-0' : 'max-h-12 opacity-100'
+                className={`hidden lg:block bg-[#111111] border-b border-white/10 overflow-hidden transition-all duration-500 ${scrolled ? 'max-h-0 opacity-0' : 'max-h-12 opacity-100'
                     }`}
             >
                 <div
@@ -95,7 +95,7 @@ export default function Navbar() {
                     </Link>
 
                     {/* Desktop Nav (Center) */}
-                    <nav className="hidden md:flex items-center justify-center gap-8 absolute left-1/2 -translate-x-1/2">
+                    <nav className="hidden lg:flex items-center justify-center gap-8 absolute left-1/2 -translate-x-1/2">
                         {navLinks.map((link, i) => (
                             <motion.div
                                 key={link.href}
@@ -119,7 +119,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.6 }}
-                        className="hidden md:flex flex-1 justify-end"
+                        className="hidden lg:flex flex-1 justify-end"
                     >
                         <a
                             href="tel:+421944236257"
@@ -137,7 +137,7 @@ export default function Navbar() {
                     {/* Mobile Hamburger */}
                     <button
                         onClick={() => setMenuOpen(!menuOpen)}
-                        className="md:hidden flex flex-col gap-1.5 p-2"
+                        className="lg:hidden flex flex-col gap-1.5 p-2"
                         aria-label="Menu"
                     >
                         <motion.span
@@ -164,7 +164,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="md:hidden bg-[#1D1D1B] border-t border-[#E31C25]/20"
+                        className="lg:hidden bg-[#1D1D1B] border-t border-[#E31C25]/20"
                     >
                         <div className="px-6 py-6 flex flex-col gap-4">
                             {navLinks.map((link) => (
@@ -186,6 +186,15 @@ export default function Navbar() {
                             >
                                 +421 944 236 257
                             </a>
+                            <div className="flex items-center justify-center gap-4 pt-2 text-white">
+                                <span
+                                    className="text-white/50 text-xs tracking-widest uppercase"
+                                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                                >
+                                    Sledujte nás
+                                </span>
+                                <SocialIcons iconClassName="w-6 h-6" className="gap-4" />
+                            </div>
                         </div>
                     </motion.div>
                 )}

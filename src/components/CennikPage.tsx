@@ -173,7 +173,7 @@ export default function CennikPage() {
             <Navbar />
             <main className="min-h-screen bg-[#111111]">
                 {/* Hero strip */}
-                <div className="relative bg-gradient-to-b from-[#1D1D1B] to-[#111111] pt-40 pb-20 overflow-hidden">
+                <div className="relative bg-gradient-to-b from-[#1D1D1B] to-[#111111] pt-32 lg:pt-40 pb-20 overflow-hidden">
                     <div
                         className="absolute left-0 top-1/2 -translate-y-1/2 text-[22vw] font-black text-white/3 leading-none select-none pointer-events-none"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
