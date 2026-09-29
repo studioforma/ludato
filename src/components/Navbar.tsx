@@ -43,36 +43,32 @@ export default function Navbar() {
                     style={{ fontFamily: 'var(--font-inter)' }}
                 >
                     <div className="flex items-center gap-5 min-w-0">
+                        <span className="text-white font-semibold truncate">
+                            Ludato Family Autoservis a Pneuservis
+                        </span>
                         <a
                             href="https://maps.app.goo.gl/xaKkcTPLukbzixYB6"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-1.5 hover:text-white transition-colors truncate"
+                            className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors truncate"
                         >
                             <svg className="w-3.5 h-3.5 text-[#E31C25] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 21s-7-6.1-7-11.5a7 7 0 1114 0C19 14.9 12 21 12 21z" />
                                 <circle cx="12" cy="9.5" r="2.5" strokeWidth={2} />
                             </svg>
                             <span className="truncate">
-                                Odborárska 52<span className="hidden sm:inline">, 831 02 Bratislava – Nové Mesto</span>
+                                Odborárska 52<span className="hidden lg:inline">, 831 02 Bratislava – Nové Mesto</span>
                             </span>
                         </a>
                         <a
                             href="tel:+421944236257"
-                            className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors whitespace-nowrap"
+                            className="hidden md:flex items-center gap-1.5 hover:text-white transition-colors whitespace-nowrap"
                         >
                             <svg className="w-3.5 h-3.5 text-[#E31C25]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                             +421 944 236 257
                         </a>
-                        <span className="hidden lg:flex items-center gap-1.5 whitespace-nowrap">
-                            <svg className="w-3.5 h-3.5 text-[#E31C25]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <circle cx="12" cy="12" r="9" strokeWidth={2} />
-                                <path strokeLinecap="round" strokeWidth={2} d="M12 7v5l3 2" />
-                            </svg>
-                            Po–Št 9:00–19:00, Pi 7:00–16:00
-                        </span>
                     </div>
                     <SocialIcons className="flex-shrink-0 text-white" iconClassName="w-4 h-4" />
                 </div>
