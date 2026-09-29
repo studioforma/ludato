@@ -161,6 +161,64 @@ export const services: ServiceMeta[] = [
             secondaryLabel: 'Pozrieť cenník',
         },
     },
+    {
+        slug: 'geometria-bratislava',
+        name: 'Geometria',
+        h1: 'GEOMETRIA BRATISLAVA – NOVÉ MESTO',
+        h1Accent: 'BRATISLAVA',
+        title: 'Geometria Bratislava – Nové Mesto | Kontrola od 16 € | Ludato Family Autoservis',
+        description:
+            'Geometria kolies v Bratislave, Novom Meste: kontrola a nastavenie zbiehavosti a odklonu na prednej aj zadnej náprave podľa výrobcu. Kontrola od 16 €.',
+        teaser: 'Kontrola a nastavenie zbiehavosti a odklonu, aby auto išlo rovno a pneumatiky vydržali.',
+        category: 'podvozok',
+        related: ['podvozok-bratislava', 'pneuservis-bratislava', 'brzdy-bratislava'],
+        cta: {
+            question: 'Ťahá vám auto do strany?',
+            subtext: 'Skontrolujeme geometriu skôr, než vám zje nové pneumatiky.',
+            secondaryHref: '/nacenenie',
+            secondaryLabel: 'Objednať sa',
+        },
+    },
+    {
+        slug: 'podvozok-bratislava',
+        name: 'Podvozok',
+        h1: 'OPRAVA PODVOZKU BRATISLAVA – NOVÉ MESTO',
+        h1Accent: 'BRATISLAVA',
+        title: 'Oprava podvozku Bratislava – Nové Mesto | Kontrola od 30 € | Ludato Family Autoservis',
+        description:
+            'Kontrola a oprava podvozku v Bratislave, Novom Meste: tlmiče, horné uloženie, ramená, silentbloky, stabilizátory, ložiská kolies a čapy. Kontrola od 30 €.',
+        teaser: 'Tlmiče, ramená, silentbloky, stabilizátory aj ložiská kolies, menené podľa skutočného stavu.',
+        category: 'podvozok',
+        heroImage: {
+            src: '/sluzby/podvozok-naprava-ludato-bratislava.webp',
+            alt: 'Suzuki Swift na zdviháku s demontovaným kolesom počas opravy prednej nápravy v autoservise Ludato Family, Bratislava Nové Mesto',
+        },
+        related: ['geometria-bratislava', 'brzdy-bratislava', 'stk-ek-bratislava', 'pneuservis-bratislava'],
+        cta: {
+            question: 'Klepe vám niečo na nerovnostiach?',
+            subtext: 'Auto zdvihneme, nájdeme príčinu a povieme vám cenu vopred.',
+            secondaryHref: '/nacenenie',
+            secondaryLabel: 'Objednať sa',
+        },
+    },
+    {
+        slug: 'rozvody-bratislava',
+        name: 'Rozvody',
+        h1: 'VÝMENA ROZVODOV BRATISLAVA – NOVÉ MESTO',
+        h1Accent: 'BRATISLAVA',
+        title: 'Výmena rozvodov Bratislava – Nové Mesto | Remeň aj reťaz | Ludato Family Autoservis',
+        description:
+            'Výmena rozvodov v Bratislave, Novom Meste: rozvodový remeň aj reťaz, napínač, vodiace lišty, kladky a vodné čerpadlo. Postup podľa výrobcu, cena vopred.',
+        teaser: 'Rozvodový remeň aj reťaz s kompletnou sadou, skôr než zlyhanie poškodí motor.',
+        category: 'motor',
+        related: ['pocitacova-diagnostika-bratislava', 'vymena-oleja-bratislava', 'turboduchadlo-bratislava', 'opravy-motora-bratislava'],
+        cta: {
+            question: 'Neviete, kedy sa vám naposledy menil rozvod?',
+            subtext: 'Preveríme to a vymeníme skôr, než sa z výmeny stane oprava motora.',
+            secondaryHref: '/nacenenie',
+            secondaryLabel: 'Objednať sa',
+        },
+    },
 ];
 
 export function getService(slug: string): ServiceMeta | undefined {
