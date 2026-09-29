@@ -255,6 +255,72 @@ export const services: ServiceMeta[] = [
             secondaryLabel: 'Objednať sa',
         },
     },
+    {
+        slug: 'zlozita-diagnostika-bratislava',
+        name: 'Zložitá diagnostika',
+        h1: 'ZLOŽITÁ DIAGNOSTIKA BRATISLAVA – NOVÉ MESTO',
+        h1Accent: 'BRATISLAVA',
+        title: 'Zložitá diagnostika Bratislava – Nové Mesto | Keď iný servis chybu nenašiel | Ludato Family Autoservis',
+        description:
+            'Zložitá diagnostika v Bratislave, Novom Meste: poruchy, ktoré sa vracajú, skraty v kabeláži, klamúce snímače. Hľadáme skutočnú príčinu, nie prvý diel z kódu.',
+        teaser: 'Keď sa kontrolka stále vracia alebo chybu inde nenašli. Hľadáme skutočnú príčinu, nie prvý diel.',
+        category: 'motor',
+        heroImage: {
+            src: '/sluzby/zlozita-diagnostika-motor-ludato-bratislava.webp',
+            alt: 'Motorový priestor Škody Rapid pri zložitej diagnostike v autoservise Ludato Family, Bratislava Nové Mesto',
+        },
+        related: ['pocitacova-diagnostika-bratislava', 'turboduchadlo-bratislava', 'nahradne-vozidlo-bratislava'],
+        cta: {
+            question: 'Vracia sa vám tá istá porucha?',
+            subtext: 'Prineste auto aj doklady z predchádzajúcich opráv, nájdeme skutočnú príčinu.',
+            secondaryHref: '/nacenenie',
+            secondaryLabel: 'Objednať sa',
+        },
+    },
+    {
+        slug: 'turboduchadlo-bratislava',
+        name: 'Turbodúchadlo',
+        h1: 'OPRAVA TURBODÚCHADLA BRATISLAVA – NOVÉ MESTO',
+        h1Accent: 'BRATISLAVA',
+        title: 'Oprava a výmena turba Bratislava – Nové Mesto | Repas aj nové turbo | Ludato Family Autoservis',
+        description:
+            'Repas a výmena turbodúchadla v Bratislave, Novom Meste. Diagnostika tlaku plnenia, kontrola olejových vedení, DPF a EGR. Hľadáme aj príčinu, prečo turbo odišlo.',
+        teaser: 'Repas aj výmena turba, s kontrolou olejových vedení a príčiny, prečo turbo odišlo.',
+        category: 'motor',
+        heroImage: {
+            src: '/sluzby/turbo-demontaz-napravnice-ludato-bratislava.webp',
+            alt: 'Demontáž prednej nápravnice Škody Rapid 1.4 TDI pri výmene turbodúchadla v autoservise Ludato Family, Bratislava Nové Mesto',
+        },
+        related: ['zlozita-diagnostika-bratislava', 'vymena-oleja-bratislava', 'rozvody-bratislava', 'pocitacova-diagnostika-bratislava'],
+        cta: {
+            question: 'Stratilo auto výkon alebo dymí?',
+            subtext: 'Skontrolujeme turbo skôr, než sa poškodenie prenesie na motor.',
+            secondaryHref: '/nacenenie',
+            secondaryLabel: 'Objednať sa',
+        },
+    },
+    {
+        slug: 'servis-veteranov-bratislava',
+        name: 'Servis veteránov',
+        h1: 'SERVIS VETERÁNOV BRATISLAVA – NOVÉ MESTO',
+        h1Accent: 'BRATISLAVA',
+        title: 'Servis veteránov Bratislava – Nové Mesto | Diely nové aj repasované | Ludato Family Autoservis',
+        description:
+            'Servis a opravy veteránov v Bratislave, Novom Meste. Podvozok, motor, brzdy aj elektrika, zháňanie nových aj repasovaných dielov a príprava na sezónu.',
+        teaser: 'Údržba aj opravy veteránov, so zháňaním nových aj repasovaných dielov.',
+        category: 'specialne',
+        heroImage: {
+            src: '/sluzby/veteran-land-rover-ludato-bratislava.webp',
+            alt: 'Veterán Land Rover z roku 1974 na zdviháku v autoservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+        },
+        related: ['nahradne-vozidlo-bratislava', 'brzdy-bratislava', 'podvozok-bratislava'],
+        cta: {
+            question: 'Máte veterána, ktorý si zaslúži poriadnu starostlivosť?',
+            subtext: 'Zavolajte nám, porozprávame sa o aute a dohodneme postup.',
+            secondaryHref: '/nacenenie',
+            secondaryLabel: 'Objednať sa',
+        },
+    },
 ];
 
 export function getService(slug: string): ServiceMeta | undefined {
