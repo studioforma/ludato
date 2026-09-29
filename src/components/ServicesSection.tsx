@@ -47,40 +47,11 @@ const featured: { slug: string; detail: string; icon: React.ReactNode }[] = [
         ),
     },
     {
-        slug: 'geometria-bratislava',
-        detail: 'Zbiehavosť • Odklon • Volant',
-        icon: (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18M5 7l2 10M19 7l-2 10M3 12h18" />
-            </svg>
-        ),
-    },
-    {
-        slug: 'rozvody-bratislava',
-        detail: 'Remeň • Reťaz • Napínač',
-        icon: (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
-                <circle cx="7" cy="12" r="3.5" />
-                <circle cx="17" cy="12" r="3.5" />
-                <path strokeLinecap="round" d="M7 8.5h10M7 15.5h10" />
-            </svg>
-        ),
-    },
-    {
         slug: 'servis-klimatizacie-bratislava',
         detail: 'R134a • R1234yf • Dezinfekcia',
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5" />
-            </svg>
-        ),
-    },
-    {
-        slug: 'stk-ek-bratislava',
-        detail: 'Kontrola • Sprostredkovanie',
-        icon: (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z" />
             </svg>
         ),
     },
