@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import SocialIcons from '@/components/SocialIcons';
 
 const navLinks = [
     { href: '/sluzby', label: 'Služby' },
@@ -54,6 +55,7 @@ export default function Footer() {
                             Prémiová precíznosť.<br />
                             Poctivá práca bez kompromisov.
                         </p>
+                        <SocialIcons className="mt-6 text-white" iconClassName="w-6 h-6" />
                     </div>
 
                     {/* Navigation */}
