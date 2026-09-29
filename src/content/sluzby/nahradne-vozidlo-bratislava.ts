@@ -15,7 +15,7 @@ const content: ServiceContent = [
             'Náhradné vozidlo počas opravy za 35 € na deň',
             'Náhradné vozidlo zadarmo pri servise nad 1000 €',
             'Náhradné vozidlo pri poistnej udalosti, hradené poisťovňou',
-            'Škoda Fabia II. generácie s benzínovým motorom',
+            'Vozidlá Škoda Fabia II. generácie a VW Passat',
             'Možnosť kombinácie s vyzdvihnutím vášho auta (pickup)',
         ],
     },
@@ -37,7 +37,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Aké autá požičiavame',
-                text: 'Náhradnými vozidlami sú Škody Fabia II. generácie s benzínovým motorom. Malé, úsporné autá, s ktorými sa v Bratislave ľahko zaparkuje a ktoré zvládnu dennú dochádzku, nákupy aj vozenie detí. Spoznáte ich podľa červenej farby a nášho loga na zadnom skle.',
+                text: 'Požičiavame Škody Fabia II. generácie s benzínovým motorom, malé a úsporné autá, s ktorými sa v Bratislave ľahko zaparkuje, a spoznáte ich podľa červenej farby a nášho loga na zadnom skle. Ak potrebujete viac miesta, máme aj priestranné VW Passat z rokov 2019 a 2022, vhodné na dlhšie cesty alebo pre rodinu.',
             },
         ],
     },
@@ -169,7 +169,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Aké auto dostanem?',
-                a: 'Náhradnými vozidlami sú Škody Fabia II. generácie s benzínovým motorom.',
+                a: 'Požičiavame Škody Fabia II. generácie s benzínovým motorom a VW Passat z rokov 2019 a 2022.',
             },
             {
                 q: 'Ako si náhradné vozidlo rezervujem?',
