@@ -78,7 +78,7 @@ export default function ReviewsSection() {
                         className="text-[#1D1D1B]/55 max-w-lg mx-auto"
                         style={{ fontFamily: 'var(--font-inter)' }}
                     >
-                        Spokojnosť zákazníka je naším najväčším ocenením.
+                        Viac ako 30 recenzií na Google s hodnotením 5.0. Spokojnosť zákazníka je naším najväčším ocenením.
                     </p>
                 </motion.div>
 
@@ -169,8 +169,8 @@ export default function ReviewsSection() {
                             className="text-[#1D1D1B]/60 text-sm"
                             style={{ fontFamily: 'var(--font-inter)' }}
                         >
-                            <span className="block font-semibold text-[#1D1D1B]">Google</span>
-                            hodnotenie
+                            <span className="block font-semibold text-[#1D1D1B]">Google hodnotenie</span>
+                            30+ recenzií
                         </div>
                     </a>
                 </motion.div>
