@@ -111,7 +111,7 @@ export default function HeroSection() {
                     {[
                         { value: '10+', label: 'rokov skúseností' },
                         { value: '5.0 ★', label: 'Google hodnotenie' },
-                        { value: '100%', label: 'férové ceny vopred' },
+                        { value: '1 200+', label: 'opravených áut' },
                     ].map((stat) => (
                         <div key={stat.label} className="text-center bg-white/5 border border-white/10 rounded-sm px-2 py-3 sm:p-4 backdrop-blur-sm">
                             <div
