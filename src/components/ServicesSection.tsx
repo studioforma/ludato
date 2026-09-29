@@ -89,7 +89,7 @@ function ServiceCard({ card, index }: { card: Card; index: number }) {
         >
             <Link
                 href={`/sluzby/${card.meta.slug}`}
-                className="group relative flex flex-col h-full bg-[#1D1D1B] border border-white/10 rounded-sm p-8 transition-all duration-300 hover:bg-[#242422] hover:border-[#E31C25]/70 hover:shadow-[0_20px_60px_rgba(227,28,37,0.35)] overflow-hidden"
+                className="group relative flex flex-col h-full bg-white border border-black/10 rounded-sm p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-[#E31C25]/60 hover:shadow-[0_20px_50px_rgba(227,28,37,0.18)] overflow-hidden"
             >
                 {/* Top left slash accent */}
                 <div className="absolute top-0 left-0 w-10 h-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -102,7 +102,7 @@ function ServiceCard({ card, index }: { card: Card; index: number }) {
                 </div>
 
                 <h3
-                    className="font-black text-white text-lg mb-3 tracking-wider uppercase group-hover:text-[#E31C25] transition-colors duration-300"
+                    className="font-black text-[#1D1D1B] text-lg mb-3 tracking-wider uppercase group-hover:text-[#E31C25] transition-colors duration-300"
                     style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
                     <span className="text-[#E31C25] mr-1">//</span>
@@ -110,18 +110,18 @@ function ServiceCard({ card, index }: { card: Card; index: number }) {
                 </h3>
 
                 <p
-                    className="text-white/60 text-sm leading-relaxed mb-4 flex-1"
+                    className="text-[#1D1D1B]/65 text-sm leading-relaxed mb-4 flex-1"
                     style={{ fontFamily: 'var(--font-inter)' }}
                 >
                     {card.meta.teaser}
                 </p>
 
                 <div
-                    className="flex items-center justify-between gap-4 border-t border-white/10 pt-4 text-xs tracking-widest uppercase"
+                    className="flex items-center justify-between gap-4 border-t border-black/10 pt-4 text-xs tracking-widest uppercase"
                     style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
-                    <span className="text-[#E31C25]/70 font-medium">{card.detail}</span>
-                    <span className="text-white/70 group-hover:text-[#E31C25] font-bold whitespace-nowrap transition-colors duration-300">
+                    <span className="text-[#E31C25]/80 font-medium">{card.detail}</span>
+                    <span className="text-[#1D1D1B]/70 group-hover:text-[#E31C25] font-bold whitespace-nowrap transition-colors duration-300">
                         Viac →
                     </span>
                 </div>
@@ -151,11 +151,11 @@ function SectionHeader({ children }: { children: React.ReactNode }) {
 
 export { SectionHeader };
 
-const inlineLink = 'text-white/80 underline decoration-[#E31C25]/60 underline-offset-4 hover:text-[#E31C25] transition-colors';
+const inlineLink = 'text-[#1D1D1B]/85 underline decoration-[#E31C25]/60 underline-offset-4 hover:text-[#E31C25] transition-colors';
 
 export default function ServicesSection() {
     return (
-        <section id="sluzby" className="bg-[#111111] py-24 lg:py-32">
+        <section id="sluzby" className="bg-white py-24 lg:py-32">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <SectionHeader>
@@ -167,13 +167,13 @@ export default function ServicesSection() {
                             <span className="text-[#E31C25] font-black">//</span> Čo robíme najlepšie
                         </p>
                         <h2
-                            className="text-4xl md:text-5xl font-black text-white mb-6"
+                            className="text-4xl md:text-5xl font-black text-[#1D1D1B] mb-6"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             NAŠE <span className="text-[#E31C25]">SLUŽBY</span>
                         </h2>
                         <div
-                            className="text-white/55 max-w-3xl mx-auto text-base leading-relaxed space-y-4"
+                            className="text-[#1D1D1B]/60 max-w-3xl mx-auto text-base leading-relaxed space-y-4"
                             style={{ fontFamily: 'var(--font-inter)' }}
                         >
                             <p>
@@ -217,14 +217,14 @@ export default function ServicesSection() {
                 >
                     <Link
                         href="/sluzby"
-                        className="text-white/70 hover:text-[#E31C25] text-sm font-semibold tracking-widest uppercase transition-colors duration-300"
+                        className="text-[#1D1D1B]/75 hover:text-[#E31C25] text-sm font-semibold tracking-widest uppercase transition-colors duration-300"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
                         Zobraziť všetky služby →
                     </Link>
                     <Link
                         href="/cennik"
-                        className="text-white/40 hover:text-[#E31C25] text-sm font-semibold tracking-widest uppercase transition-colors duration-300"
+                        className="text-[#1D1D1B]/45 hover:text-[#E31C25] text-sm font-semibold tracking-widest uppercase transition-colors duration-300"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
                         Cenník →
