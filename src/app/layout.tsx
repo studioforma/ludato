@@ -93,6 +93,8 @@ const localBusinessSchema = {
     "https://www.google.com/maps?cid=17759226303715263437",
     "https://maps.app.goo.gl/xaKkcTPLukbzixYB6",
     "https://www.google.com/search?kgmid=/g/11z0zy7xvy",
+    "https://www.instagram.com/ludato_family_cars_services/",
+    "https://www.facebook.com/ludato.family/",
   ],
   openingHoursSpecification: [
     {
