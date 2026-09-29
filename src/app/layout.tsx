@@ -82,8 +82,18 @@ const localBusinessSchema = {
     latitude: 48.17825271232653,
     longitude: 17.139108691302297,
   },
-  hasMap: "https://maps.app.goo.gl/xaKkcTPLukbzixYB6",
-  sameAs: ["https://maps.app.goo.gl/xaKkcTPLukbzixYB6"],
+  // Google Business Profile identifiers. The Place ID and CID are both derived
+  // from the profile's feature ID 0x476c8faf19a09f43:0xf675723b16b8c3cd.
+  identifier: [
+    { "@type": "PropertyValue", propertyID: "Google Place ID", value: "ChIJQ5-gGa-PbEcRzcO4FjtydfY" },
+    { "@type": "PropertyValue", propertyID: "Google CID", value: "17759226303715263437" },
+  ],
+  hasMap: "https://www.google.com/maps?cid=17759226303715263437",
+  sameAs: [
+    "https://www.google.com/maps?cid=17759226303715263437",
+    "https://maps.app.goo.gl/xaKkcTPLukbzixYB6",
+    "https://www.google.com/search?kgmid=/g/11z0zy7xvy",
+  ],
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
