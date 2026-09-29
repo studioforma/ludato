@@ -87,7 +87,7 @@ const content: ServiceContent = [
         heading: 'Na čo si dať pozor',
         paragraphs: [
             'Veľa vodičov odkladá prezutie na poslednú chvíľu. Keď príde prvý mráz alebo sneh, termíny bývajú narýchlo obsadené, odporúčame preto objednať sa ešte pred sezónou.',
-            'Bežná chyba je aj nesprávne skladovanie pneumatík doma, napríklad naukladané na sebe alebo na priamom slnku, čo skracuje ich životnosť. Presne preto ponúkame aj sezónne uskladnenie priamo u nás.',
+            'Bežná chyba je aj nesprávne skladovanie pneumatík doma, napríklad naukladané na sebe alebo na priamom slnku, čo skracuje ich životnosť. Presne preto ponúkame aj [sezónne uskladnenie pneumatík](/sluzby/uskladnenie-pneumatik-bratislava) priamo u nás.',
             'Po náraze do výtlku alebo obrubníka sa oplatí nechať skontrolovať vyváženie kolies aj geometriu, aj keď auto navonok vyzerá úplne v poriadku.',
             'Miešanie rôznych vzorov alebo značiek pneumatík na jednej náprave nie je vhodné, keďže to ovplyvňuje správanie auta pri [prudkom brzdení](/sluzby/brzdy-bratislava) alebo v zákrute. Ak potrebujete vymeniť len jednu alebo dve pneumatiky, poradíme vám, ako to najbezpečnejšie riešiť.',
             'Ak sa na palubnej doske rozsvieti kontrolka tlaku v pneumatikách, neignorujte ju. Môže signalizovať pomalý únik vzduchu, ktorý si na prvý pohľad nevšimnete, no postupne zvyšuje opotrebovanie aj riziko defektu.',

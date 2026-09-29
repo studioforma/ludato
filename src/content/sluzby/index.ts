@@ -8,6 +8,8 @@ import stkEkBratislava from './stk-ek-bratislava';
 import geometriaBratislava from './geometria-bratislava';
 import podvozokBratislava from './podvozok-bratislava';
 import rozvodyBratislava from './rozvody-bratislava';
+import uskladneniePneumatikBratislava from './uskladnenie-pneumatik-bratislava';
+import nahradneVozidloBratislava from './nahradne-vozidlo-bratislava';
 
 export const serviceContent: Record<string, ServiceContent> = {
     'pneuservis-bratislava': pneuservisBratislava,
@@ -19,6 +21,8 @@ export const serviceContent: Record<string, ServiceContent> = {
     'geometria-bratislava': geometriaBratislava,
     'podvozok-bratislava': podvozokBratislava,
     'rozvody-bratislava': rozvodyBratislava,
+    'uskladnenie-pneumatik-bratislava': uskladneniePneumatikBratislava,
+    'nahradne-vozidlo-bratislava': nahradneVozidloBratislava,
 };
 
 export function getServiceContent(slug: string): ServiceContent | undefined {

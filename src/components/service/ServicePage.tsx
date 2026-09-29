@@ -166,9 +166,14 @@ function SectionBlock({ section }: { section: Section }) {
             const categories = section.categories
                 .map((name) => getCategory(name))
                 .filter((c): c is PricingCategory => c !== undefined)
-                .map((cat) =>
-                    only ? { ...cat, items: cat.items.filter((item) => only.includes(item.service)) } : cat
-                )
+                .map((cat) => {
+                    if (!only) return cat;
+                    const items = cat.items.filter((item) => only.includes(item.service));
+                    // A footnote may describe a row that was filtered out, so keep it
+                    // only when the whole category is shown.
+                    const footnote = items.length === cat.items.length ? cat.footnote : undefined;
+                    return { ...cat, items, footnote };
+                })
                 .filter((cat) => cat.items.length > 0);
 
             return (

@@ -219,6 +219,42 @@ export const services: ServiceMeta[] = [
             secondaryLabel: 'Objednať sa',
         },
     },
+    {
+        slug: 'uskladnenie-pneumatik-bratislava',
+        name: 'Uskladnenie pneumatík',
+        h1: 'USKLADNENIE PNEUMATÍK BRATISLAVA – NOVÉ MESTO',
+        h1Accent: 'BRATISLAVA',
+        title: 'Uskladnenie pneumatík Bratislava – Nové Mesto | 40 € na sezónu | Ludato Family Autoservis',
+        description:
+            'Sezónne uskladnenie pneumatík v Bratislave, Novom Meste za 40 € na sezónu. Kontrola dezénu pri uskladnení a sada pripravená priamo pri ďalšom prezutí.',
+        teaser: 'Sezónna sada uložená u nás za 40 €, pripravená pri ďalšom prezutí. Bez vláčenia z pivnice.',
+        category: 'pneumatiky',
+        related: ['pneuservis-bratislava', 'geometria-bratislava', 'brzdy-bratislava'],
+        cta: {
+            question: 'Nemáte kam dať druhú sadu pneumatík?',
+            subtext: 'Uskladníme ju u nás a pri ďalšom prezutí ju budete mať pripravenú.',
+            secondaryHref: '/nacenenie',
+            secondaryLabel: 'Objednať sa',
+        },
+    },
+    {
+        slug: 'nahradne-vozidlo-bratislava',
+        name: 'Náhradné vozidlo',
+        h1: 'NÁHRADNÉ VOZIDLO POČAS OPRAVY BRATISLAVA – NOVÉ MESTO',
+        h1Accent: 'BRATISLAVA',
+        title: 'Náhradné vozidlo Bratislava – Nové Mesto | 35 € na deň, nad 1000 € zadarmo | Ludato Family Autoservis',
+        description:
+            'Náhradné vozidlo počas opravy v Bratislave, Novom Meste: 35 € na deň, pri servise nad 1000 € zadarmo, pri poistnej udalosti ho hradí poisťovňa.',
+        teaser: '35 € na deň, pri servise nad 1000 € zadarmo a pri poistnej udalosti ho hradí poisťovňa.',
+        category: 'specialne',
+        related: ['rozvody-bratislava', 'podvozok-bratislava', 'pocitacova-diagnostika-bratislava'],
+        cta: {
+            question: 'Čaká vás dlhšia oprava?',
+            subtext: 'Rezervujte si náhradné vozidlo už pri objednaní servisu.',
+            secondaryHref: '/nacenenie',
+            secondaryLabel: 'Objednať sa',
+        },
+    },
 ];
 
 export function getService(slug: string): ServiceMeta | undefined {

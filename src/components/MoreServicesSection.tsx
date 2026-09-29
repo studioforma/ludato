@@ -13,8 +13,8 @@ const extras = [
         ),
         title: 'NÁHRADNÉ VOZIDLO',
         description:
-            'Počas dlhšej opravy vám radi požičiame náhradné auto, aby ste ani na chvíľu nezostali bez kolies.',
-        href: '/kde-posobime',
+            'Počas dlhšej opravy vám požičiame náhradné auto za 35 € na deň, pri servise nad 1000 € zadarmo.',
+        href: '/sluzby/nahradne-vozidlo-bratislava',
         linkLabel: 'Viac o náhradnom aute',
     },
     {
@@ -40,7 +40,7 @@ const extras = [
         title: 'USKLADNENIE PNEUMATÍK',
         description:
             'Sezónnu sadu pneumatík vám medzi prezutiami radi uskladníme, aby ste sa o ne nemuseli starať doma.',
-        href: '/sluzby/pneuservis-bratislava',
+        href: '/sluzby/uskladnenie-pneumatik-bratislava',
         linkLabel: 'Viac o uskladnení',
     },
 ];
