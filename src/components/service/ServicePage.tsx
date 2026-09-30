@@ -166,9 +166,14 @@ function SectionBlock({ section }: { section: Section }) {
             const categories = section.categories
                 .map((name) => getCategory(name))
                 .filter((c): c is PricingCategory => c !== undefined)
-                .map((cat) =>
-                    only ? { ...cat, items: cat.items.filter((item) => only.includes(item.service)) } : cat
-                )
+                .map((cat) => {
+                    if (!only) return cat;
+                    const items = cat.items.filter((item) => only.includes(item.service));
+                    // A footnote may describe a row that was filtered out, so keep it
+                    // only when the whole category is shown.
+                    const footnote = items.length === cat.items.length ? cat.footnote : undefined;
+                    return { ...cat, items, footnote };
+                })
                 .filter((cat) => cat.items.length > 0);
 
             return (
@@ -285,18 +290,50 @@ export default function ServicePage({
 
     const [beforeAccent, afterAccent] = meta.h1.split(meta.h1Accent);
 
+    // Same rows the price section shows, so the schema never promises a price
+    // the page does not.
+    const offers = content.flatMap((s) =>
+        s.type !== 'prices'
+            ? []
+            : s.categories
+                  .map((name) => getCategory(name))
+                  .filter((c): c is PricingCategory => c !== undefined)
+                  .flatMap((cat) =>
+                      cat.items
+                          .filter((item) => !s.only || s.only.includes(item.service))
+                          .map((item) => ({ item, category: cat.category }))
+                  )
+                  .filter(({ item }) => item.price !== null)
+                  .map(({ item, category }) => ({
+                      '@type': 'Offer',
+                      // Rows like '15" – 17"' only make sense with their category.
+                      name: /^\d/.test(item.service)
+                          ? `${category.charAt(0)}${category.slice(1).toLowerCase()} ${item.service}`
+                          : item.service,
+                      priceCurrency: 'EUR',
+                      priceSpecification: {
+                          '@type': item.unit ? 'UnitPriceSpecification' : 'PriceSpecification',
+                          priceCurrency: 'EUR',
+                          ...(item.prefix ? { minPrice: Number(item.price) } : { price: Number(item.price) }),
+                          ...(item.unit ? { unitText: item.unit.replace('/', '') } : {}),
+                      },
+                  }))
+    );
+
     const serviceSchema = {
         '@context': 'https://schema.org',
         '@type': 'Service',
+        '@id': `${url}#sluzba`,
         serviceType: meta.name,
-        name: `${meta.name} Ludato Family Autoservis`,
+        name: `${meta.name} Bratislava – Ludato Family Autoservis a Pneuservis`,
         description: meta.description,
-        provider: {
-            '@type': 'AutoRepair',
-            name: 'Ludato Family Autoservis',
-            url: `${SITE}/`,
-        },
-        areaServed: 'Bratislava',
+        provider: { '@id': `${SITE}/#autoservis` },
+        areaServed: [
+            { '@type': 'City', name: 'Bratislava' },
+            { '@type': 'Place', name: 'Bratislava - Nové Mesto' },
+        ],
+        ...(meta.heroImage ? { image: `${SITE}${meta.heroImage.src}` } : {}),
+        ...(offers.length > 0 ? { offers } : {}),
         url,
     };
 
@@ -342,7 +379,7 @@ export default function ServicePage({
 
             <Navbar />
 
-            <div className="pt-32 pb-20">
+            <div className="pt-32 lg:pt-40 pb-20">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <Breadcrumbs
                         items={[

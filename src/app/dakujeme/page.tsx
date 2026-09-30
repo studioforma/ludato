@@ -16,7 +16,7 @@ export default function Dakujeme() {
     return (
         <>
             <Navbar />
-            <main className="min-h-screen bg-[#111111] flex items-center justify-center px-4 sm:px-6 pt-32 pb-20">
+            <main className="min-h-screen bg-[#111111] flex items-center justify-center px-4 sm:px-6 pt-32 lg:pt-40 pb-20">
                 <div className="max-w-lg w-full text-center">
                     <div className="w-20 h-20 rounded-full bg-[#E31C25] flex items-center justify-center mb-6 shadow-lg shadow-[#E31C25]/40 mx-auto">
                         <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

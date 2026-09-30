@@ -72,7 +72,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Ako predĺžiť životnosť pneumatík',
         paragraphs: [
-            'Životnosť pneumatiky výrazne ovplyvňuje aj to, ako sa o ňu staráte medzi jednotlivými prezutiami. Pravidelná kontrola tlaku, plynulá jazda bez zbytočne prudkého brzdenia a zrýchľovania a včasné riešenie nesprávnej geometrie po náraze do výtlku dokážu predĺžiť životnosť sady o desiatky percent. Rovnako dôležité je nenechávať auto dlhodobo stáť s podhustenými pneumatikami, čo zaťažuje bočnice a spôsobuje nerovnomerné opotrebovanie. Ak si nie ste istí, v akom stave vaše pneumatiky sú, radi vám ich pri návšteve skontrolujeme aj bez objednaného prezutia.',
+            'Životnosť pneumatiky výrazne ovplyvňuje aj to, ako sa o ňu staráte medzi jednotlivými prezutiami. Pravidelná kontrola tlaku, plynulá jazda bez zbytočne prudkého brzdenia a zrýchľovania a včasné riešenie nesprávnej [geometrie](/sluzby/geometria-bratislava) po náraze do výtlku dokážu predĺžiť životnosť sady o desiatky percent. Rovnako dôležité je nenechávať auto dlhodobo stáť s podhustenými pneumatikami, čo zaťažuje bočnice a spôsobuje nerovnomerné opotrebovanie. Ak si nie ste istí, v akom stave vaše pneumatiky sú, radi vám ich pri návšteve skontrolujeme aj bez objednaného prezutia.',
         ],
     },
     {
@@ -87,9 +87,9 @@ const content: ServiceContent = [
         heading: 'Na čo si dať pozor',
         paragraphs: [
             'Veľa vodičov odkladá prezutie na poslednú chvíľu. Keď príde prvý mráz alebo sneh, termíny bývajú narýchlo obsadené, odporúčame preto objednať sa ešte pred sezónou.',
-            'Bežná chyba je aj nesprávne skladovanie pneumatík doma, napríklad naukladané na sebe alebo na priamom slnku, čo skracuje ich životnosť. Presne preto ponúkame aj sezónne uskladnenie priamo u nás.',
+            'Bežná chyba je aj nesprávne skladovanie pneumatík doma, napríklad naukladané na sebe alebo na priamom slnku, čo skracuje ich životnosť. Presne preto ponúkame aj [sezónne uskladnenie pneumatík](/sluzby/uskladnenie-pneumatik-bratislava) priamo u nás.',
             'Po náraze do výtlku alebo obrubníka sa oplatí nechať skontrolovať vyváženie kolies aj geometriu, aj keď auto navonok vyzerá úplne v poriadku.',
-            'Miešanie rôznych vzorov alebo značiek pneumatík na jednej náprave nie je vhodné, keďže to ovplyvňuje správanie auta pri prudkom brzdení alebo v zákrute. Ak potrebujete vymeniť len jednu alebo dve pneumatiky, poradíme vám, ako to najbezpečnejšie riešiť.',
+            'Miešanie rôznych vzorov alebo značiek pneumatík na jednej náprave nie je vhodné, keďže to ovplyvňuje správanie auta pri [prudkom brzdení](/sluzby/brzdy-bratislava) alebo v zákrute. Ak potrebujete vymeniť len jednu alebo dve pneumatiky, poradíme vám, ako to najbezpečnejšie riešiť.',
             'Ak sa na palubnej doske rozsvieti kontrolka tlaku v pneumatikách, neignorujte ju. Môže signalizovať pomalý únik vzduchu, ktorý si na prvý pohľad nevšimnete, no postupne zvyšuje opotrebovanie aj riziko defektu.',
         ],
     },
@@ -97,7 +97,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo si vybrať náš pneuservis',
         paragraphs: [
-            'Pneuservis u nás nie je len rýchla zástavka, ale súčasť komplexnej starostlivosti o vozidlo. Keďže sa venujeme aj mechanickým opravám, podvozku aj diagnostike, dokážeme pri prezutí odhaliť aj súvisiace problémy, napríklad opotrebované tlmiče, netesniace poloosové manžety alebo nesprávnu geometriu, ktoré by inak zostali nepovšimnuté až do ďalšej väčšej poruchy. Vďaka tomu je prezutie u nás zároveň krátkou preventívnou kontrolou podvozku. Snažíme sa, aby ste od nás odchádzali nielen s prezutými kolesami, ale aj s jasnou predstavou o tom, v akom stave je vaše vozidlo a čo prípadne bude treba riešiť pri najbližšej návšteve.',
+            'Pneuservis u nás nie je len rýchla zástavka, ale súčasť komplexnej starostlivosti o vozidlo. Keďže sa venujeme aj mechanickým opravám, [podvozku](/sluzby/podvozok-bratislava) aj [diagnostike](/sluzby/pocitacova-diagnostika-bratislava), dokážeme pri prezutí odhaliť aj súvisiace problémy, napríklad opotrebované tlmiče, netesniace poloosové manžety alebo nesprávnu geometriu, ktoré by inak zostali nepovšimnuté až do ďalšej väčšej poruchy. Vďaka tomu je prezutie u nás zároveň krátkou preventívnou kontrolou podvozku. Snažíme sa, aby ste od nás odchádzali nielen s prezutými kolesami, ale aj s jasnou predstavou o tom, v akom stave je vaše vozidlo a čo prípadne bude treba riešiť pri najbližšej návšteve.',
         ],
     },
     {
@@ -135,7 +135,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Aké veľkosti diskov zvládnete?',
-                a: 'Bežné veľkosti od 12" do 19".',
+                a: 'Bežné veľkosti od 12" do 21".',
             },
             {
                 q: 'Ako dlho trvá kompletné prezutie?',

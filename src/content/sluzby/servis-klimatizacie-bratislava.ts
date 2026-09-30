@@ -70,7 +70,7 @@ const content: ServiceContent = [
         heading: 'Zápach z ventilácie',
         paragraphs: [
             'Nepríjemný zápach z ventilácie zvyčajne nesúvisí s chladivom, ale s vlhkosťou a baktériami, ktoré sa usídlia vo výparníku klimatizácie. Riešime to ozónovou dezinfekciou interiéru, ktorá zápach odstráni pri zdroji, nielen prekryje vôňou.',
-            'Zanesený kabínový (peľový) filter zápach ešte zosilňuje, preto pri probléme s ventiláciou odporúčame skontrolovať aj jeho stav.',
+            'Zanesený kabínový (peľový) filter zápach ešte zosilňuje, preto pri probléme s ventiláciou odporúčame skontrolovať aj jeho stav. Vymeniť ho môžeme samostatne alebo v rámci [výmeny oleja a filtrov](/sluzby/vymena-oleja-bratislava).',
         ],
     },
     {
@@ -93,7 +93,7 @@ const content: ServiceContent = [
         heading: 'Na čo si dať pozor',
         paragraphs: [
             'Pri dlhých cestách v lete odporúčame nastaviť klimatizáciu na recirkuláciu vzduchu z interiéru, chladí rýchlejšie a šetrí palivo, no na kratšie úseky je lepšie prepínať aj na privádzanie vzduchu zvonku, aby sa v interiéri nehromadila vlhkosť.',
-            'Servis klimatizácie sa oplatí naplánovať ešte pred letnou špičkou, na jar. Vtedy je jednoduchšie získať termín a problém odhalíte skôr, než vás nechladenie prekvapí počas najhorúcejších dní.',
+            'Servis klimatizácie sa oplatí naplánovať ešte pred letnou špičkou, na jar, pokojne spolu s [prezutím na letné pneumatiky](/sluzby/pneuservis-bratislava). Vtedy je jednoduchšie získať termín a problém odhalíte skôr, než vás nechladenie prekvapí počas najhorúcejších dní.',
         ],
     },
     {

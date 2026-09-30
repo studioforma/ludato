@@ -103,16 +103,16 @@ export const pricingCategories: PricingCategory[] = [
         category: 'KOMPLETNÉ PREZUTIE',
         items: [
             { service: '12" – 14"', price: '45', sub: '1 ks pneumatika a disk: 11,25 €' },
-            { service: '15" – 16"', price: '55', sub: '1 ks pneumatika a disk: 13,55 €' },
-            { service: '17" – 19"', price: '65', sub: '1 ks pneumatika a disk: 16,25 €' },
+            { service: '15" – 17"', price: '55', sub: '1 ks pneumatika a disk: 13,55 €' },
+            { service: '18" – 21"', price: '65', sub: '1 ks pneumatika a disk: 16,25 €' },
         ],
     },
     {
         category: 'PREVÁŽENIE A PREHODENIE KOLIES NA DISKU',
         items: [
             { service: '12" – 14"', price: '40', sub: '1 ks pneumatika a disk: 10,00 €' },
-            { service: '15" – 16"', price: '45', sub: '1 ks pneumatika a disk: 11,25 €' },
-            { service: '17" – 19"', price: '50', sub: '1 ks pneumatika a disk: 12,50 €' },
+            { service: '15" – 17"', price: '45', sub: '1 ks pneumatika a disk: 11,25 €' },
+            { service: '18" – 21"', price: '50', sub: '1 ks pneumatika a disk: 12,50 €' },
         ],
     },
     {

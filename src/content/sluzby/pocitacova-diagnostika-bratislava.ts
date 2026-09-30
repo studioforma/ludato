@@ -98,7 +98,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'ABS a ESP',
-                text: 'Kontrolka ABS alebo ESP znamená, že tieto asistenčné systémy sú vyradené z činnosti. Auto zostáva pojazdné a brzdy fungujú, ale pri prudkom brzdení alebo na klzkom povrchu nemáte k dispozícii pomoc, na ktorú ste zvyknutí.',
+                text: 'Kontrolka ABS alebo ESP znamená, že tieto asistenčné systémy sú vyradené z činnosti. Auto zostáva pojazdné a [brzdy](/sluzby/brzdy-bratislava) fungujú, ale pri prudkom brzdení alebo na klzkom povrchu nemáte k dispozícii pomoc, na ktorú ste zvyknutí.',
             },
             {
                 title: 'Airbag',
@@ -122,7 +122,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Diagnostika ako súčasť väčšej opravy',
         paragraphs: [
-            'Diagnostiku často robíme ako prvý krok pred väčšou opravou, napríklad pred zásahom do turbodúchadla, vstrekovačov alebo prevodovky. Presné vyhodnotenie chýb nám povie, ktorým smerom sa má oprava uberať, a šetrí čas aj peniaze, keďže sa vyhneme skúšaniu dielov "na slepo".',
+            'Diagnostiku často robíme ako prvý krok pred väčšou opravou, napríklad pred zásahom do [rozvodov](/sluzby/rozvody-bratislava), [turbodúchadla](/sluzby/turboduchadlo-bratislava), vstrekovačov alebo prevodovky. Presné vyhodnotenie chýb nám povie, ktorým smerom sa má oprava uberať, a šetrí čas aj peniaze, keďže sa vyhneme skúšaniu dielov "na slepo". Rovnako je bežnou súčasťou [prípravy na STK a emisnú kontrolu](/sluzby/stk-ek-bratislava).',
             'Rovnako diagnostiku využívame aj pri sťažnostiach, ktoré sa navonok javia ako drobnosť, napríklad nepravidelný chod motora pri studenom starte. Aj takéto príznaky totiž vedia mať pôvod v elektronike, nie len v mechanike.',
         ],
     },
@@ -130,7 +130,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Čo si pripraviť pred návštevou',
         paragraphs: [
-            'Pri diagnostike nám najviac pomôže, keď viete popísať okolnosti. Kedy sa problém objavuje, či za studena alebo až po zahriatí motora, pri akej rýchlosti, či pri zrýchľovaní alebo brzdení, a či sa deje zakaždým alebo len občas. Prerušované poruchy sú najťažšie na odhalenie a práve tieto detaily vedia hľadanie výrazne skrátiť.',
+            'Pri diagnostike nám najviac pomôže, keď viete opísať okolnosti. Kedy sa problém objavuje, či za studena alebo až po zahriatí motora, pri akej rýchlosti, či pri zrýchľovaní alebo brzdení, a či sa deje zakaždým alebo len občas. [Prerušované poruchy](/sluzby/zlozita-diagnostika-bratislava) sú najťažšie na odhalenie a práve tieto detaily vedia hľadanie výrazne skrátiť.',
             'Ak už na vozidle niekto nedávno niečo menil alebo opravoval, povedzte nám to rovno. Nie preto, aby sme hľadali vinníka, ale preto, že nová porucha často súvisí s posledným zásahom, napríklad s nesprávne zapojeným konektorom alebo dielom, ktorý nesedí do špecifikácie.',
         ],
     },

@@ -107,6 +107,11 @@ export default function AboutSection() {
                                 jednáte a čo presne sa s vaším autom deje.
                             </p>
                             <p>
+                                Od otvorenia servisu sme opravili viac ako 1 200 áut a takmer dve
+                                tretiny z nich boli náročné opravy: rozvody, prevodovky, zotrvačníky,
+                                turbá, vstrekovače, generálky, tlmiče, podvozky aj poistné udalosti.
+                            </p>
+                            <p>
                                 Zakladám si na tom, aby bola oprava spravená poriadne hneď
                                 na prvýkrát. Preto ku každému vozidlu pristupujem, akoby bolo moje vlastné.
                             </p>

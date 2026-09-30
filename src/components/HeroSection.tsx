@@ -46,7 +46,7 @@ export default function HeroSection() {
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 pt-24 lg:pt-0 text-center"
+                className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 pt-28 pb-16 lg:pt-40 lg:pb-36 text-center"
             >
                 {/* Small label */}
                 <motion.div variants={itemVariants} className="mb-6">
@@ -106,22 +106,22 @@ export default function HeroSection() {
                 {/* Stats row */}
                 <motion.div
                     variants={itemVariants}
-                    className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto"
+                    className="mt-10 lg:mt-16 grid grid-cols-3 gap-3 sm:gap-8 max-w-3xl mx-auto"
                 >
                     {[
                         { value: '10+', label: 'rokov skúseností' },
                         { value: '5.0 ★', label: 'Google hodnotenie' },
-                        { value: '100%', label: 'férové ceny vopred' },
+                        { value: '1 200+', label: 'opravených áut' },
                     ].map((stat) => (
-                        <div key={stat.label} className="text-center bg-white/5 border border-white/10 rounded-sm p-4 backdrop-blur-sm">
+                        <div key={stat.label} className="text-center bg-white/5 border border-white/10 rounded-sm px-2 py-3 sm:p-4 backdrop-blur-sm">
                             <div
-                                className="text-xl sm:text-2xl font-black text-[#E31C25]"
+                                className="text-lg sm:text-2xl font-black text-[#E31C25]"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
                                 {stat.value}
                             </div>
                             <div
-                                className="text-xs text-white/70 mt-1 tracking-wide uppercase"
+                                className="text-[10px] leading-tight sm:text-xs text-white/70 mt-1 tracking-wide uppercase"
                                 style={{ fontFamily: 'var(--font-inter)' }}
                             >
                                 {stat.label}
@@ -136,7 +136,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2, duration: 1 }}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2"
             >
                 <span className="text-white/40 text-xs tracking-widest uppercase" style={{ fontFamily: 'var(--font-inter)' }}>
                     Scrollujte

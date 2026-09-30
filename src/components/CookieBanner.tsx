@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { OPEN_COOKIE_SETTINGS } from '@/components/CookieSettingsButton';
 
 export default function CookieBanner() {
     const [isVisible, setIsVisible] = useState(false);
@@ -16,13 +18,36 @@ export default function CookieBanner() {
         }
     }, []);
 
+    // "Nastavenia cookies" in the footer and on the privacy page reopens the bar.
+    useEffect(() => {
+        const open = () => setIsVisible(true);
+        window.addEventListener(OPEN_COOKIE_SETTINGS, open);
+        return () => window.removeEventListener(OPEN_COOKIE_SETTINGS, open);
+    }, []);
+
+    // Google consent mode v2. The default (all denied) and the grant for
+    // returning visitors are set in the inline gtag script in layout.tsx.
+    const updateConsent = (state: 'granted' | 'denied') => {
+        const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
+        gtag?.('consent', 'update', {
+            ad_storage: state,
+            ad_user_data: state,
+            ad_personalization: state,
+            analytics_storage: state,
+        });
+    };
+
     const handleAccept = () => {
         localStorage.setItem('ludato_cookie_consent', 'accepted');
+        updateConsent('granted');
+        // Let Google Ads swap in the call tracking number now, without a reload.
+        (window as Window & { ludatoConfigureCallTracking?: () => void }).ludatoConfigureCallTracking?.();
         setIsVisible(false);
     };
 
     const handleDecline = () => {
         localStorage.setItem('ludato_cookie_consent', 'declined');
+        updateConsent('denied');
         setIsVisible(false);
     };
 
@@ -54,9 +79,17 @@ export default function CookieBanner() {
                                     className="text-white/60 text-sm leading-relaxed"
                                     style={{ fontFamily: 'var(--font-inter)' }}
                                 >
-                                    Tato stránka používa súbory cookies pre zabezpečenie základných funkcií
-                                    (ako je napríklad Google Mapa) a analýzu návštevnosti. Rešpektujeme
-                                    vaše súkromie, môžete nastavenia prijať alebo odmietnuť.
+                                    Táto stránka používa súbory cookies pre zabezpečenie základných funkcií
+                                    (ako je napríklad Google Mapa), analýzu návštevnosti a meranie reklamy.
+                                    Rešpektujeme vaše súkromie, môžete nastavenia prijať alebo odmietnuť.
+                                    Viac v{' '}
+                                    <Link
+                                        href="/ochrana-osobnych-udajov"
+                                        className="text-white/80 underline hover:text-[#E31C25] transition-colors"
+                                    >
+                                        zásadách ochrany osobných údajov
+                                    </Link>
+                                    .
                                 </p>
                             </div>
 

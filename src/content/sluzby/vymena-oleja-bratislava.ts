@@ -38,7 +38,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Kabínový (peľový) filter',
-                text: 'Kabínový filter čistí vzduch, ktorý sa dostáva do interiéru cez klimatizáciu a vetranie. Zanesený filter je najčastejšia príčina nepríjemného zápachu z ventilácie a zníženého výkonu klimatizácie.',
+                text: 'Kabínový filter čistí vzduch, ktorý sa dostáva do interiéru cez klimatizáciu a vetranie. Zanesený filter je najčastejšia príčina nepríjemného zápachu z ventilácie a zníženého výkonu [klimatizácie](/sluzby/servis-klimatizacie-bratislava).',
             },
             {
                 title: 'Palivový filter',
@@ -96,14 +96,14 @@ const content: ServiceContent = [
         heading: 'Ako často meniť olej',
         paragraphs: [
             'Interval výmeny oleja predpisuje výrobca vozidla, bežne ide o rozsah 10 000 až 15 000 km alebo raz ročne, podľa toho, čo nastane skôr. Olej totiž starne aj časom, nielen prejdenými kilometrami, jeho mazacie vlastnosti sa postupne znižujú, aj keď auto stojí v garáži.',
-            'Mestská jazda s krátkymi trasami a častým zastavovaním, typická pre Nové Mesto a okolité časti Bratislavy, zaťažuje olej viac než rovnomerná jazda po diaľnici. Motor sa nestíha poriadne zahriať, do oleja sa dostáva viac kondenzátu a nespálených splodín, preto pri prevažne mestskej jazde odporúčame držať sa skôr kratšieho intervalu.',
+            'Mestská jazda s krátkymi trasami a častým zastavovaním, typická pre Nové Mesto a okolité časti Bratislavy, zaťažuje olej viac než rovnomerná jazda po diaľnici. Motor sa nestíha poriadne zahriať, do oleja sa dostáva viac kondenzátu a nespálených splodín, preto pri prevažne mestskej jazde odporúčame držať sa skôr kratšieho intervalu. Pri motoroch s reťazou je čerstvý olej zároveň najlepšou ochranou [rozvodov](/sluzby/rozvody-bratislava).',
         ],
     },
     {
         type: 'text',
         heading: 'Varovné signály, že olej treba vymeniť',
         paragraphs: [
-            'Tmavý, takmer čierny olej na mierke je bežným znakom, že olej už stráca svoje mazacie vlastnosti. Rozsvietená kontrolka oleja na palubnej doske je vážnejší signál, ktorý neznamená len "treba dolievať", ale často už aj problém s tlakom v mazacom okruhu.',
+            'Tmavý, takmer čierny olej na mierke je bežným znakom, že olej už stráca svoje mazacie vlastnosti. Rozsvietená kontrolka oleja na palubnej doske je vážnejší signál, ktorý sa oplatí overiť aj [počítačovou diagnostikou](/sluzby/pocitacova-diagnostika-bratislava), ktorý neznamená len "treba dolievať", ale často už aj problém s tlakom v mazacom okruhu.',
             'Zvýšená spotreba oleja medzi servismi, nezvyčajný hluk motora po nastartovaní alebo namodralý dym z výfuku môžu signalizovať opotrebenie motora, ktoré súvisí s dlhodobo zanedbanou výmenou oleja. V takom prípade odporúčame nečakať na najbližší plánovaný termín a prísť na kontrolu skôr.',
         ],
     },
