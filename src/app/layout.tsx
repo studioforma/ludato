@@ -206,6 +206,9 @@ export default function RootLayout({
                   if (window.ludatoApplyCallNumber) window.ludatoApplyCallNumber();
                 }
               });
+              // Google Analytics 4. Loaded by the same gtag.js, respects the
+              // consent state above (analytics_storage).
+              gtag('config', 'G-7VKRXW04MX');
             `,
           }}
         />
