@@ -13,8 +13,30 @@ npm run dev
 
 ## Premenné
 
-`RESEND_API_KEY`, `CONTACT_FROM`, `CONTACT_TO` — bez nich formuláre neodošlú mail,
+`RESEND_API_KEY`, `CONTACT_FROM`, `CONTACT_TO`: bez nich formuláre neodošlú mail,
 zvyšok webu funguje normálne.
+
+## Telefónne číslo a meranie hovorov (Google Ads)
+
+Návštevníkom z reklamy Google Ads vymení číslo za presmerovacie, aby sa hovor
+započítal ako konverzia. Config je v inline gtag skripte v `src/app/layout.tsx`,
+výmenu robí `src/components/CallNumberSwap.tsx`.
+
+Pravidlá pri úpravách webu:
+
+- **Zobrazené číslo píš vždy presne ako `+421 944 236 257`.** Iný zápis
+  (`0944 236 257`, `+421944236257`, bez medzier…) sa nevymení a hovor
+  z reklamy sa nezapočíta.
+- **tel: odkazy vždy ako `href="tel:+421944236257"`.** Iný tvar sa nevymení.
+- Platí to aj pre nové stránky a texty v `src/content/sluzby/*.ts`.
+- JSON-LD schéma (`telephone` v `layout.tsx`) a maily z formulárov majú mať
+  vždy skutočné číslo. `CallNumberSwap` skripty nemení, nič netreba riešiť.
+- Číslo sa vymení len pri súhlase s cookies (consent mode v2, `CookieBanner`).
+  Kto cookies odmietne, uvidí skutočné číslo a jeho hovor sa v Ads nezapočíta.
+  Je to zámer.
+
+Test na produkcii: `https://www.ludato.sk/#google-wcc-debug` (na localhoste
+nefunguje).
 
 ## Build
 

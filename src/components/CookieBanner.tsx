@@ -16,13 +16,27 @@ export default function CookieBanner() {
         }
     }, []);
 
+    // Google consent mode v2. The default (all denied) and the grant for
+    // returning visitors are set in the inline gtag script in layout.tsx.
+    const updateConsent = (state: 'granted' | 'denied') => {
+        const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
+        gtag?.('consent', 'update', {
+            ad_storage: state,
+            ad_user_data: state,
+            ad_personalization: state,
+            analytics_storage: state,
+        });
+    };
+
     const handleAccept = () => {
         localStorage.setItem('ludato_cookie_consent', 'accepted');
+        updateConsent('granted');
         setIsVisible(false);
     };
 
     const handleDecline = () => {
         localStorage.setItem('ludato_cookie_consent', 'declined');
+        updateConsent('denied');
         setIsVisible(false);
     };
 
@@ -54,7 +68,7 @@ export default function CookieBanner() {
                                     className="text-white/60 text-sm leading-relaxed"
                                     style={{ fontFamily: 'var(--font-inter)' }}
                                 >
-                                    Tato stránka používa súbory cookies pre zabezpečenie základných funkcií
+                                    Táto stránka používa súbory cookies pre zabezpečenie základných funkcií
                                     (ako je napríklad Google Mapa) a analýzu návštevnosti. Rešpektujeme
                                     vaše súkromie, môžete nastavenia prijať alebo odmietnuť.
                                 </p>
