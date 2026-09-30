@@ -57,7 +57,7 @@ const featured: { slug: string; detail: string; icon: React.ReactNode }[] = [
     },
     {
         slug: 'pneuservis-bratislava',
-        detail: '12" – 19" • Vyváženie • Uskladnenie',
+        detail: '12" – 21" • Vyváženie • Uskladnenie',
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
                 <circle cx="12" cy="12" r="9" />

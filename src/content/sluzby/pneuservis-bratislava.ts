@@ -135,7 +135,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Aké veľkosti diskov zvládnete?',
-                a: 'Bežné veľkosti od 12" do 19".',
+                a: 'Bežné veľkosti od 12" do 21".',
             },
             {
                 q: 'Ako dlho trvá kompletné prezutie?',
