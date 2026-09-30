@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
+import CallNumberSwap from "@/components/CallNumberSwap";
 import { services } from "@/lib/services";
 
 const montserrat = Montserrat({
@@ -173,6 +174,16 @@ export default function RootLayout({
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'AW-18425609803');
+              gtag('config', 'AW-18425609803/2kV5CJOU0YsdEMv8gdJE', {
+                'phone_conversion_number': '+421 944 236 257',
+                'phone_conversion_callback': function (formattedNumber, mobileNumber) {
+                  // With a callback Google does not swap the number itself.
+                  // CallNumberSwap applies it to text and tel: links, and
+                  // again after every client-side navigation.
+                  window.ludatoCallNumber = { formatted: formattedNumber, mobile: mobileNumber };
+                  if (window.ludatoApplyCallNumber) window.ludatoApplyCallNumber();
+                }
+              });
             `,
           }}
         />
@@ -190,6 +201,7 @@ export default function RootLayout({
         />
         {children}
         <CookieBanner />
+        <CallNumberSwap />
       </body>
     </html>
   );
