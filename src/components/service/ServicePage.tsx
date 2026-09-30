@@ -306,7 +306,7 @@ export default function ServicePage({
                   .filter(({ item }) => item.price !== null)
                   .map(({ item, category }) => ({
                       '@type': 'Offer',
-                      // Rows like '15" – 16"' only make sense with their category.
+                      // Rows like '15" – 17"' only make sense with their category.
                       name: /^\d/.test(item.service)
                           ? `${category.charAt(0)}${category.slice(1).toLowerCase()} ${item.service}`
                           : item.service,
