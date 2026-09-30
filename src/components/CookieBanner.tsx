@@ -31,6 +31,8 @@ export default function CookieBanner() {
     const handleAccept = () => {
         localStorage.setItem('ludato_cookie_consent', 'accepted');
         updateConsent('granted');
+        // Let Google Ads swap in the call tracking number now, without a reload.
+        (window as Window & { ludatoConfigureCallTracking?: () => void }).ludatoConfigureCallTracking?.();
         setIsVisible(false);
     };
 
