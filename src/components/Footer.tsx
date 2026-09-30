@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import SocialIcons from '@/components/SocialIcons';
+import CookieSettingsButton from '@/components/CookieSettingsButton';
 
 const navLinks = [
     { href: '/sluzby', label: 'Služby' },
@@ -132,17 +133,29 @@ export default function Footer() {
                         className="text-white/30 text-xs text-center sm:text-left"
                         style={{ fontFamily: 'var(--font-inter)' }}
                     >
-                        © {new Date().getFullYear()} LUDATO FAMILY, s.r.o., Odborárska 52, 831 02 Bratislava. Všetky práva vyhradené.
+                        © {new Date().getFullYear()} Ludato Family s. r. o., Odborárska 52, 831 02 Bratislava.
+                        IČO 57526800, DIČ 2122815046. Všetky práva vyhradené.
                     </p>
-                    <a
-                        href="https://byforma.eu"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white/30 hover:text-[#E31C25] text-xs transition-colors"
+                    <div
+                        className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs"
                         style={{ fontFamily: 'var(--font-inter)' }}
                     >
-                        Vytvorilo Studio Forma
-                    </a>
+                        <Link
+                            href="/ochrana-osobnych-udajov"
+                            className="text-white/30 hover:text-[#E31C25] transition-colors"
+                        >
+                            Ochrana osobných údajov
+                        </Link>
+                        <CookieSettingsButton className="text-white/30 hover:text-[#E31C25] transition-colors" />
+                        <a
+                            href="https://byforma.eu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white/30 hover:text-[#E31C25] transition-colors"
+                        >
+                            Vytvorilo Studio Forma
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>

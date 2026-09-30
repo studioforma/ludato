@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { OPEN_COOKIE_SETTINGS } from '@/components/CookieSettingsButton';
 
 export default function CookieBanner() {
     const [isVisible, setIsVisible] = useState(false);
@@ -14,6 +16,13 @@ export default function CookieBanner() {
             const timer = setTimeout(() => setIsVisible(true), 1500);
             return () => clearTimeout(timer);
         }
+    }, []);
+
+    // "Nastavenia cookies" in the footer and on the privacy page reopens the bar.
+    useEffect(() => {
+        const open = () => setIsVisible(true);
+        window.addEventListener(OPEN_COOKIE_SETTINGS, open);
+        return () => window.removeEventListener(OPEN_COOKIE_SETTINGS, open);
     }, []);
 
     // Google consent mode v2. The default (all denied) and the grant for
@@ -71,8 +80,16 @@ export default function CookieBanner() {
                                     style={{ fontFamily: 'var(--font-inter)' }}
                                 >
                                     Táto stránka používa súbory cookies pre zabezpečenie základných funkcií
-                                    (ako je napríklad Google Mapa) a analýzu návštevnosti. Rešpektujeme
-                                    vaše súkromie, môžete nastavenia prijať alebo odmietnuť.
+                                    (ako je napríklad Google Mapa), analýzu návštevnosti a meranie reklamy.
+                                    Rešpektujeme vaše súkromie, môžete nastavenia prijať alebo odmietnuť.
+                                    Viac v{' '}
+                                    <Link
+                                        href="/ochrana-osobnych-udajov"
+                                        className="text-white/80 underline hover:text-[#E31C25] transition-colors"
+                                    >
+                                        zásadách ochrany osobných údajov
+                                    </Link>
+                                    .
                                 </p>
                             </div>
 
