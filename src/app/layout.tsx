@@ -3,6 +3,7 @@ import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
 import CallNumberSwap from "@/components/CallNumberSwap";
+import StickyCallBar from "@/components/StickyCallBar";
 import { services } from "@/lib/services";
 
 const montserrat = Montserrat({
@@ -232,6 +233,7 @@ export default function RootLayout({
         />
         {children}
         <CookieBanner />
+        <StickyCallBar />
         <CallNumberSwap />
       </body>
     </html>

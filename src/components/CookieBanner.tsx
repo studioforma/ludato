@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { OPEN_COOKIE_SETTINGS } from '@/components/CookieSettingsButton';
+import { COOKIE_DECIDED } from '@/components/StickyCallBar';
 
 export default function CookieBanner() {
     const [isVisible, setIsVisible] = useState(false);
@@ -43,12 +44,14 @@ export default function CookieBanner() {
         // Let Google Ads swap in the call tracking number now, without a reload.
         (window as Window & { ludatoConfigureCallTracking?: () => void }).ludatoConfigureCallTracking?.();
         setIsVisible(false);
+        window.dispatchEvent(new Event(COOKIE_DECIDED));
     };
 
     const handleDecline = () => {
         localStorage.setItem('ludato_cookie_consent', 'declined');
         updateConsent('denied');
         setIsVisible(false);
+        window.dispatchEvent(new Event(COOKIE_DECIDED));
     };
 
     return (
