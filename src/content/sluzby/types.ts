@@ -23,6 +23,18 @@ export type Section =
      */
     | { type: 'prices'; heading: string; categories: string[]; only?: string[] }
     | { type: 'faq'; heading: string; items: { q: string; a: string }[] }
+    /**
+     * Red call-to-action box inside the article. The phone button always uses
+     * the standard number format so Google Ads call tracking can swap it.
+     */
+    | {
+          type: 'cta';
+          heading: string;
+          text: string;
+          points?: string[];
+          secondaryHref: string;
+          secondaryLabel: string;
+      }
     /** Photo from the workshop. Only real Ludato photos belong here. */
     | {
           type: 'image';
