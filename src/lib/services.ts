@@ -47,6 +47,10 @@ export const services: ServiceMeta[] = [
             'Pneuservis Ludato Family Autoservis v Bratislave, Novom Meste: kompletné prezutie, vyváženie, oprava defektu a uskladnenie pneumatík. Rýchlo, presne, bez zbytočného čakania.',
         teaser: 'Sezónne prezutie, vyváženie, oprava defektu aj uskladnenie pneumatík na jednom mieste.',
         category: 'pneumatiky',
+        heroImage: {
+            src: '/sluzby/pneuservis-prezutie-ludato-bratislava.webp',
+            alt: 'Mechanik prezúva pneumatiku na prezúvačke v autoservise a pneuservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+        },
         related: ['brzdy-bratislava', 'geometria-bratislava', 'uskladnenie-pneumatik-bratislava'],
         cta: {
             question: 'Čas na sezónne prezutie?',

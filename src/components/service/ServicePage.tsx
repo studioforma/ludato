@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
@@ -353,6 +354,12 @@ export default function ServicePage({
 
     const [beforeAccent, afterAccent] = meta.h1.split(meta.h1Accent);
 
+    // Pages that send ad traffic put a CTA right under the intro. On mobile the
+    // hero photo would sit between the two and push the CTA down, so there it
+    // moves below the CTA instead.
+    const ctaIndex = content.findIndex((s) => s.type === 'cta');
+    const heroBelowCtaOnMobile = Boolean(meta.heroImage) && ctaIndex >= 0;
+
     // Same rows the price section shows, so the schema never promises a price
     // the page does not.
     const offers = content.flatMap((s) =>
@@ -489,7 +496,11 @@ export default function ServicePage({
                         </div>
 
                         {meta.heroImage && (
-                            <div className="relative w-full max-w-sm mx-auto lg:mx-0 lg:w-80 aspect-[3/4] rounded-sm overflow-hidden border border-white/10">
+                            <div
+                                className={`relative w-full max-w-sm mx-auto lg:mx-0 lg:w-80 aspect-[3/4] rounded-sm overflow-hidden border border-white/10 ${
+                                    heroBelowCtaOnMobile ? 'hidden lg:block' : ''
+                                }`}
+                            >
                                 <Image
                                     src={meta.heroImage.src}
                                     alt={meta.heroImage.alt}
@@ -503,7 +514,20 @@ export default function ServicePage({
                     </div>
 
                     {content.map((section, i) => (
-                        <SectionBlock key={i} section={section} />
+                        <Fragment key={i}>
+                            <SectionBlock section={section} />
+                            {heroBelowCtaOnMobile && i === ctaIndex && meta.heroImage && (
+                                <div className="lg:hidden mb-14 relative w-full max-w-sm mx-auto aspect-[3/4] rounded-sm overflow-hidden border border-white/10">
+                                    <Image
+                                        src={meta.heroImage.src}
+                                        alt={meta.heroImage.alt}
+                                        fill
+                                        sizes="(max-width: 1024px) 100vw, 384px"
+                                        className="object-cover"
+                                    />
+                                </div>
+                            )}
+                        </Fragment>
                     ))}
 
                     <div className="mb-4 max-w-3xl mx-auto">

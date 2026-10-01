@@ -67,6 +67,13 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'image',
+        src: '/sluzby/pneuservis-vyvazovanie-ludato-bratislava.webp',
+        alt: 'Vyvažovanie kolesa na vyvažovačke Redats v pneuservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+        caption: 'Vyváženie kolesa na vyvažovačke, súčasť kompletného prezutia.',
+        orientation: 'portrait',
+    },
+    {
         type: 'text',
         heading: 'Rozdiel medzi letnými a zimnými pneumatikami',
         paragraphs: [
