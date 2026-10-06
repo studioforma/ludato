@@ -13,7 +13,7 @@ import ServiceIcon from '@/components/ServiceIcon';
 export const metadata: Metadata = {
     title: 'Kde nás nájdete | Ludato Family Autoservis',
     description:
-        'Ludato Family Autoservis a pneuservis sídli na Odborárskej v Bratislave - Novom Meste a autom k nám chodia zákazníci z celej Bratislavy: Rača, Vajnory, Staré Mesto, Ružinov, Karlova Ves a Dúbravka.',
+        'Ludato Family Autoservis a pneuservis sídli na Odborárskej v Bratislave - Novom Meste a autom k nám chodia zákazníci z celej Bratislavy aj okolia: Rača, Vajnory, Staré Mesto, Ružinov, Karlova Ves a Dúbravka.',
     alternates: { canonical: '/kde-posobime' },
 };
 
@@ -42,7 +42,7 @@ const whyNoveMesto = [
     },
     {
         title: 'Dôvera zákazníkov',
-        text: 'Zákazníci k nám chodia z Nového Mesta aj z celej Bratislavy, často na odporúčanie. Dôveru si budujeme na odporúčaniach a poctivej práci, nie na reklame.',
+        text: 'Zákazníci k nám chodia z Nového Mesta, z celej Bratislavy aj z okolia, často na odporúčanie. Dôveru si budujeme na odporúčaniach a poctivej práci, nie na reklame.',
     },
 ];
 
@@ -108,7 +108,7 @@ const faq = [
     },
     {
         q: 'Obsluhujete aj zákazníkov mimo Nového Mesta?',
-        a: 'Určite, chodia k nám zákazníci z celej Bratislavy, prehľad ostatných mestských častí nájdete nižšie na tejto stránke.',
+        a: 'Určite, chodia k nám zákazníci z celej Bratislavy aj z okolia, prehľad ostatných mestských častí nájdete nižšie na tejto stránke.',
     },
     {
         q: 'Robíte aj prípravu na STK a emisnú kontrolu?',
@@ -263,7 +263,7 @@ export default function KdePosobime() {
                             style={{ fontFamily: 'var(--font-inter)' }}
                         >
                             Sme na Odborárskej 52 v Novom Meste, no autom k nám chodia zákazníci
-                            z celej Bratislavy. Tu je prehľad mestských častí, odkiaľ k nám
+                            z celej Bratislavy aj okolia. Tu je prehľad mestských častí, odkiaľ k nám
                             najčastejšie prichádzajú, s orientačným časom dojazdu (podľa dopravy
                             sa môže líšiť).
                         </p>
@@ -370,7 +370,7 @@ export default function KdePosobime() {
                                     Kopce, kolóny a parkovanie na ulici však nie sú len vec Nového
                                     Mesta. Rovnako to poznajú vodiči z Rače, Ružinova, Karlovej Vsi
                                     či Dúbravky, a preto k nám chodia aj oni. Nové Mesto je náš
-                                    domov, servisujeme však autá z celej Bratislavy. Prehľad
+                                    domov, servisujeme však autá z celej Bratislavy aj okolia. Prehľad
                                     mestských častí s časom dojazdu nájdete{' '}
                                     <a href="#okolite-casti" className="text-[#E31C25] hover:text-white transition-colors underline">
                                         nižšie na tejto stránke
@@ -420,7 +420,7 @@ export default function KdePosobime() {
                                 className="text-white font-black text-xl mb-4 flex items-center gap-2"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                <span className="text-[#E31C25]">//</span> Naše služby pre zákazníkov z celej Bratislavy
+                                <span className="text-[#E31C25]">//</span> Naše služby pre zákazníkov z Bratislavy a okolia
                             </h3>
                             <p
                                 className="text-white/70 text-base leading-relaxed mb-6"
