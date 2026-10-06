@@ -85,6 +85,12 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'image',
+        src: '/sluzby/podvozok-auto-na-zdvihaku-ludato-bratislava.webp',
+        alt: 'Auto na zdviháku so zloženým kolesom počas práce na podvozku v autoservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+        caption: 'Auto na zdviháku počas práce na prednej náprave.',
+    },
+    {
         type: 'caseStudy',
         heading: 'Prípad z našej dielne',
         vehicle: 'Suzuki Swift, kompletná predná náprava',

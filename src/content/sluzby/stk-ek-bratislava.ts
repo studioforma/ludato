@@ -45,6 +45,13 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'image',
+        src: '/sluzby/stk-stanica-ludato-bratislava.webp',
+        alt: 'Auto na stanici technickej kontroly v Bratislave, sprostredkovanie STK a EK Ludato Family Autoservis',
+        caption: 'Auto na stanici technickej kontroly. Pri sprostredkovaní ho tam odvezieme za vás.',
+        orientation: 'portrait',
+    },
+    {
         type: 'steps',
         heading: 'Ako prebieha sprostredkovanie',
         steps: [

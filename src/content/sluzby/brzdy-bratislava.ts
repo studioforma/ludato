@@ -77,6 +77,13 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'image',
+        src: '/sluzby/brzdy-kotuc-strmen-detail-ludato-bratislava.webp',
+        alt: 'Brzdový kotúč a strmeň po zložení kolesa pri kontrole bŕzd v autoservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+        caption: 'Brzdový kotúč a strmeň po zložení kolesa, takto ich vidíme pri kontrole.',
+        orientation: 'portrait',
+    },
+    {
         type: 'caseStudy',
         heading: 'Prípad z našej dielne',
         vehicle: 'Suzuki Swift, kompletná predná náprava',

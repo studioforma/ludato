@@ -81,6 +81,13 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'image',
+        src: '/sluzby/vymena-oleja-motor-ludato-bratislava.webp',
+        alt: 'Otvorený motorový priestor auta počas servisu v autoservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+        caption: 'Motorový priestor počas servisu v našej dielni.',
+        orientation: 'portrait',
+    },
+    {
         type: 'text',
         heading: 'Typy motorových olejov',
         paragraphs: [

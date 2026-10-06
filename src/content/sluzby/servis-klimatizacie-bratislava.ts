@@ -50,6 +50,13 @@ const content: ServiceContent = [
     },
     {
         type: 'image',
+        src: '/sluzby/klimatizacia-manometre-ludato-bratislava.webp',
+        alt: 'Manometre plničky klimatizácie pri kontrole tlaku v okruhu v autoservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+        caption: 'Manometre plničky ukazujú tlak v okruhu klimatizácie.',
+        orientation: 'portrait',
+    },
+    {
+        type: 'image',
         src: '/sluzby/plnenie-klimatizacie-ludato-bratislava.webp',
         alt: 'Mechanik pripája plničku klimatizácie k vozidlu v autoservise Ludato Family na Odborárskej v Bratislave, Novom Meste',
         caption: 'Plnenie klimatizácie u nás na Odborárskej 52. Okruh najprv vyprázdnime a natlakujeme, až potom plníme chladivom.',

@@ -48,8 +48,8 @@ export const services: ServiceMeta[] = [
         teaser: 'Sezónne prezutie, vyváženie, oprava defektu aj uskladnenie pneumatík na jednom mieste.',
         category: 'pneumatiky',
         heroImage: {
-            src: '/sluzby/pneuservis-prezutie-ludato-bratislava.webp',
-            alt: 'Mechanik prezúva pneumatiku na prezúvačke v autoservise a pneuservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+            src: '/sluzby/pneuservis-subaru-zdvihak-ludato-bratislava.webp',
+            alt: 'Auto na zdviháku pri prezúvaní kolies v pneuservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
         },
         related: ['brzdy-bratislava', 'geometria-bratislava', 'uskladnenie-pneumatik-bratislava'],
         cta: {
@@ -215,6 +215,10 @@ export const services: ServiceMeta[] = [
             'Výmena rozvodov v Bratislave, Novom Meste: rozvodový remeň aj reťaz, napínač, vodiace lišty, kladky a vodné čerpadlo. Postup podľa výrobcu, cena vopred.',
         teaser: 'Rozvodový remeň aj reťaz s kompletnou sadou, skôr než zlyhanie poškodí motor.',
         category: 'motor',
+        heroImage: {
+            src: '/sluzby/rozvody-aretacia-ludato-bratislava.webp',
+            alt: 'Aretačný prípravok nasadený na rozvode motora pri výmene rozvodov v autoservise Ludato Family, Bratislava Nové Mesto',
+        },
         related: ['pocitacova-diagnostika-bratislava', 'vymena-oleja-bratislava', 'turboduchadlo-bratislava', 'opravy-motora-bratislava'],
         cta: {
             question: 'Neviete, kedy sa vám naposledy menil rozvod?',
