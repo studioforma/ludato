@@ -6,7 +6,7 @@ import { motion, useInView } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-import { pricingCategories, type PriceItem, type PricingCategory } from '@/lib/pricing';
+import { formatPriceWithVat, pricingCategories, withVat, type PriceItem, type PricingCategory } from '@/lib/pricing';
 
 const hours = [
     { day: 'Pondelok – Štvrtok', time: '9:00 – 19:00' },
@@ -47,7 +47,8 @@ function PriceRow({ item, index }: { item: PriceItem; index: number }) {
 
             <div className="flex-1 border-b border-dashed border-white/15 mx-2 min-w-[20px]" />
 
-            <div className="flex items-baseline gap-1 flex-shrink-0">
+            <div className="flex flex-col items-end flex-shrink-0">
+            <div className="flex items-baseline gap-1">
                 {item.priceLabel ? (
                     <span
                         className={`text-xl font-black ${
@@ -96,6 +97,15 @@ function PriceRow({ item, index }: { item: PriceItem; index: number }) {
                         </span>
                     </>
                 )}
+            </div>
+            {formatPriceWithVat(item) && (
+                <span
+                    className="text-white/45 text-xs mt-0.5 whitespace-nowrap"
+                    style={{ fontFamily: 'var(--font-inter)' }}
+                >
+                    {formatPriceWithVat(item)}
+                </span>
+            )}
             </div>
         </motion.div>
     );
@@ -238,6 +248,12 @@ export default function CennikPage() {
                                         <span className="text-sm font-medium text-white/40">/NH</span>
                                     </span>
                                     <span
+                                        className="text-white/55 text-[11px] font-semibold"
+                                        style={{ fontFamily: 'var(--font-inter)' }}
+                                    >
+                                        s DPH {withVat(tier.price)} €
+                                    </span>
+                                    <span
                                         className="text-white/35 text-[10px]"
                                         style={{ fontFamily: 'var(--font-inter)' }}
                                     >
@@ -245,6 +261,23 @@ export default function CennikPage() {
                                     </span>
                                 </div>
                             ))}
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.45 }}
+                            className="mt-6 flex justify-center"
+                        >
+                            <p
+                                className="inline-flex items-center gap-3 bg-[#E31C25] text-white text-sm font-bold px-5 py-3 rounded-sm shadow-[0_10px_30px_rgba(227,28,37,0.3)]"
+                                style={{ fontFamily: 'var(--font-montserrat)' }}
+                            >
+                                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="9" strokeWidth={2} />
+                                    <path strokeLinecap="round" strokeWidth={2} d="M12 8v5M12 16.5v.01" />
+                                </svg>
+                                Ceny sú uvedené bez DPH. Pri každej cene nájdete aj sumu s DPH 23 %.
+                            </p>
                         </motion.div>
                     </div>
                 </div>

@@ -8,7 +8,7 @@ import FaqAccordion from '@/components/FaqAccordion';
 import Breadcrumbs from '@/components/service/Breadcrumbs';
 import RichText from '@/components/service/RichText';
 import InlineCta from '@/components/InlineCta';
-import { formatPrice, getCategory, type PricingCategory } from '@/lib/pricing';
+import { formatPrice, formatPriceWithVat, getCategory, type PricingCategory } from '@/lib/pricing';
 import { stripLinks } from '@/lib/richText';
 import { getRelated, type ServiceMeta } from '@/lib/services';
 import type { Section, ServiceContent } from '@/content/sluzby/types';
@@ -181,6 +181,12 @@ function SectionBlock({ section }: { section: Section }) {
             return (
                 <div className="mb-14">
                     <Heading>{section.heading}</Heading>
+                    <p
+                        className="inline-flex items-center gap-2 bg-[#E31C25]/15 border border-[#E31C25]/40 text-white text-xs font-semibold px-3 py-2 rounded-sm mb-6"
+                        style={{ fontFamily: 'var(--font-montserrat)' }}
+                    >
+                        Ceny sú uvedené bez DPH, pod každou nájdete aj sumu s DPH 23 %.
+                    </p>
                     <div className="space-y-8">
                         {categories.map((cat) => (
                             <div key={cat.category}>
@@ -202,11 +208,21 @@ function SectionBlock({ section }: { section: Section }) {
                                             >
                                                 {item.service}
                                             </span>
-                                            <span
-                                                className="text-white font-black text-base flex-shrink-0"
-                                                style={{ fontFamily: 'var(--font-montserrat)' }}
-                                            >
-                                                {formatPrice(item)}
+                                            <span className="flex flex-col items-end flex-shrink-0">
+                                                <span
+                                                    className="text-white font-black text-base"
+                                                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                                                >
+                                                    {formatPrice(item)}
+                                                </span>
+                                                {formatPriceWithVat(item) && (
+                                                    <span
+                                                        className="text-white/45 text-xs whitespace-nowrap"
+                                                        style={{ fontFamily: 'var(--font-inter)' }}
+                                                    >
+                                                        {formatPriceWithVat(item)}
+                                                    </span>
+                                                )}
                                             </span>
                                         </div>
                                     ))}

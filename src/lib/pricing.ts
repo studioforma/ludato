@@ -186,6 +186,21 @@ export function formatPrice(item: PriceItem): string {
     return `${prefix}${item.price} €${unit}`;
 }
 
+/** Slovak standard VAT. Prices in this file are without VAT. */
+export const VAT_RATE = 0.23;
+
+/** '35' -> '43,05' (price including VAT, Slovak decimal comma). */
+export function withVat(price: string): string {
+    return (Number(price.replace(',', '.')) * (1 + VAT_RATE)).toFixed(2).replace('.', ',');
+}
+
+/** "s DPH 43,05 €" line under a price, or null when there is no number to show. */
+export function formatPriceWithVat(item: PriceItem): string | null {
+    if (item.priceLabel || item.price === null) return null;
+    const prefix = item.prefix ? item.prefix + ' ' : '';
+    return `s DPH ${prefix}${withVat(item.price)} €${item.unit ?? ''}`;
+}
+
 export function getCategory(name: string): PricingCategory | undefined {
     return pricingCategories.find((c) => c.category === name);
 }
