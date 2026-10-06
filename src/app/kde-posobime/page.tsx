@@ -508,15 +508,15 @@ export default function KdePosobime() {
                     </div>
 
                     {/* Areas grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {areas.map((area) => {
                             const page = areaPages.find((p) => p.name === area.name);
                             const cardClass =
-                                'group block bg-[#1D1D1B] border border-white/10 rounded-sm p-6 hover:border-[#E31C25]/40 transition-colors duration-300';
+                                'group block bg-[#1D1D1B] border border-white/10 rounded-sm p-5 hover:border-[#E31C25]/40 transition-colors duration-300';
                             const body = (
                                 <>
                                     <h2
-                                        className="text-white font-black text-lg mb-1 flex items-center gap-2"
+                                        className="text-white font-black text-base mb-1 flex items-center gap-2"
                                         style={{ fontFamily: 'var(--font-montserrat)' }}
                                     >
                                         <span className="text-[#E31C25]">//</span> {area.name}
@@ -541,7 +541,7 @@ export default function KdePosobime() {
                                     </p>
                                     {page && (
                                         <span
-                                            className="inline-block mt-4 text-[#E31C25] group-hover:text-white text-xs font-bold tracking-widest uppercase transition-colors"
+                                            className="inline-block mt-3 text-[#E31C25] group-hover:text-white text-xs font-bold tracking-widest uppercase transition-colors"
                                             style={{ fontFamily: 'var(--font-montserrat)' }}
                                         >
                                             Autoservis pre {page.nameAcc} →
