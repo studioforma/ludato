@@ -5,19 +5,26 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FaqAccordion from '@/components/FaqAccordion';
 import CtaBanner from '@/components/CtaBanner';
+import InlineCta from '@/components/InlineCta';
+import { areas as areaPages } from '@/lib/areas';
+import { getService } from '@/lib/services';
+import ServiceIcon from '@/components/ServiceIcon';
 
 export const metadata: Metadata = {
     title: 'Kde nás nájdete | Ludato Family Autoservis',
     description:
-        'Ludato Family Autoservis a pneuservis sídli na Odborárskej v Bratislave - Novom Meste a autom k nám chodia zákazníci z celej Bratislavy: Rača, Vajnory, Staré Mesto, Ružinov, Karlová Ves a Dúbravka.',
+        'Ludato Family Autoservis a pneuservis sídli na Odborárskej v Bratislave - Novom Meste a autom k nám chodia zákazníci z celej Bratislavy aj okolia: Rača, Vajnory, Staré Mesto, Ružinov, Karlova Ves a Dúbravka.',
     alternates: { canonical: '/kde-posobime' },
 };
 
 type Area = {
     name: string;
     driveTime: string;
+    /** Big number on the card, e.g. "10-15". */
+    minutes: string;
+    /** Rough position relative to Odborárska 52 in km (x east, y north), for the mini map. */
+    pos: [number, number];
     route: string;
-    note: string;
 };
 
 const whyNoveMesto = [
@@ -34,23 +41,31 @@ const whyNoveMesto = [
         text: 'Servis vedie rodina, Lucia, Damian a Tomáš, osobne. Nie sme anonymná pobočka veľkej siete, poznáme svojich zákazníkov aj ich autá.',
     },
     {
-        title: 'Dôvera miestnych',
-        text: 'Väčšina našich zákazníkov je z Nového Mesta a najbližšieho okolia. Dôveru si budujeme na odporúčaniach a poctivej práci, nie na reklame.',
+        title: 'Dôvera zákazníkov',
+        text: 'Zákazníci k nám chodia z Nového Mesta, z celej Bratislavy aj z okolia, často na odporúčanie. Dôveru si budujeme na odporúčaniach a poctivej práci, nie na reklame.',
     },
 ];
 
-const noveMestoServices = [
+// A few core services linked from this page; the rest are one click away on /sluzby.
+const featuredServices = [
+    'pocitacova-diagnostika-bratislava',
+    'vymena-oleja-bratislava',
+    'brzdy-bratislava',
+    'pneuservis-bratislava',
+];
+
+const bratislavaServices = [
     {
         name: 'Diagnostika a opravy',
-        text: 'Skôr než čokoľvek vymieňame, chceme presne vedieť, čo sa s vozidlom deje. Počítačová diagnostika nám ukáže skutočný stav auta, nie len prvý odhad, čo je dôležité obzvlášť pri starších rodinných autách, s ktorými sa v uličkách Nového Mesta stretávame bežne.',
+        text: 'Skôr než čokoľvek vymieňame, chceme presne vedieť, čo sa s vozidlom deje. Počítačová diagnostika nám ukáže skutočný stav auta, nie len prvý odhad, čo je dôležité obzvlášť pri starších rodinných autách, s ktorými sa v Bratislave stretávame bežne.',
     },
     {
         name: 'Servisné prehliadky',
-        text: 'Pravidelná servisná prehliadka pred STK alebo podľa intervalov výrobcu vám ušetrí nepríjemné prekvapenia. Vzhľadom na kopcovitý terén v okolí Kramárov a Koliby odporúčame nepodceňovať kontrolu bŕzd a kvapalín ani mimo bežného intervalu.',
+        text: 'Pravidelná servisná prehliadka pred STK alebo podľa intervalov výrobcu vám ušetrí nepríjemné prekvapenia. Ak jazdíte v kopcovitých častiach mesta, ako sú Kramáre, Koliba či Karlova Ves, odporúčame nepodceňovať kontrolu bŕzd a kvapalín ani mimo bežného intervalu.',
     },
     {
         name: 'Oprava bŕzd a podvozkov',
-        text: 'Kopce, križovatky a časté brzdenie v hustej mestskej doprave dávajú bŕzdam v Novom Meste zabrať viac než priemeru. Kontrolujeme platničky, kotúče aj celý podvozok, geometriu, tlmiče, ramená, aby vaše auto zvládalo terén bez zbytočného opotrebovania.',
+        text: 'Kopce, križovatky a časté brzdenie v hustej mestskej doprave dávajú bŕzdam v Bratislave zabrať viac než jazda mimo mesta. Kontrolujeme platničky, kotúče aj celý podvozok, geometriu, tlmiče, ramená, aby vaše auto zvládalo terén bez zbytočného opotrebovania.',
     },
     {
         name: 'Servis klimatizácie',
@@ -58,7 +73,7 @@ const noveMestoServices = [
     },
     {
         name: 'Pneuservis a prezutie',
-        text: 'Sezónne prezutie je pre nás bežná rutina, no pri parkovaní na uliciach Nového Mesta odporúčame nepodceňovať ani vyváženie kolies. Obrubníky a výtlky v uličkách vedia diskom ublížiť rýchlejšie, než by ste čakali.',
+        text: 'Sezónne prezutie je pre nás bežná rutina, no pri parkovaní na uliciach Bratislavy odporúčame nepodceňovať ani vyváženie kolies. Obrubníky a výtlky v uličkách vedia diskom ublížiť rýchlejšie, než by ste čakali.',
     },
     {
         name: 'Výmena kolies na diskoch',
@@ -77,7 +92,7 @@ const faq = [
     },
     {
         q: 'Ponúkate náhradné vozidlo?',
-        a: 'Áno, k dispozícii máme dve náhradné autá, VW Passat (ročníky približne 2019 a 2022). Dostupnosť si prosím overte vopred telefonicky, počet vozidiel je obmedzený.',
+        a: 'Áno, požičiavame Škody Fabia a VW Passat. Náhradné vozidlo stojí 35 € na deň, pri servise nad 1000 € je zadarmo a pri poistnej udalosti ho hradí poisťovňa. Dostupnosť si overte pri objednaní.',
     },
     {
         q: 'Servisujete všetky značky vozidiel?',
@@ -93,7 +108,7 @@ const faq = [
     },
     {
         q: 'Obsluhujete aj zákazníkov mimo Nového Mesta?',
-        a: 'Určite, chodia k nám zákazníci z celej Bratislavy, prehľad ostatných mestských častí nájdete nižšie na tejto stránke.',
+        a: 'Určite, chodia k nám zákazníci z celej Bratislavy aj z okolia, prehľad ostatných mestských častí nájdete nižšie na tejto stránke.',
     },
     {
         q: 'Robíte aj prípravu na STK a emisnú kontrolu?',
@@ -146,40 +161,78 @@ const areas: Area[] = [
     {
         name: 'Rača',
         driveTime: 'orientačne 10 - 15 min autom',
+        minutes: '10-15',
+        pos: [1, 2.9],
         route: 'Cez Púchovskú a Račiansku.',
-        note: 'Susedná mestská časť, veľmi častá trasa pre zákazníkov idúcich do práce cez Nové Mesto.',
     },
     {
         name: 'Vajnory',
         driveTime: 'orientačne 15 - 20 min autom',
+        minutes: '15-20',
+        pos: [5.1, 3.1],
         route: 'Cez Vajnorskú a Račiansku.',
-        note: 'Aj z okrajovej časti Vajnor k nám zákazníci chodievajú pravidelne na servisné prehliadky.',
     },
     {
         name: 'Staré Mesto',
         driveTime: 'orientačne 10 min autom',
+        minutes: '10',
+        pos: [-2.3, -3.8],
         route: 'Cez Trnavské mýto a Legionársku.',
-        note: 'Blízko centra, ideálne pre zákazníkov, ktorí kombinujú servis s pochôdzkami v meste.',
     },
     {
         name: 'Ružinov',
         driveTime: 'orientačne 15 min autom',
+        minutes: '15',
+        pos: [2, -2.8],
         route: 'Cez Prievozskú alebo Trnavskú cestu.',
-        note: 'Druhá najväčšia mestská časť Bratislavy, odtiaľto k nám prichádza pravidelne veľa zákazníkov.',
     },
     {
-        name: 'Karlová Ves',
+        name: 'Karlova Ves',
         driveTime: 'orientačne 20 min autom',
+        minutes: '20',
+        pos: [-6, -2.5],
         route: 'Cez Most SNP alebo Botanickú.',
-        note: 'Trochu ďalej, ale pre poctivý servis a férové ceny sa oplatí prejsť aj cez celé mesto.',
     },
     {
         name: 'Dúbravka',
         driveTime: 'orientačne 20 - 25 min autom',
+        minutes: '20-25',
+        pos: [-7.4, 1],
         route: 'Cez Saratovskú a Botanickú.',
-        note: 'Najvzdialenejšia oblasť z nášho okruhu, no aj odtiaľto máme spokojných stálych klientov.',
     },
 ];
+
+/** Schematic map: our workshop in the middle, the district as a dot in its real direction. */
+function MiniMap({ pos }: { pos: [number, number] }) {
+    const c = 40;
+    const k = 4.4;
+    const x = c + pos[0] * k;
+    const y = c - pos[1] * k;
+    return (
+        <svg viewBox="0 0 80 80" className="w-20 h-20 shrink-0" aria-hidden="true">
+            <circle cx={c} cy={c} r="36" fill="none" stroke="rgba(255,255,255,0.08)" />
+            <circle cx={c} cy={c} r="24" fill="none" stroke="rgba(255,255,255,0.08)" />
+            <circle cx={c} cy={c} r="12" fill="none" stroke="rgba(255,255,255,0.08)" />
+            <line x1={c} y1="4" x2={c} y2="76" stroke="rgba(255,255,255,0.05)" />
+            <line x1="4" y1={c} x2="76" y2={c} stroke="rgba(255,255,255,0.05)" />
+            <text x={c} y="10" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.35)" fontWeight="700">
+                S
+            </text>
+            <line
+                x1={c}
+                y1={c}
+                x2={x}
+                y2={y}
+                stroke="#E31C25"
+                strokeWidth="1.5"
+                strokeDasharray="3 3"
+                className="opacity-60 group-hover:opacity-100 transition-opacity"
+            />
+            <circle cx={x} cy={y} r="4" fill="#ffffff" />
+            <circle cx={c} cy={c} r="5" fill="#E31C25" stroke="#ffffff" strokeWidth="1.5" />
+        </svg>
+    );
+}
 
 export default function KdePosobime() {
     return (
@@ -210,11 +263,23 @@ export default function KdePosobime() {
                             style={{ fontFamily: 'var(--font-inter)' }}
                         >
                             Sme na Odborárskej 52 v Novom Meste, no autom k nám chodia zákazníci
-                            z celej Bratislavy. Tu je prehľad mestských častí, odkiaľ k nám
+                            z celej Bratislavy aj okolia. Tu je prehľad mestských častí, odkiaľ k nám
                             najčastejšie prichádzajú, s orientačným časom dojazdu (podľa dopravy
                             sa môže líšiť).
                         </p>
                     </div>
+
+                    <InlineCta
+                        heading="Nemáte čas prísť do servisu?"
+                        text="Po auto si prídeme sami, v Bratislave aj okolí."
+                        points={[
+                            'Vyzdvihnutie auta v Bratislave a okolí za 50 €',
+                            'Náhradné vozidlo za 35 € na deň',
+                            'Odťah nepojazdného auta za 170 €',
+                        ]}
+                        secondaryHref="/nacenenie?sluzba=pickup"
+                        secondaryLabel="Objednať sa"
+                    />
 
                     {/* Nové Mesto - domáca mestská časť */}
                     <div id="nove-mesto" className="mb-16">
@@ -258,8 +323,8 @@ export default function KdePosobime() {
                                 prvýkrát, presne tak, ako by sme sa starali o vlastné auto. Pred
                                 každou opravou vás informujeme o nákladoch, žiadne skryté
                                 poplatky, len úprimná komunikácia. Táto filozofia je dôvod, prečo
-                                sa k nám zákazníci z Nového Mesta vracajú a prečo nás odporúčajú
-                                aj svojim susedom a rodine v okolí.
+                                sa k nám zákazníci vracajú aj z druhého konca Bratislavy a prečo
+                                nás odporúčajú svojim susedom a rodine.
                             </p>
                         </div>
 
@@ -301,6 +366,17 @@ export default function KdePosobime() {
                                     miestne podmienky a vie odhadnúť, kde sa oplatí byť
                                     obozretný skôr, než sa z malej závady stane veľká.
                                 </p>
+                                <p>
+                                    Kopce, kolóny a parkovanie na ulici však nie sú len vec Nového
+                                    Mesta. Rovnako to poznajú vodiči z Rače, Ružinova, Karlovej Vsi
+                                    či Dúbravky, a preto k nám chodia aj oni. Nové Mesto je náš
+                                    domov, servisujeme však autá z celej Bratislavy aj okolia. Prehľad
+                                    mestských častí s časom dojazdu nájdete{' '}
+                                    <a href="#okolite-casti" className="text-[#E31C25] hover:text-white transition-colors underline">
+                                        nižšie na tejto stránke
+                                    </a>
+                                    .
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -338,24 +414,24 @@ export default function KdePosobime() {
                             ))}
                         </div>
 
-                        {/* Služby pre Nové Mesto */}
+                        {/* Služby pre celú Bratislavu */}
                         <div className="mb-10 max-w-3xl mx-auto">
                             <h3
                                 className="text-white font-black text-xl mb-4 flex items-center gap-2"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                <span className="text-[#E31C25]">//</span> Naše služby pre zákazníkov z Nového Mesta
+                                <span className="text-[#E31C25]">//</span> Naše služby pre zákazníkov z Bratislavy a okolia
                             </h3>
                             <p
                                 className="text-white/70 text-base leading-relaxed mb-6"
                                 style={{ fontFamily: 'var(--font-inter)' }}
                             >
                                 Ponúkame plný rozsah autoservisných služieb pod jednou strechou,
-                                s dôrazom presne na to, čo autám v Novom Meste najčastejšie
-                                spôsobuje problémy.
+                                s dôrazom na to, čo autám v Bratislave najčastejšie spôsobuje
+                                problémy: kopce, výtlky, krátke trasy a parkovanie na ulici.
                             </p>
                             <div className="space-y-5">
-                                {noveMestoServices.map((service) => (
+                                {bratislavaServices.map((service) => (
                                     <div key={service.name}>
                                         <div
                                             className="text-white font-bold text-sm mb-1"
@@ -371,6 +447,39 @@ export default function KdePosobime() {
                                         </p>
                                     </div>
                                 ))}
+                            </div>
+
+                            <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                {featuredServices.map((slug) => {
+                                    const meta = getService(slug);
+                                    if (!meta) return null;
+                                    return (
+                                        <Link
+                                            key={slug}
+                                            href={`/sluzby/${slug}`}
+                                            className="group flex flex-col items-center gap-2 bg-[#1D1D1B] border border-white/10 rounded-sm px-3 py-4 text-center hover:border-[#E31C25]/50 transition-colors duration-300"
+                                        >
+                                            <span className="text-white group-hover:text-[#E31C25] transition-colors duration-300">
+                                                <ServiceIcon slug={slug} />
+                                            </span>
+                                            <span
+                                                className="text-white text-xs font-bold leading-tight"
+                                                style={{ fontFamily: 'var(--font-montserrat)' }}
+                                            >
+                                                {meta.name}
+                                            </span>
+                                        </Link>
+                                    );
+                                })}
+                            </div>
+                            <div className="mt-4 text-center">
+                                <Link
+                                    href="/sluzby"
+                                    className="inline-block text-[#E31C25] hover:text-white text-xs font-bold tracking-widest uppercase transition-colors"
+                                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                                >
+                                    Pozrieť všetky služby →
+                                </Link>
                             </div>
                         </div>
 
@@ -390,9 +499,9 @@ export default function KdePosobime() {
                                     Sme na Odborárskej 52 v Bratislave, Novom Meste. Parkovanie je
                                     možné priamo pred prevádzkou aj popri ceste vedľa nášho
                                     areálu, takže sa nemusíte obávať, že nebudete mať kde
-                                    zastaviť. Väčšina zákazníkov z okolitých sídlisk Kramáre,
-                                    Vinohrady a Koliba k nám prichádza autom do pár minút, z
-                                    centra Bratislavy je to tiež len krátka jazda.
+                                    zastaviť. Zo sídlisk Kramáre, Vinohrady a Koliba ste u nás autom za
+                                    pár minút, z centra Bratislavy je to tiež len krátka jazda.
+                                    Trasy z ostatných mestských častí nájdete pri kartách nižšie.
                                 </p>
                                 <p>
                                     Ak počas opravy potrebujete pokračovať bez auta, Nové Mesto má
@@ -484,53 +593,83 @@ export default function KdePosobime() {
                     </div>
 
                     {/* Ostatné oblasti header */}
-                    <div className="text-center mb-10">
+                    <div id="okolite-casti" className="text-center mb-10 scroll-mt-28">
                         <h2
                             className="text-2xl md:text-3xl font-black text-white"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             OBSLUHUJEME AJ <span className="text-[#E31C25]">OKOLITÉ ČASTI</span>
                         </h2>
+                        <div
+                            className="mt-4 flex items-center justify-center gap-5 text-white/50 text-xs"
+                            style={{ fontFamily: 'var(--font-inter)' }}
+                        >
+                            <span className="flex items-center gap-2">
+                                <span className="w-2.5 h-2.5 rounded-full bg-[#E31C25] ring-[1.5px] ring-white" />
+                                Náš servis, Odborárska 52
+                            </span>
+                            <span className="flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-white" />
+                                Mestská časť
+                            </span>
+                        </div>
                     </div>
 
                     {/* Areas grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        {areas.map((area) => (
-                            <div
-                                key={area.name}
-                                id={area.name.toLowerCase().replace(/\s+/g, '-')}
-                                className="bg-[#1D1D1B] border border-white/10 rounded-sm p-6 hover:border-[#E31C25]/40 transition-colors duration-300"
-                            >
-                                <h2
-                                    className="text-white font-black text-lg mb-1 flex items-center gap-2"
-                                    style={{ fontFamily: 'var(--font-montserrat)' }}
-                                >
-                                    <span className="text-[#E31C25]">//</span> {area.name}
-                                </h2>
-                                <div
-                                    className="text-[#E31C25] text-xs font-bold tracking-widest uppercase mb-3"
-                                    style={{ fontFamily: 'var(--font-montserrat)' }}
-                                >
-                                    {area.driveTime}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                        {areas.map((area) => {
+                            const page = areaPages.find((p) => p.name === area.name);
+                            const cardClass =
+                                'group flex flex-col justify-between bg-[#1D1D1B] border border-white/10 rounded-sm p-5 hover:border-[#E31C25]/50 hover:bg-[#222220] transition-colors duration-300';
+                            const body = (
+                                <>
+                                    <div className="flex items-center gap-4">
+                                        <MiniMap pos={area.pos} />
+                                        <div className="min-w-0">
+                                            <h2
+                                                className="text-white font-black text-base leading-tight"
+                                                style={{ fontFamily: 'var(--font-montserrat)' }}
+                                            >
+                                                {area.name}
+                                            </h2>
+                                            <div className="mt-1 flex items-baseline gap-1.5" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                                <span className="text-[#E31C25] font-black text-2xl leading-none">{area.minutes}</span>
+                                                <span className="text-white/50 text-xs font-bold uppercase tracking-wider">min autom</span>
+                                            </div>
+                                            <p
+                                                className="mt-1.5 text-white/45 text-xs"
+                                                style={{ fontFamily: 'var(--font-inter)' }}
+                                            >
+                                                {area.route}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    {page && (
+                                        <span
+                                            className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[#E31C25] group-hover:text-white text-xs font-bold tracking-widest uppercase transition-colors"
+                                            style={{ fontFamily: 'var(--font-montserrat)' }}
+                                        >
+                                            Autoservis pre {page.nameAcc}
+                                            <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
+                                        </span>
+                                    )}
+                                </>
+                            );
+                            const id = area.name.toLowerCase().replace(/s+/g, '-');
+                            return page ? (
+                                <Link key={area.name} id={id} href={`/kde-posobime/${page.slug}`} className={cardClass}>
+                                    {body}
+                                </Link>
+                            ) : (
+                                <div key={area.name} id={id} className={cardClass}>
+                                    {body}
                                 </div>
-                                <p
-                                    className="text-white/50 text-sm mb-2"
-                                    style={{ fontFamily: 'var(--font-inter)' }}
-                                >
-                                    {area.route}
-                                </p>
-                                <p
-                                    className="text-white/70 text-sm leading-relaxed"
-                                    style={{ fontFamily: 'var(--font-inter)' }}
-                                >
-                                    {area.note}
-                                </p>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
 
                     {/* Services + CTA */}
-                    <div className="mt-16 text-center border-t border-white/10 pt-12">
+                    <div className="mt-16 text-center border-t border-white/10 pt-12 px-4">
                         <p
                             className="text-white/60 max-w-xl mx-auto mb-6"
                             style={{ fontFamily: 'var(--font-inter)' }}

@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Pískajú vám brzdy?',
+        text: 'Keď platnička dôjde až na kov, zničí aj kotúč a oprava vás vyjde takmer dvojnásobne. Skontrolujeme ich na oboch nápravách.',
+        points: [
+            'Kontrola bŕzd za 35 €',
+            'Výmena platničiek na nápravu za 45 €',
+            'Kotúče s platničkami na nápravu za 85 €',
+        ],
+        secondaryHref: '/nacenenie?sluzba=brzdy',
+        secondaryLabel: 'Objednať kontrolu bŕzd',
+    },
+    {
         type: 'list',
         heading: 'Čo zahŕňa servis bŕzd u nás',
         items: [
@@ -63,6 +75,13 @@ const content: ServiceContent = [
                 text: 'Po väčšom zásahu do bŕzd absolvujeme skúšobnú jazdu, aby sme si overili, že je všetko v poriadku ešte pred odovzdaním vozidla.',
             },
         ],
+    },
+    {
+        type: 'image',
+        src: '/sluzby/brzdy-kotuc-strmen-detail-ludato-bratislava.webp',
+        alt: 'Brzdový kotúč a strmeň po zložení kolesa pri kontrole bŕzd v autoservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+        caption: 'Brzdový kotúč a strmeň po zložení kolesa, takto ich vidíme pri kontrole.',
+        orientation: 'portrait',
     },
     {
         type: 'caseStudy',

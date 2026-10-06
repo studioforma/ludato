@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Potrebujete vymeniť olej?',
+        text: 'Starý olej prestáva mazať a motor sa opotrebúva s každým kilometrom. Olej a filtre pripravíme podľa EČV presne pre vaše auto.',
+        points: [
+            'Výmena oleja a olejového filtra od 35 €',
+            'Olej a filtre podľa špecifikácie výrobcu',
+            'Kompletný servis vrátane palivového filtra za 65 €',
+        ],
+        secondaryHref: '/nacenenie?sluzba=olej',
+        secondaryLabel: 'Objednať výmenu oleja',
+    },
+    {
         type: 'list',
         heading: 'Čo zahŕňa výmena oleja u nás',
         items: [
@@ -67,6 +79,13 @@ const content: ServiceContent = [
                 text: 'Na záver skontrolujeme hladinu ostatných kvapalín a vizuálne posúdime celkový stav motora.',
             },
         ],
+    },
+    {
+        type: 'image',
+        src: '/sluzby/vymena-oleja-motor-ludato-bratislava.webp',
+        alt: 'Otvorený motorový priestor auta počas servisu v autoservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+        caption: 'Motorový priestor počas servisu v našej dielni.',
+        orientation: 'portrait',
     },
     {
         type: 'text',

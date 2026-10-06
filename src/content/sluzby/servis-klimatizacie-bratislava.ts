@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Nechladí vám klimatizácia?',
+        text: 'Kompresor bez dostatku chladiva a oleja sa ničí s každou jazdou a jeho výmena je drahá. Skontrolujeme tesnosť a doplníme chladivo.',
+        points: [
+            'Servis klímy od 40 €, chladivo podľa množstva',
+            'Staré aj nové chladivo R134a a R1234yf',
+            'Ozónová dezinfekcia proti zápachu za 30 €',
+        ],
+        secondaryHref: '/nacenenie?sluzba=klimatizacia',
+        secondaryLabel: 'Objednať servis klímy',
+    },
+    {
         type: 'list',
         heading: 'Čo zahŕňa servis klimatizácie u nás',
         items: [
@@ -35,6 +47,13 @@ const content: ServiceContent = [
                 text: 'Pri probléme so zápachom z ventilácie ponúkame aj ozónovú dezinfekciu interiéru, ktorá odstráni baktérie a plesne priamo vo výparníku, nie len prekryje zápach.',
             },
         ],
+    },
+    {
+        type: 'image',
+        src: '/sluzby/klimatizacia-manometre-ludato-bratislava.webp',
+        alt: 'Manometre plničky klimatizácie pri kontrole tlaku v okruhu v autoservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+        caption: 'Manometre plničky ukazujú tlak v okruhu klimatizácie.',
+        orientation: 'portrait',
     },
     {
         type: 'image',

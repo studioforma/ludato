@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import CtaBanner from '@/components/CtaBanner';
 import Breadcrumbs from '@/components/service/Breadcrumbs';
 import { serviceCategories, services } from '@/lib/services';
+import ServiceIcon from '@/components/ServiceIcon';
 
 const SITE = 'https://www.ludato.sk';
 
@@ -95,31 +96,35 @@ export default function Sluzby() {
                                     <div className="flex-1 h-px bg-white/8" />
                                 </div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                     {cat.items.map((s) => (
                                         <Link
                                             key={s.slug}
                                             href={`/sluzby/${s.slug}`}
-                                            className="group block bg-[#1D1D1B] border border-white/10 rounded-sm p-6 hover:border-[#E31C25]/50 transition-colors duration-300"
+                                            className="group flex gap-4 bg-[#1D1D1B] border border-white/10 rounded-sm p-5 hover:border-[#E31C25]/50 hover:bg-[#222220] transition-colors duration-300"
                                         >
-                                            <h3
-                                                className="font-black text-white text-lg mb-2"
-                                                style={{ fontFamily: 'var(--font-montserrat)' }}
-                                            >
-                                                <span className="text-[#E31C25] mr-1">//</span>
-                                                {s.name}
-                                            </h3>
-                                            <p
-                                                className="text-white/60 text-sm leading-relaxed mb-4"
-                                                style={{ fontFamily: 'var(--font-inter)' }}
-                                            >
-                                                {s.teaser}
-                                            </p>
-                                            <span
-                                                className="text-[#E31C25] group-hover:text-white text-xs font-bold tracking-widest uppercase transition-colors duration-300"
-                                                style={{ fontFamily: 'var(--font-montserrat)' }}
-                                            >
-                                                Zistiť viac →
+                                            <span className="shrink-0 w-11 h-11 rounded-sm border border-white/15 flex items-center justify-center text-white group-hover:text-[#E31C25] group-hover:border-[#E31C25]/50 transition-colors duration-300">
+                                                <ServiceIcon slug={s.slug} />
+                                            </span>
+                                            <span className="min-w-0 flex flex-col">
+                                                <h3
+                                                    className="font-black text-white text-base leading-tight mb-1.5"
+                                                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                                                >
+                                                    {s.name}
+                                                </h3>
+                                                <span
+                                                    className="text-white/55 text-sm leading-snug mb-3"
+                                                    style={{ fontFamily: 'var(--font-inter)' }}
+                                                >
+                                                    {s.teaser}
+                                                </span>
+                                                <span
+                                                    className="mt-auto text-[#E31C25] group-hover:text-white text-xs font-bold tracking-widest uppercase transition-colors duration-300"
+                                                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                                                >
+                                                    Zistiť viac →
+                                                </span>
                                             </span>
                                         </Link>
                                     ))}

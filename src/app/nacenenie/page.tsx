@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
+import { getOrderPrefill } from '@/lib/orderPrefill';
 
 const servicesOptions = [
     'Diagnostika vozidla',
@@ -37,6 +38,18 @@ export default function QuotePage() {
         email: '',
         phone: '',
     });
+
+    // ?sluzba=prezutie from a service page CTA pre-selects that service.
+    // Read after mount so the static page needs no Suspense boundary.
+    useEffect(() => {
+        const prefill = getOrderPrefill(new URLSearchParams(window.location.search).get('sluzba'));
+        if (!prefill) return;
+        setFormState((prev) => ({
+            ...prev,
+            services: prev.services.includes(prefill.service) ? prev.services : [...prev.services, prefill.service],
+            otherDetails: prev.otherDetails || prefill.note || '',
+        }));
+    }, []);
 
     const toggleService = (service: string) => {
         setFormState((prev) => ({

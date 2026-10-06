@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Potrebujete auto počas opravy?',
+        text: 'Hlavne v sezóne sa oplatí rezervovať ho s predstihom. Povedzte nám o ňom už pri objednaní servisu.',
+        points: [
+            'Náhradné vozidlo za 35 € na deň',
+            'Zadarmo pri servise nad 1000 €',
+            'Pri poistnej udalosti ho hradí poisťovňa',
+        ],
+        secondaryHref: '/nacenenie?sluzba=nahradne-vozidlo',
+        secondaryLabel: 'Objednať servis',
+    },
+    {
         type: 'list',
         heading: 'Čo ponúkame',
         items: [

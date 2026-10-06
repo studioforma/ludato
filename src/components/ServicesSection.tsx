@@ -4,75 +4,42 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 import { getService, type ServiceMeta } from '@/lib/services';
+import ServiceIcon from '@/components/ServiceIcon';
 
 // Homepage shows only the core services. Name and teaser come from the
 // registry, so the cards always match the service pages they link to.
-const featured: { slug: string; detail: string; icon: React.ReactNode }[] = [
+const featured: { slug: string; detail: string }[] = [
     {
         slug: 'pocitacova-diagnostika-bratislava',
         detail: 'OBD II • ESP • ABS • Airbag',
-        icon: (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
-            </svg>
-        ),
     },
     {
         slug: 'vymena-oleja-bratislava',
         detail: 'Olej • Filtre • Kontrola kvapalín',
-        icon: (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c-3 4.5-6 7.5-6 11a6 6 0 0012 0c0-3.5-3-6.5-6-11z" />
-            </svg>
-        ),
     },
     {
         slug: 'brzdy-bratislava',
         detail: 'Kotúče • Platničky • Kvapalina',
-        icon: (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
-                <circle cx="12" cy="12" r="10" strokeLinecap="round" />
-                <circle cx="12" cy="12" r="3" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 2v3M12 19v3M2 12h3M19 12h3" />
-            </svg>
-        ),
     },
     {
         slug: 'podvozok-bratislava',
         detail: 'Tlmiče • Ramená • Ložiská',
-        icon: (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 12h16M7 8v8M17 8v8M12 5l2 3h-4l2-3zM12 19l2-3h-4l2 3z" />
-            </svg>
-        ),
     },
     {
         slug: 'servis-klimatizacie-bratislava',
         detail: 'R134a • R1234yf • Dezinfekcia',
-        icon: (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5" />
-            </svg>
-        ),
     },
     {
         slug: 'pneuservis-bratislava',
         detail: '12" – 21" • Vyváženie • Uskladnenie',
-        icon: (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
-                <circle cx="12" cy="12" r="9" />
-                <circle cx="12" cy="12" r="2.5" />
-                <path strokeLinecap="round" d="M12 3v3M12 18v3M21 12h-3M6 12H3M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M18.4 18.4l-2.1-2.1M7.7 7.7L5.6 5.6" />
-            </svg>
-        ),
     },
 ];
 
-type Card = { meta: ServiceMeta; detail: string; icon: React.ReactNode };
+type Card = { meta: ServiceMeta; detail: string };
 
 const cards: Card[] = featured.flatMap((f) => {
     const meta = getService(f.slug);
-    return meta ? [{ meta, detail: f.detail, icon: f.icon }] : [];
+    return meta ? [{ meta, detail: f.detail }] : [];
 });
 
 function ServiceCard({ card, index }: { card: Card; index: number }) {
@@ -98,7 +65,7 @@ function ServiceCard({ card, index }: { card: Card; index: number }) {
                 </div>
 
                 <div className="text-[#E31C25] mb-6 group-hover:scale-110 transition-transform duration-300 origin-left">
-                    {card.icon}
+                    <ServiceIcon slug={card.meta.slug} className="w-8 h-8" />
                 </div>
 
                 <h3

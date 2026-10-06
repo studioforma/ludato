@@ -10,14 +10,14 @@ const content: ServiceContent = [
     },
     {
         type: 'cta',
-        heading: 'Prezujte sa skôr, než príde prvý mráz',
-        text: 'Keď napadne prvý sneh, chce sa prezúvať celé mesto naraz a voľné termíny zmiznú za pár dní. Zavolajte teraz a máte to vybavené v pokoji, bez čakania a bez stresu z klzkej cesty.',
+        heading: 'Čas na sezónne prezutie?',
+        text: 'Nečakajte na prvý sneh. Vtedy sú termíny plné a na letných pneumatikách sa vám na klzkej ceste predĺži brzdná dráha.',
         points: [
             'Kompletné prezutie od 45 € vrátane vyváženia každého kolesa',
             'Kontrola dezénu, tlaku a ventilčekov pri každom prezutí',
             'Druhú sadu vám uskladníme za 40 € na sezónu',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=prezutie',
         secondaryLabel: 'Objednať prezutie',
     },
     {
@@ -68,10 +68,9 @@ const content: ServiceContent = [
     },
     {
         type: 'image',
-        src: '/sluzby/pneuservis-vyvazovanie-ludato-bratislava.webp',
-        alt: 'Vyvažovanie kolesa na vyvažovačke Redats v pneuservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
-        caption: 'Vyváženie kolesa na vyvažovačke, súčasť kompletného prezutia.',
-        orientation: 'portrait',
+        src: '/sluzby/pneuservis-prezuvacka-vyvazovacka-ludato-bratislava.webp',
+        alt: 'Vyvažovačka a prezúvačka pneumatík v pneuservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+        caption: 'Vyvažovačka a prezúvačka v našej dielni. Vyváženie kolies je súčasťou kompletného prezutia.',
     },
     {
         type: 'text',

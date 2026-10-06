@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Klepe vám niečo pod autom?',
+        text: 'Opotrebovaný podvozok predlžuje brzdnú dráhu a s vôľou v riadení STK neprejdete. Auto zdvihneme a nájdeme príčinu.',
+        points: [
+            'Kontrola podvozku za 30 €',
+            'Tlmiče, ramená, silentbloky, ložiská aj čapy',
+            'Cena opravy vopred, bez prekvapení',
+        ],
+        secondaryHref: '/nacenenie?sluzba=podvozok',
+        secondaryLabel: 'Objednať kontrolu podvozku',
+    },
+    {
         type: 'list',
         heading: 'Čo zahŕňa servis podvozku u nás',
         items: [
@@ -71,6 +83,12 @@ const content: ServiceContent = [
                 text: 'Po zásahu do podvozku odporúčame nastaviť geometriu, aby sa nové diely a pneumatiky zbytočne neopotrebúvali.',
             },
         ],
+    },
+    {
+        type: 'image',
+        src: '/sluzby/podvozok-auto-na-zdvihaku-ludato-bratislava.webp',
+        alt: 'Auto na zdviháku so zloženým kolesom počas práce na podvozku v autoservise Ludato Family na Odborárskej, Bratislava Nové Mesto',
+        caption: 'Auto na zdviháku počas práce na prednej náprave.',
     },
     {
         type: 'caseStudy',
