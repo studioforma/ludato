@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Kompletné sprostredkovanie STK a EK za 150 €',
             'Brzdy, podvozok aj osvetlenie opravíme priamo u nás',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=stk',
         secondaryLabel: 'Objednať kontrolu',
     },
     {

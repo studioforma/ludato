@@ -225,7 +225,7 @@ export default function KdePosobime() {
                             'Náhradné vozidlo za 35 € na deň',
                             'Odťah nepojazdného auta za 170 €',
                         ]}
-                        secondaryHref="/nacenenie"
+                        secondaryHref="/nacenenie?sluzba=pickup"
                         secondaryLabel="Objednať sa"
                     />
 

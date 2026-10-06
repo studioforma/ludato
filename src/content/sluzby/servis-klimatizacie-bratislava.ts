@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Staré aj nové chladivo R134a a R1234yf',
             'Ozónová dezinfekcia proti zápachu za 30 €',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=klimatizacia',
         secondaryLabel: 'Objednať servis klímy',
     },
     {

@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Tlmiče, ramená, silentbloky, ložiská aj čapy',
             'Cena opravy vopred, bez prekvapení',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=podvozok',
         secondaryLabel: 'Objednať kontrolu podvozku',
     },
     {

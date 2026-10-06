@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Výmena platničiek na nápravu za 45 €',
             'Kotúče s platničkami na nápravu za 85 €',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=brzdy',
         secondaryLabel: 'Objednať kontrolu bŕzd',
     },
     {

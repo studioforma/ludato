@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Zadarmo pri servise nad 1000 €',
             'Pri poistnej udalosti ho hradí poisťovňa',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=nahradne-vozidlo',
         secondaryLabel: 'Objednať servis',
     },
     {

@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Kontrola olejových vedení a príčiny poruchy',
             'Cenu poznáte vopred, ešte pred opravou',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=turbo',
         secondaryLabel: 'Objednať diagnostiku',
     },
     {

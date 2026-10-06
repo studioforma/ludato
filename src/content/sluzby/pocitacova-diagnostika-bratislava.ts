@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Motor, ABS, ESP, airbag aj elektronika',
             'Hľadáme skutočnú príčinu, nielen kód chyby',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=diagnostika',
         secondaryLabel: 'Objednať diagnostiku',
     },
     {

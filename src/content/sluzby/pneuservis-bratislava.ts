@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Kontrola dezénu, tlaku a ventilčekov pri každom prezutí',
             'Druhú sadu vám uskladníme za 40 € na sezónu',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=prezutie',
         secondaryLabel: 'Objednať prezutie',
     },
     {

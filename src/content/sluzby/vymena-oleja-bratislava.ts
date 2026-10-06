@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Olej a filtre podľa špecifikácie výrobcu',
             'Kompletný servis vrátane palivového filtra za 65 €',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=olej',
         secondaryLabel: 'Objednať výmenu oleja',
     },
     {

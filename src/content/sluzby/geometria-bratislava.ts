@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Nastavenie prednej nápravy za 40 €, oboch náprav za 55 €',
             'Pred nastavením skontrolujeme aj podvozok',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=geometria',
         secondaryLabel: 'Objednať geometriu',
     },
     {

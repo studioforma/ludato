@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Údržba, opravy aj príprava na sezónu',
             'Nepojazdné auto k nám vieme dopraviť',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=veteran',
         secondaryLabel: 'Napísať nám',
     },
     {

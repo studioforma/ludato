@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { GOOGLE_RATING, GOOGLE_REVIEWS, GOOGLE_REVIEWS_URL } from '@/lib/trust';
 
 const reviews = [
     {
@@ -78,7 +79,7 @@ export default function ReviewsSection() {
                         className="text-[#1D1D1B]/55 max-w-lg mx-auto"
                         style={{ fontFamily: 'var(--font-inter)' }}
                     >
-                        Viac ako 30 recenzií na Google s hodnotením 5.0. Spokojnosť zákazníka je naším najväčším ocenením.
+                        {GOOGLE_REVIEWS} recenzií na Google s hodnotením {GOOGLE_RATING}. Spokojnosť zákazníka je naším najväčším ocenením.
                     </p>
                 </motion.div>
 
@@ -149,7 +150,7 @@ export default function ReviewsSection() {
                     className="mt-12 flex justify-center"
                 >
                     <a
-                        href="https://maps.app.goo.gl/YQtaNBnBdTFTYLZn8"
+                        href={GOOGLE_REVIEWS_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-4 border border-black/10 rounded-sm px-8 py-4 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-[#F5B301] transition-colors duration-300"
@@ -159,7 +160,7 @@ export default function ReviewsSection() {
                                 className="text-3xl font-black text-[#1D1D1B]"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                5.0
+                                {GOOGLE_RATING}
                             </div>
                             <StarRating count={5} />
                         </div>
@@ -170,7 +171,7 @@ export default function ReviewsSection() {
                             style={{ fontFamily: 'var(--font-inter)' }}
                         >
                             <span className="block font-semibold text-[#1D1D1B]">Google hodnotenie</span>
-                            30+ recenzií
+                            {GOOGLE_REVIEWS} recenzií
                         </div>
                     </a>
                 </motion.div>

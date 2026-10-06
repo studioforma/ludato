@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import RichText from '@/components/service/RichText';
+import { GOOGLE_RATING, GOOGLE_REVIEWS, REPAIRED_CARS } from '@/lib/trust';
 
 export type InlineCtaProps = {
     heading: string;
@@ -39,7 +40,7 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                         <RichText text={text} />
                     </p>
                     {points && (
-                        <ul className="relative space-y-2 mb-7 lg:mb-0">
+                        <ul className="relative space-y-2 mb-5">
                             {points.map((p) => (
                                 <li
                                     key={p}
@@ -52,6 +53,26 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                             ))}
                         </ul>
                     )}
+                    {/* Social proof right next to the call buttons */}
+                    <div
+                        className="relative inline-flex flex-wrap items-center gap-x-3 gap-y-1 bg-black/25 rounded-sm px-4 py-2.5 mb-7 lg:mb-0 text-white text-sm"
+                        style={{ fontFamily: 'var(--font-inter)' }}
+                    >
+                        <span className="flex items-center gap-0.5" aria-hidden="true">
+                            {Array.from({ length: 5 }).map((_, i) => (
+                                <svg key={i} className="w-4 h-4 text-[#F5B301] fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            ))}
+                        </span>
+                        <span>
+                            <strong className="font-black">{GOOGLE_RATING}</strong> na Google, {GOOGLE_REVIEWS} recenzií
+                        </span>
+                        <span className="text-white/50" aria-hidden="true">•</span>
+                        <span>
+                            <strong className="font-black">{REPAIRED_CARS}</strong> opravených áut
+                        </span>
+                    </div>
                 </div>
                 <div className="relative flex flex-col sm:flex-row lg:flex-col gap-3 lg:min-w-[280px]">
                     <a

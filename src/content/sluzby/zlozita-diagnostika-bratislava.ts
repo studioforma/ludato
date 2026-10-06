@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Meranie snímačov a kabeláže priamo na aute',
             'Vlastný tester vstrekovačov',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=zlozita-diagnostika',
         secondaryLabel: 'Objednať diagnostiku',
     },
     {

@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Napínač, kladky aj vodné čerpadlo v jednom kroku',
             'Cenu vrátane dielov poznáte vopred',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=rozvody',
         secondaryLabel: 'Objednať výmenu rozvodov',
     },
     {

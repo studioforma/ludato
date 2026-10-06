@@ -17,7 +17,7 @@ const content: ServiceContent = [
             'Kontrola dezénu a stavu pri uskladnení',
             'Kompletné prezutie od 45 € vrátane vyváženia',
         ],
-        secondaryHref: '/nacenenie',
+        secondaryHref: '/nacenenie?sluzba=prezutie',
         secondaryLabel: 'Objednať prezutie',
     },
     {

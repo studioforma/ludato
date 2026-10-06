@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useTransform, type Variants } from 'framer-motion';
+import { GOOGLE_RATING, REPAIRED_CARS } from '@/lib/trust';
 
 export default function HeroSection() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -110,8 +111,8 @@ export default function HeroSection() {
                 >
                     {[
                         { value: '10+', label: 'rokov skúseností' },
-                        { value: '5.0 ★', label: 'Google hodnotenie' },
-                        { value: '1 200+', label: 'opravených áut' },
+                        { value: `${GOOGLE_RATING} ★`, label: 'Google hodnotenie' },
+                        { value: REPAIRED_CARS, label: 'opravených áut' },
                     ].map((stat) => (
                         <div key={stat.label} className="text-center bg-white/5 border border-white/10 rounded-sm px-2 py-3 sm:p-4 backdrop-blur-sm">
                             <div
