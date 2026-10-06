@@ -509,47 +509,57 @@ export default function KdePosobime() {
 
                     {/* Areas grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        {areas.map((area) => (
-                            <div
-                                key={area.name}
-                                id={area.name.toLowerCase().replace(/\s+/g, '-')}
-                                className="bg-[#1D1D1B] border border-white/10 rounded-sm p-6 hover:border-[#E31C25]/40 transition-colors duration-300"
-                            >
-                                <h2
-                                    className="text-white font-black text-lg mb-1 flex items-center gap-2"
-                                    style={{ fontFamily: 'var(--font-montserrat)' }}
-                                >
-                                    <span className="text-[#E31C25]">//</span> {area.name}
-                                </h2>
-                                <div
-                                    className="text-[#E31C25] text-xs font-bold tracking-widest uppercase mb-3"
-                                    style={{ fontFamily: 'var(--font-montserrat)' }}
-                                >
-                                    {area.driveTime}
-                                </div>
-                                <p
-                                    className="text-white/50 text-sm mb-2"
-                                    style={{ fontFamily: 'var(--font-inter)' }}
-                                >
-                                    {area.route}
-                                </p>
-                                <p
-                                    className="text-white/70 text-sm leading-relaxed"
-                                    style={{ fontFamily: 'var(--font-inter)' }}
-                                >
-                                    {area.note}
-                                </p>
-                                {areaPages.find((p) => p.name === area.name) && (
-                                    <Link
-                                        href={`/kde-posobime/${areaPages.find((p) => p.name === area.name)?.slug}`}
-                                        className="inline-block mt-4 text-[#E31C25] hover:text-white text-xs font-bold tracking-widest uppercase transition-colors"
+                        {areas.map((area) => {
+                            const page = areaPages.find((p) => p.name === area.name);
+                            const cardClass =
+                                'group block bg-[#1D1D1B] border border-white/10 rounded-sm p-6 hover:border-[#E31C25]/40 transition-colors duration-300';
+                            const body = (
+                                <>
+                                    <h2
+                                        className="text-white font-black text-lg mb-1 flex items-center gap-2"
                                         style={{ fontFamily: 'var(--font-montserrat)' }}
                                     >
-                                        Autoservis pre {areaPages.find((p) => p.name === area.name)?.nameAcc} →
-                                    </Link>
-                                )}
-                            </div>
-                        ))}
+                                        <span className="text-[#E31C25]">//</span> {area.name}
+                                    </h2>
+                                    <div
+                                        className="text-[#E31C25] text-xs font-bold tracking-widest uppercase mb-3"
+                                        style={{ fontFamily: 'var(--font-montserrat)' }}
+                                    >
+                                        {area.driveTime}
+                                    </div>
+                                    <p
+                                        className="text-white/50 text-sm mb-2"
+                                        style={{ fontFamily: 'var(--font-inter)' }}
+                                    >
+                                        {area.route}
+                                    </p>
+                                    <p
+                                        className="text-white/70 text-sm leading-relaxed"
+                                        style={{ fontFamily: 'var(--font-inter)' }}
+                                    >
+                                        {area.note}
+                                    </p>
+                                    {page && (
+                                        <span
+                                            className="inline-block mt-4 text-[#E31C25] group-hover:text-white text-xs font-bold tracking-widest uppercase transition-colors"
+                                            style={{ fontFamily: 'var(--font-montserrat)' }}
+                                        >
+                                            Autoservis pre {page.nameAcc} →
+                                        </span>
+                                    )}
+                                </>
+                            );
+                            const id = area.name.toLowerCase().replace(/s+/g, '-');
+                            return page ? (
+                                <Link key={area.name} id={id} href={`/kde-posobime/${page.slug}`} className={cardClass}>
+                                    {body}
+                                </Link>
+                            ) : (
+                                <div key={area.name} id={id} className={cardClass}>
+                                    {body}
+                                </div>
+                            );
+                        })}
                     </div>
 
                     {/* Services + CTA */}
