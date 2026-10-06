@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Neviete, kedy sa menil rozvod?',
+        text: 'Keď rozvod povolí, piesty narazia do ventilov a z výmeny za pár stoviek je oprava motora za tisíce. Nečakajte, kým sa to stane.',
+        points: [
+            'Rozvodový remeň aj reťaz, všetky značky',
+            'Napínač, kladky aj vodné čerpadlo v jednom kroku',
+            'Cenu vrátane dielov poznáte vopred',
+        ],
+        secondaryHref: '/nacenenie',
+        secondaryLabel: 'Objednať výmenu rozvodov',
+    },
+    {
         type: 'list',
         heading: 'Čo zahŕňa výmena rozvodov u nás',
         items: [

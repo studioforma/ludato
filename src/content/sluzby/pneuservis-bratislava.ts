@@ -10,8 +10,8 @@ const content: ServiceContent = [
     },
     {
         type: 'cta',
-        heading: 'Prezujte sa skôr, než príde prvý mráz',
-        text: 'Keď napadne prvý sneh, chce sa prezúvať celé mesto naraz a voľné termíny zmiznú za pár dní. Zavolajte teraz a máte to vybavené v pokoji, bez čakania a bez stresu z klzkej cesty.',
+        heading: 'Čas na sezónne prezutie?',
+        text: 'Nečakajte na prvý sneh. Vtedy sú termíny plné a na letných pneumatikách sa vám na klzkej ceste predĺži brzdná dráha.',
         points: [
             'Kompletné prezutie od 45 € vrátane vyváženia každého kolesa',
             'Kontrola dezénu, tlaku a ventilčekov pri každom prezutí',

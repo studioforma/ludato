@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Pískajú vám brzdy?',
+        text: 'Keď platnička dôjde až na kov, zničí aj kotúč a oprava vás vyjde takmer dvojnásobne. Skontrolujeme ich na oboch nápravách.',
+        points: [
+            'Kontrola bŕzd za 35 €',
+            'Výmena platničiek na nápravu za 45 €',
+            'Kotúče s platničkami na nápravu za 85 €',
+        ],
+        secondaryHref: '/nacenenie',
+        secondaryLabel: 'Objednať kontrolu bŕzd',
+    },
+    {
         type: 'list',
         heading: 'Čo zahŕňa servis bŕzd u nás',
         items: [

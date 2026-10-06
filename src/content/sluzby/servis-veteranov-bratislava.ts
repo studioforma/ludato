@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Hľadáte servis pre svojho veterána?',
+        text: 'Čím dlhšie veterán stojí bez kontroly, tým viac vysychajú tesnenia a zasekávajú sa brzdy. Zavolajte a dohodneme prehliadku.',
+        points: [
+            'Diely nové aj repasované',
+            'Údržba, opravy aj príprava na sezónu',
+            'Nepojazdné auto k nám vieme dopraviť',
+        ],
+        secondaryHref: '/nacenenie',
+        secondaryLabel: 'Napísať nám',
+    },
+    {
         type: 'list',
         heading: 'Čo pri veteránoch riešime',
         items: [

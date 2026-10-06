@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Nemáte kam s druhou sadou pneumatík?',
+        text: 'Na balkóne a vo vlhkej pivnici pneumatiky starnú rýchlejšie a môžu vás pripraviť o celú sezónu. Uskladníme ich u nás.',
+        points: [
+            'Uskladnenie za 40 € na sezónu',
+            'Kontrola dezénu a stavu pri uskladnení',
+            'Kompletné prezutie od 45 € vrátane vyváženia',
+        ],
+        secondaryHref: '/nacenenie',
+        secondaryLabel: 'Objednať prezutie',
+    },
+    {
         type: 'list',
         heading: 'Čo zahŕňa uskladnenie u nás',
         items: [

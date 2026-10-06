@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Stratilo auto výkon alebo dymí?',
+        text: 'Pokazené turbo môže pustiť olej do motora a zničiť ho. Neodkladajte to, overíme turbo a povieme vám, či repas alebo nové.',
+        points: [
+            'Repas aj výmena turbodúchadla',
+            'Kontrola olejových vedení a príčiny poruchy',
+            'Cenu poznáte vopred, ešte pred opravou',
+        ],
+        secondaryHref: '/nacenenie',
+        secondaryLabel: 'Objednať diagnostiku',
+    },
+    {
         type: 'list',
         heading: 'Čo pri turbodúchadle robíme',
         items: [

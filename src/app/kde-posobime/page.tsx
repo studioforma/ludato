@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FaqAccordion from '@/components/FaqAccordion';
 import CtaBanner from '@/components/CtaBanner';
+import InlineCta from '@/components/InlineCta';
 
 export const metadata: Metadata = {
     title: 'Kde nás nájdete | Ludato Family Autoservis',
@@ -215,6 +216,18 @@ export default function KdePosobime() {
                             sa môže líšiť).
                         </p>
                     </div>
+
+                    <InlineCta
+                        heading="Nemáte čas prísť do servisu?"
+                        text="Po auto si prídeme sami, v Bratislave aj okolí."
+                        points={[
+                            'Vyzdvihnutie auta v Bratislave a okolí za 50 €',
+                            'Náhradné vozidlo za 35 € na deň',
+                            'Odťah nepojazdného auta za 170 €',
+                        ]}
+                        secondaryHref="/nacenenie"
+                        secondaryLabel="Objednať sa"
+                    />
 
                     {/* Nové Mesto - domáca mestská časť */}
                     <div id="nove-mesto" className="mb-16">

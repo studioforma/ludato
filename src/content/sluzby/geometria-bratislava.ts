@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Ťahá vám auto do strany?',
+        text: 'Zlá geometria vám každým kilometrom zjedá pneumatiky a novú sadu vie zničiť za jednu sezónu. Skontrolujeme ju a nastavíme podľa výrobcu.',
+        points: [
+            'Kontrola geometrie za 16 €',
+            'Nastavenie prednej nápravy za 40 €, oboch náprav za 55 €',
+            'Pred nastavením skontrolujeme aj podvozok',
+        ],
+        secondaryHref: '/nacenenie',
+        secondaryLabel: 'Objednať geometriu',
+    },
+    {
         type: 'list',
         heading: 'Čo zahŕňa geometria u nás',
         items: [

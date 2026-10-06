@@ -53,7 +53,7 @@ export const services: ServiceMeta[] = [
         },
         related: ['brzdy-bratislava', 'geometria-bratislava', 'uskladnenie-pneumatik-bratislava'],
         cta: {
-            question: 'Čas na sezónne prezutie?',
+            question: 'Chcete mať prezutie vybavené v pokoji?',
             subtext: 'Objednajte sa ešte dnes, kým nie je plný kalendár.',
             secondaryHref: '/nacenenie',
             secondaryLabel: 'Objednať sa',
@@ -159,7 +159,7 @@ export const services: ServiceMeta[] = [
         category: 'specialne',
         related: ['kontrola-pred-kupou-bratislava', 'brzdy-bratislava', 'podvozok-bratislava', 'pocitacova-diagnostika-bratislava'],
         cta: {
-            question: 'Blíži sa vám STK?',
+            question: 'Nechcete riešiť STK sami?',
             subtext: 'Pripravíme vaše auto tak, aby prešlo na prvýkrát, bez zbytočného stresu.',
             secondaryHref: '/cennik',
             secondaryLabel: 'Pozrieť cenník',

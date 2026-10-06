@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Blíži sa vám STK?',
+        text: 'Neúspešná STK znamená opakovaný termín, ďalšie poplatky a stratený čas. Auto pripravíme tak, aby prešlo na prvýkrát.',
+        points: [
+            'Kontrola pred STK a EK za 50 €',
+            'Kompletné sprostredkovanie STK a EK za 150 €',
+            'Brzdy, podvozok aj osvetlenie opravíme priamo u nás',
+        ],
+        secondaryHref: '/nacenenie',
+        secondaryLabel: 'Objednať kontrolu',
+    },
+    {
         type: 'list',
         heading: 'Čo ponúkame',
         items: [

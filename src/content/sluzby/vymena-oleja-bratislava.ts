@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Potrebujete vymeniť olej?',
+        text: 'Starý olej prestáva mazať a motor sa opotrebúva s každým kilometrom. Olej a filtre pripravíme podľa EČV presne pre vaše auto.',
+        points: [
+            'Výmena oleja a olejového filtra od 35 €',
+            'Olej a filtre podľa špecifikácie výrobcu',
+            'Kompletný servis vrátane palivového filtra za 65 €',
+        ],
+        secondaryHref: '/nacenenie',
+        secondaryLabel: 'Objednať výmenu oleja',
+    },
+    {
         type: 'list',
         heading: 'Čo zahŕňa výmena oleja u nás',
         items: [

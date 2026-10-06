@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Vracia sa vám tá istá porucha?',
+        text: 'Každé ďalšie skúšanie dielov stojí peniaze a porucha medzitým môže poškodiť turbo či katalyzátor. Nájdeme skutočnú príčinu.',
+        points: [
+            'Diagnostika riadiacej jednotky za 40 €',
+            'Meranie snímačov a kabeláže priamo na aute',
+            'Vlastný tester vstrekovačov',
+        ],
+        secondaryHref: '/nacenenie',
+        secondaryLabel: 'Objednať diagnostiku',
+    },
+    {
         type: 'list',
         heading: 'Čo pri zložitej diagnostike robíme',
         items: [

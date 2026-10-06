@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Svieti vám kontrolka?',
+        text: 'Každá jazda s rozsvietenou kontrolkou môže z drobnej chyby spraviť drahú opravu. Zistíme prečo, skôr než bude neskoro.',
+        points: [
+            'Diagnostika riadiacej jednotky za 40 €',
+            'Motor, ABS, ESP, airbag aj elektronika',
+            'Hľadáme skutočnú príčinu, nielen kód chyby',
+        ],
+        secondaryHref: '/nacenenie',
+        secondaryLabel: 'Objednať diagnostiku',
+    },
+    {
         type: 'list',
         heading: 'Čo diagnostika u nás zahŕňa',
         items: [

@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Klepe vám niečo pod autom?',
+        text: 'Opotrebovaný podvozok predlžuje brzdnú dráhu a s vôľou v riadení STK neprejdete. Auto zdvihneme a nájdeme príčinu.',
+        points: [
+            'Kontrola podvozku za 30 €',
+            'Tlmiče, ramená, silentbloky, ložiská aj čapy',
+            'Cena opravy vopred, bez prekvapení',
+        ],
+        secondaryHref: '/nacenenie',
+        secondaryLabel: 'Objednať kontrolu podvozku',
+    },
+    {
         type: 'list',
         heading: 'Čo zahŕňa servis podvozku u nás',
         items: [

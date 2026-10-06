@@ -9,6 +9,18 @@ const content: ServiceContent = [
         ],
     },
     {
+        type: 'cta',
+        heading: 'Nechladí vám klimatizácia?',
+        text: 'Kompresor bez dostatku chladiva a oleja sa ničí s každou jazdou a jeho výmena je drahá. Skontrolujeme tesnosť a doplníme chladivo.',
+        points: [
+            'Servis klímy od 40 €, chladivo podľa množstva',
+            'Staré aj nové chladivo R134a a R1234yf',
+            'Ozónová dezinfekcia proti zápachu za 30 €',
+        ],
+        secondaryHref: '/nacenenie',
+        secondaryLabel: 'Objednať servis klímy',
+    },
+    {
         type: 'list',
         heading: 'Čo zahŕňa servis klimatizácie u nás',
         items: [
