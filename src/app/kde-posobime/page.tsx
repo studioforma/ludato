@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import FaqAccordion from '@/components/FaqAccordion';
 import CtaBanner from '@/components/CtaBanner';
 import InlineCta from '@/components/InlineCta';
+import { areas as areaPages } from '@/lib/areas';
 
 export const metadata: Metadata = {
     title: 'Kde nás nájdete | Ludato Family Autoservis',
@@ -78,7 +79,7 @@ const faq = [
     },
     {
         q: 'Ponúkate náhradné vozidlo?',
-        a: 'Áno, k dispozícii máme dve náhradné autá, VW Passat (ročníky približne 2019 a 2022). Dostupnosť si prosím overte vopred telefonicky, počet vozidiel je obmedzený.',
+        a: 'Áno, požičiavame Škody Fabia a VW Passat. Náhradné vozidlo stojí 35 € na deň, pri servise nad 1000 € je zadarmo a pri poistnej udalosti ho hradí poisťovňa. Dostupnosť si overte pri objednaní.',
     },
     {
         q: 'Servisujete všetky značky vozidiel?',
@@ -538,6 +539,15 @@ export default function KdePosobime() {
                                 >
                                     {area.note}
                                 </p>
+                                {areaPages.find((p) => p.name === area.name) && (
+                                    <Link
+                                        href={`/kde-posobime/${areaPages.find((p) => p.name === area.name)?.slug}`}
+                                        className="inline-block mt-4 text-[#E31C25] hover:text-white text-xs font-bold tracking-widest uppercase transition-colors"
+                                        style={{ fontFamily: 'var(--font-montserrat)' }}
+                                    >
+                                        Autoservis pre {areaPages.find((p) => p.name === area.name)?.nameAcc} →
+                                    </Link>
+                                )}
                             </div>
                         ))}
                     </div>

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { services } from '@/lib/services';
+import { areas } from '@/lib/areas';
 
 const baseUrl = 'https://www.ludato.sk';
 
@@ -20,7 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: 'monthly' as const,
     }));
 
-    return [...staticRoutes, ...serviceRoutes].map((route) => ({
+    const areaRoutes = areas.map((a) => ({
+        path: `/kde-posobime/${a.slug}`,
+        priority: 0.7,
+        changeFrequency: 'monthly' as const,
+    }));
+
+    return [...staticRoutes, ...serviceRoutes, ...areaRoutes].map((route) => ({
         url: `${baseUrl}${route.path}`,
         lastModified: new Date(),
         changeFrequency: route.changeFrequency,

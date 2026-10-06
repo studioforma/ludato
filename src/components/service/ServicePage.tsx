@@ -15,7 +15,7 @@ import type { Section, ServiceContent } from '@/content/sluzby/types';
 
 const SITE = 'https://www.ludato.sk';
 
-function Heading({ children }: { children: React.ReactNode }) {
+export function Heading({ children }: { children: React.ReactNode }) {
     return (
         <h2
             className="text-2xl font-black text-white mb-6 flex items-center gap-2"
@@ -41,7 +41,7 @@ function Paragraphs({ paragraphs }: { paragraphs: string[] }) {
     );
 }
 
-function SectionBlock({ section }: { section: Section }) {
+export function SectionBlock({ section }: { section: Section }) {
     switch (section.type) {
         case 'intro':
             return null;
