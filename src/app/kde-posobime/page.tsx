@@ -45,26 +45,52 @@ const noveMestoServices = [
     {
         name: 'Diagnostika a opravy',
         text: 'Skôr než čokoľvek vymieňame, chceme presne vedieť, čo sa s vozidlom deje. Počítačová diagnostika nám ukáže skutočný stav auta, nie len prvý odhad, čo je dôležité obzvlášť pri starších rodinných autách, s ktorými sa v uličkách Nového Mesta stretávame bežne.',
+        links: [
+            { href: '/sluzby/pocitacova-diagnostika-bratislava', label: 'Počítačová diagnostika' },
+            { href: '/sluzby/zlozita-diagnostika-bratislava', label: 'Zložitá diagnostika' },
+            { href: '/sluzby/rozvody-bratislava', label: 'Rozvody' },
+            { href: '/sluzby/turboduchadlo-bratislava', label: 'Turbodúchadlo' },
+        ],
     },
     {
         name: 'Servisné prehliadky',
         text: 'Pravidelná servisná prehliadka pred STK alebo podľa intervalov výrobcu vám ušetrí nepríjemné prekvapenia. Vzhľadom na kopcovitý terén v okolí Kramárov a Koliby odporúčame nepodceňovať kontrolu bŕzd a kvapalín ani mimo bežného intervalu.',
+        links: [
+            { href: '/sluzby/vymena-oleja-bratislava', label: 'Výmena oleja a filtrov' },
+            { href: '/sluzby/stk-ek-bratislava', label: 'Príprava na STK a EK' },
+            { href: '/sluzby/autobateria-bratislava', label: 'Autobatéria' },
+        ],
     },
     {
         name: 'Oprava bŕzd a podvozkov',
         text: 'Kopce, križovatky a časté brzdenie v hustej mestskej doprave dávajú bŕzdam v Novom Meste zabrať viac než priemeru. Kontrolujeme platničky, kotúče aj celý podvozok, geometriu, tlmiče, ramená, aby vaše auto zvládalo terén bez zbytočného opotrebovania.',
+        links: [
+            { href: '/sluzby/brzdy-bratislava', label: 'Brzdy' },
+            { href: '/sluzby/podvozok-bratislava', label: 'Podvozok' },
+            { href: '/sluzby/geometria-bratislava', label: 'Geometria' },
+        ],
     },
     {
         name: 'Servis klimatizácie',
         text: 'Bratislavské leto vie potrápiť aj klimatizáciu, ktorá stojí celý deň na slnku pri ceste bez garáže. Dopĺňame chladivo, čistíme a dezinfikujeme systém, aby ste mali v aute čistý vzduch po celý rok.',
+        links: [
+            { href: '/sluzby/servis-klimatizacie-bratislava', label: 'Servis klimatizácie' },
+        ],
     },
     {
         name: 'Pneuservis a prezutie',
         text: 'Sezónne prezutie je pre nás bežná rutina, no pri parkovaní na uliciach Nového Mesta odporúčame nepodceňovať ani vyváženie kolies. Obrubníky a výtlky v uličkách vedia diskom ublížiť rýchlejšie, než by ste čakali.',
+        links: [
+            { href: '/sluzby/pneuservis-bratislava', label: 'Pneuservis' },
+            { href: '/sluzby/uskladnenie-pneumatik-bratislava', label: 'Uskladnenie pneumatík' },
+        ],
     },
     {
         name: 'Výmena kolies na diskoch',
         text: 'Ak máte kolesá už namontované na samostatných diskoch, výmena u nás zaberie len chvíľu, bez čakania na prezúvanie pneumatík.',
+        links: [
+            { href: '/cennik', label: 'Cenník prezutia' },
+        ],
     },
 ];
 
@@ -383,6 +409,18 @@ export default function KdePosobime() {
                                         >
                                             {service.text}
                                         </p>
+                                        <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                                            {service.links.map((link) => (
+                                                <Link
+                                                    key={link.href}
+                                                    href={link.href}
+                                                    className="text-[#E31C25] hover:text-white text-xs font-bold tracking-widest uppercase transition-colors"
+                                                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                                                >
+                                                    {link.label} →
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
                                 ))}
                             </div>
