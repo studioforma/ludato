@@ -32,7 +32,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Čo autá v Karlovej Vsi najviac zaťažuje',
         paragraphs: [
-            'Karlová Ves je kopcovitá, najmä okolie sídliska Dlhé diely. Stúpania a klesania zaťažujú brzdy viac než jazda po rovine a pri častom brzdení dolu kopcom sa platničky aj kotúče opotrebúvajú rýchlejšie. Ak bývate vyššie, kontrolu bŕzd odporúčame robiť častejšie.',
+            'Karlova Ves je kopcovitá, najmä okolie sídliska Dlhé diely. Stúpania a klesania zaťažujú brzdy viac než jazda po rovine a pri častom brzdení dolu kopcom sa platničky aj kotúče opotrebúvajú rýchlejšie. Ak bývate vyššie, kontrolu bŕzd odporúčame robiť častejšie.',
             'Rozbiehanie do kopca zase namáha spojku a pri manuálnej prevodovke sa jej opotrebenie prejaví skôr. Rovnako dôležitý je podvozok: na kopcovitých a nerovných uliciach sa tlmiče a silentbloky opotrebúvajú rýchlejšie.',
             'V zime sú vyššie položené ulice skôr namrznuté. Zimné pneumatiky s dobrým dezénom sú tu nevyhnutnosť, nie formalita.',
         ],

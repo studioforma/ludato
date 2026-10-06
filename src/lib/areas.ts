@@ -93,11 +93,11 @@ export const areas: AreaMeta[] = [
     },
     {
         slug: 'karlova-ves',
-        name: 'Karlová Ves',
+        name: 'Karlova Ves',
         nameAcc: 'Karlovu Ves',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE KARLOVU VES',
         h1Accent: 'KARLOVU VES',
-        title: 'Autoservis Karlová Ves | 20 minút cez most, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis Karlova Ves | 20 minút cez most, Odborárska 52 | Ludato Family Autoservis',
         description:
             'Autoservis a pneuservis pre Karlovu Ves a Dlhé diely. Na Odborárskej v Novom Meste sme orientačne 20 minút autom. Brzdy, podvozok, prezutie, výmena oleja aj pickup auta.',
         driveTime: 'orientačne 20 minút autom',

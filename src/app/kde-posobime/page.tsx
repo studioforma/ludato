@@ -11,7 +11,7 @@ import { areas as areaPages } from '@/lib/areas';
 export const metadata: Metadata = {
     title: 'Kde nás nájdete | Ludato Family Autoservis',
     description:
-        'Ludato Family Autoservis a pneuservis sídli na Odborárskej v Bratislave - Novom Meste a autom k nám chodia zákazníci z celej Bratislavy: Rača, Vajnory, Staré Mesto, Ružinov, Karlová Ves a Dúbravka.',
+        'Ludato Family Autoservis a pneuservis sídli na Odborárskej v Bratislave - Novom Meste a autom k nám chodia zákazníci z celej Bratislavy: Rača, Vajnory, Staré Mesto, Ružinov, Karlova Ves a Dúbravka.',
     alternates: { canonical: '/kde-posobime' },
 };
 
@@ -196,7 +196,7 @@ const areas: Area[] = [
         note: 'Druhá najväčšia mestská časť Bratislavy, odtiaľto k nám prichádza pravidelne veľa zákazníkov.',
     },
     {
-        name: 'Karlová Ves',
+        name: 'Karlova Ves',
         driveTime: 'orientačne 20 min autom',
         route: 'Cez Most SNP alebo Botanickú.',
         note: 'Trochu ďalej, ale pre poctivý servis a férové ceny sa oplatí prejsť aj cez celé mesto.',
@@ -546,7 +546,7 @@ export default function KdePosobime() {
                     </div>
 
                     {/* Areas grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
                         {areas.map((area) => {
                             const page = areaPages.find((p) => p.name === area.name);
                             const cardClass =

@@ -52,7 +52,7 @@ const areasServed = [
   "Bratislava - Vajnory",
   "Bratislava - Staré Mesto",
   "Bratislava - Ružinov",
-  "Bratislava - Karlová Ves",
+  "Bratislava - Karlova Ves",
   "Bratislava - Dúbravka",
 ];
 
