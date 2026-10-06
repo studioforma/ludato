@@ -7,6 +7,8 @@ import FaqAccordion from '@/components/FaqAccordion';
 import CtaBanner from '@/components/CtaBanner';
 import InlineCta from '@/components/InlineCta';
 import { areas as areaPages } from '@/lib/areas';
+import { getService } from '@/lib/services';
+import ServiceIcon from '@/components/ServiceIcon';
 
 export const metadata: Metadata = {
     title: 'Kde nás nájdete | Ludato Family Autoservis',
@@ -44,6 +46,14 @@ const whyNoveMesto = [
     },
 ];
 
+// A few core services linked from this page; the rest are one click away on /sluzby.
+const featuredServices = [
+    'pocitacova-diagnostika-bratislava',
+    'vymena-oleja-bratislava',
+    'brzdy-bratislava',
+    'pneuservis-bratislava',
+];
+
 const bratislavaServices = [
     {
         name: 'Diagnostika a opravy',
@@ -55,7 +65,7 @@ const bratislavaServices = [
     },
     {
         name: 'Oprava bŕzd a podvozkov',
-        text: 'Kopce, križovatky a časté brzdenie v hustej mestskej doprave dávajú bŕzdam v Novom Meste zabrať viac než priemeru. Kontrolujeme platničky, kotúče aj celý podvozok, geometriu, tlmiče, ramená, aby vaše auto zvládalo terén bez zbytočného opotrebovania.',
+        text: 'Kopce, križovatky a časté brzdenie v hustej mestskej doprave dávajú bŕzdam v Bratislave zabrať viac než jazda mimo mesta. Kontrolujeme platničky, kotúče aj celý podvozok, geometriu, tlmiče, ramená, aby vaše auto zvládalo terén bez zbytočného opotrebovania.',
     },
     {
         name: 'Servis klimatizácie',
@@ -356,6 +366,17 @@ export default function KdePosobime() {
                                     miestne podmienky a vie odhadnúť, kde sa oplatí byť
                                     obozretný skôr, než sa z malej závady stane veľká.
                                 </p>
+                                <p>
+                                    Kopce, kolóny a parkovanie na ulici však nie sú len vec Nového
+                                    Mesta. Rovnako to poznajú vodiči z Rače, Ružinova, Karlovej Vsi
+                                    či Dúbravky, a preto k nám chodia aj oni. Nové Mesto je náš
+                                    domov, servisujeme však autá z celej Bratislavy. Prehľad
+                                    mestských častí s časom dojazdu nájdete{' '}
+                                    <a href="#okolite-casti" className="text-[#E31C25] hover:text-white transition-colors underline">
+                                        nižšie na tejto stránke
+                                    </a>
+                                    .
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -427,6 +448,39 @@ export default function KdePosobime() {
                                     </div>
                                 ))}
                             </div>
+
+                            <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                {featuredServices.map((slug) => {
+                                    const meta = getService(slug);
+                                    if (!meta) return null;
+                                    return (
+                                        <Link
+                                            key={slug}
+                                            href={`/sluzby/${slug}`}
+                                            className="group flex flex-col items-center gap-2 bg-[#1D1D1B] border border-white/10 rounded-sm px-3 py-4 text-center hover:border-[#E31C25]/50 transition-colors duration-300"
+                                        >
+                                            <span className="text-white group-hover:text-[#E31C25] transition-colors duration-300">
+                                                <ServiceIcon slug={slug} />
+                                            </span>
+                                            <span
+                                                className="text-white text-xs font-bold leading-tight"
+                                                style={{ fontFamily: 'var(--font-montserrat)' }}
+                                            >
+                                                {meta.name}
+                                            </span>
+                                        </Link>
+                                    );
+                                })}
+                            </div>
+                            <div className="mt-4 text-center">
+                                <Link
+                                    href="/sluzby"
+                                    className="inline-block text-[#E31C25] hover:text-white text-xs font-bold tracking-widest uppercase transition-colors"
+                                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                                >
+                                    Pozrieť všetky služby →
+                                </Link>
+                            </div>
                         </div>
 
                         {/* Ako sa k nám dostanete */}
@@ -445,9 +499,9 @@ export default function KdePosobime() {
                                     Sme na Odborárskej 52 v Bratislave, Novom Meste. Parkovanie je
                                     možné priamo pred prevádzkou aj popri ceste vedľa nášho
                                     areálu, takže sa nemusíte obávať, že nebudete mať kde
-                                    zastaviť. Väčšina zákazníkov z okolitých sídlisk Kramáre,
-                                    Vinohrady a Koliba k nám prichádza autom do pár minút, z
-                                    centra Bratislavy je to tiež len krátka jazda.
+                                    zastaviť. Zo sídlisk Kramáre, Vinohrady a Koliba ste u nás autom za
+                                    pár minút, z centra Bratislavy je to tiež len krátka jazda.
+                                    Trasy z ostatných mestských častí nájdete pri kartách nižšie.
                                 </p>
                                 <p>
                                     Ak počas opravy potrebujete pokračovať bez auta, Nové Mesto má
@@ -539,7 +593,7 @@ export default function KdePosobime() {
                     </div>
 
                     {/* Ostatné oblasti header */}
-                    <div className="text-center mb-10">
+                    <div id="okolite-casti" className="text-center mb-10 scroll-mt-28">
                         <h2
                             className="text-2xl md:text-3xl font-black text-white"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
