@@ -15,6 +15,8 @@ const prefills: Record<string, Prefill> = {
     prezutie: { service: 'Kompletné prezutie kolies' },
     podvozok: { service: 'Oprava podvozku' },
     pickup: { service: 'Pickup / odťah vozidla' },
+    bateria: { service: 'Výmena batérie' },
+    prevodovka: { service: 'Výmena náplne prevodovky' },
     // Services without their own checkbox go to "Iné" with a note.
     klimatizacia: { service: OTHER_OPTION, note: 'Servis klimatizácie' },
     rozvody: { service: OTHER_OPTION, note: 'Výmena rozvodov' },
@@ -22,6 +24,8 @@ const prefills: Record<string, Prefill> = {
     'zlozita-diagnostika': { service: 'Diagnostika vozidla', note: 'Porucha, ktorá sa vracia (zložitá diagnostika)' },
     veteran: { service: OTHER_OPTION, note: 'Servis veterána' },
     'nahradne-vozidlo': { service: OTHER_OPTION, note: 'Náhradné vozidlo počas servisu' },
+    spojka: { service: OTHER_OPTION, note: 'Spojka alebo prevodovka' },
+    vstrekovace: { service: OTHER_OPTION, note: 'Vstrekovače' },
 };
 
 export function getOrderPrefill(key: string | null): Prefill | undefined {
