@@ -362,7 +362,7 @@ export default function CennikPage() {
                             <li className="flex items-start gap-3">
                                 <span className="text-[#E31C25] flex-shrink-0 text-base">📞</span>
                                 <a href="tel:+421944236257" className="hover:text-[#E31C25] transition-colors font-medium">
-                                    +421 944 236 257
+                                    0944 236 257
                                 </a>
                             </li>
                         </ul>

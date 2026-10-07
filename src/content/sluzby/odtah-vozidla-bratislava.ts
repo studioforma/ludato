@@ -179,7 +179,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Ako sa objednám?',
-                a: 'Zavolajte na +421 944 236 257, povedzte nám, kde auto stojí a čo sa s ním deje. Dohodneme vyzdvihnutie alebo odťah.',
+                a: 'Zavolajte na 0944 236 257, povedzte nám, kde auto stojí a čo sa s ním deje. Dohodneme vyzdvihnutie alebo odťah.',
             },
         ],
     },

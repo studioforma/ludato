@@ -204,7 +204,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Musím sa objednať vopred?',
-                a: 'Áno, pri rozvodoch odporúčame objednať sa vopred, aby sme mali pripravené správne diely pre váš motor. Najistejšie je zavolať na +421 944 236 257.',
+                a: 'Áno, pri rozvodoch odporúčame objednať sa vopred, aby sme mali pripravené správne diely pre váš motor. Najistejšie je zavolať na 0944 236 257.',
             },
         ],
     },

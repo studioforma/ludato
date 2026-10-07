@@ -10,7 +10,7 @@ export const COOKIE_DECIDED = 'ludato:cookie-decided';
 // Fixed call bar at the bottom of the screen on mobile and tablet. Desktop has
 // the phone in the NAP strip and the navbar. It stays hidden while the cookie
 // bar is up, so the two never cover each other. The number is written exactly
-// as +421 944 236 257 so Google Ads call tracking swaps it (see README).
+// as 0944 236 257 so Google Ads call tracking swaps it (see README).
 export default function StickyCallBar() {
     const [visible, setVisible] = useState(false);
 
@@ -51,7 +51,7 @@ export default function StickyCallBar() {
                         </svg>
                         <span className="flex flex-col leading-tight text-left">
                             <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-white/80">Zavolať</span>
-                            <span className="text-base font-black tracking-wide">+421 944 236 257</span>
+                            <span className="text-base font-black tracking-wide">0944 236 257</span>
                         </span>
                     </a>
                     <Link

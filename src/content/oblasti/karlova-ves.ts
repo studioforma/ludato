@@ -182,7 +182,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Musím sa objednať vopred?',
-                a: 'Odporúčame to, najmä ak chcete pickup alebo náhradné auto. Zavolajte na +421 944 236 257.',
+                a: 'Odporúčame to, najmä ak chcete pickup alebo náhradné auto. Zavolajte na 0944 236 257.',
             },
         ],
     },

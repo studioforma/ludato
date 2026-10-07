@@ -151,7 +151,7 @@ export default function ContactSection() {
                                         </svg>
                                     ),
                                     label: 'Telefón',
-                                    value: '+421 944 236 257',
+                                    value: '0944 236 257',
                                     href: 'tel:+421944236257',
                                 },
                                 {

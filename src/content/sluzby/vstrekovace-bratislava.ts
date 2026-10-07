@@ -190,7 +190,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Ako sa objednám?',
-                a: 'Zavolajte na +421 944 236 257 a opíšte, ako sa auto správa. Dohodneme termín na diagnostiku a test vstrekovačov.',
+                a: 'Zavolajte na 0944 236 257 a opíšte, ako sa auto správa. Dohodneme termín na diagnostiku a test vstrekovačov.',
             },
         ],
     },

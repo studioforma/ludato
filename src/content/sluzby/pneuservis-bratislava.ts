@@ -133,7 +133,7 @@ const content: ServiceContent = [
         items: [
             {
                 q: 'Musím sa objednať vopred na prezutie?',
-                a: 'Odporúčame objednať sa vopred, keďže v hlavnej sezóne (jar, jeseň) je o prezutie vysoký záujem a termíny sa rýchlo zapĺňajú. Najistejšie je zavolať vopred na +421 944 236 257.',
+                a: 'Odporúčame objednať sa vopred, keďže v hlavnej sezóne (jar, jeseň) je o prezutie vysoký záujem a termíny sa rýchlo zapĺňajú. Najistejšie je zavolať vopred na 0944 236 257.',
             },
             {
                 q: 'Vyvažujete kolesá pri každom prezutí?',

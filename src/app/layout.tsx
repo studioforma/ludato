@@ -202,12 +202,13 @@ export default function RootLayout({
               gtag('set', 'url_passthrough', true);
               gtag('js', new Date());
               gtag('config', 'AW-18425609803');
-              // Call tracking. CookieBanner runs this again after consent is
-              // granted, because the site does not reload between pages and a
-              // visitor from an ad usually accepts cookies after this first run.
+              // Call tracking runs only with consent: on load for a visitor who
+              // accepted earlier, otherwise from CookieBanner right after the
+              // consent update to granted. Firing it before consent made Google
+              // return errorCode 14 (support case 8-6626000041470).
               window.ludatoConfigureCallTracking = function () {
                 gtag('config', 'AW-18425609803/2kV5CJOU0YsdEMv8gdJE', {
-                  'phone_conversion_number': '+421 944 236 257',
+                  'phone_conversion_number': '0944 236 257',
                   'phone_conversion_callback': function (formattedNumber, mobileNumber) {
                     // With a callback Google does not swap the number itself.
                     // CallNumberSwap applies it to text and tel: links, and
@@ -217,7 +218,11 @@ export default function RootLayout({
                   }
                 });
               };
-              window.ludatoConfigureCallTracking();
+              try {
+                if (localStorage.getItem('ludato_cookie_consent') === 'accepted') {
+                  window.ludatoConfigureCallTracking();
+                }
+              } catch (e) {}
               // Google Analytics 4. Loaded by the same gtag.js, respects the
               // consent state above (analytics_storage).
               gtag('config', 'G-7VKRXW04MX');

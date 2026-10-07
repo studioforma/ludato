@@ -193,7 +193,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Ako sa objednám?',
-                a: 'Zavolajte na +421 944 236 257 a povedzte nám o svojom aute. Dohodneme termín a postup.',
+                a: 'Zavolajte na 0944 236 257 a povedzte nám o svojom aute. Dohodneme termín a postup.',
             },
         ],
     },

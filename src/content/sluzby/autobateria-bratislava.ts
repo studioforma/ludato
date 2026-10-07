@@ -167,7 +167,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Auto mi nenaštartovalo, čo mám robiť?',
-                a: 'Zavolajte nám na +421 944 236 257. Ak auto nenaštartuje, zabezpečíme odťah do dielne, kde zistíme príčinu.',
+                a: 'Zavolajte nám na 0944 236 257. Ak auto nenaštartuje, zabezpečíme odťah do dielne, kde zistíme príčinu.',
             },
             {
                 q: 'Koľko trvá výmena batérie?',
@@ -175,7 +175,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Ako sa objednám?',
-                a: 'Zavolajte na +421 944 236 257 alebo vyplňte formulár na nacenenie. Dohodneme termín, ktorý vám vyhovuje.',
+                a: 'Zavolajte na 0944 236 257 alebo vyplňte formulár na nacenenie. Dohodneme termín, ktorý vám vyhovuje.',
             },
         ],
     },
