@@ -164,7 +164,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="sk" className="scroll-smooth">
+    <html lang="sk" className="scroll-smooth" suppressHydrationWarning>
       <head>
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18425609803" />
@@ -184,6 +184,11 @@ export default function RootLayout({
                 'wait_for_update': 500
               });
               try {
+                // The cookie bar is in the server HTML; hide it before the first
+                // paint for visitors who already decided (CSS in globals.css).
+                if (localStorage.getItem('ludato_cookie_consent')) {
+                  document.documentElement.classList.add('cookie-decided');
+                }
                 if (localStorage.getItem('ludato_cookie_consent') === 'accepted') {
                   gtag('consent', 'update', {
                     'ad_storage': 'granted',

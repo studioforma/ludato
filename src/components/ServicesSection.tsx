@@ -1,8 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
 import Link from 'next/link';
-import { motion, useInView } from 'framer-motion';
 import { getService, type ServiceMeta } from '@/lib/services';
 import ServiceIcon from '@/components/ServiceIcon';
 
@@ -42,21 +40,11 @@ const cards: Card[] = featured.flatMap((f) => {
     return meta ? [{ meta, detail: f.detail }] : [];
 });
 
-function ServiceCard({ card, index }: { card: Card; index: number }) {
-    const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true, margin: '-80px' });
-
+function ServiceCard({ card }: { card: Card }) {
     return (
-        <motion.div
-            ref={ref}
-            initial={{ opacity: 0, y: 60 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: (index % 3) * 0.12, ease: 'easeOut' }}
-            whileHover={{ y: -8 }}
-        >
             <Link
                 href={`/sluzby/${card.meta.slug}`}
-                className="group relative flex flex-col h-full bg-white border border-black/10 rounded-sm p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-[#E31C25]/60 hover:shadow-[0_20px_50px_rgba(227,28,37,0.18)] overflow-hidden"
+                className="group relative flex flex-col h-full bg-white border border-black/10 rounded-sm p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#E31C25]/60 hover:shadow-[0_20px_50px_rgba(227,28,37,0.18)] overflow-hidden"
             >
                 {/* Top left slash accent */}
                 <div className="absolute top-0 left-0 w-10 h-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -96,24 +84,11 @@ function ServiceCard({ card, index }: { card: Card; index: number }) {
                 {/* Bottom red glow line */}
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E31C25] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Link>
-        </motion.div>
     );
 }
 
 function SectionHeader({ children }: { children: React.ReactNode }) {
-    const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-    return (
-        <motion.div
-            ref={ref}
-            initial={{ opacity: 0, x: -60 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-        >
-            {children}
-        </motion.div>
-    );
+    return <div>{children}</div>;
 }
 
 export { SectionHeader };
@@ -169,34 +144,30 @@ export default function ServicesSection() {
                 </SectionHeader>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {cards.map((card, i) => (
-                        <ServiceCard key={card.meta.slug} card={card} index={i} />
+                    {cards.map((card) => (
+                        <ServiceCard key={card.meta.slug} card={card} />
                     ))}
                 </div>
 
-                {/* Bottom links */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 mt-14"
-                >
+                {/* Bottom buttons, set apart from the cards */}
+                <div className="mt-14 pt-10 border-t border-black/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
                     <Link
                         href="/sluzby"
-                        className="text-[#1D1D1B]/75 hover:text-[#E31C25] text-sm font-semibold tracking-widest uppercase transition-colors duration-300"
+                        className="inline-flex items-center justify-center gap-2 bg-[#1D1D1B] hover:bg-[#E31C25] text-white font-bold px-8 py-4 text-sm tracking-widest uppercase rounded-sm transition-colors duration-300"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        Zobraziť všetky služby →
+                        Zobraziť všetky služby
+                        <span aria-hidden="true">→</span>
                     </Link>
                     <Link
                         href="/cennik"
-                        className="text-[#1D1D1B]/45 hover:text-[#E31C25] text-sm font-semibold tracking-widest uppercase transition-colors duration-300"
+                        className="inline-flex items-center justify-center gap-2 border-2 border-[#1D1D1B] hover:border-[#E31C25] text-[#1D1D1B] hover:text-[#E31C25] font-bold px-8 py-[14px] text-sm tracking-widest uppercase rounded-sm transition-colors duration-300"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        Cenník →
+                        Cenník služieb
+                        <span aria-hidden="true">→</span>
                     </Link>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

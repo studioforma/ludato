@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 type CtaBannerProps = {
     question: string;
@@ -22,11 +21,7 @@ export default function CtaBanner({ question, subtext, secondaryHref, secondaryL
                     : 'bg-[#1D1D1B] border-y border-[#E31C25]/20 py-16'
             }
         >
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+            <div
                 className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
             >
                 <h2
@@ -80,7 +75,7 @@ export default function CtaBanner({ question, subtext, secondaryHref, secondaryL
                         {secondaryLabel}
                     </Link>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 }

@@ -77,3 +77,8 @@ a, button, select, [role="button"], input[type="submit"], input[type="button"] {
 details[open] > summary .faq-toggle {
   rotate: 45deg;
 }
+
+/* Cookie bar is server-rendered; layout.tsx adds this class before paint once the visitor has decided. */
+.cookie-decided #cookie-banner {
+  display: none;
+}

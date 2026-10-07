@@ -1,8 +1,7 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { motion, useInView } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -14,12 +13,9 @@ const hours = [
     { day: 'Sobota – Nedeľa', time: 'Zatvorené' },
 ];
 
-function PriceRow({ item, index }: { item: PriceItem; index: number }) {
+function PriceRow({ item }: { item: PriceItem }) {
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.03 }}
+        <div
             className={`group flex items-center justify-between gap-4 py-4 px-6 rounded-sm border transition-all duration-300 hover:border-[#E31C25]/50 hover:bg-[#E31C25]/5 ${
                 item.highlight
                     ? 'border-[#E31C25]/40 bg-[#E31C25]/10'
@@ -107,26 +103,18 @@ function PriceRow({ item, index }: { item: PriceItem; index: number }) {
                 </span>
             )}
             </div>
-        </motion.div>
+        </div>
     );
 }
 
 function CategorySection({
     cat,
-    catIndex,
 }: {
     cat: PricingCategory;
-    catIndex: number;
 }) {
-    const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true, margin: '-60px' });
 
     return (
-        <motion.div
-            ref={ref}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: catIndex * 0.05 }}
+        <div
             className="space-y-2"
         >
             <div className="flex items-center gap-3 mb-4 pt-2">
@@ -146,8 +134,8 @@ function CategorySection({
             </div>
 
             <div className="space-y-2">
-                {cat.items.map((item, i) => (
-                    <PriceRow key={`${cat.category}-${item.service}`} item={item} index={i} />
+                {cat.items.map((item) => (
+                    <PriceRow key={`${cat.category}-${item.service}`} item={item} />
                 ))}
             </div>
 
@@ -159,7 +147,7 @@ function CategorySection({
                     {cat.footnote}
                 </p>
             )}
-        </motion.div>
+        </div>
     );
 }
 
@@ -191,38 +179,26 @@ export default function CennikPage() {
                         //
                     </div>
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
-                        <motion.p
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
+                        <p
                             className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             <span className="font-black">//</span> Transparentné ceny
-                        </motion.p>
-                        <motion.h1
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.1 }}
+                        </p>
+                        <h1
                             className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tight"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             CENNÍK <span className="text-[#E31C25]">SERVISU</span>
-                        </motion.h1>
-                        <motion.p
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.6, delay: 0.25 }}
+                        </h1>
+                        <p
                             className="text-white/50 max-w-xl mx-auto text-base"
                             style={{ fontFamily: 'var(--font-inter)' }}
                         >
                             Žiadne prekvapenia, žiadne skryté poplatky. Ceny sú orientačné a
                             závisia od konkrétneho vozidla.
-                        </motion.p>
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.35 }}
+                        </p>
+                        <div
                             className="mt-8 inline-grid grid-cols-3 divide-x divide-white/20 bg-white/5 border border-white/10 rounded-sm overflow-hidden shadow-xl"
                         >
                             {[
@@ -261,11 +237,8 @@ export default function CennikPage() {
                                     </span>
                                 </div>
                             ))}
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.45 }}
+                        </div>
+                        <div
                             className="mt-6 flex justify-center"
                         >
                             <p
@@ -278,7 +251,7 @@ export default function CennikPage() {
                                 </svg>
                                 Ceny sú uvedené bez DPH. Pri každej cene nájdete aj sumu s DPH 23 %.
                             </p>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
 
@@ -298,11 +271,7 @@ export default function CennikPage() {
                                 >
                                     <span className="relative z-10">{tab.label}</span>
                                     {isActive && (
-                                        <motion.div
-                                            layoutId="activeCennikTab"
-                                            className="absolute inset-0 bg-[#E31C25] rounded-sm"
-                                            transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                                        />
+                                        <div className="absolute inset-0 bg-[#E31C25] rounded-sm" />
                                     )}
                                 </button>
                             );
@@ -312,21 +281,17 @@ export default function CennikPage() {
 
                 {/* Pricing by category grid */}
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-                    <motion.div 
-                        layout
+                    <div
                         className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
                     >
-                        {activeCategories.map((cat, i) => (
-                            <CategorySection key={cat.category} cat={cat} catIndex={i} />
+                        {activeCategories.map((cat) => (
+                            <CategorySection key={cat.category} cat={cat} />
                         ))}
-                    </motion.div>
+                    </div>
                 </div>
 
                 {/* Disclaimer */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
+                <div
                     className="max-w-4xl mx-auto px-4 sm:px-6 pb-8"
                 >
                     <p
@@ -335,15 +300,11 @@ export default function CennikPage() {
                     >
                         * Ceny sú orientačné a môžu sa líšiť v závislosti od značky, modelu a stavu vozidla. Konečná cena bude vždy odsúhlasená pred zahájením prác. Uvedené ceny sú bez materiálu, pokiaľ nie je uvedené inak. Sme platitelia DPH, k uvedeným cenám je potrebné pripočítať DPH.
                     </p>
-                </motion.div>
+                </div>
 
                 {/* Opening hours + info */}
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                    <div
                         className="bg-white/5 border border-white/10 rounded-sm p-8"
                     >
                         <h2
@@ -373,13 +334,9 @@ export default function CennikPage() {
                                 </div>
                             ))}
                         </div>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
+                    <div
                         className="bg-white/5 border border-white/10 rounded-sm p-8"
                     >
                         <h2
@@ -418,7 +375,7 @@ export default function CennikPage() {
                                 REZERVOVAŤ TERMÍN
                             </a>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
 
                 {/* Back CTA */}
