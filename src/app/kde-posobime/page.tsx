@@ -84,7 +84,7 @@ const bratislavaServices = [
 const faq = [
     {
         q: 'Musím sa vopred objednať?',
-        a: 'Objednanie vopred odporúčame, vieme sa tak lepšie pripraviť a nemusíte čakať. Niektoré jednoduchšie práce ale zvládneme aj na počkanie, najlepšie je nám vopred zavolať na +421 944 236 257 a dohodneme sa.',
+        a: 'Objednanie vopred odporúčame, vieme sa tak lepšie pripraviť a nemusíte čakať. Niektoré jednoduchšie práce ale zvládneme aj na počkanie, najlepšie je nám vopred zavolať na 0944 236 257 a dohodneme sa.',
     },
     {
         q: 'Je možné platiť kartou?',
@@ -686,7 +686,7 @@ export default function KdePosobime() {
                                 className="inline-flex items-center justify-center gap-3 bg-[#E31C25] hover:bg-[#c0151d] text-white font-bold px-8 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                +421 944 236 257
+                                0944 236 257
                             </a>
                             <Link
                                 href="/nacenenie"

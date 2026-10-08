@@ -2,26 +2,26 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 import { OPEN_COOKIE_SETTINGS } from '@/components/CookieSettingsButton';
 import { COOKIE_DECIDED } from '@/components/StickyCallBar';
 
+// The bar is part of the server HTML so it paints with the page instead of
+// popping up after hydration (it used to be the page's LCP element, ~3 s late).
+// Returning visitors get the 'cookie-decided' class from the inline script in
+// layout.tsx, which hides it before the first paint.
 export default function CookieBanner() {
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
-        // Check if the user has already made a choice
-        const consent = localStorage.getItem('ludato_cookie_consent');
-        if (!consent) {
-            // Small delay before showing so it doesn't jarringly pop up on load instantly
-            const timer = setTimeout(() => setIsVisible(true), 1500);
-            return () => clearTimeout(timer);
-        }
+        if (localStorage.getItem('ludato_cookie_consent')) setIsVisible(false);
     }, []);
 
     // "Nastavenia cookies" in the footer and on the privacy page reopens the bar.
     useEffect(() => {
-        const open = () => setIsVisible(true);
+        const open = () => {
+            document.documentElement.classList.remove('cookie-decided');
+            setIsVisible(true);
+        };
         window.addEventListener(OPEN_COOKIE_SETTINGS, open);
         return () => window.removeEventListener(OPEN_COOKIE_SETTINGS, open);
     }, []);
@@ -55,13 +55,10 @@ export default function CookieBanner() {
     };
 
     return (
-        <AnimatePresence>
+        <>
             {isVisible && (
-                <motion.div
-                    initial={{ y: 150, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: 150, opacity: 0 }}
-                    transition={{ duration: 0.6, type: 'spring', bounce: 0.3 }}
+                <div
+                    id="cookie-banner"
                     className="fixed bottom-0 left-0 right-0 z-[100] p-4 sm:p-6 pointer-events-none"
                 >
                     <div className="max-w-7xl mx-auto pointer-events-auto">
@@ -116,8 +113,8 @@ export default function CookieBanner() {
                             </div>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             )}
-        </AnimatePresence>
+        </>
     );
 }

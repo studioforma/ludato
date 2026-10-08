@@ -156,7 +156,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Ako sa na uskladnenie objednám?',
-                a: 'Najjednoduchšie je dohodnúť ho spolu s prezutím. Sadu, ktorú zložíme z auta, si rovno necháte u nás. Objednať sa môžete na +421 944 236 257.',
+                a: 'Najjednoduchšie je dohodnúť ho spolu s prezutím. Sadu, ktorú zložíme z auta, si rovno necháte u nás. Objednať sa môžete na 0944 236 257.',
             },
             {
                 q: 'Musím si pneumatiky u vás aj prezúvať?',

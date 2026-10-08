@@ -181,7 +181,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Musím sa objednať vopred?',
-                a: 'Odporúčame to. Zavolajte na +421 944 236 257 a dohodneme termín.',
+                a: 'Odporúčame to. Zavolajte na 0944 236 257 a dohodneme termín.',
             },
         ],
     },

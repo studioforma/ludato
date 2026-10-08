@@ -24,14 +24,16 @@ výmenu robí `src/components/CallNumberSwap.tsx`.
 
 Pravidlá pri úpravách webu:
 
-- **Zobrazené číslo píš vždy presne ako `+421 944 236 257`.** Iný zápis
-  (`0944 236 257`, `+421944236257`, bez medzier…) sa nevymení a hovor
-  z reklamy sa nezapočíta.
+- **Zobrazené číslo píš vždy presne ako `0944 236 257`** (národný formát).
+  Iný zápis (`+421 944 236 257`, `+421944236257`, bez medzier…) sa nevymení
+  a hovor z reklamy sa nezapočíta. Medzinárodný formát s "+" spôsoboval chybu
+  errorCode 14 / cc=ZZ (podpora Google Ads, case 8-6626000041470).
 - **tel: odkazy vždy ako `href="tel:+421944236257"`.** Iný tvar sa nevymení.
 - Platí to aj pre nové stránky a texty v `src/content/sluzby/*.ts`.
 - JSON-LD schéma (`telephone` v `layout.tsx`) a maily z formulárov majú mať
   vždy skutočné číslo. `CallNumberSwap` skripty nemení, nič netreba riešiť.
-- Číslo sa vymení len pri súhlase s cookies (consent mode v2, `CookieBanner`).
+- Značka pre hovory sa spúšťa až po súhlase s cookies (consent mode v2,
+  `CookieBanner`), nikdy pred ním. Číslo sa teda vymení len pri súhlase.
   Kto cookies odmietne, uvidí skutočné číslo a jeho hovor sa v Ads nezapočíta.
   Je to zámer.
 

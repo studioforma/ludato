@@ -1,7 +1,5 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
 import { GOOGLE_RATING, GOOGLE_REVIEWS, GOOGLE_REVIEWS_URL } from '@/lib/trust';
 
 const reviews = [
@@ -49,18 +47,12 @@ function GoogleG({ className }: { className?: string }) {
 }
 
 export default function ReviewsSection() {
-    const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true, margin: '-100px' });
 
     return (
         <section id="recenzie" className="bg-white pt-24 lg:pt-32">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
-                <motion.div
-                    ref={ref}
-                    initial={{ opacity: 0, x: -60 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.7 }}
+                <div
                     className="text-center mb-16"
                 >
                     <p
@@ -81,18 +73,13 @@ export default function ReviewsSection() {
                     >
                         {GOOGLE_REVIEWS} recenzií na Google s hodnotením {GOOGLE_RATING}. Spokojnosť zákazníka je naším najväčším ocenením.
                     </p>
-                </motion.div>
+                </div>
 
                 {/* Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {reviews.map((review, i) => (
-                        <motion.div
+                    {reviews.map((review) => (
+                        <div
                             key={review.name}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: i * 0.15 }}
-                            whileHover={{ y: -4, borderColor: 'rgba(245,179,1,0.7)' }}
                             className="relative bg-white border border-black/10 rounded-sm p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-colors duration-300 group"
                         >
                             {/* Review source */}
@@ -137,16 +124,12 @@ export default function ReviewsSection() {
 
                             {/* Bottom accent */}
                             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F5B301] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
 
                 {/* Google rating badge */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
+                <div
                     className="mt-12 flex justify-center"
                 >
                     <a
@@ -174,7 +157,7 @@ export default function ReviewsSection() {
                             {GOOGLE_REVIEWS} recenzií
                         </div>
                     </a>
-                </motion.div>
+                </div>
 
                 {/* Divider before the white About section */}
                 <div className="flex items-center gap-4 max-w-4xl mx-auto mt-20 lg:mt-24" aria-hidden="true">

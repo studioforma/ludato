@@ -87,7 +87,7 @@ export default function OchranaOsobnychUdajov() {
                             </a>{' '}
                             alebo na čísle{' '}
                             <a href="tel:+421944236257" className="text-[#E31C25] hover:text-white underline">
-                                +421 944 236 257
+                                0944 236 257
                             </a>
                             .
                         </p>

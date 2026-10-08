@@ -1,8 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
 import Link from 'next/link';
-import { motion, useInView } from 'framer-motion';
 
 const extras = [
     {
@@ -46,16 +44,10 @@ const extras = [
 
 type Extra = typeof extras[number];
 
-function ExtraCard({ item, index }: { item: Extra; index: number }) {
-    const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true, margin: '-80px' });
+function ExtraCard({ item }: { item: Extra }) {
 
     return (
-        <motion.div
-            ref={ref}
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
+        <div
             className="bg-[#111111] border border-white/10 rounded-sm p-8 hover:border-[#E31C25]/40 transition-colors duration-300"
         >
             <div className="text-[#E31C25] mb-5">{item.icon}</div>
@@ -79,7 +71,7 @@ function ExtraCard({ item, index }: { item: Extra; index: number }) {
             >
                 {item.linkLabel} →
             </Link>
-        </motion.div>
+        </div>
     );
 }
 
@@ -102,8 +94,8 @@ export default function MoreServicesSection() {
                     </h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    {extras.map((item, i) => (
-                        <ExtraCard key={item.title} item={item} index={i} />
+                    {extras.map((item) => (
+                        <ExtraCard key={item.title} item={item} />
                     ))}
                 </div>
             </div>

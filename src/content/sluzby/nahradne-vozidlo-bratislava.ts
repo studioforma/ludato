@@ -197,7 +197,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Ako si náhradné vozidlo rezervujem?',
-                a: 'Povedzte nám o ňom pri objednávaní servisu, najlepšie telefonicky na +421 944 236 257. Čím skôr nám dáte vedieť, tým istejšie ho pre vás budeme mať pripravené.',
+                a: 'Povedzte nám o ňom pri objednávaní servisu, najlepšie telefonicky na 0944 236 257. Čím skôr nám dáte vedieť, tým istejšie ho pre vás budeme mať pripravené.',
             },
             {
                 q: 'Na ako dlho si ho môžem požičať?',

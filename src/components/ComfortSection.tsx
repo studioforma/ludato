@@ -1,23 +1,14 @@
 'use client';
 
-import { useRef } from 'react';
 import Image from 'next/image';
-import { motion, useInView } from 'framer-motion';
 
 export default function ComfortSection() {
-    const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true, margin: '-100px' });
 
     return (
         <section className="bg-[#111111] py-24 lg:py-32">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <motion.div
-                        ref={ref}
-                        initial={{ opacity: 0, x: -60 }}
-                        animate={isInView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.7 }}
-                    >
+                    <div>
                         <p
                             className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
@@ -38,12 +29,9 @@ export default function ComfortSection() {
                             si dáte kávu, pozriete televíziu alebo si len tak posedíte, kým je
                             vaše vozidlo pripravené.
                         </p>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 60 }}
-                        animate={isInView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.7, delay: 0.15 }}
+                    <div
                         className="relative aspect-[4/3] rounded-sm overflow-hidden border border-white/10"
                     >
                         <Image
@@ -53,7 +41,7 @@ export default function ComfortSection() {
                             sizes="(max-width: 1024px) 100vw, 50vw"
                             className="object-cover"
                         />
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import { getOrderPrefill } from '@/lib/orderPrefill';
@@ -151,13 +150,8 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                     <div className={`h-1 flex-1 rounded-full transition-colors duration-500 ${step >= 2 ? 'bg-[#E31C25]' : 'bg-white/10'}`} />
                 </div>
 
-                <AnimatePresence mode="wait">
-                        <motion.form
+                        <form
                             key={step}
-                            initial={{ opacity: 0, x: step === 1 ? -20 : 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: step === 1 ? 20 : -20 }}
-                            transition={{ duration: 0.3 }}
                             onSubmit={step === 2 ? handleSubmit : (e) => e.preventDefault()}
                         >
                             {step === 1 && (
@@ -337,8 +331,7 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                     </div>
                                 </div>
                             )}
-                        </motion.form>
-                </AnimatePresence>
+                        </form>
             </div>
         </div>
     );

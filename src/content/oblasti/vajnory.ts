@@ -173,7 +173,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Musím sa objednať vopred?',
-                a: 'Odporúčame to, hlavne v sezóne prezúvania. Zavolajte na +421 944 236 257.',
+                a: 'Odporúčame to, hlavne v sezóne prezúvania. Zavolajte na 0944 236 257.',
             },
         ],
     },

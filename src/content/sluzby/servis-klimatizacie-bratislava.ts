@@ -169,7 +169,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Musím sa objednať vopred?',
-                a: 'Odporúčame objednať sa vopred, aby ste nečakali na uvoľnenie termínu. Najistejšie je zavolať na +421 944 236 257.',
+                a: 'Odporúčame objednať sa vopred, aby ste nečakali na uvoľnenie termínu. Najistejšie je zavolať na 0944 236 257.',
             },
             {
                 q: 'Prečo klíma zapácha najviac po zapnutí?',

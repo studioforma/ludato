@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useState } from 'react';
 
 export default function ContactSection() {
     const [formData, setFormData] = useState({
@@ -13,8 +12,6 @@ export default function ContactSection() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState('');
 
-    const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true, margin: '-80px' });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -57,11 +54,7 @@ export default function ContactSection() {
         <section id="kontakt" className="bg-[#111111] py-24 lg:py-32">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
-                <motion.div
-                    ref={ref}
-                    initial={{ opacity: 0, x: -60 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.7 }}
+                <div
                     className="text-center mb-16"
                 >
                     <p
@@ -82,15 +75,11 @@ export default function ContactSection() {
                     >
                         Napíšte nám správu alebo si dohodte termín. Ozveme sa vám do 24 hodín.
                     </p>
-                </motion.div>
+                </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Form */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={isInView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                    >
+                    <div>
                         <form
                             onSubmit={handleSubmit}
                             className="space-y-4"
@@ -136,13 +125,10 @@ export default function ContactSection() {
                                 * Povinné polia. Vaše údaje sú v bezpečí.
                             </p>
                         </form>
-                    </motion.div>
+                    </div>
 
                     {/* Map & Info */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={isInView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.8, delay: 0.3 }}
+                    <div
                         className="space-y-6"
                     >
                         {/* Contact info pills */}
@@ -165,7 +151,7 @@ export default function ContactSection() {
                                         </svg>
                                     ),
                                     label: 'Telefón',
-                                    value: '+421 944 236 257',
+                                    value: '0944 236 257',
                                     href: 'tel:+421944236257',
                                 },
                                 {
@@ -219,7 +205,7 @@ export default function ContactSection() {
                             </svg>
                             Otvoriť v Google Mapách
                         </a>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

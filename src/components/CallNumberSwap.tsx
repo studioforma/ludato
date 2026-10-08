@@ -14,7 +14,7 @@ import { usePathname } from 'next/navigation';
 // markup (mobile menu, animated sections), because the site switches pages
 // without a reload and would otherwise show the original number again.
 
-const ORIGINAL_TEXT = '+421 944 236 257';
+const ORIGINAL_TEXT = '0944 236 257';
 const ORIGINAL_HREF = 'tel:+421944236257';
 
 type CallNumber = { formatted: string; mobile: string };

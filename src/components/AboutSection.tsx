@@ -1,7 +1,5 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
 import { Dancing_Script } from 'next/font/google';
 
 const dancingScript = Dancing_Script({
@@ -54,43 +52,32 @@ const nameBreakdown = [
 ];
 
 export default function AboutSection() {
-    const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true, margin: '-100px' });
 
     return (
         <section id="o-nas" className={`${dancingScript.variable} bg-white py-24 lg:py-32 overflow-hidden`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     {/* Left: Text content */}
-                    <div ref={ref}>
+                    <div>
                         {/* Section label */}
-                        <motion.p
-                            initial={{ opacity: 0, x: -40 }}
-                            animate={isInView ? { opacity: 1, x: 0 } : {}}
-                            transition={{ duration: 0.6 }}
+                        <p
                             className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             <span className="font-black">//</span> Náš príbeh
-                        </motion.p>
+                        </p>
 
                         {/* Heading */}
-                        <motion.h2
-                            initial={{ opacity: 0, x: -60 }}
-                            animate={isInView ? { opacity: 1, x: 0 } : {}}
-                            transition={{ duration: 0.7, delay: 0.1 }}
+                        <h2
                             className="text-4xl md:text-5xl font-black text-[#1D1D1B] mb-6 leading-tight"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             <span className="text-[#E31C25]">//</span> NAŠA HISTÓRIA,{' '}
                             <span className="block">VAŠA DÔVERA.</span>
-                        </motion.h2>
+                        </h2>
 
                         {/* Body */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.7, delay: 0.2 }}
+                        <div
                             className="space-y-4 text-[#1D1D1B]/70 text-base leading-relaxed"
                             style={{ fontFamily: 'var(--font-inter)' }}
                         >
@@ -115,24 +102,18 @@ export default function AboutSection() {
                                 Zakladám si na tom, aby bola oprava spravená poriadne hneď
                                 na prvýkrát. Preto ku každému vozidlu pristupujem, akoby bolo moje vlastné.
                             </p>
-                        </motion.div>
+                        </div>
 
                         {/* Script accent */}
-                        <motion.p
-                            initial={{ opacity: 0 }}
-                            animate={isInView ? { opacity: 1 } : {}}
-                            transition={{ duration: 0.8, delay: 0.4 }}
+                        <p
                             className="text-2xl text-[#E31C25] mt-6"
                             style={{ fontFamily: 'var(--font-dancing)' }}
                         >
                             – Lucia, Damian, Tomáš
-                        </motion.p>
+                        </p>
 
                         {/* Values */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.7, delay: 0.5 }}
+                        <div
                             className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4"
                         >
                             {values.map((v) => (
@@ -155,14 +136,11 @@ export default function AboutSection() {
                                     </div>
                                 </div>
                             ))}
-                        </motion.div>
+                        </div>
                     </div>
 
                     {/* Right: LUDATO name origin typographic card */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 80 }}
-                        animate={isInView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.9, delay: 0.2 }}
+                    <div
                         className="relative"
                     >
                         <div className="bg-[#1D1D1B] rounded-sm p-10 lg:p-14 relative overflow-hidden">
@@ -186,12 +164,9 @@ export default function AboutSection() {
 
                             {/* Name breakdown */}
                             <div className="space-y-8">
-                                {nameBreakdown.map((item, i) => (
-                                    <motion.div
+                                {nameBreakdown.map((item) => (
+                                    <div
                                         key={item.syllable}
-                                        initial={{ opacity: 0, x: 30 }}
-                                        animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                        transition={{ duration: 0.6, delay: 0.4 + i * 0.15 }}
                                         className="flex items-baseline gap-3"
                                     >
                                         <span
@@ -206,7 +181,7 @@ export default function AboutSection() {
                                         >
                                             {item.name}
                                         </span>
-                                    </motion.div>
+                                    </div>
                                 ))}
                             </div>
 
@@ -237,7 +212,7 @@ export default function AboutSection() {
                                 &ldquo;Rodina je to, čo nás ženie vpred, a preto nesie aj náš servis ich mená.&rdquo;
                             </p>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>
