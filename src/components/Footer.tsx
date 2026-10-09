@@ -93,7 +93,7 @@ export default function Footer() {
                         </h4>
                         <ul className="space-y-3 text-white/50 text-sm" style={{ fontFamily: 'var(--font-inter)' }}>
                             <li className="text-white font-semibold">
-                                Ludato Family Autoservis a pneuservis
+                                Ludato Family Autoservis a Pneuservis
                             </li>
                             <li className="flex items-center gap-2">
                                 <span className="text-[#E31C25]">✆</span>
