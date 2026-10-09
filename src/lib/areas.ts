@@ -125,6 +125,40 @@ export const areas: AreaMeta[] = [
             subtext: 'Cesta k nám trvá 20 až 25 minút. Po auto si vieme prísť aj my.',
         },
     },
+    {
+        slug: 'kramare',
+        name: 'Kramáre',
+        nameAcc: 'Kramáre',
+        h1: 'AUTOSERVIS A PNEUSERVIS PRE KRAMÁRE',
+        h1Accent: 'KRAMÁRE',
+        title: 'Autoservis Kramáre | Približne 10 minút, Odborárska 52 | Ludato Family Autoservis',
+        description:
+            'Autoservis a pneuservis pre Kramáre. Na Odborárskej v Novom Meste sme orientačne 10 minút autom. Brzdy, prezutie, podvozok, výmena oleja aj vyzdvihnutie auta.',
+        driveTime: 'orientačne 10 minút autom',
+        route: 'Cez Račiansku a Pionierskú',
+        services: ['brzdy-bratislava', 'pneuservis-bratislava', 'podvozok-bratislava', 'vymena-oleja-bratislava'],
+        cta: {
+            question: 'Potrebujete servis a bývate na Kramároch?',
+            subtext: 'Sme vo vašej mestskej časti, orientačne 10 minút autom. Zavolajte a dohodneme termín.',
+        },
+    },
+    {
+        slug: 'koliba',
+        name: 'Koliba',
+        nameAcc: 'Kolibu',
+        h1: 'AUTOSERVIS A PNEUSERVIS PRE KOLIBU',
+        h1Accent: 'KOLIBU',
+        title: 'Autoservis Koliba | 10 až 15 minút, Odborárska 52 | Ludato Family Autoservis',
+        description:
+            'Autoservis a pneuservis pre Kolibu. Na Odborárskej v Novom Meste sme orientačne 10 až 15 minút autom. Brzdy, zimné pneumatiky, spojka, podvozok aj vyzdvihnutie auta.',
+        driveTime: 'orientačne 10 až 15 minút autom',
+        route: 'Cez Pionierskú a Jeséniovu',
+        services: ['brzdy-bratislava', 'pneuservis-bratislava', 'prevodovka-spojka-bratislava', 'podvozok-bratislava'],
+        cta: {
+            question: 'Potrebujete servis a bývate na Kolibe?',
+            subtext: 'Sme orientačne 10 až 15 minút od vás, a keď nemáte čas, po auto si prídeme sami.',
+        },
+    },
 ];
 
 export function getArea(slug: string): AreaMeta | undefined {
