@@ -13,7 +13,7 @@ import ServiceIcon from '@/components/ServiceIcon';
 export const metadata: Metadata = {
     title: 'Kde nás nájdete | Ludato Family Autoservis',
     description:
-        'Ludato Family Autoservis a pneuservis sídli na Odborárskej v Bratislave - Novom Meste a autom k nám chodia zákazníci z celej Bratislavy aj okolia: Rača, Vajnory, Staré Mesto, Ružinov, Karlova Ves a Dúbravka.',
+        'Ludato Family Autoservis a Pneuservis sídli na Odborárskej v Bratislave - Novom Meste a autom k nám chodia zákazníci z celej Bratislavy aj okolia: Kramáre, Koliba, Rača, Vajnory, Staré Mesto, Ružinov, Karlova Ves a Dúbravka.',
     alternates: { canonical: '/kde-posobime' },
 };
 
@@ -158,6 +158,20 @@ const faqSchema = {
 };
 
 const areas: Area[] = [
+    {
+        name: 'Kramáre',
+        driveTime: 'orientačne 10 min autom',
+        minutes: '10',
+        pos: [-1.8, -0.9],
+        route: 'Cez Račiansku a Pionierskú.',
+    },
+    {
+        name: 'Koliba',
+        driveTime: 'orientačne 10 - 15 min autom',
+        minutes: '10-15',
+        pos: [-2.9, -0.1],
+        route: 'Cez Pionierskú a Jeséniovu.',
+    },
     {
         name: 'Rača',
         driveTime: 'orientačne 10 - 15 min autom',
@@ -304,7 +318,7 @@ export default function KdePosobime() {
                             style={{ fontFamily: 'var(--font-inter)' }}
                         >
                             <p>
-                                Ludato Family Autoservis a pneuservis sídli na Odborárskej 52 v Bratislave,
+                                Ludato Family Autoservis a Pneuservis sídli na Odborárskej 52 v Bratislave,
                                 v mestskej časti Nové Mesto. Nie sme veľká reťaz s desiatkami
                                 pobočiek. Sme rodinný servis, ktorý poctivo stavia svoje meno
                                 priamo tu. Za diagnostikou, výmenou bŕzd aj sezónnym servisom
@@ -525,7 +539,7 @@ export default function KdePosobime() {
                                 <div className="relative rounded-sm overflow-hidden border border-white/10 aspect-[3/4]">
                                     <Image
                                         src="/prevadzka-1.webp"
-                                        alt="Prevádzka Ludato Family Autoservis a pneuservis na Odborárskej 52"
+                                        alt="Prevádzka Ludato Family Autoservis a Pneuservis na Odborárskej 52"
                                         fill
                                         className="object-cover"
                                         sizes="(max-width: 640px) 100vw, 50vw"
@@ -550,7 +564,7 @@ export default function KdePosobime() {
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    title="Ludato Family Autoservis a pneuservis - Odborárska 52, Bratislava"
+                                    title="Ludato Family Autoservis a Pneuservis - Odborárska 52, Bratislava"
                                 />
                             </div>
                         </div>

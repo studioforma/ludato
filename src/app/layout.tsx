@@ -207,6 +207,17 @@ export default function RootLayout({
               // consent update to granted. Firing it before consent made Google
               // return errorCode 14 (support case 8-6626000041470).
               window.ludatoConfigureCallTracking = function () {
+                // Google caches the call tracking request in localStorage for
+                // 3 hours. A visitor who came without an ad and returns through
+                // one would get the cached request without gclid, so drop it.
+                try {
+                  var q = new URLSearchParams(location.search);
+                  if (q.has('gclid') || q.has('gbraid') || q.has('wbraid')) {
+                    Object.keys(localStorage).forEach(function (k) {
+                      if (k.indexOf('2kV5CJOU0YsdEMv8gdJE,') === 0) localStorage.removeItem(k);
+                    });
+                  }
+                } catch (e) {}
                 gtag('config', 'AW-18425609803/2kV5CJOU0YsdEMv8gdJE', {
                   'phone_conversion_number': '0944 236 257',
                   'phone_conversion_callback': function (formattedNumber, mobileNumber) {

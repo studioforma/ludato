@@ -17,6 +17,11 @@ import odtahVozidlaBratislava from './odtah-vozidla-bratislava';
 import autobateriaBratislava from './autobateria-bratislava';
 import prevodovkaSpojkaBratislava from './prevodovka-spojka-bratislava';
 import vstrekovaceBratislava from './vstrekovace-bratislava';
+import predajPneumatikBratislava from './predaj-pneumatik-bratislava';
+import kontrolaPredDovolenkouBratislava from './kontrola-pred-dovolenkou-bratislava';
+import ozonovaDezinfekciaBratislava from './ozonova-dezinfekcia-bratislava';
+import tepovanieInterieruBratislava from './tepovanie-interieru-bratislava';
+import chladenieKurenieBratislava from './chladenie-kurenie-bratislava';
 
 export const serviceContent: Record<string, ServiceContent> = {
     'pneuservis-bratislava': pneuservisBratislava,
@@ -37,6 +42,11 @@ export const serviceContent: Record<string, ServiceContent> = {
     'autobateria-bratislava': autobateriaBratislava,
     'prevodovka-spojka-bratislava': prevodovkaSpojkaBratislava,
     'vstrekovace-bratislava': vstrekovaceBratislava,
+    'predaj-pneumatik-bratislava': predajPneumatikBratislava,
+    'kontrola-pred-dovolenkou-bratislava': kontrolaPredDovolenkouBratislava,
+    'ozonova-dezinfekcia-bratislava': ozonovaDezinfekciaBratislava,
+    'tepovanie-interieru-bratislava': tepovanieInterieruBratislava,
+    'chladenie-kurenie-bratislava': chladenieKurenieBratislava,
 };
 
 export function getServiceContent(slug: string): ServiceContent | undefined {

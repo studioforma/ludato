@@ -53,6 +53,15 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                             ))}
                         </ul>
                     )}
+                    {/* Cennik prices are without VAT; say so wherever the points quote one. */}
+                    {points?.some((p) => p.includes('€')) && (
+                        <p
+                            className="relative -mt-3 mb-5 text-white/80 text-xs"
+                            style={{ fontFamily: 'var(--font-inter)' }}
+                        >
+                            Uvedené ceny sú bez DPH.
+                        </p>
+                    )}
                     {/* Social proof right next to the call buttons */}
                     <div
                         className="relative inline-flex flex-wrap items-center gap-x-3 gap-y-1 bg-black/25 rounded-sm px-4 py-2.5 mb-7 lg:mb-0 text-white text-sm"
