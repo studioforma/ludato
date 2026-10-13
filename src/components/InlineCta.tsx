@@ -34,7 +34,7 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                         {heading}
                     </h2>
                     <p
-                        className="relative text-white/90 leading-relaxed mb-5"
+                        className="relative text-white leading-relaxed mb-5"
                         style={{ fontFamily: 'var(--font-inter)' }}
                     >
                         <RichText text={text} />

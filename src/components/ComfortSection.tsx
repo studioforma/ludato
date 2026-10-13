@@ -10,7 +10,7 @@ export default function ComfortSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
                         <p
-                            className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                            className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             <span className="font-black">//</span> Počas čakania

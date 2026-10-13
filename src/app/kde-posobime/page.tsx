@@ -287,7 +287,7 @@ export default function KdePosobime() {
                     {/* Header */}
                     <div className="text-center mb-16">
                         <p
-                            className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                            className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             <span className="font-black">//</span> Kde nás nájdete
@@ -325,7 +325,7 @@ export default function KdePosobime() {
                     <div id="nove-mesto" className="mb-16">
                         <div className="text-center mb-10">
                             <p
-                                className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                                className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
                                 <span className="font-black">//</span> Naša domovská mestská časť
@@ -617,7 +617,7 @@ export default function KdePosobime() {
                     <div className="mb-16 max-w-3xl mx-auto">
                         <div className="text-center mb-10">
                             <p
-                                className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                                className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
                                 <span className="font-black">//</span> Časté otázky

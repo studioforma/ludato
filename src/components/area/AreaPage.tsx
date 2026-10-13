@@ -92,7 +92,7 @@ export default function AreaPage({ meta, content }: { meta: AreaMeta; content: S
 
                     <div className="text-center mb-14 max-w-3xl mx-auto">
                         <p
-                            className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                            className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             <span className="font-black">//</span> Kde pôsobíme

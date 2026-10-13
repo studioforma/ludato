@@ -139,7 +139,7 @@ export function SectionBlock({ section }: { section: Section }) {
                     <Heading>{section.heading}</Heading>
                     <div className="border border-[#E31C25]/30 bg-[#E31C25]/5 rounded-sm p-6 sm:p-8">
                         <p
-                            className="text-[#E31C25] text-xs tracking-[0.3em] uppercase font-bold mb-4"
+                            className="text-[#FF5A60] text-xs tracking-[0.3em] uppercase font-bold mb-4"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             {section.vehicle}
@@ -424,7 +424,7 @@ export default function ServicePage({
                     >
                         <div className={meta.heroImage ? 'text-left' : ''}>
                             <p
-                                className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                                className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
                                 <span className="font-black">//</span> Služby

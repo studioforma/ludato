@@ -2,6 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  // Inline the (small) Tailwind CSS into the HTML so it does not block the
+  // first paint as a separate request (PageSpeed: render-blocking requests).
+  experimental: {
+    inlineCss: true,
+  },
   images: {
     remotePatterns: [],
   },

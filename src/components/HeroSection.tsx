@@ -25,7 +25,7 @@ export default function HeroSection() {
                 {/* Small label */}
                 <div className="mb-6">
                     <span
-                        className="inline-flex items-center gap-2 text-[#E31C25] text-xs tracking-[0.4em] uppercase border border-[#E31C25]/40 px-4 py-2 rounded-sm bg-black/20 backdrop-blur-sm"
+                        className="inline-flex items-center gap-2 text-[#FF5A60] text-xs tracking-[0.4em] uppercase border border-[#E31C25]/40 px-4 py-2 rounded-sm bg-black/20 backdrop-blur-sm"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
                         <span className="w-4 h-px bg-[#E31C25]" />

@@ -61,12 +61,12 @@ export default function Footer() {
 
                     {/* Navigation */}
                     <div>
-                        <h4
+                        <h3
                             className="text-white font-bold text-xs tracking-[0.3em] uppercase mb-6 flex items-center gap-2"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             <span className="text-[#E31C25]">//</span> Navigácia
-                        </h4>
+                        </h3>
                         <ul className="space-y-3">
                             {navLinks.map((link) => (
                                 <li key={link.href}>
@@ -85,12 +85,12 @@ export default function Footer() {
 
                     {/* Contact */}
                     <div>
-                        <h4
+                        <h3
                             className="text-white font-bold text-xs tracking-[0.3em] uppercase mb-6 flex items-center gap-2"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             <span className="text-[#E31C25]">//</span> Kontakt
-                        </h4>
+                        </h3>
                         <ul className="space-y-3 text-white/50 text-sm" style={{ fontFamily: 'var(--font-inter)' }}>
                             <li className="text-white font-semibold">
                                 Ludato Family Autoservis a Pneuservis
@@ -130,7 +130,7 @@ export default function Footer() {
                 {/* Bottom bar */}
                 <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p
-                        className="text-white/30 text-xs text-center sm:text-left"
+                        className="text-white/60 text-xs text-center sm:text-left"
                         style={{ fontFamily: 'var(--font-inter)' }}
                     >
                         © {new Date().getFullYear()} Ludato Family s. r. o., Odborárska 52, 831 02 Bratislava.
@@ -142,16 +142,16 @@ export default function Footer() {
                     >
                         <Link
                             href="/ochrana-osobnych-udajov"
-                            className="text-white/30 hover:text-[#E31C25] transition-colors"
+                            className="text-white/60 hover:text-[#E31C25] transition-colors"
                         >
                             Ochrana osobných údajov
                         </Link>
-                        <CookieSettingsButton className="text-white/30 hover:text-[#E31C25] transition-colors" />
+                        <CookieSettingsButton className="text-white/60 hover:text-[#E31C25] transition-colors" />
                         <a
                             href="https://byforma.eu"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white/30 hover:text-[#E31C25] transition-colors"
+                            className="text-white/60 hover:text-[#E31C25] transition-colors"
                         >
                             Vytvorilo Studio Forma
                         </a>

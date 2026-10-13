@@ -131,7 +131,7 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                 {/* Header */}
                 <div className="mb-10 text-center">
                     <p
-                        className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                        className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
                         <span className="font-black">//</span> Nezáväzná kalkulácia a rezervácia
