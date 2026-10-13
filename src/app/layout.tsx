@@ -5,6 +5,7 @@ import CookieBanner from "@/components/CookieBanner";
 import CallNumberSwap from "@/components/CallNumberSwap";
 import StickyCallBar from "@/components/StickyCallBar";
 import { services } from "@/lib/services";
+import { SITE, BUSINESS_ID, areaServedSchema } from "@/lib/schema";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -42,28 +43,18 @@ export const metadata: Metadata = {
   },
 };
 
-const SITE = "https://www.ludato.sk";
-// Service pages reference this node by @id, so Google ties them to one business.
-const BUSINESS_ID = `${SITE}/#autoservis`;
-
-const areasServed = [
-  "Bratislava - Nové Mesto",
-  "Bratislava - Rača",
-  "Bratislava - Vajnory",
-  "Bratislava - Staré Mesto",
-  "Bratislava - Ružinov",
-  "Bratislava - Karlova Ves",
-  "Bratislava - Dúbravka",
-];
-
+// Service and area pages reference the business node by @id (BUSINESS_ID),
+// so Google ties them to one business.
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["AutoRepair", "TireShop"],
   "@id": BUSINESS_ID,
   name: "Ludato Family Autoservis a Pneuservis",
+  legalName: "Ludato Family s. r. o.",
   alternateName: ["LUDATO FAMILY Cars Services", "Ludato"],
   description:
-    "Rodinný autoservis a pneuservis v Bratislave, Novom Meste. Diagnostika, výmena oleja, brzdy, podvozok, geometria, rozvody, turbodúchadlá, klimatizácia, STK a EK, pneuservis aj servis veteránov pre autá všetkých značiek.",
+    "Rodinný autoservis a pneuservis na Odborárskej 52 v Bratislave, Novom Meste, pre autá všetkých značiek z celej Bratislavy aj okolia. Diagnostika, výmena oleja, brzdy, podvozok, geometria, rozvody, spojka, turbodúchadlá, vstrekovače, klimatizácia, STK a EK, pneuservis a predaj pneumatík, odťah a náhradné vozidlo.",
+  taxID: "2122815046",
   telephone: "+421944236257",
   email: "ludato.recepcia@gmail.com",
   url: `${SITE}/`,
@@ -91,6 +82,7 @@ const localBusinessSchema = {
   identifier: [
     { "@type": "PropertyValue", propertyID: "Google Place ID", value: "ChIJQ5-gGa-PbEcRzcO4FjtydfY" },
     { "@type": "PropertyValue", propertyID: "Google CID", value: "17759226303715263437" },
+    { "@type": "PropertyValue", propertyID: "IČO", value: "57526800" },
   ],
   hasMap: "https://www.google.com/maps?cid=17759226303715263437",
   sameAs: [
@@ -124,10 +116,7 @@ const localBusinessSchema = {
     areaServed: "SK",
     availableLanguage: ["Slovak"],
   },
-  areaServed: [
-    { "@type": "City", name: "Bratislava" },
-    ...areasServed.map((name) => ({ "@type": "Place", name })),
-  ],
+  areaServed: areaServedSchema(),
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Služby autoservisu Ludato Family Autoservis a Pneuservis",

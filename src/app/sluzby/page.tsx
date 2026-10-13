@@ -25,6 +25,19 @@ const breadcrumbSchema = {
     ],
 };
 
+// Every service page, in registry order, so search and AI see the full offer.
+const servicesListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Služby autoservisu Ludato Family Autoservis a Pneuservis',
+    itemListElement: services.map((s, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: s.name,
+        url: `${SITE}/sluzby/${s.slug}`,
+    })),
+};
+
 export default function Sluzby() {
     const populated = serviceCategories
         .map((cat) => ({
@@ -38,6 +51,10 @@ export default function Sluzby() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesListSchema) }}
             />
             <Navbar />
 

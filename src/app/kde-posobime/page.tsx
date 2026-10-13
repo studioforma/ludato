@@ -9,6 +9,24 @@ import InlineCta from '@/components/InlineCta';
 import { areas as areaPages } from '@/lib/areas';
 import { getService } from '@/lib/services';
 import ServiceIcon from '@/components/ServiceIcon';
+import { SITE, breadcrumbSchema } from '@/lib/schema';
+
+const kdePosobimeBreadcrumb = breadcrumbSchema([
+    { name: 'Domov', path: '/' },
+    { name: 'Kde pôsobíme', path: '/kde-posobime' },
+]);
+
+const areasListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Mestské časti, odkiaľ k nám chodia zákazníci',
+    itemListElement: areaPages.map((a, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: `Autoservis pre ${a.nameAcc}`,
+        url: `${SITE}/kde-posobime/${a.slug}`,
+    })),
+};
 
 export const metadata: Metadata = {
     title: 'Kde nás nájdete | Ludato Family Autoservis',
@@ -254,6 +272,14 @@ export default function KdePosobime() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(kdePosobimeBreadcrumb) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(areasListSchema) }}
             />
             <Navbar />
             <div className="pt-32 lg:pt-40 pb-20">
