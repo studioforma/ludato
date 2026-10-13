@@ -41,7 +41,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Teplo a teplotné výkyvy',
-                text: 'Guma najlepšie znáša stabilnú teplotu. Letné horúčavy na balkóne a mrazy v nevykurovanej garáži ju striedavo zmäkčujú a stvrdzujú, čím zmes postupne stráca pružnosť, na ktorej závisí priľnavosť.',
+                text: 'Guma najlepšie znáša stabilnú teplotu. Letné horúčavy na balkóne a mrazy v nevykurovanej garáži ju striedavo zmäkčujú a stvrdzujú, čím zmes postupne stráca pružnosť, od ktorej závisí priľnavosť.',
             },
             {
                 title: 'Vlhkosť',
@@ -180,7 +180,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Oplatí sa uskladnenie, keď mám miesto v pivnici?',
-                a: 'Ak je pivnica suchá, tmavá a chladná, pneumatiky tam vydržia dobre. Uskladnenie u nás sa oplatí hlavne vtedy, keď je pivnica vlhká, pneumatiky by ležali na slnku, alebo keď ich nechcete nosiť hore dole.',
+                a: 'Ak je pivnica suchá, tmavá a chladná, pneumatiky tam vydržia dobre. Uskladnenie u nás sa oplatí hlavne vtedy, keď je pivnica vlhká, pneumatiky by ležali na slnku, alebo keď ich nechcete nosiť hore-dole.',
             },
             {
                 q: 'Kedy si mám dohodnúť termín na prezutie?',

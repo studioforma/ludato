@@ -5,7 +5,7 @@ const content: ServiceContent = [
         type: 'intro',
         paragraphs: [
             'Kontrolka svieti znova, hoci ste už boli v servise dvakrát. Vymenil sa diel, ktorý označila diagnostika, chyba sa vymazala a po pár dňoch je späť. Takto k nám prichádza veľa zákazníkov a skoro vždy platí to isté: chybový kód ukázal, kde sa problém prejavuje, no nie to, čo ho spôsobuje.',
-            'V Bratislave, Novom Meste, sa špecializujeme práve na takéto poruchy. Keď iný servis chybu nenašiel alebo sa oprava nevydržala, hľadáme skutočnú príčinu, aj keď to znamená prejsť celý systém krok za krokom, od riadiacej jednotky cez snímače až po jednotlivé vodiče.',
+            'V Bratislave, Novom Meste, sa špecializujeme práve na takéto poruchy. Keď iný servis chybu nenašiel alebo oprava nevydržala, hľadáme skutočnú príčinu, aj keď to znamená prejsť celý systém krok za krokom, od riadiacej jednotky cez snímače až po jednotlivé vodiče.',
         ],
     },
     {
@@ -36,7 +36,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo chybový kód nie je diagnóza',
         paragraphs: [
-            'Riadiaca jednotka vidí svet len cez snímače. Keď hodnota z nejakého snímača nesedí, uloží chybu k tomu systému, kde nezrovnalosť zistila. Príčina však môže byť úplne inde: v snímači, ktorý posiela zlé údaje, v kabeláži, ktorá signál skresľuje, alebo v inej časti motora, ktorá hodnotu ovplyvňuje.',
+            'Riadiaca jednotka vidí svet len cez snímače. Keď hodnota z nejakého snímača nesedí, uloží chybu k tomu systému, v ktorom nezrovnalosť zistila. Príčina však môže byť úplne inde: v snímači, ktorý posiela zlé údaje, v kabeláži, ktorá signál skresľuje, alebo v inej časti motora, ktorá hodnotu ovplyvňuje.',
             'Preto je chybový kód pre nás začiatok hľadania, nie jeho koniec. Bežná [počítačová diagnostika](/sluzby/pocitacova-diagnostika-bratislava) stačí na väčšinu porúch. Pri tých, ktoré sa vracajú, však treba ísť ďalej a overiť, či to, čo hlási auto, zodpovedá skutočnosti.',
         ],
     },
@@ -80,7 +80,7 @@ const content: ServiceContent = [
                 text: 'Opotrebovaný vstrekovač zhorší spaľovanie a ovplyvní hodnoty, ktoré riadiaca jednotka vyhodnocuje pri turbe, emisiách aj chode motora. Máme vlastný tester vstrekovačov, takže ich stav vieme overiť priamo u nás.',
             },
             {
-                title: 'Netesnosti v sání a výfuku',
+                title: 'Netesnosti v saní a výfuku',
                 text: 'Malá netesnosť v sacom potrubí alebo v prívode vzduchu k turbu mení tlaky a prietoky, s ktorými riadiaca jednotka počíta. Výsledkom sú chyby turba, zmesi alebo výkonu, hoci samotné diely sú v poriadku.',
             },
             {

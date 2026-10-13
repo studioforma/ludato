@@ -26,6 +26,11 @@ const prefills: Record<string, Prefill> = {
     'nahradne-vozidlo': { service: OTHER_OPTION, note: 'Náhradné vozidlo počas servisu' },
     spojka: { service: OTHER_OPTION, note: 'Spojka alebo prevodovka' },
     vstrekovace: { service: OTHER_OPTION, note: 'Vstrekovače' },
+    pneumatiky: { service: OTHER_OPTION, note: 'Predaj pneumatík (rozmer, sezóna, preferovaná značka)' },
+    dovolenka: { service: OTHER_OPTION, note: 'Kontrola auta pred dovolenkou' },
+    ozon: { service: 'Ozónová dezinfekcia interiéru' },
+    tepovanie: { service: 'Tepovanie' },
+    chladenie: { service: OTHER_OPTION, note: 'Chladiaci systém alebo kúrenie' },
 };
 
 export function getOrderPrefill(key: string | null): Prefill | undefined {

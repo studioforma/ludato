@@ -36,7 +36,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Remeň alebo reťaz',
         paragraphs: [
-            'Rozvodový remeň je ozubený pás z gumy vystuženej vláknami. Je tichý a lacnejší na výrobu, no guma starne vekom aj teplom, preto má výrobcom predpísaný interval v kilometroch aj v rokoch. Ktorý nastane skôr, ten platí.',
+            'Rozvodový remeň je ozubený pás z gumy vystuženej vláknami. Je tichý a lacnejší na výrobu, no guma starne vekom aj teplom, preto má výrobcom predpísaný interval v kilometroch aj v rokoch. Platí to, čo nastane skôr.',
             'Rozvodová reťaz je kovová a beží v motorovom oleji. Často sa o nej hovorí, že vydrží celú životnosť motora, no v praxi to platí len pri pravidelnej výmene oleja a pri motoroch, ktoré s reťazou nemajú známe konštrukčné problémy. Reťaz sa časom vyťahuje a opotrebúvajú sa aj napínač a vodiace lišty. Na rozdiel od remeňa však zvyčajne dá o sebe vedieť skôr, než zlyhá.',
         ],
     },
@@ -172,7 +172,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Vydrží rozvodová reťaz celú životnosť motora?',
-                a: 'Niekedy áno, no nie je to pravidlo. Reťaz sa časom vyťahuje a opotrebúva sa napínač aj lišty. Veľa závisí od konkrétneho motora a od toho, ako pravidelne sa menil olej.',
+                a: 'Niekedy áno, no nie je to pravidlo. Reťaz sa časom vyťahuje a opotrebúvajú sa napínač aj lišty. Veľa závisí od konkrétneho motora a od toho, ako pravidelne sa menil olej.',
             },
             {
                 q: 'Aké zvuky prezrádzajú problém s rozvodom?',

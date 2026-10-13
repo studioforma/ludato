@@ -79,8 +79,8 @@ export default function CookieBanner() {
                                     className="text-white/60 text-sm leading-relaxed"
                                     style={{ fontFamily: 'var(--font-inter)' }}
                                 >
-                                    Táto stránka používa súbory cookies pre zabezpečenie základných funkcií
-                                    (ako je napríklad Google Mapa), analýzu návštevnosti a meranie reklamy.
+                                    Táto stránka používa súbory cookies na zabezpečenie základných funkcií
+                                    (ako je napríklad Google Mapy), analýzu návštevnosti a meranie reklamy.
                                     Rešpektujeme vaše súkromie, môžete nastavenia prijať alebo odmietnuť.
                                     Viac v{' '}
                                     <Link

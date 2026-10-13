@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 
-export default function ContactSection() {
+// On /kontakt the section heading is the page H1; on the homepage it stays an H2.
+export default function ContactSection({ asPageHeading = false }: { asPageHeading?: boolean }) {
+    const Heading = asPageHeading ? 'h1' : 'h2';
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -58,17 +60,17 @@ export default function ContactSection() {
                     className="text-center mb-16"
                 >
                     <p
-                        className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                        className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
                         <span className="font-black">//</span> Sme tu pre vás
                     </p>
-                    <h2
+                    <Heading
                         className="text-4xl md:text-5xl font-black text-white mb-4"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
                         KONTAKTUJTE <span className="text-[#E31C25]">NÁS</span>
-                    </h2>
+                    </Heading>
                     <p
                         className="text-white/50 max-w-lg mx-auto"
                         style={{ fontFamily: 'var(--font-inter)' }}

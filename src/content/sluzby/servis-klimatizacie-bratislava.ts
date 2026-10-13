@@ -44,7 +44,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Ozónová dezinfekcia',
-                text: 'Pri probléme so zápachom z ventilácie ponúkame aj ozónovú dezinfekciu interiéru, ktorá odstráni baktérie a plesne priamo vo výparníku, nie len prekryje zápach.',
+                text: 'Pri probléme so zápachom z ventilácie ponúkame aj ozónovú dezinfekciu interiéru, ktorá odstráni baktérie a plesne priamo vo výparníku, nielen prekryje zápach.',
             },
         ],
     },
@@ -73,7 +73,7 @@ const content: ServiceContent = [
         heading: 'Ako klimatizácia funguje',
         paragraphs: [
             'Klimatizácia vzduch nevyrába chladný, ale odoberá z neho teplo a odvádza ho von z vozidla. Kľúčovým prvkom je chladivo, ktoré v uzavretom okruhu neustále mení skupenstvo. Kompresor ho stlačí a zohriate ho pošle do kondenzátora vpredu pri chladiči, kde odovzdá teplo do okolia a skvapalní sa.',
-            'Odtiaľ putuje k výparníku, ktorý je ukrytý v palubnej doske. Tam chladivo prudko expanduje, odoberie teplo vzduchu prúdiacemu do interiéru a vráti sa späť ku kompresoru. Práve pri výparníku zároveň kondenzuje vlhkosť zo vzduchu, čo je dôvod, prečo pod zaparkovaným autom s puštenou klímou býva mláčka vody, a zároveň prečo je výparník ideálnym miestom pre baktérie a zápach.',
+            'Odtiaľ putuje k výparníku, ktorý je ukrytý v palubnej doske. Tam chladivo prudko expanduje, odoberie teplo vzduchu prúdiacemu do interiéru a vráti sa späť ku kompresoru. Práve pri výparníku zároveň kondenzuje vlhkosť zo vzduchu, čo je dôvod, prečo pod zaparkovaným autom s pustenou klímou býva mláčka vody, a zároveň prečo je výparník ideálnym miestom pre baktérie a zápach.',
         ],
     },
     {
@@ -189,7 +189,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Môže klimatizácia bežať súčasne s kúrením?',
-                a: 'Áno a v zime to dokonca odporúčame. Klimatizácia odoberá vzduchu vlhkosť, takže v kombinácii s kúrením rýchlejšie zbavíte okná zahmlievania.',
+                a: 'Áno, a v zime to dokonca odporúčame. Klimatizácia odoberá vzduchu vlhkosť, takže v kombinácii s kúrením rýchlejšie zbavíte okná zahmlievania.',
             },
             {
                 q: 'Dá sa staršie vozidlo prerobiť na nové chladivo?',

@@ -180,7 +180,7 @@ export default function CennikPage() {
                     </div>
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
                         <p
-                            className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                            className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             <span className="font-black">//</span> Transparentné ceny
@@ -349,7 +349,7 @@ export default function CennikPage() {
                             <li className="flex items-start gap-3">
                                 <span className="text-[#E31C25] flex-shrink-0 text-base">🏢</span>
                                 <div>
-                                    <div className="text-white font-bold" style={{ fontFamily: 'var(--font-montserrat)' }}>LUDATO FAMILY, s.r.o</div>
+                                    <div className="text-white font-bold" style={{ fontFamily: 'var(--font-montserrat)' }}>Ludato Family s. r. o.</div>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">

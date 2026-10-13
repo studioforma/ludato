@@ -11,7 +11,7 @@ const content: ServiceContent = [
     {
         type: 'cta',
         heading: 'Je to pre vás do servisu ďaleko?',
-        text: 'Po auto si do Dúbravky prídeme sami a počas dlhšej opravy vám požičiame náhradné. Vy nemusíte nikam cestovať.',
+        text: 'Po auto si do Dúbravky prídeme sami a počas dlhšej opravy vám požičiame náhradné auto. Vy nemusíte nikam cestovať.',
         points: [
             'Vyzdvihnutie auta v Bratislave a okolí za 50 €',
             'Náhradné vozidlo za 35 € na deň, nad 1000 € zadarmo',
@@ -75,7 +75,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo k nám chodia aj z Dúbravky',
         paragraphs: [
-            'Sme rodinný servis, kde sa rozprávate priamo s tým, kto robí na vašom aute. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5.0 z viac ako 40 recenzií.',
+            'Sme rodinný servis, kde sa rozprávate priamo s tým, kto robí na vašom aute. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 40 recenzií.',
             'Ceny sú zverejnené v [cenníku](/cennik) a pred každou väčšou opravou vám povieme, čo treba urobiť a koľko to bude stáť. Vďaka vyzdvihnutiu auta a náhradnému vozidlu vás vzdialenosť nemusí trápiť.',
             'Mnohí zákazníci z Dúbravky si u nás nechávajú robiť pravidelný servis aj sezónne prezutie naraz. Jedna návšteva tak vyrieši viac vecí a nemusíte cez mesto jazdiť zbytočne často. Stačí pri objednaní povedať, čo všetko chcete urobiť.',
         ],

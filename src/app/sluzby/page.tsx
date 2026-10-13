@@ -12,7 +12,7 @@ const SITE = 'https://www.ludato.sk';
 export const metadata: Metadata = {
     title: 'Služby autoservisu Bratislava – Nové Mesto | Ludato Family Autoservis',
     description:
-        'Prehľad služieb autoservisu Ludato Family v Bratislave, Novom Meste: diagnostika, výmena oleja, brzdy, klimatizácia, pneuservis, STK a EK. Ku každej službe nájdete ceny aj postup.',
+        'Všetky služby autoservisu Ludato Family v Bratislave, Novom Meste: diagnostika, olej, brzdy, klimatizácia, pneuservis aj STK. Pri každej nájdete ceny a postup.',
     alternates: { canonical: `${SITE}/sluzby` },
 };
 
@@ -23,6 +23,19 @@ const breadcrumbSchema = {
         { '@type': 'ListItem', position: 1, name: 'Domov', item: `${SITE}/` },
         { '@type': 'ListItem', position: 2, name: 'Služby', item: `${SITE}/sluzby` },
     ],
+};
+
+// Every service page, in registry order, so search and AI see the full offer.
+const servicesListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Služby autoservisu Ludato Family Autoservis a Pneuservis',
+    itemListElement: services.map((s, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: s.name,
+        url: `${SITE}/sluzby/${s.slug}`,
+    })),
 };
 
 export default function Sluzby() {
@@ -39,6 +52,10 @@ export default function Sluzby() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesListSchema) }}
+            />
             <Navbar />
 
             <div className="pt-32 lg:pt-40 pb-20">
@@ -47,7 +64,7 @@ export default function Sluzby() {
 
                     <div className="text-center mb-14 max-w-3xl mx-auto">
                         <p
-                            className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                            className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             <span className="font-black">//</span> Čo robíme

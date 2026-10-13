@@ -75,7 +75,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo si nás vyberajú vodiči z Rače',
         paragraphs: [
-            'Sme rodinný servis, ktorý vedú Lucia, Damian a Tomáš. O vašom aute sa rozprávate priamo s tým, kto na ňom robí, nie s recepciou veľkej siete. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5.0 z viac ako 40 recenzií.',
+            'Sme rodinný servis, ktorý vedú Lucia, Damian a Tomáš. O vašom aute sa rozprávate priamo s tým, kto na ňom robí, nie s recepciou veľkej siete. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 40 recenzií.',
             'Ceny nájdete vopred v našom [cenníku](/cennik) a pred každou väčšou opravou vám povieme, čo sme našli a koľko to bude stáť. Bez súhlasu nič navyše nerobíme.',
         ],
     },

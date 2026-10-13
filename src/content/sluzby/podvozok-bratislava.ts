@@ -157,7 +157,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Lokálny kontext',
         paragraphs: [
-            'Mestská jazda v Novom Meste dáva podvozku zabrať. Výtlky po zime, spomaľovače na sídliskách, prejazdy cez električkové koľajnice a kopcovité ulice smerom na Kramáre a Kolibu zaťažujú tlmiče, silentbloky aj ložiská viac, než rovnomerná jazda po diaľnici. Ak väčšinu kilometrov najazdíte v meste, odporúčame nechať si podvozok skontrolovať aspoň raz ročne, napríklad pri prezutí.',
+            'Mestská jazda v Novom Meste dáva podvozku zabrať. Výtlky po zime, spomaľovače na sídliskách, prejazdy cez električkové koľajnice a kopcovité ulice smerom na Kramáre a Kolibu zaťažujú tlmiče, silentbloky aj ložiská viac než rovnomerná jazda po diaľnici. Ak väčšinu kilometrov najazdíte v meste, odporúčame nechať si podvozok skontrolovať aspoň raz ročne, napríklad pri prezutí.',
         ],
     },
     {

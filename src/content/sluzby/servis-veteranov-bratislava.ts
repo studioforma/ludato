@@ -66,7 +66,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Brzdy',
-                text: 'Staršie brzdové systémy nemajú posilňovače a asistenty, na aké sme dnes zvyknutí. O to dôležitejšie je, aby boli v perfektnom stave, od valčekov a hadíc až po [brzdovú kvapalinu](/sluzby/brzdy-bratislava), ktorá pri aute, čo veľa stojí, starne aj bez jazdenia.',
+                text: 'Staršie brzdové systémy nemajú posilňovače a asistenty, na aké sme dnes zvyknutí. O to dôležitejšie je, aby boli v perfektnom stave, od valčekov a hadíc až po [brzdovú kvapalinu](/sluzby/brzdy-bratislava), ktorá pri aute, ktoré dlho stojí, starne aj bez jazdenia.',
             },
             {
                 title: 'Motor a palivový systém',

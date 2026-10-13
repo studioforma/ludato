@@ -81,7 +81,7 @@ export default function MoreServicesSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-14">
                     <p
-                        className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                        className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
                         <span className="font-black">//</span> Prečo Ludato

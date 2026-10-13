@@ -5,6 +5,7 @@ import CookieBanner from "@/components/CookieBanner";
 import CallNumberSwap from "@/components/CallNumberSwap";
 import StickyCallBar from "@/components/StickyCallBar";
 import { services } from "@/lib/services";
+import { SITE, BUSINESS_ID, areaServedSchema } from "@/lib/schema";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   title:
     "NAJLEPŠÍ Autoservis Bratislava – Nové Mesto | Ak hľadáte - Diagnostika, Brzdy, Rozvody, Podvozok, Klimatizácia, Pneuservis, blízko mňa - Ludato Family Autoservis a Pneuservis je to správne miesto",
   description:
-    "Autoservis Bratislava – Nové Mesto: komplexná starostlivosť o vozidlá všetkých značiek a modelov. Diagnostika, opravy, servisné prehliadky, brzdy, podvozok, klimatizácia, pneuservis. Zažite rozdiel v dôveryhodnom rodinnom autoservise LUDATO.",
+    "Rodinný autoservis a pneuservis na Odborárskej 52 v Bratislave, Novom Meste. Diagnostika, brzdy, olej, rozvody, klimatizácia aj prezutie. Cenu povieme vopred.",
   keywords:
     "autoservis bratislava, autoservis nové mesto, pneuservis bratislava, diagnostika auta bratislava, oprava bŕzd bratislava, servis klimatizácie bratislava, LUDATO, rodinný autoservis",
   openGraph: {
@@ -42,28 +43,18 @@ export const metadata: Metadata = {
   },
 };
 
-const SITE = "https://www.ludato.sk";
-// Service pages reference this node by @id, so Google ties them to one business.
-const BUSINESS_ID = `${SITE}/#autoservis`;
-
-const areasServed = [
-  "Bratislava - Nové Mesto",
-  "Bratislava - Rača",
-  "Bratislava - Vajnory",
-  "Bratislava - Staré Mesto",
-  "Bratislava - Ružinov",
-  "Bratislava - Karlova Ves",
-  "Bratislava - Dúbravka",
-];
-
+// Service and area pages reference the business node by @id (BUSINESS_ID),
+// so Google ties them to one business.
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["AutoRepair", "TireShop"],
   "@id": BUSINESS_ID,
   name: "Ludato Family Autoservis a Pneuservis",
+  legalName: "Ludato Family s. r. o.",
   alternateName: ["LUDATO FAMILY Cars Services", "Ludato"],
   description:
-    "Rodinný autoservis a pneuservis v Bratislave, Novom Meste. Diagnostika, výmena oleja, brzdy, podvozok, geometria, rozvody, turbodúchadlá, klimatizácia, STK a EK, pneuservis aj servis veteránov pre autá všetkých značiek.",
+    "Rodinný autoservis a pneuservis na Odborárskej 52 v Bratislave, Novom Meste, pre autá všetkých značiek z celej Bratislavy aj okolia. Diagnostika, výmena oleja, brzdy, podvozok, geometria, rozvody, spojka, turbodúchadlá, vstrekovače, klimatizácia, STK a EK, pneuservis a predaj pneumatík, odťah a náhradné vozidlo.",
+  taxID: "2122815046",
   telephone: "+421944236257",
   email: "ludato.recepcia@gmail.com",
   url: `${SITE}/`,
@@ -91,6 +82,7 @@ const localBusinessSchema = {
   identifier: [
     { "@type": "PropertyValue", propertyID: "Google Place ID", value: "ChIJQ5-gGa-PbEcRzcO4FjtydfY" },
     { "@type": "PropertyValue", propertyID: "Google CID", value: "17759226303715263437" },
+    { "@type": "PropertyValue", propertyID: "IČO", value: "57526800" },
   ],
   hasMap: "https://www.google.com/maps?cid=17759226303715263437",
   sameAs: [
@@ -124,10 +116,7 @@ const localBusinessSchema = {
     areaServed: "SK",
     availableLanguage: ["Slovak"],
   },
-  areaServed: [
-    { "@type": "City", name: "Bratislava" },
-    ...areasServed.map((name) => ({ "@type": "Place", name })),
-  ],
+  areaServed: areaServedSchema(),
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Služby autoservisu Ludato Family Autoservis a Pneuservis",
@@ -207,6 +196,17 @@ export default function RootLayout({
               // consent update to granted. Firing it before consent made Google
               // return errorCode 14 (support case 8-6626000041470).
               window.ludatoConfigureCallTracking = function () {
+                // Google caches the call tracking request in localStorage for
+                // 3 hours. A visitor who came without an ad and returns through
+                // one would get the cached request without gclid, so drop it.
+                try {
+                  var q = new URLSearchParams(location.search);
+                  if (q.has('gclid') || q.has('gbraid') || q.has('wbraid')) {
+                    Object.keys(localStorage).forEach(function (k) {
+                      if (k.indexOf('2kV5CJOU0YsdEMv8gdJE,') === 0) localStorage.removeItem(k);
+                    });
+                  }
+                } catch (e) {}
                 gtag('config', 'AW-18425609803/2kV5CJOU0YsdEMv8gdJE', {
                   'phone_conversion_number': '0944 236 257',
                   'phone_conversion_callback': function (formattedNumber, mobileNumber) {

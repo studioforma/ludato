@@ -50,7 +50,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Náhradné vozidlo počas opravy',
-                text: 'Ak bez auta neviete fungovať, dohodnite si k vyzdvihnutiu alebo odťahu aj [náhradné vozidlo](/nahradne-vozidlo-bratislava). Stojí 35 € na deň, pri servise nad 1000 € je zadarmo a pri poistnej udalosti ho hradí poisťovňa. Dostupnosť si overte pri objednaní.',
+                text: 'Ak bez auta neviete fungovať, dohodnite si k vyzdvihnutiu alebo odťahu aj [náhradné vozidlo](/sluzby/nahradne-vozidlo-bratislava). Stojí 35 € na deň, pri servise nad 1000 € je zadarmo a pri poistnej udalosti ho hradí poisťovňa. Dostupnosť si overte pri objednaní.',
             },
         ],
     },
@@ -103,7 +103,7 @@ const content: ServiceContent = [
         heading: 'Čo robiť, kým čakáte na odťah',
         paragraphs: [
             'Ak auto zostalo stáť na ceste, zapnite výstražné svetlá, oblečte si reflexnú vestu a postavte výstražný trojuholník v dostatočnej vzdialenosti za autom. Na rýchlejších cestách a diaľniciach počkajte mimo auta, za zvodidlami, ak je to možné.',
-            'Neskúšajte auto opakovane štartovať, keď sa motor neozýva alebo sa ozýva nezvyčajný zvuk. Opakované pokusy môžu vybiť batériu úplne alebo poškodiť štartér. Ak svieti červená kontrolka oleja alebo teploty, motor vypnite a už ho nenaštartujte. Do auta si nachystajte technický preukaz a kľúče, nech je odovzdanie rýchle.',
+            'Neskúšajte auto opakovane štartovať, keď sa motor neozýva alebo sa ozýva nezvyčajný zvuk. Opakované pokusy môžu vybiť batériu úplne alebo poškodiť štartér. Ak svieti červená kontrolka oleja alebo teploty, motor vypnite a už ho neštartujte. Do auta si nachystajte technický preukaz a kľúče, nech je odovzdanie rýchle.',
         ],
     },
     {
@@ -111,7 +111,7 @@ const content: ServiceContent = [
         heading: 'Prečo auto ťaháme rovno k nám',
         paragraphs: [
             'Pri odťahu cez náhodnú službu často skončí auto na odstavnej ploche a vy potom riešite, kto sa naň pozrie. U nás ide auto rovno do dielne, kde ho skontroluje ten istý tím, ktorý ho bude opravovať. Žiadne ďalšie prevážanie a žiadne čakanie, kým si auto niekto prevezme.',
-            'Za sebou máme cez 1 200 opravených áut a väčšina z nich boli náročnejšie opravy, od rozvodov cez turbá až po podvozok. Preto vieme, že pri nepojazdnom aute je najdôležitejšie nájsť skutočnú príčinu, nie vymeniť prvý diel, ktorý sa ponúka.',
+            'Za sebou máme cez 1 200 opravených áut a väčšinu z nich tvorili náročnejšie opravy, od rozvodov cez turbá až po podvozok. Preto vieme, že pri nepojazdnom aute je najdôležitejšie nájsť skutočnú príčinu, nie vymeniť prvý diel, ktorý sa ponúka.',
         ],
     },
     {

@@ -8,9 +8,9 @@ import { Heading, SectionBlock } from '@/components/service/ServicePage';
 import { stripLinks } from '@/lib/richText';
 import { areas, type AreaMeta } from '@/lib/areas';
 import { getService, type ServiceMeta } from '@/lib/services';
+import { SITE } from '@/lib/schema';
 import type { ServiceContent } from '@/content/sluzby/types';
 
-const SITE = 'https://www.ludato.sk';
 
 // Area pages reuse the service page sections (text, lists, CTA, FAQ), so they
 // look the same and the CTA keeps the call tracking phone format.
@@ -30,7 +30,20 @@ export default function AreaPage({ meta, content }: { meta: AreaMeta; content: S
         name: `Autoservis a pneuservis pre ${meta.nameAcc}`,
         description: meta.description,
         provider: { '@id': `${SITE}/#autoservis` },
-        areaServed: { '@type': 'Place', name: `Bratislava - ${meta.name}` },
+        areaServed: {
+            '@type': 'Place',
+            name: `Bratislava - ${meta.name}`,
+            containedInPlace: { '@type': 'City', name: 'Bratislava' },
+        },
+        // The services this page highlights for the district.
+        hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: `Služby pre ${meta.nameAcc}`,
+            itemListElement: services.map((s) => ({
+                '@type': 'Offer',
+                itemOffered: { '@type': 'Service', name: s.name, url: `${SITE}/sluzby/${s.slug}` },
+            })),
+        },
         url,
     };
 
@@ -79,7 +92,7 @@ export default function AreaPage({ meta, content }: { meta: AreaMeta; content: S
 
                     <div className="text-center mb-14 max-w-3xl mx-auto">
                         <p
-                            className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                            className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             <span className="font-black">//</span> Kde pôsobíme

@@ -34,7 +34,7 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                         {heading}
                     </h2>
                     <p
-                        className="relative text-white/90 leading-relaxed mb-5"
+                        className="relative text-white leading-relaxed mb-5"
                         style={{ fontFamily: 'var(--font-inter)' }}
                     >
                         <RichText text={text} />
@@ -52,6 +52,15 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                                 </li>
                             ))}
                         </ul>
+                    )}
+                    {/* Cennik prices are without VAT; say so wherever the points quote one. */}
+                    {points?.some((p) => p.includes('€')) && (
+                        <p
+                            className="relative -mt-3 mb-5 text-white/80 text-xs"
+                            style={{ fontFamily: 'var(--font-inter)' }}
+                        >
+                            Uvedené ceny sú bez DPH.
+                        </p>
                     )}
                     {/* Social proof right next to the call buttons */}
                     <div

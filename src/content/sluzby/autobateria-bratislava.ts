@@ -11,7 +11,7 @@ const content: ServiceContent = [
     {
         type: 'cta',
         heading: 'Auto ráno ťažko štartuje?',
-        text: 'Batéria, ktorá štartuje čoraz ťažšie, vás najbližším mrazivým ránom nechá stáť. Príďte skôr, než budete volať odťah.',
+        text: 'Batéria, ktorá štartuje čoraz ťažšie, vás najbližšie mrazivé ráno nechá stáť. Príďte skôr, než budete volať odťah.',
         points: [
             'Výmena batérie od 30 €',
             'Kontrola elektroniky a osvetlenia za 30 €',
@@ -80,7 +80,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Kontrola po výmene',
-                text: 'Po výmene načítame chyby z riadiacich jednotiek a overíme, že všetko funguje, ako má.',
+                text: 'Po výmene načítame chyby z riadiacich jednotiek a overíme, či všetko funguje, ako má.',
             },
         ],
     },
@@ -89,7 +89,7 @@ const content: ServiceContent = [
         heading: 'Batéria v modernom aute nie je len o štartovaní',
         paragraphs: [
             'Kedysi sa batéria v aute vymenila za pár minút a nikto to neriešil. Dnešné autá majú desiatky riadiacich jednotiek, štart-stop, elektronickú parkovaciu brzdu a množstvo komfortných funkcií. Keď batéria slabne alebo sa odpojí nesprávne, môžu sa objaviť chybové hlásenia, ktoré s batériou na prvý pohľad nesúvisia.',
-            'Preto pri výmene batérie nekončíme odskrutkovaním svoriek. Po výmene skontrolujeme chyby v riadiacich jednotkách a overíme, že auto nehlási nič nezvyčajné. Ak by sa niečo objavilo, vieme to vyriešiť rovno na mieste počítačovou [diagnostikou](/sluzby/pocitacova-diagnostika-bratislava).',
+            'Preto pri výmene batérie nekončíme odskrutkovaním svoriek. Po výmene skontrolujeme chyby v riadiacich jednotkách a overíme, či auto nehlási nič nezvyčajné. Ak by sa niečo objavilo, vieme to vyriešiť rovno na mieste počítačovou [diagnostikou](/sluzby/pocitacova-diagnostika-bratislava).',
         ],
     },
     {

@@ -11,9 +11,9 @@ import InlineCta from '@/components/InlineCta';
 import { formatPrice, formatPriceWithVat, getCategory, type PricingCategory } from '@/lib/pricing';
 import { stripLinks } from '@/lib/richText';
 import { getRelated, type ServiceMeta } from '@/lib/services';
+import { SITE, areaServedSchema } from '@/lib/schema';
 import type { Section, ServiceContent } from '@/content/sluzby/types';
 
-const SITE = 'https://www.ludato.sk';
 
 export function Heading({ children }: { children: React.ReactNode }) {
     return (
@@ -139,7 +139,7 @@ export function SectionBlock({ section }: { section: Section }) {
                     <Heading>{section.heading}</Heading>
                     <div className="border border-[#E31C25]/30 bg-[#E31C25]/5 rounded-sm p-6 sm:p-8">
                         <p
-                            className="text-[#E31C25] text-xs tracking-[0.3em] uppercase font-bold mb-4"
+                            className="text-[#FF5A60] text-xs tracking-[0.3em] uppercase font-bold mb-4"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             {section.vehicle}
@@ -341,6 +341,8 @@ export default function ServicePage({
                       priceSpecification: {
                           '@type': item.unit ? 'UnitPriceSpecification' : 'PriceSpecification',
                           priceCurrency: 'EUR',
+                          // Cennik prices are quoted without VAT.
+                          valueAddedTaxIncluded: false,
                           ...(item.prefix ? { minPrice: Number(item.price) } : { price: Number(item.price) }),
                           ...(item.unit ? { unitText: item.unit.replace('/', '') } : {}),
                       },
@@ -355,10 +357,7 @@ export default function ServicePage({
         name: `${meta.name} Bratislava – Ludato Family Autoservis a Pneuservis`,
         description: meta.description,
         provider: { '@id': `${SITE}/#autoservis` },
-        areaServed: [
-            { '@type': 'City', name: 'Bratislava' },
-            { '@type': 'Place', name: 'Bratislava - Nové Mesto' },
-        ],
+        areaServed: areaServedSchema(),
         ...(meta.heroImage ? { image: `${SITE}${meta.heroImage.src}` } : {}),
         ...(offers.length > 0 ? { offers } : {}),
         url,
@@ -425,7 +424,7 @@ export default function ServicePage({
                     >
                         <div className={meta.heroImage ? 'text-left' : ''}>
                             <p
-                                className="text-[#E31C25] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
+                                className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
                                 <span className="font-black">//</span> Služby

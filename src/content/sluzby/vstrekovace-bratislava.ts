@@ -69,7 +69,7 @@ const content: ServiceContent = [
         vehicle: 'Škoda Rapid, vstrekovače ako súčasť hľadania poruchy',
         paragraphs: [
             'Na Škode Rapid, ktorá k nám prišla s poruchou, ktorú sa dlho nedarilo vyriešiť, boli vstrekovače jedným z prvých podozrivých. Mali za sebou výmenu a my sme potrebovali vedieť, či sú v poriadku, skôr než sa pohneme ďalej.',
-            'Skontrolovali sme, že vstrekovače sú správne nakódované, a otestovali sme ich. Testovanie potvrdilo, že palivo do motora rozprašujú v poriadku. Vďaka tomu sme ich mohli s istotou vylúčiť a zamerať sa inam. Skutočnou príčinou bol nakoniec skrat v kabeláži, celý prípad opisujeme na stránke [zložitá diagnostika](/sluzby/zlozita-diagnostika-bratislava).',
+            'Skontrolovali sme, či sú vstrekovače správne nakódované, a otestovali sme ich. Testovanie potvrdilo, že palivo do motora rozprašujú v poriadku. Vďaka tomu sme ich mohli s istotou vylúčiť a zamerať sa inam. Skutočnou príčinou bol nakoniec skrat v kabeláži, celý prípad opisujeme na stránke [zložitá diagnostika](/sluzby/zlozita-diagnostika-bratislava).',
         ],
         outcomes: [
             'Kontrola kódovania vstrekovačov',
@@ -99,7 +99,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Kontrola po oprave',
-                text: 'Po oprave vymažeme chyby, auto otestujeme a overíme, že motor beží plynulo a nehlási nič nové.',
+                text: 'Po oprave vymažeme chyby, auto otestujeme a overíme, či motor beží plynulo a nehlási nič nové.',
             },
         ],
     },

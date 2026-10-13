@@ -75,7 +75,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo k nám chodia aj z centra',
         paragraphs: [
-            'Sme rodinný servis, kde sa o vaše auto stará ten, s kým sa rozprávate. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5.0 z viac ako 40 recenzií.',
+            'Sme rodinný servis, kde sa o vaše auto stará ten, s kým sa rozprávate. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 40 recenzií.',
             'Ceny sú zverejnené v [cenníku](/cennik) a pred opravou vám vždy povieme, čo treba urobiť a koľko to bude stáť. Pri dlhšej oprave vám požičiame [náhradné vozidlo](/sluzby/nahradne-vozidlo-bratislava), aby ste neostali bez auta.',
         ],
     },

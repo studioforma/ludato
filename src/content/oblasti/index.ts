@@ -5,6 +5,8 @@ import ruzinov from './ruzinov';
 import stareMesto from './stare-mesto';
 import karlovaVes from './karlova-ves';
 import dubravka from './dubravka';
+import kramare from './kramare';
+import koliba from './koliba';
 
 export const areaContent: Record<string, ServiceContent> = {
     raca,
@@ -13,6 +15,8 @@ export const areaContent: Record<string, ServiceContent> = {
     'stare-mesto': stareMesto,
     'karlova-ves': karlovaVes,
     dubravka,
+    kramare,
+    koliba,
 };
 
 export function getAreaContent(slug: string): ServiceContent | undefined {

@@ -10,9 +10,14 @@ import {
     Droplet,
     Fan,
     Fuel,
+    Luggage,
     MoveVertical,
     ScanSearch,
+    ShoppingCart,
     Snowflake,
+    Sparkles,
+    SprayCan,
+    Thermometer,
     Timer,
     Torus,
     Truck,
@@ -41,6 +46,11 @@ const icons: Record<string, LucideIcon> = {
     'autobateria-bratislava': CarBattery,
     'prevodovka-spojka-bratislava': Cog,
     'vstrekovace-bratislava': Fuel,
+    'predaj-pneumatik-bratislava': ShoppingCart,
+    'kontrola-pred-dovolenkou-bratislava': Luggage,
+    'ozonova-dezinfekcia-bratislava': Sparkles,
+    'tepovanie-interieru-bratislava': SprayCan,
+    'chladenie-kurenie-bratislava': Thermometer,
 };
 
 export default function ServiceIcon({ slug, className = 'w-6 h-6' }: { slug: string; className?: string }) {
