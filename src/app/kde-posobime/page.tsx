@@ -31,7 +31,7 @@ const areasListSchema = {
 export const metadata: Metadata = {
     title: 'Kde nás nájdete | Ludato Family Autoservis',
     description:
-        'Ludato Family Autoservis a Pneuservis sídli na Odborárskej v Bratislave - Novom Meste a autom k nám chodia zákazníci z celej Bratislavy aj okolia: Kramáre, Koliba, Rača, Vajnory, Staré Mesto, Ružinov, Karlova Ves a Dúbravka.',
+        'Autoservis na Odborárskej 52 v Novom Meste pre celú Bratislavu aj okolie: Kramáre, Koliba, Rača, Ružinov, Staré Mesto a ďalšie. Po auto si vieme aj prísť.',
     alternates: { canonical: '/kde-posobime' },
 };
 
@@ -121,7 +121,7 @@ const faq = [
         a: 'Väčšinu diagnostík zvládneme do jednej až dvoch hodín. Pri komplikovanejších závadách vás vopred informujeme o predpokladanom čase aj cene.',
     },
     {
-        q: 'Máte kde parkovať pri príchode na servis?',
+        q: 'Máte kde parkovať pri príchode do servisu?',
         a: 'Áno, parkovať môžete priamo pred prevádzkou alebo popri ceste vedľa areálu.',
     },
     {
@@ -181,14 +181,14 @@ const areas: Area[] = [
         driveTime: 'orientačne 10 min autom',
         minutes: '10',
         pos: [-1.8, -0.9],
-        route: 'Cez Račiansku a Pionierskú.',
+        route: 'Cez Račiansku a Pioniersku.',
     },
     {
         name: 'Koliba',
         driveTime: 'orientačne 10 - 15 min autom',
         minutes: '10-15',
         pos: [-2.9, -0.1],
-        route: 'Cez Pionierskú a Jeséniovu.',
+        route: 'Cez Pioniersku a Jeséniovu.',
     },
     {
         name: 'Rača',
@@ -345,7 +345,7 @@ export default function KdePosobime() {
                         >
                             <p>
                                 Ludato Family Autoservis a Pneuservis sídli na Odborárskej 52 v Bratislave,
-                                v mestskej časti Nové Mesto. Nie sme veľká reťaz s desiatkami
+                                v mestskej časti Nové Mesto. Nie sme veľká sieť s desiatkami
                                 pobočiek. Sme rodinný servis, ktorý poctivo stavia svoje meno
                                 priamo tu. Za diagnostikou, výmenou bŕzd aj sezónnym servisom
                                 stoja Lucia, Damian a Tomáš, rodina, ktorej mená servis nesie
@@ -385,7 +385,7 @@ export default function KdePosobime() {
                                     s hustou zástavbou sídlisk ako Kramáre, Vinohrady alebo Koliba.
                                     Kopcovitý terén smerom na Kolibu a Kramáre dáva bŕzdam,
                                     podvozku aj prevodovke poriadne zabrať, obzvlášť v zime, keď sa
-                                    k tomu pridá soľ na cestách a teplotné výkyvy.
+                                    k tomu pridajú soľ na cestách a teplotné výkyvy.
                                 </p>
                                 <p>
                                     Veľká časť vozidiel tu parkuje priamo na ulici, nie v garáži,
@@ -400,8 +400,8 @@ export default function KdePosobime() {
                                 <p>
                                     K tomu sa pridáva aj hustá doprava okolo Trnavského mýta a na
                                     hlavných ťahoch smerom do centra, ktorá je v Bratislave dobre
-                                    známy problém. Časté state a rozjazdy v kolónach zaťažujú
-                                    spojku, brzdy aj motor omnoho viac, než rovnomerná jazda mimo
+                                    známy problém. Časté státie a rozjazdy v kolónach zaťažujú
+                                    spojku, brzdy aj motor omnoho viac než rovnomerná jazda mimo
                                     mesta. Práve preto sa oplatí mať poruke servis, ktorý pozná
                                     miestne podmienky a vie odhadnúť, kde sa oplatí byť
                                     obozretný skôr, než sa z malej závady stane veľká.
@@ -547,7 +547,7 @@ export default function KdePosobime() {
                                     Ak počas opravy potrebujete pokračovať bez auta, Nové Mesto má
                                     dobré spojenie mestskou hromadnou dopravou. Priamo z okolia
                                     Odborárskej sa dostanete spojmi smerom do centra aj na ostatné
-                                    strany mesta, takže vybaviť si niečo v meste počas toho, čo
+                                    strany mesta, takže vybaviť si niečo v meste, kým
                                     vám servisujeme auto, nie je problém.
                                 </p>
                             </div>

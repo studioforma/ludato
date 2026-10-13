@@ -12,7 +12,7 @@ const SITE = 'https://www.ludato.sk';
 export const metadata: Metadata = {
     title: 'Služby autoservisu Bratislava – Nové Mesto | Ludato Family Autoservis',
     description:
-        'Prehľad služieb autoservisu Ludato Family v Bratislave, Novom Meste: diagnostika, výmena oleja, brzdy, klimatizácia, pneuservis, STK a EK. Ku každej službe nájdete ceny aj postup.',
+        'Všetky služby autoservisu Ludato Family v Bratislave, Novom Meste: diagnostika, olej, brzdy, klimatizácia, pneuservis aj STK. Pri každej nájdete ceny a postup.',
     alternates: { canonical: `${SITE}/sluzby` },
 };
 

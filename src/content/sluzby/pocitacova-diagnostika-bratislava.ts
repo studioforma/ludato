@@ -58,7 +58,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Čo diagnostika vie a čo nie',
         paragraphs: [
-            'Diagnostika vie povedať, ktorý systém a ktorý senzor nahlásil odchýlku od bežných hodnôt, a v akých podmienkach sa to stalo. Nevie ale vždy povedať presnú príčinu, tá istá chyba môže mať viacero rôznych príčin.',
+            'Diagnostika vie povedať, ktorý systém a ktorý senzor nahlásil odchýlku od bežných hodnôt a v akých podmienkach sa to stalo. Nevie ale vždy povedať presnú príčinu, tá istá chyba môže mať viacero rôznych príčin.',
             'Chybový kód "porucha snímača" napríklad nemusí znamenať, že je snímač pokazený, môže ísť aj o poškodenú kabeláž k nemu, uvoľnený konektor alebo problém v úplne inej časti systému, ktorá snímač len ovplyvňuje. Presne preto k diagnostike vždy pristupujeme ako k prvému kroku, nie k finálnej odpovedi.',
         ],
     },
@@ -126,7 +126,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Na čo si dať pozor',
         paragraphs: [
-            'Blikajúca kontrolka motora je vážnejší signál než trvalo svietiaca, zvyčajne znamená aktívnu poruchu, napríklad vynechávanie zapaľovania. V takom prípade odporúčame prestať jazdiť vyššími otáčkami a nechať vozidlo skontrolovať čo najskôr.',
+            'Blikajúca kontrolka motora je vážnejší signál než trvalo svietiaca, zvyčajne znamená aktívnu poruchu, napríklad vynechávanie zapaľovania. V takom prípade odporúčame prestať jazdiť vo vyšších otáčkach a nechať vozidlo skontrolovať čo najskôr.',
             'Vymazanie chyby bez zistenia príčiny je len dočasné riešenie, kontrolka sa po čase rozsvieti znova a niekedy sa medzitým problém ešte zhorší. Rovnako platí, že jedna chyba môže spôsobiť "reťaz" ďalších chybových hlášok v iných systémoch, preto pri diagnostike vždy hľadáme pôvodnú príčinu, nie len najnovšiu hlášku.',
         ],
     },
@@ -134,8 +134,8 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Diagnostika ako súčasť väčšej opravy',
         paragraphs: [
-            'Diagnostiku často robíme ako prvý krok pred väčšou opravou, napríklad pred zásahom do [rozvodov](/sluzby/rozvody-bratislava), [turbodúchadla](/sluzby/turboduchadlo-bratislava), vstrekovačov alebo prevodovky. Presné vyhodnotenie chýb nám povie, ktorým smerom sa má oprava uberať, a šetrí čas aj peniaze, keďže sa vyhneme skúšaniu dielov "na slepo". Rovnako je bežnou súčasťou [prípravy na STK a emisnú kontrolu](/sluzby/stk-ek-bratislava).',
-            'Rovnako diagnostiku využívame aj pri sťažnostiach, ktoré sa navonok javia ako drobnosť, napríklad nepravidelný chod motora pri studenom starte. Aj takéto príznaky totiž vedia mať pôvod v elektronike, nie len v mechanike.',
+            'Diagnostiku často robíme ako prvý krok pred väčšou opravou, napríklad pred zásahom do [rozvodov](/sluzby/rozvody-bratislava), [turbodúchadla](/sluzby/turboduchadlo-bratislava), vstrekovačov alebo prevodovky. Presné vyhodnotenie chýb nám povie, ktorým smerom sa má oprava uberať, a šetrí čas aj peniaze, keďže sa vyhneme skúšaniu dielov naslepo. Rovnako je bežnou súčasťou [prípravy na STK a emisnú kontrolu](/sluzby/stk-ek-bratislava).',
+            'Rovnako diagnostiku využívame aj pri sťažnostiach, ktoré sa navonok javia ako drobnosť, napríklad nepravidelný chod motora pri studenom starte. Aj takéto príznaky totiž vedia mať pôvod v elektronike, nielen v mechanike.',
         ],
     },
     {
@@ -166,7 +166,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Vymažete mi kontrolku?',
-                a: 'Chybu vymažeme až po tom, čo zistíme a vyriešime jej príčinu. Vymazanie chyby bez opravy problém nevyriešuje, len skryje kontrolku.',
+                a: 'Chybu vymažeme až po tom, čo zistíme a vyriešime jej príčinu. Vymazanie chyby bez opravy problém nevyrieši, len skryje kontrolku.',
             },
             {
                 q: 'Robíte diagnostiku všetkých značiek?',

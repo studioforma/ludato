@@ -188,12 +188,12 @@ const content: ServiceContent = [
                 a: 'Odporúčame objednať sa vopred, aby ste nečakali na uvoľnenie termínu. Najistejšie je zavolať na 0944 236 257.',
             },
             {
-                q: 'Robíte kontrolu aj na dieselové vozidlá?',
+                q: 'Robíte kontrolu aj pri dieselových vozidlách?',
                 a: 'Áno, pri dieseloch venujeme zvýšenú pozornosť aj filtru pevných častíc (DPF), ktorý je bežným dôvodom neúspešnej emisnej kontroly.',
             },
             {
                 q: 'Je sprostredkovanie drahšie ako bežná STK?',
-                a: 'Cena sprostredkovania zahŕňa aj našu prácu s vybavením celého procesu, nie len samotný poplatok za kontrolu na stanici.',
+                a: 'Cena sprostredkovania zahŕňa aj našu prácu s vybavením celého procesu, nielen samotný poplatok za kontrolu na stanici.',
             },
             {
                 q: 'Môžem prísť len na kontrolu bez sprostredkovania?',

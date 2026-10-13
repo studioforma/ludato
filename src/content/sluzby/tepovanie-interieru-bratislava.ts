@@ -10,7 +10,7 @@ const content: ServiceContent = [
     },
     {
         type: 'cta',
-        heading: 'Potrebuje vaše auto vyčistiť zvnútra?',
+        heading: 'Treba vaše auto vyčistiť zvnútra?',
         text: 'Škvrna, ktorá sa nechá zaschnúť, sa z čalúnenia dostáva čoraz ťažšie. Vytepujeme sedadlá aj koberce, cez deň alebo v noci.',
         points: [
             'Tepovanie cez deň od 50 €',
@@ -68,7 +68,7 @@ const content: ServiceContent = [
         steps: [
             {
                 title: 'Vyprázdnite auto',
-                text: 'Pred tepovaním vyberte z auta osobné veci, detské sedačky a všetko z priehradok. Ušetríte čas aj sebe aj nám.',
+                text: 'Pred tepovaním vyberte z auta osobné veci, detské sedačky a všetko z priehradok. Ušetríte čas aj sebe, aj nám.',
             },
             {
                 title: 'Vysávanie',
@@ -137,7 +137,7 @@ const content: ServiceContent = [
             'Používajte gumené koberce, hlavne v zime',
             'Škvrny riešte hneď, kým nezaschnú',
             'V aute nejedzte, alebo majte po ruke vrecko na odpadky',
-            'Zvieratá voste na deke alebo v prepravke',
+            'Zvieratá vozte na deke alebo v prepravke',
             'Auto pravidelne vysávajte, piesok sa zarýva do vlákien',
             'Raz za čas nechajte auto vyčistiť dôkladne',
         ],

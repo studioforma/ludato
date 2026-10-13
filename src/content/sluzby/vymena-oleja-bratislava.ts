@@ -67,12 +67,12 @@ const content: ServiceContent = [
                 text: 'Podľa EČV vozidla zistíme presnú špecifikáciu, objem oleja a zoznam filtrov, ktoré vaše vozidlo potrebuje.',
             },
             {
-                title: 'Vypustenie starého oleja a filtre',
+                title: 'Vypustenie starého oleja a výmena filtrov',
                 text: 'Vypustíme starý olej a vymeníme olejový filter, prípadne aj ďalšie filtre podľa vybraného balíka.',
             },
             {
                 title: 'Nová náplň',
-                text: 'Motor naplníme novým olejom na predpísanú hladinu a skontrolujeme, že nikde nič nepresakuje.',
+                text: 'Motor naplníme novým olejom na predpísanú hladinu a skontrolujeme, či nikde nič nepresakuje.',
             },
             {
                 title: 'Záverečná kontrola',
@@ -106,7 +106,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Čo znamenajú označenia ako 5W30',
         paragraphs: [
-            'Označenie typu 5W30 hovorí o viskozite oleja, teda o tom, ako olej tečie pri rôznych teplotách. Číslo pred písmenom W (z anglického winter, zima) opisuje správanie oleja za studena. Čím je nižšie, tým je olej pri studenom štarte redší a rýchlejšie sa dostane ku všetkým častiam motora, čo je práve moment, kedy motor trpí najviac.',
+            'Označenie typu 5W30 hovorí o viskozite oleja, teda o tom, ako olej tečie pri rôznych teplotách. Číslo pred písmenom W (z anglického winter, zima) opisuje správanie oleja za studena. Čím je nižšie, tým je olej pri studenom štarte redší a rýchlejšie sa dostane ku všetkým častiam motora, čo je práve moment, keď motor trpí najviac.',
             'Číslo za písmenom W udáva viskozitu pri prevádzkovej teplote motora. Vyššie číslo znamená hustejší olej, ktorý si udrží mazací film aj pri vysokej záťaži. Neplatí však, že vyššie číslo je automaticky lepšie, moderné motory s úzkymi mazacími kanálikmi potrebujú presne tú viskozitu, ktorú predpísal výrobca, inak sa mazanie zhorší namiesto toho, aby sa zlepšilo.',
         ],
     },
@@ -122,7 +122,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Varovné signály, že olej treba vymeniť',
         paragraphs: [
-            'Tmavý, takmer čierny olej na mierke je bežným znakom, že olej už stráca svoje mazacie vlastnosti. Rozsvietená kontrolka oleja na palubnej doske je vážnejší signál, ktorý sa oplatí overiť aj [počítačovou diagnostikou](/sluzby/pocitacova-diagnostika-bratislava), ktorý neznamená len "treba dolievať", ale často už aj problém s tlakom v mazacom okruhu.',
+            'Tmavý, takmer čierny olej na mierke je bežným znakom, že olej už stráca svoje mazacie vlastnosti. Rozsvietená kontrolka oleja na palubnej doske je vážnejší signál, ktorý neznamená len "treba dolievať", ale často už aj problém s tlakom v mazacom okruhu. Oplatí sa ho overiť aj [počítačovou diagnostikou](/sluzby/pocitacova-diagnostika-bratislava).',
             'Zvýšená spotreba oleja medzi servismi, nezvyčajný hluk motora po nastartovaní alebo namodralý dym z výfuku môžu signalizovať opotrebenie motora, ktoré súvisí s dlhodobo zanedbanou výmenou oleja. V takom prípade odporúčame nečakať na najbližší plánovaný termín a prísť na kontrolu skôr.',
         ],
     },

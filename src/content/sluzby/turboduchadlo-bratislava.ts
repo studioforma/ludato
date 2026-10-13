@@ -108,17 +108,17 @@ const content: ServiceContent = [
     },
     {
         type: 'text',
-        heading: 'Prečo turbo odišlo, býva inde',
+        heading: 'Príčina poruchy turba býva inde',
         paragraphs: [
             'Turbo väčšinou nezlyhá samo od seba. Najčastejšou príčinou je olej: starý, nesprávny alebo ho je málo. Zanesené olejové vedenie, predĺžené intervaly výmeny oleja alebo olej, ktorý nespĺňa normu výrobcu, skracujú životnosť ložísk turba. Pravidelná [výmena oleja](/sluzby/vymena-oleja-bratislava) je preto najlepšia prevencia.',
-            'Ďalšou príčinou býva zanesený DPF filter alebo EGR ventil, ktoré zvyšujú protitlak vo výfuku a zaťažujú turbo. Turbo vedia poškodiť aj nečistoty nasaté cez netesné sanie. A niekedy nie je chyba v turbe vôbec, ako pri prípade, keď za opakovanou chybou turba stál skrat v kabeláži, ktorý sme riešili v rámci [zložitej diagnostiky](/sluzby/zlozita-diagnostika-bratislava).',
+            'Ďalšou príčinou býva zanesený DPF filter alebo EGR ventil, ktoré zvyšujú protitlak vo výfuku a zaťažujú turbo. Turbo vedia poškodiť aj nečistoty nasaté cez netesné sanie. A niekedy nie je chyba v turbe vôbec, ako v prípade, keď za opakovanou chybou turba stál skrat v kabeláži, ktorý sme riešili v rámci [zložitej diagnostiky](/sluzby/zlozita-diagnostika-bratislava).',
         ],
     },
     {
         type: 'text',
         heading: 'Ako predĺžiť životnosť turba',
         paragraphs: [
-            'Po naštartovaní studeného motora nejazdite hneď naplno. Olej potrebuje chvíľu, kým sa zohreje a dostane ku všetkým ložiskám. Rovnako po prudkej jazde, napríklad z diaľnice, nechajte motor pred vypnutím krátko bežať na voľnobeh, aby sa turbo ochladilo a olej v ňom nezhorel.',
+            'Po naštartovaní studeného motora nejazdite hneď naplno. Olej potrebuje chvíľu, kým sa zohreje a dostane ku všetkým ložiskám. Rovnako po prudkej jazde, napríklad z diaľnice, nechajte motor pred vypnutím krátko bežať na voľnobehu, aby sa turbo ochladilo a olej v ňom nezhorel.',
             'Dodržiavajte intervaly výmeny oleja a používajte olej podľa normy výrobcu. Pri naftových motoroch sa oplatí z času na čas prejsť dlhší úsek po diaľnici, aby sa DPF filter mohol vyčistiť regeneráciou. Pri prevažne mestskej jazde sa totiž zanáša rýchlejšie.',
         ],
     },

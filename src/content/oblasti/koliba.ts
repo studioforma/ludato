@@ -4,8 +4,8 @@ const content: ServiceContent = [
     {
         type: 'intro',
         paragraphs: [
-            'Hľadáte autoservis blízko Koliby? Ludato Family Autoservis a Pneuservis je na Odborárskej 52 v Novom Meste, v rovnakej mestskej časti ako Koliba. Autom k nám prídete orientačne za 10 až 15 minút, dolu z kopca cez Jeséniovu a Pionierskú.',
-            'Sme rodinný servis, ktorý sa stará o autá všetkých značiek, od bežnej údržby až po náročnejšie opravy. Jazda na Kolibe má svoje špecifiká, strmé ulice, zimné zjazdy a úzke cesty, a presne na tie sa pri servise zameriavame.',
+            'Hľadáte autoservis blízko Koliby? Ludato Family Autoservis a Pneuservis je na Odborárskej 52 v Novom Meste, v rovnakej mestskej časti ako Koliba. Autom k nám prídete orientačne za 10 až 15 minút, dolu z kopca cez Jeséniovu a Pioniersku.',
+            'Sme rodinný servis, ktorý sa stará o autá všetkých značiek, od bežnej údržby až po náročnejšie opravy. Jazda na Kolibe má svoje špecifiká: strmé ulice, zimné zjazdy a úzke cesty, a presne na tie sa pri servise zameriavame.',
         ],
     },
     {
@@ -24,7 +24,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Ako sa k nám dostanete z Koliby',
         paragraphs: [
-            'Z Koliby k nám vedie cesta dolu cez Jeséniovu a Pionierskú. Trvá orientačne 10 až 15 minút podľa toho, z ktorej časti Koliby idete a aká je doprava. Od pondelka do štvrtka máme otvorené do 19:00, takže auto môžete priviezť aj po práci.',
+            'Z Koliby k nám vedie cesta dolu cez Jeséniovu a Pioniersku. Trvá orientačne 10 až 15 minút podľa toho, z ktorej časti Koliby idete a aká je doprava. Od pondelka do štvrtka máme otvorené do 19:00, takže auto môžete priviezť aj po práci.',
             'Ak sa vám do servisu nechce alebo auto nie je pojazdné, nemusíte nikam chodiť. Auto vyzdvihneme za 50 € a nepojazdné vozidlo odtiahneme za 170 €. V zime, keď sú ulice na Kolibe zľadovatené, to ocení nejeden vodič.',
         ],
     },
@@ -33,7 +33,7 @@ const content: ServiceContent = [
         heading: 'Čo autá na Kolibe najviac zaťažuje',
         paragraphs: [
             'Koliba patrí k najkopcovitejším častiam Bratislavy. Strmé zjazdy dolu do mesta zaťažujú brzdy oveľa viac ako jazda po rovine. Platničky a kotúče sa opotrebúvajú rýchlejšie a pri dlhom zjazde sa brzdy prehrievajú. Pri autách, ktoré jazdia po Kolibe denne, odporúčame kontrolovať brzdy aj brzdovú kvapalinu častejšie.',
-            'Rozjazdy v strmom kopci sú náročné na spojku. Ak auto pri rozjazde do kopca prekĺzava alebo cítiť zápach spáleného obloženia, spojka dosluhuje. Pri autách s dvojhmotovým zotrvačníkom zaťažuje kopcovitý terén aj ten.',
+            'Rozjazdy v strmom kopci sú náročné na spojku. Ak spojka pri rozjazde do kopca prekĺzava alebo cítiť zápach spáleného obloženia, spojka dosluhuje. Pri autách s dvojhmotovým zotrvačníkom zaťažuje kopcovitý terén aj ten.',
             'V zime sú ulice na Kolibe často zasnežené a zľadovatené, kým dolu v meste je sucho. Kvalitné zimné pneumatiky s dostatočným dezénom sú tu základ bezpečnosti. Prezutie sa oplatí naplánovať ešte pred prvým snehom.',
         ],
     },
@@ -151,7 +151,7 @@ const content: ServiceContent = [
         items: [
             {
                 q: 'Ako dlho mi to k vám trvá z Koliby?',
-                a: 'Orientačne 10 až 15 minút autom cez Jeséniovu a Pionierskú, podľa dopravy.',
+                a: 'Orientačne 10 až 15 minút autom cez Jeséniovu a Pioniersku, podľa dopravy.',
             },
             {
                 q: 'Prídete si po auto na Kolibu?',

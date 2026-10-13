@@ -93,7 +93,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Test',
-                text: 'Motor necháme zohriať a overíme, že teplota drží a kúrenie hreje.',
+                text: 'Motor necháme zohriať a overíme, či teplota drží a kúrenie hreje.',
             },
         ],
     },
@@ -181,7 +181,7 @@ const content: ServiceContent = [
                 a: 'Podľa intervalu výrobcu vášho auta. Pri servise vám povieme, či je kvapalina ešte v poriadku.',
             },
             {
-                q: 'Mením vodné čerpadlo spolu s rozvodmi?',
+                q: 'Treba meniť vodné čerpadlo spolu s rozvodmi?',
                 a: 'Pri motoroch, kde čerpadlo poháňa rozvodový remeň, sa to oplatí. Práca sa prekrýva a ušetríte.',
             },
             {
@@ -194,7 +194,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Prečo sa auto prehrieva len v kolóne?',
-                a: 'Najčastejšie nefunguje ventilátor chladiča alebo je chladič zanesený. Pri jazde to nevidno, lebo vzduch chladí sám.',
+                a: 'Najčastejšie nefunguje ventilátor chladiča alebo je chladič zanesený. Pri jazde sa to neprejaví, lebo vzduch chladí sám.',
             },
             {
                 q: 'Skontrolujete aj ochranu pred mrazom?',

@@ -58,7 +58,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Vyvetranie',
-                text: 'Po zákroku auto dôkladne vyvetráme, kým vám ho odovzdáme.',
+                text: 'Po zákroku auto dôkladne vyvetráme predtým, ako vám ho odovzdáme.',
             },
         ],
     },
@@ -66,7 +66,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Ozón a klimatizácia',
         paragraphs: [
-            'Zatuchnutý zápach, ktorý ide z ventilácie hlavne po zapnutí klimatizácie, má často pôvod vo výparníku. Je to diel, na ktorom sa kondenzuje vlhkosť, a keď sa nevysuší, môže zapáchať. Ozón zápach z ventilácie zmierni, no ak je príčinou zanedbaná klimatizácia, oplatí sa ju dať do poriadku.',
+            'Zatuchnutý zápach, ktorý ide z ventilácie hlavne po zapnutí klimatizácie, má často pôvod vo výparníku. Je to diel, na ktorom kondenzuje vlhkosť, a keď sa nevysuší, môže zapáchať. Ozón zápach z ventilácie zmierni, no ak je príčinou zanedbaná klimatizácia, oplatí sa ju dať do poriadku.',
             'Ozónovú dezinfekciu preto môžete spojiť so [servisom klimatizácie](/sluzby/servis-klimatizacie-bratislava). Pri zápachu z ventilácie sa oplatí skontrolovať aj kabínový filter, ktorý meníme v rámci [olejového servisu](/sluzby/vymena-oleja-bratislava).',
         ],
     },
@@ -105,7 +105,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Zápach po zvieratách',
         paragraphs: [
-            'Psy a mačky zanechávajú v aute srsť, sliny aj pach, ktorý sa drží v textíliách a v kobercoch. Ak vozíte zvieratá pravidelne, pach sa postupne kumuluje a po čase ho cítiť aj vtedy, keď zviera v aute nie je. Ozón tento pach rozloží aj v miestach, kam sa pri bežnom vysávaní nedostanete.',
+            'Psy a mačky zanechávajú v aute srsť, sliny aj pach, ktorý sa drží v textíliách a v kobercoch. Ak vozíte zvieratá pravidelne, pach sa postupne kumuluje a po čase ho cítiť aj vtedy, keď zviera v aute nie je. Ozón tento pach rozloží aj na miestach, kam sa pri bežnom vysávaní nedostanete.',
             'Pri silnom znečistení srsťou a nečistotami odporúčame najprv tepovanie a až potom ozón. Srsť zachytená v kobercoch by inak zápach udržiavala ďalej.',
         ],
     },
@@ -121,8 +121,8 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Ozón pred predajom auta',
         paragraphs: [
-            'Ak auto predávate, neutrálny zápach v interiéri pôsobí na kupujúceho lepšie než zápach cigariet alebo zvierat. V kombinácii s tepovaním je ozónová dezinfekcia lacný spôsob, ako dať autu pred predajom čo najlepší dojem.',
-            'Rovnako pri kúpe: ak si kupujete auto, ktoré niekto fajčil, ozón pomôže zbaviť sa zápachu, ktorý by vás inak sprevádzal každý deň.',
+            'Ak auto predávate, neutrálny zápach v interiéri pôsobí na kupujúceho lepšie než zápach cigariet alebo zvierat. V kombinácii s tepovaním je ozónová dezinfekcia lacný spôsob, aby auto pred predajom urobilo čo najlepší dojem.',
+            'Rovnako pri kúpe: ak si kupujete auto, v ktorom niekto fajčil, ozón pomôže zbaviť sa zápachu, ktorý by vás inak sprevádzal každý deň.',
         ],
     },
     {
@@ -160,7 +160,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Je to bezpečné?',
-                a: 'Áno. Počas zákroku v aute nikto nie je a po ňom auto dôkladne vyvetráme, kým vám ho odovzdáme.',
+                a: 'Áno. Počas zákroku v aute nikto nie je a po ňom auto dôkladne vyvetráme predtým, ako vám ho odovzdáme.',
             },
             {
                 q: 'Pomôže ozón proti zápachu z klimatizácie?',

@@ -119,8 +119,8 @@ export default function Footer() {
                                 <span className="text-[#E31C25] mt-0.5">🕐</span>
                                 <span>
                                     Pondelok–Štvrtok: 9:00–19:00<br />
-                                    Pia: 7:00–16:00<br />
-                                    So–Ne: Zatvorené
+                                    Pi: 7:00–16:00<br />
+                                    So–Ne: zatvorené
                                 </span>
                             </li>
                         </ul>

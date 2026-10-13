@@ -82,7 +82,7 @@ const content: ServiceContent = [
         heading: 'Kedy prísť',
         paragraphs: [
             'Najlepšie týždeň až dva pred odchodom. Kontrola sama netrvá dlho, no ak sa ukáže, že treba vymeniť brzdy, pneumatiky alebo opraviť klimatizáciu, potrebujeme čas na diely a termín.',
-            'Rovnako dôležitá je kontrola pred zimou. Ak chystáte cestu na hory, spojte ju so [sezónnym prezutím](/sluzby/pneuservis-bratislava), pri ktorom vidno aj stav bŕzd.',
+            'Rovnako dôležitá je kontrola pred zimou. Ak sa chystáte na hory, spojte ju so [sezónnym prezutím](/sluzby/pneuservis-bratislava), pri ktorom vidno aj stav bŕzd.',
         ],
     },
     {
@@ -181,7 +181,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Skontrolujete aj klimatizáciu?',
-                a: 'Ak klimatizácia nechladí ako má, odporúčame jej servis, ktorý stojí od 40 € podľa typu chladiva.',
+                a: 'Ak klimatizácia nechladí, ako má, odporúčame jej servis, ktorý stojí od 40 € podľa typu chladiva.',
             },
             {
                 q: 'Idem s prívesom, je to problém?',

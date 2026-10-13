@@ -135,7 +135,7 @@ export const areas: AreaMeta[] = [
         description:
             'Autoservis a pneuservis pre Kramáre. Na Odborárskej v Novom Meste sme orientačne 10 minút autom. Brzdy, prezutie, podvozok, výmena oleja aj vyzdvihnutie auta.',
         driveTime: 'orientačne 10 minút autom',
-        route: 'Cez Račiansku a Pionierskú',
+        route: 'Cez Račiansku a Pioniersku',
         services: ['brzdy-bratislava', 'pneuservis-bratislava', 'podvozok-bratislava', 'vymena-oleja-bratislava'],
         cta: {
             question: 'Potrebujete servis a bývate na Kramároch?',
@@ -152,7 +152,7 @@ export const areas: AreaMeta[] = [
         description:
             'Autoservis a pneuservis pre Kolibu. Na Odborárskej v Novom Meste sme orientačne 10 až 15 minút autom. Brzdy, zimné pneumatiky, spojka, podvozok aj vyzdvihnutie auta.',
         driveTime: 'orientačne 10 až 15 minút autom',
-        route: 'Cez Pionierskú a Jeséniovu',
+        route: 'Cez Pioniersku a Jeséniovu',
         services: ['brzdy-bratislava', 'pneuservis-bratislava', 'prevodovka-spojka-bratislava', 'podvozok-bratislava'],
         cta: {
             question: 'Potrebujete servis a bývate na Kolibe?',

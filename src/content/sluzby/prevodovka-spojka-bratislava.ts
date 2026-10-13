@@ -11,7 +11,7 @@ const content: ServiceContent = [
     {
         type: 'cta',
         heading: 'Prekĺzava vám spojka?',
-        text: 'Spojka, ktorá prekĺzava, sa sama nezlepší a jedného dňa auto jednoducho nepohne. Pozrieme sa na to skôr, než budete potrebovať odťah.',
+        text: 'Spojka, ktorá prekĺzava, sa sama nezlepší a jedného dňa sa auto jednoducho nepohne. Pozrieme sa na to skôr, než budete potrebovať odťah.',
         points: [
             'Výmena spojky aj dvojhmotového zotrvačníka',
             'Olej v manuálnej prevodovke od 75 €, v automate od 85 €',
@@ -59,8 +59,8 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Príznaky opotrebovanej spojky',
         paragraphs: [
-            'Najznámejším príznakom je prekĺzavanie. Pri zrýchľovaní, hlavne na vyšší prevodový stupeň alebo do kopca, otáčky motora vyskočia, ale auto sa nepohne rýchlejšie. Často je cítiť aj zápach spáleného obloženia. Ďalším signálom je spojka, ktorá zaberá vysoko, až na konci pedálu.',
-            'Spojka sa ohlasuje aj inak: pedál ide ťažšie alebo sa nevracia, pri rozbehu auto trhá, ozýva sa pískanie alebo hrkotanie pri stlačení pedálu, alebo sa nedá plynule zaradiť. Niektoré z týchto príznakov môže spôsobiť aj hydraulika spojky, preto auto najprv skontrolujeme a až potom navrhneme opravu.',
+            'Najznámejším príznakom je prekĺzavanie. Pri zrýchľovaní, hlavne na vyšší prevodový stupeň alebo do kopca, otáčky motora vyskočia, ale auto sa nepohne rýchlejšie. Často je cítiť aj zápach spáleného obloženia. Ďalším signálom je spojka, ktorá zaberá vysoko, až na konci pedála.',
+            'Spojka sa ohlasuje aj inak: pedál ide ťažšie alebo sa nevracia, pri rozbehu auto trhá, ozýva sa pískanie alebo hrkotanie pri stlačení pedála, alebo sa nedá plynule zaradiť. Niektoré z týchto príznakov môže spôsobiť aj hydraulika spojky, preto auto najprv skontrolujeme a až potom navrhneme opravu.',
         ],
     },
     {
@@ -85,7 +85,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Skúšobná jazda',
-                text: 'Po oprave auto otestujeme v premávke a overíme, že spojka zaberá a prevodovka radí, ako má.',
+                text: 'Po oprave auto otestujeme v premávke a overíme, či spojka zaberá a prevodovka radí, ako má.',
             },
         ],
     },
@@ -109,7 +109,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Na čo si dať pozor',
         paragraphs: [
-            'S prekĺzavajúcou spojkou nejazdite dlho. Prekĺzavanie znamená teplo a teplo ničí prítlačný tanier aj zotrvačník. Čím dlhšie sa oprava odkladá, tým viac dielov je potom treba vymeniť. A keď spojka dosluhuje úplne, auto sa nepohne a zostáva len [odťah](/sluzby/odtah-vozidla-bratislava).',
+            'S prekĺzavajúcou spojkou nejazdite dlho. Prekĺzavanie znamená teplo a teplo ničí prítlačný tanier aj zotrvačník. Čím dlhšie sa oprava odkladá, tým viac dielov je potom treba vymeniť. A keď spojka úplne doslúži, auto sa nepohne a zostáva len [odťah](/sluzby/odtah-vozidla-bratislava).',
             'Pozor aj na lacné sady spojky neznámeho pôvodu. Výmena spojky je náročná práca s demontážou prevodovky a nikto nechce robiť tú istú prácu dvakrát. Pri automatickej prevodovke nikdy nemiešajte rôzne druhy oleja a nedolievajte nič, čo nezodpovedá predpisu výrobcu.',
         ],
     },
@@ -125,7 +125,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Keď je auto v servise dlhšie',
         paragraphs: [
-            'Výmena spojky alebo oprava prevodovky nie je práca na hodinu. Prevodovka sa musí z auta vybrať a znova namontovať, a ak treba čakať na diely, môže auto zostať v dielni niekoľko dní. Ak bez auta neviete fungovať, dohodnite si [náhradné vozidlo](/nahradne-vozidlo-bratislava) za 35 € na deň. Pri servise nad 1000 € je zadarmo. Dostupnosť si overte pri objednaní.',
+            'Výmena spojky alebo oprava prevodovky nie je práca na hodinu. Prevodovka sa musí z auta vybrať a znova namontovať, a ak treba čakať na diely, môže auto zostať v dielni niekoľko dní. Ak bez auta neviete fungovať, dohodnite si [náhradné vozidlo](/sluzby/nahradne-vozidlo-bratislava) za 35 € na deň. Pri servise nad 1000 € je zadarmo. Dostupnosť si overte pri objednaní.',
         ],
     },
     {
@@ -184,7 +184,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Kde nás nájdete',
         paragraphs: [
-            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Ak auto nepohne, zabezpečíme odťah priamo k nám. Prehľad mestských častí, odkiaľ k nám zákazníci chodia, nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Ak sa auto nepohne, zabezpečíme odťah priamo k nám. Prehľad mestských častí, odkiaľ k nám zákazníci chodia, nájdete na stránke [Kde pôsobíme](/kde-posobime).',
         ],
     },
 ];

@@ -349,7 +349,7 @@ export default function CennikPage() {
                             <li className="flex items-start gap-3">
                                 <span className="text-[#E31C25] flex-shrink-0 text-base">🏢</span>
                                 <div>
-                                    <div className="text-white font-bold" style={{ fontFamily: 'var(--font-montserrat)' }}>LUDATO FAMILY, s.r.o</div>
+                                    <div className="text-white font-bold" style={{ fontFamily: 'var(--font-montserrat)' }}>Ludato Family s. r. o.</div>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">

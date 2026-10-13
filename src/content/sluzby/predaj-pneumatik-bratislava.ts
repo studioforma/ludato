@@ -4,7 +4,7 @@ const content: ServiceContent = [
     {
         type: 'intro',
         paragraphs: [
-            'Pneumatiky sú jediná časť auta, ktorá sa dotýka cesty. Od ich stavu závisí, ako auto brzdí, ako drží v zákrute a ako sa správa na mokrej alebo zasneženej vozovke. Keď je dezén ojazdený alebo pneumatika starne, auto to cítiť skôr, než by ste čakali, a najviac vtedy, keď treba prudko zabrzdiť.',
+            'Pneumatiky sú jediná časť auta, ktorá sa dotýka cesty. Od ich stavu závisí, ako auto brzdí, ako drží v zákrute a ako sa správa na mokrej alebo zasneženej vozovke. Keď je dezén ojazdený alebo pneumatika starne, na aute to pocítite skôr, než by ste čakali, a najviac vtedy, keď treba prudko zabrzdiť.',
             'V Bratislave, Novom Meste, vám nové pneumatiky dodáme na objednávku. Nemáme vlastný sklad pneumatík, preto ich objednávame cez overených partnerov podľa rozmeru a sezóny, ktoré potrebujete. Vieme dodať značky Pirelli, Michelin, Nexen a Matador. Pomôžeme vám s výberom a v našom pneuservise ich rovno namontujeme.',
         ],
     },
@@ -192,7 +192,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Treba meniť všetky štyri pneumatiky naraz?',
-                a: 'Nie vždy. Na jednej náprave by však mali byť rovnaké pneumatiky. Pri štvorkolke výrobcovia často odporúčajú meniť všetky štyri naraz, poradíme podľa auta.',
+                a: 'Nie vždy. Na jednej náprave by však mali byť rovnaké pneumatiky. Pri aute s pohonom všetkých kolies výrobcovia často odporúčajú meniť všetky štyri naraz, poradíme podľa auta.',
             },
             {
                 q: 'Čo so starými pneumatikami?',

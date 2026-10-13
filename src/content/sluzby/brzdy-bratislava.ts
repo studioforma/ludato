@@ -72,7 +72,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Skúšobná jazda',
-                text: 'Po väčšom zásahu do bŕzd absolvujeme skúšobnú jazdu, aby sme si overili, že je všetko v poriadku ešte pred odovzdaním vozidla.',
+                text: 'Po väčšom zásahu do bŕzd absolvujeme skúšobnú jazdu, aby sme si overili, či je všetko v poriadku ešte pred odovzdaním vozidla.',
             },
         ],
     },

@@ -33,7 +33,7 @@ const content: ServiceContent = [
         heading: 'Čo autá z Vajnor najviac zaťažuje',
         paragraphs: [
             'Kto z Vajnor denne dochádza do mesta, najazdí za rok viac kilometrov než vodič, ktorý jazdí len po štvrti. Väčší nájazd znamená častejšiu výmenu oleja, rýchlejšie opotrebenie pneumatík aj bŕzd. Dodržať servisný interval sa tu oplatí dvojnásobne.',
-            'Ranné kolóny na Vajnorskej znamenajú veľa státia, rozbiehania a brzdenia. Motor beží často na voľnobeh, olej sa nestihne poriadne zohriať a brzdy pracujú viac než pri plynulej jazde. To sú presne veci, ktoré skontrolujeme pri bežnej servisnej návšteve.',
+            'Ranné kolóny na Vajnorskej znamenajú veľa státia, rozbiehania a brzdenia. Motor beží často na voľnobehu, olej sa nestihne poriadne zohriať a brzdy pracujú viac než pri plynulej jazde. To sú presne veci, ktoré skontrolujeme pri bežnej servisnej návšteve.',
             'Na okraji mesta je cez zimu chladnejšie a ráno častejšie namŕza. Batéria a zimné pneumatiky to cítia ako prvé. Ak auto ráno ťažšie štartuje alebo pneumatiky majú dezén na hranici, nečakajte na prvý mráz.',
         ],
     },
@@ -75,7 +75,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo k nám chodia aj z Vajnor',
         paragraphs: [
-            'Sme rodinný servis, kde sa rozprávate priamo s tým, kto robí na vašom aute. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5.0 z viac ako 40 recenzií.',
+            'Sme rodinný servis, kde sa rozprávate priamo s tým, kto robí na vašom aute. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 40 recenzií.',
             'Ceny máme zverejnené v [cenníku](/cennik) a pred každou väčšou opravou vám povieme, čo treba urobiť a koľko to bude stáť. Nemusíte sa báť, že na faktúre nájdete niečo, o čom ste nevedeli.',
         ],
     },
@@ -84,8 +84,8 @@ const content: ServiceContent = [
         heading: 'Vyšší nájazd a servisné intervaly',
         paragraphs: [
             'Výrobcovia predpisujú výmenu oleja podľa kilometrov aj času, a platí to, čo nastane skôr. Kto z Vajnor denne dochádza do mesta a späť, najazdí ročne výrazne viac než vodič, ktorý jazdí len po okolí. Interval podľa kilometrov tak príde skôr, než by človek čakal, a často skôr ako ročná prehliadka.',
-            'Zároveň je veľká časť týchto kilometrov v kolónach na Vajnorskej, kde motor beží pri nízkych otáčkach a často na voľnobeh. Takáto prevádzka je pre olej náročnejšia, než naznačuje samotný počet kilometrov. Preto pri dochádzaní odporúčame držať sa skôr kratšieho intervalu a pri každej výmene oleja nechať skontrolovať aj brzdy a pneumatiky.',
-            'Pri vyššom nájazde sa rýchlejšie opotrebúvajú aj pneumatiky a brzdy. Preto pri výmene oleja vždy pozrieme aj na dezén, platničky a úniky pod autom, aby ste vedeli, čo bude na rade pri ďalšej návšteve.',
+            'Zároveň je veľká časť týchto kilometrov v kolónach na Vajnorskej, kde motor beží pri nízkych otáčkach a často na voľnobehu. Takáto prevádzka je pre olej náročnejšia, než naznačuje samotný počet kilometrov. Preto pri dochádzaní odporúčame držať sa skôr kratšieho intervalu a pri každej výmene oleja nechať skontrolovať aj brzdy a pneumatiky.',
+            'Pri vyššom nájazde sa rýchlejšie opotrebúvajú aj pneumatiky a brzdy. Preto pri výmene oleja vždy sa pozrieme aj na dezén, platničky a úniky pod autom, aby ste vedeli, čo bude na rade pri ďalšej návšteve.',
         ],
     },
     {

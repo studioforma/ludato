@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   title:
     "NAJLEPŠÍ Autoservis Bratislava – Nové Mesto | Ak hľadáte - Diagnostika, Brzdy, Rozvody, Podvozok, Klimatizácia, Pneuservis, blízko mňa - Ludato Family Autoservis a Pneuservis je to správne miesto",
   description:
-    "Autoservis Bratislava – Nové Mesto: komplexná starostlivosť o vozidlá všetkých značiek a modelov. Diagnostika, opravy, servisné prehliadky, brzdy, podvozok, klimatizácia, pneuservis. Zažite rozdiel v dôveryhodnom rodinnom autoservise LUDATO.",
+    "Rodinný autoservis a pneuservis na Odborárskej 52 v Bratislave, Novom Meste. Diagnostika, brzdy, olej, rozvody, klimatizácia aj prezutie. Cenu povieme vopred.",
   keywords:
     "autoservis bratislava, autoservis nové mesto, pneuservis bratislava, diagnostika auta bratislava, oprava bŕzd bratislava, servis klimatizácie bratislava, LUDATO, rodinný autoservis",
   openGraph: {

@@ -75,7 +75,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo si nás vyberajú vodiči z Ružinova',
         paragraphs: [
-            'Nie sme anonymná pobočka veľkej siete, ale rodinný servis. O auto sa stará ten, s kým sa rozprávate. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5.0 z viac ako 40 recenzií.',
+            'Nie sme anonymná pobočka veľkej siete, ale rodinný servis. O auto sa stará ten, s kým sa rozprávate. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 40 recenzií.',
             'Ceny sú zverejnené v [cenníku](/cennik) a pred každou opravou vám povieme, čo sme našli a koľko to bude stáť. Ak sa oprava predĺži, požičiame vám [náhradné vozidlo](/sluzby/nahradne-vozidlo-bratislava) za 35 € na deň.',
         ],
     },
@@ -83,7 +83,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Geometria a pneumatiky na sídlisku',
         paragraphs: [
-            'Geometria určuje, ako kolesá smerujú voči ceste. Stačí, aby sa zbiehavosť posunula o malý kúsok, a pneumatika sa začne pri každom metri jemne šmýkať do strany. Navonok to nevidno, no vnútorná alebo vonkajšia hrana dezénu sa zjedá podstatne rýchlejšie ako zvyšok. V Ružinove, kde sa parkuje tesne pri obrubníkoch a jazdí cez koľajnice, sa nastavenie rozlaďuje častejšie.',
+            'Geometria určuje, ako kolesá smerujú voči ceste. Stačí, aby sa zbiehavosť posunula o malý kúsok, a pneumatika sa začne na každom metri jemne šmýkať do strany. Navonok to nevidno, no vnútorná alebo vonkajšia hrana dezénu sa zjedá podstatne rýchlejšie ako zvyšok. V Ružinove, kde sa parkuje tesne pri obrubníkoch a jazdí cez koľajnice, sa nastavenie rozlaďuje častejšie.',
             'Kontrola geometrie stojí 16 € a ukáže, či treba nastavovať. Pred nastavením vždy skontrolujeme aj podvozok, pretože na opotrebovaných dieloch by nové nastavenie dlho nevydržalo. Ak sa hodnoty nedajú nastaviť, zvyčajne to znamená ohnutý diel po náraze, a ten vám ukážeme.',
             'Zlá geometria sa neprejaví hneď ako porucha, ale postupne ako výdavok. Pneumatika, ktorá by pri správnom nastavení vydržala niekoľko sezón, sa zje na jednej hrane podstatne skôr. Pri cenách dnešných pneumatík je kontrola geometrie jedna z najvýhodnejších investícií do auta.',
         ],
@@ -153,7 +153,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Vybavíte mi STK?',
-                a: 'Áno, kompletné sprostredkovanie STK a EK stojí 150 €. Auto pred tým skontrolujeme a nedostatky opravíme.',
+                a: 'Áno, kompletné sprostredkovanie STK a EK stojí 150 €. Auto predtým skontrolujeme a nedostatky opravíme.',
             },
             {
                 q: 'Koľko stojí prezutie?',

@@ -2,7 +2,7 @@
 // (reviews section, CTA boxes) updates at once.
 
 /** Google rating of the business profile. */
-export const GOOGLE_RATING = '5.0';
+export const GOOGLE_RATING = '5,0';
 
 /** Number of Google reviews, rounded down. */
 export const GOOGLE_REVIEWS = '40+';

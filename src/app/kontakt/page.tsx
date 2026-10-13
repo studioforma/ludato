@@ -31,7 +31,7 @@ export default function Kontakt() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(kontaktBreadcrumb) }} />
             <Navbar />
             <div className="pt-20">
-                <ContactSection />
+                <ContactSection asPageHeading />
             </div>
             <Footer />
         </main>

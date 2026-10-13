@@ -24,7 +24,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Ako sa k nám dostanete z Kramárov',
         paragraphs: [
-            'Z Kramárov je to k nám najjednoduchšie dolu cez Pionierskú a Račiansku. Cesta trvá orientačne 10 minút, v rannej a poobednej špičke môže byť dlhšia. Keďže sme v tej istej mestskej časti, mnohí zákazníci nechajú auto u nás a domov sa vrátia pešo alebo mestskou dopravou. Od pondelka do štvrtka máme otvorené do 19:00.',
+            'Z Kramárov je to k nám najjednoduchšie dolu cez Pioniersku a Račiansku. Cesta trvá orientačne 10 minút, v rannej a poobednej špičke môže byť dlhšia. Keďže sme v tej istej mestskej časti, mnohí zákazníci nechajú auto u nás a domov sa vrátia pešo alebo mestskou dopravou. Od pondelka do štvrtka máme otvorené do 19:00.',
             'Ak sa vám do servisu nechce alebo auto nie je pojazdné, nemusíte nikam chodiť. Auto vyzdvihneme za 50 € a nepojazdné vozidlo odtiahneme za 170 €.',
         ],
     },
@@ -111,7 +111,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Sezónny servis',
         paragraphs: [
-            'Na jar po zime odporúčame skontrolovať podvozok a brzdy, ktoré dostali zabrať od soli, výtlkov a zľadovatených zjazdov. Na jeseň je čas na prezutie, kontrolu batérie a chladiacej kvapaliny. Pri prezutí sa dobre vidí aj na brzdy, takže prípadný problém zachytíme včas.',
+            'Na jar po zime odporúčame skontrolovať podvozok a brzdy, ktoré dostali zabrať od soli, výtlkov a zľadovatených zjazdov. Na jeseň je čas na prezutie, kontrolu batérie a chladiacej kvapaliny. Pri prezutí dobre vidno aj brzdy, takže prípadný problém zachytíme včas.',
         ],
     },
     {
@@ -149,7 +149,7 @@ const content: ServiceContent = [
         items: [
             {
                 q: 'Ako dlho mi to k vám trvá z Kramárov?',
-                a: 'Orientačne 10 minút autom cez Pionierskú a Račiansku, v špičke môže byť cesta dlhšia.',
+                a: 'Orientačne 10 minút autom cez Pioniersku a Račiansku, v špičke môže byť cesta dlhšia.',
             },
             {
                 q: 'Prídete si po auto na Kramáre?',

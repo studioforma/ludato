@@ -110,7 +110,7 @@ export const services: ServiceMeta[] = [
         h1Accent: 'BRATISLAVA',
         title: 'Diagnostika vozidla Bratislava – Nové Mesto | od 40 € | Ludato Family Autoservis',
         description:
-            'Počítačová diagnostika vozidiel v Bratislave, Novom Meste. OBD II, ESP, ABS, airbag, riadiaca jednotka, elektronika a osvetlenie. Cena od 30 €.',
+            'Počítačová diagnostika vozidiel v Bratislave, Novom Meste. OBD II, ESP, ABS, airbag, riadiaca jednotka, elektronika a osvetlenie. Diagnostika za 40 €.',
         teaser: 'Načítanie chýb, ESP, ABS, airbag aj elektronika, so skutočným vyhodnotením príčiny.',
         category: 'motor',
         heroImage: {
@@ -119,7 +119,7 @@ export const services: ServiceMeta[] = [
         },
         related: ['zlozita-diagnostika-bratislava', 'autoelektrika-bratislava', 'vstrekovace-bratislava', 'stk-ek-bratislava'],
         cta: {
-            question: 'Svieti vám kontrolka na palubovke?',
+            question: 'Svieti vám kontrolka na palubnej doske?',
             subtext: 'Zistíme presne, čo sa deje, ešte pred väčšou opravou.',
             secondaryHref: '/nacenenie',
             secondaryLabel: 'Objednať sa',
@@ -152,7 +152,7 @@ export const services: ServiceMeta[] = [
         name: 'STK a EK',
         h1: 'STK A EK BRATISLAVA – NOVÉ MESTO',
         h1Accent: 'BRATISLAVA',
-        title: 'STK a EK Bratislava – Nové Mesto | Sprostredkovanie od 50 € | Ludato Family Autoservis',
+        title: 'STK a EK Bratislava – Nové Mesto | Kontrola 50 €, sprostredkovanie 150 € | Ludato Family Autoservis',
         description:
             'Príprava a sprostredkovanie STK a EK v Bratislave, Novom Meste. Kontrola pred STK od 50 €, kompletné sprostredkovanie za 150 €.',
         teaser: 'Kontrola pred STK aj kompletné sprostredkovanie, aby ste na kontrolu prešli na prvýkrát.',
@@ -479,7 +479,7 @@ export const services: ServiceMeta[] = [
         category: 'komfort',
         related: ['ozonova-dezinfekcia-bratislava', 'servis-klimatizacie-bratislava', 'pneuservis-bratislava'],
         cta: {
-            question: 'Potrebuje vaše auto vyčistiť zvnútra?',
+            question: 'Treba vaše auto vyčistiť zvnútra?',
             subtext: 'Vytepujeme sedadlá aj koberce, cez deň alebo v noci.',
             secondaryHref: '/nacenenie?sluzba=tepovanie',
             secondaryLabel: 'Objednať tepovanie',

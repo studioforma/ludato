@@ -49,7 +49,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Aké autá požičiavame',
-                text: 'Požičiavame Škody Fabia II. generácie s benzínovým motorom, malé a úsporné autá, s ktorými sa v Bratislave ľahko zaparkuje, a spoznáte ich podľa červenej farby a nášho loga na zadnom skle. Ak potrebujete viac miesta, máme aj priestranné VW Passat z rokov 2019 a 2022, vhodné na dlhšie cesty alebo pre rodinu.',
+                text: 'Požičiavame Škody Fabia II. generácie s benzínovým motorom, malé a úsporné autá, s ktorými sa v Bratislave ľahko zaparkuje, a spoznáte ich podľa červenej farby a nášho loga na zadnom skle. Ak potrebujete viac miesta, máme aj priestranné vozidlá VW Passat z rokov 2019 a 2022, vhodné na dlhšie cesty alebo pre rodinu.',
             },
         ],
     },

@@ -5,7 +5,7 @@ const content: ServiceContent = [
         type: 'intro',
         paragraphs: [
             'Geometria kolies rozhoduje o tom, či auto ide rovno, či sa volant po zákrute vracia sám do stredu a ako rýchlo sa zjedia pneumatiky. Stačí jeden poriadny výtlk alebo zlý nájazd na obrubník a nastavenie sa posunie, aj keď na aute navonok nevidno nič.',
-            'V Bratislave, Novom Meste, vám geometriu skontrolujeme a nastavíme na prednej aj zadnej náprave podľa hodnôt predpísaných výrobcom vozidla. Pred samotným nastavením vždy pozrieme aj podvozok, pretože nastavovať geometriu na vybitých dieloch nemá zmysel.',
+            'V Bratislave, Novom Meste, vám geometriu skontrolujeme a nastavíme na prednej aj zadnej náprave podľa hodnôt predpísaných výrobcom vozidla. Pred samotným nastavením vždy sa pozrieme aj na podvozok, pretože nastavovať geometriu na vybitých dieloch nemá zmysel.',
         ],
     },
     {
@@ -72,7 +72,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Overenie',
-                text: 'Po nastavení skontrolujeme, že volant stojí rovno a auto pri jazde nikam neťahá.',
+                text: 'Po nastavení skontrolujeme, či volant stojí rovno a auto pri jazde nikam neťahá.',
             },
         ],
     },
@@ -104,7 +104,7 @@ const content: ServiceContent = [
         heading: 'Koľko vás zlá geometria stojí',
         paragraphs: [
             'Zle nastavená geometria sa neprejaví hneď ako porucha, ale postupne ako výdavok. Pneumatika, ktorá by pri správnom nastavení vydržala niekoľko sezón, sa môže zjesť na jednej hrane podstatne skôr a sadu treba meniť predčasne. Pri dnešných cenách pneumatík to býva násobne viac, než stojí samotné nastavenie.',
-            'Kolesá, ktoré nesmerujú presne v smere jazdy, navyše kladú väčší valivý odpor, čo sa prejaví aj na mierne vyššej spotrebe. A nakoniec je tu bezpečnosť, auto s rozladenou geometriou reaguje pri prudkom brzdení alebo vyhýbacom manévri menej predvídateľne.',
+            'Kolesá, ktoré nesmerujú presne v smere jazdy, navyše majú väčší valivý odpor, čo sa prejaví aj na mierne vyššej spotrebe. A nakoniec je tu bezpečnosť, auto s rozladenou geometriou reaguje pri prudkom brzdení alebo vyhýbacom manévri menej predvídateľne.',
         ],
     },
     {
@@ -145,7 +145,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Stačí nastaviť len prednú nápravu?',
-                a: 'Pri mnohých autách áno, pretože zadná náprava sa často nastaviť nedá. Ak ju však vaše vozidlo nastaviteľnú má, odporúčame nastaviť obe nápravy, aby spolu kolesá smerovali rovnako.',
+                a: 'Pri mnohých autách áno, pretože zadná náprava sa často nastaviť nedá. Ak ju však vaše vozidlo má nastaviteľnú, odporúčame nastaviť obe nápravy, aby spolu kolesá smerovali rovnako.',
             },
             {
                 q: 'Treba robiť geometriu po prezutí?',

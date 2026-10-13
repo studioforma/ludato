@@ -219,12 +219,12 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
 
                                     <div className="pt-4">
                                         <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                            Viac informácií k Vášmu problému (voliteľné)
+                                            Viac informácií k vášmu problému (voliteľné)
                                         </label>
                                         <textarea
                                             value={formState.otherDetails}
                                             onChange={(e) => setFormState(prev => ({ ...prev, otherDetails: e.target.value }))}
-                                            placeholder="Popíšte bližšie závadu alebo špeciálnu požiadavku..."
+                                            placeholder="Opíšte bližšie poruchu alebo špeciálnu požiadavku..."
                                             rows={3}
                                             className={`${inputClass} resize-none`}
                                             style={{ fontFamily: 'var(--font-inter)' }}
@@ -257,14 +257,14 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
 
                                     <div>
                                         <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                            Meno a Priezvisko / Názov spoločnosti a IČO *
+                                            Meno a priezvisko / Názov spoločnosti a IČO *
                                         </label>
                                         <input
                                             type="text"
                                             required
                                             value={formState.name}
                                             onChange={(e) => setFormState(prev => ({ ...prev, name: e.target.value }))}
-                                            placeholder="Ján Novák alebo Firma s.r.o. + IČO"
+                                            placeholder="Ján Novák alebo Firma s. r. o. + IČO"
                                             className={inputClass}
                                             style={{ fontFamily: 'var(--font-inter)' }}
                                         />
