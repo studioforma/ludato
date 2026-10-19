@@ -68,7 +68,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Dotiahnutie na predpísaný moment',
-                text: 'Všetky spoje dotiahneme presne na uťahovací moment predpísaný výrobcom, nie "od ruky".',
+                text: 'Všetky spoje dotiahneme presne na uťahovací moment predpísaný výrobcom, nie „od ruky“.',
             },
             {
                 title: 'Skúšobná jazda',
@@ -101,7 +101,7 @@ const content: ServiceContent = [
         heading: 'Ako spoznáte opotrebované brzdy',
         paragraphs: [
             'Pískanie alebo škrípanie pri brzdení je najčastejší prvý signál, že platničky sú na hranici opotrebenia. Vibrácie v pedáli alebo volante počas brzdenia zvyčajne znamenajú deformovaný alebo opotrebovaný kotúč.',
-            'Dlhšia brzdná dráha, než ste zvyknutí, a mäkký, "hubovitý" pocit v pedáli sú signály, ktoré sa oplatí riešiť čo najskôr, môžu súvisieť s brzdovou kvapalinou alebo vzduchom v systéme. V oboch prípadoch odporúčame nečakať na najbližší plánovaný servis.',
+            'Dlhšia brzdná dráha, než ste zvyknutí, a mäkký, „hubovitý“ pocit v pedáli sú signály, ktoré sa oplatí riešiť čo najskôr, môžu súvisieť s brzdovou kvapalinou alebo vzduchom v systéme. V oboch prípadoch odporúčame nečakať na najbližší plánovaný servis.',
         ],
     },
     {
@@ -140,7 +140,7 @@ const content: ServiceContent = [
         paragraphs: [
             'Bežná chyba je riešiť len nápravu, na ktorej sa problém prejavil, a druhú nechať bez kontroly. Brzdový systém pracuje ako celok, nerovnomerné opotrebenie medzi nápravami alebo stranami vie ovplyvniť stabilitu vozidla pri núdzovom brzdení.',
             'Kombinovanie rôznych značiek alebo typov platničiek na jednej náprave nie je vhodné, keďže majú rôzne trecie vlastnosti. Pri výmene odporúčame použiť rovnaký typ na oboch stranách nápravy.',
-            'Dolievaním starej brzdovej kvapaliny "len aby bola hladina v poriadku" problém s vlhkosťou v systéme nevyriešite, kvapalinu treba pri prekročení intervalu vymeniť celú, nie len doplniť.',
+            'Dolievaním starej brzdovej kvapaliny „len aby bola hladina v poriadku“ problém s vlhkosťou v systéme nevyriešite, kvapalinu treba pri prekročení intervalu vymeniť celú, nie len doplniť.',
         ],
     },
     {
@@ -169,7 +169,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Prečo pískajú aj nové brzdy?',
-                a: 'Nové platničky si potrebujú "zabehnúť" prvých pár desiatok kilometrov, po zabehnutí by mal zvuk zmiznúť. Ak pretrváva dlhšie, radi to skontrolujeme.',
+                a: 'Nové platničky si potrebujú „zabehnúť“ prvých pár desiatok kilometrov, po zabehnutí by mal zvuk zmiznúť. Ak pretrváva dlhšie, radi to skontrolujeme.',
             },
             {
                 q: 'Ako často meniť brzdovú kvapalinu?',

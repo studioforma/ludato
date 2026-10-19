@@ -92,7 +92,7 @@ const content: ServiceContent = [
         heading: 'Typy motorových olejov',
         paragraphs: [
             'Motorové oleje sa delia na minerálne, polosyntetické a syntetické. Minerálny olej je najlacnejší, ale najrýchlejšie stráca svoje vlastnosti a hodí sa len pre staršie, jednoduchšie motory. Polosyntetický olej je kompromisom medzi cenou a odolnosťou, syntetický olej si najdlhšie udrží správnu viskozitu aj pri vysokých teplotách a extrémnom zaťažení, preto ho predpisuje väčšina novších motorov.',
-            'Pri výbere oleja pre vaše vozidlo sa neriadime len týmto delením, ale hlavne normou a viskozitou, ktorú predpisuje výrobca. Použitie oleja, ktorý normu nespĺňa, môže aj pri "lepšom" oleji viesť k problémom, napríklad s filtrom pevných častíc pri naftových motoroch.',
+            'Pri výbere oleja pre vaše vozidlo sa neriadime len týmto delením, ale hlavne normou a viskozitou, ktorú predpisuje výrobca. Použitie oleja, ktorý normu nespĺňa, môže aj pri „lepšom“ oleji viesť k problémom, napríklad s filtrom pevných častíc pri naftových motoroch.',
         ],
     },
     {
@@ -122,7 +122,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Varovné signály, že olej treba vymeniť',
         paragraphs: [
-            'Tmavý, takmer čierny olej na mierke je bežným znakom, že olej už stráca svoje mazacie vlastnosti. Rozsvietená kontrolka oleja na palubnej doske je vážnejší signál, ktorý neznamená len "treba dolievať", ale často už aj problém s tlakom v mazacom okruhu. Oplatí sa ho overiť aj [počítačovou diagnostikou](/sluzby/pocitacova-diagnostika-bratislava).',
+            'Tmavý, takmer čierny olej na mierke je bežným znakom, že olej už stráca svoje mazacie vlastnosti. Rozsvietená kontrolka oleja na palubnej doske je vážnejší signál, ktorý neznamená len „treba dolievať“, ale často už aj problém s tlakom v mazacom okruhu. Oplatí sa ho overiť aj [počítačovou diagnostikou](/sluzby/pocitacova-diagnostika-bratislava).',
             'Zvýšená spotreba oleja medzi servismi, nezvyčajný hluk motora po nastartovaní alebo namodralý dym z výfuku môžu signalizovať opotrebenie motora, ktoré súvisí s dlhodobo zanedbanou výmenou oleja. V takom prípade odporúčame nečakať na najbližší plánovaný termín a prísť na kontrolu skôr.',
         ],
     },
@@ -130,8 +130,8 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Na čo si dať pozor',
         paragraphs: [
-            'Bežná chyba je odkladať výmenu oleja "ešte o kúsok ďalej", najmä pri aute, ktoré jazdí málo. Ako sme spomínali, olej starne aj časom, takže prekročenie ročného intervalu je rizikové aj pri nízkom počte kilometrov.',
-            'Pri dolievaní rôznych typov alebo výrobcov oleja medzi servismi sa vo väčšine prípadov nič nestane, no pri väčšom úbytku oleja odporúčame nechať si poradiť, aby ste dolievali kompatibilný olej a nie len "čo bolo doma v garáži".',
+            'Bežná chyba je odkladať výmenu oleja „ešte o kúsok ďalej“, najmä pri aute, ktoré jazdí málo. Ako sme spomínali, olej starne aj časom, takže prekročenie ročného intervalu je rizikové aj pri nízkom počte kilometrov.',
+            'Pri dolievaní rôznych typov alebo výrobcov oleja medzi servismi sa vo väčšine prípadov nič nestane, no pri väčšom úbytku oleja odporúčame nechať si poradiť, aby ste dolievali kompatibilný olej a nie len „čo bolo doma v garáži“.',
             'Zabudnutý alebo nevymenený vzduchový filter je tichý zlodej výkonu a paliva, motor totiž musí cez zanesený filter nasávať vzduch s väčšou námahou. Odporúčame ho kontrolovať pri každej väčšej servisnej návšteve, nielen pri výmene oleja.',
         ],
     },

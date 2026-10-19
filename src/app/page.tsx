@@ -28,7 +28,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <InlineCta
             heading="Potrebujete servis alebo prezutie?"
-            text="Nečakajte, kým sa z malej závady stane drahá oprava a kým prvý sneh zaplní všetky termíny. Zavolajte a dohodneme sa."
+            text="Nečakajte, kým sa z malej poruchy stane drahá oprava a kým prvý sneh zaplní všetky termíny. Zavolajte a dohodneme sa."
             points={[
               'Diagnostika riadiacej jednotky za 40 €',
               'Výmena oleja a olejového filtra od 35 €',
@@ -42,7 +42,7 @@ export default function Home() {
       <ServicesSection />
       <CtaBanner
         question="Počuli ste zvláštny zvuk spod auta?"
-        subtext="Nečakajte, kým sa z malej závady stane veľká. Zistíme presne, čo sa deje."
+        subtext="Nečakajte, kým sa z malej poruchy stane veľká. Zistíme presne, čo sa deje."
         secondaryHref="/nacenenie"
         secondaryLabel="Objednať sa"
       />

@@ -4,7 +4,7 @@ const content: ServiceContent = [
     {
         type: 'intro',
         paragraphs: [
-            'Klimatizácia potrebuje pravidelný servis, aj keď na prvý pohľad stále chladí. Chladivo časom mierne unikne aj z tesného okruhu, a s ním sa stráca aj olej, ktorý maže kompresor.',
+            'Klimatizácia potrebuje pravidelný servis, aj keď na prvý pohľad stále chladí. Chladivo časom mierne unikne aj z tesného okruhu a s ním sa stráca aj olej, ktorý maže kompresor.',
             'V Bratislave, Novom Meste, servisujeme klimatizácie pre staré aj nové chladivo, kontrolujeme tesnosť okruhu a riešime aj nepríjemný zápach z ventilácie, ktorý s chladením priamo nesúvisí, ale trápi rovnako veľa vodičov.',
         ],
     },
@@ -189,7 +189,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Môže klimatizácia bežať súčasne s kúrením?',
-                a: 'Áno, a v zime to dokonca odporúčame. Klimatizácia odoberá vzduchu vlhkosť, takže v kombinácii s kúrením rýchlejšie zbavíte okná zahmlievania.',
+                a: 'Áno, a v zime to dokonca odporúčame. Klimatizácia odoberá vzduchu vlhkosť, takže v kombinácii s kúrením rýchlejšie odstránite zahmlenie okien.',
             },
             {
                 q: 'Dá sa staršie vozidlo prerobiť na nové chladivo?',

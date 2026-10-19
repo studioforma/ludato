@@ -175,7 +175,7 @@ export default function OchranaOsobnychUdajov() {
                             <li>získať prístup k svojim údajom a ich kópiu,</li>
                             <li>požiadať o opravu nesprávnych údajov,</li>
                             <li>požiadať o vymazanie údajov alebo obmedzenie ich spracúvania,</li>
-                            <li>namietať proti spracúvaniu a na prenosnosť údajov,</li>
+                            <li>namietať proti spracúvaniu údajov a preniesť si ich k inému prevádzkovateľovi,</li>
                             <li>kedykoľvek odvolať súhlas s cookies.</li>
                         </ul>
                         <p>

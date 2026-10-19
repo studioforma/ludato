@@ -42,7 +42,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Vyváženie kolies',
-                text: 'Nevyvážené koleso spôsobuje pri vyšších rýchlostiach vibrácie volantu alebo karosérie a zbytočne zaťažuje ložiská aj tlmiče. Preto každé koleso pri prezutí vyvažujeme na presnom stroji, aj keď si vyváženie zákazník výslovne nepýta, je to u nás prirodzená súčasť poctivého prezutia.',
+                text: 'Nevyvážené koleso spôsobuje pri vyšších rýchlostiach vibrácie volantu alebo karosérie a zbytočne zaťažuje ložiská aj tlmiče. Preto každé koleso pri prezutí vyvažujeme na presnom stroji, aj keď si vyváženie zákazník výslovne nepýta. Je to u nás prirodzená súčasť poctivého prezutia.',
             },
             {
                 title: 'Prehodenie kolies medzi nápravami',
@@ -58,7 +58,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Sezónne uskladnenie pneumatík',
-                text: 'Ak nemáte doma vhodné miesto na uskladnenie druhej sady pneumatík, radi vám ju uskladníme priamo u nás. Pri ďalšom prezutí vám už len vymeníme aktuálnu sadu za tú uskladnenú, nemusíte nič vláčiť ani riešiť skladovanie doma.',
+                text: 'Druhú sadu vám za 40 € na sezónu uskladníme u nás a pri ďalšom prezutí ju budete mať pripravenú. Ako to funguje, nájdete na stránke [uskladnenie pneumatík](/sluzby/uskladnenie-pneumatik-bratislava).',
             },
             {
                 title: 'Výmena ventilčekov',
@@ -141,7 +141,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Ponúkate aj uskladnenie pneumatík?',
-                a: 'Áno, sezónne uskladnenie pneumatík stojí 40 € za sezónu.',
+                a: 'Áno, sezónne uskladnenie pneumatík stojí 40 € za sezónu. Podrobnosti nájdete na stránke o uskladnení pneumatík.',
             },
             {
                 q: 'Opravíte defekt na pneumatike?',

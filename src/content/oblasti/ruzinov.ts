@@ -10,7 +10,7 @@ const content: ServiceContent = [
     },
     {
         type: 'cta',
-        heading: 'Ťahá vám auto po obrubníkoch do strany?',
+        heading: 'Ťahá vám auto po náraze do obrubníka do strany?',
         text: 'Parkovanie na sídlisku a výtlky nenápadne rozladia geometriu a zjedajú pneumatiky. Skontrolujeme to skôr, než budete meniť novú sadu.',
         points: [
             'Kontrola geometrie za 16 €',

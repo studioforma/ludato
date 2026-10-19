@@ -85,7 +85,7 @@ const content: ServiceContent = [
         paragraphs: [
             'Batéria sa dobíja počas jazdy z alternátora. Pri štartovaní z nej motor odoberie veľa energie a krátka jazda po centre ju nestihne doplniť. Ak sa takto jazdí dlhodobo, batéria je stále čiastočne vybitá, rýchlejšie starne a v zime ju mráz vie úplne vyradiť.',
             'Ak auto stojí niekoľko dní na ulici, batéria sa navyše pomaly vybíja aj sama, pretože časť elektroniky v aute odoberá prúd aj pri vypnutom motore. Prvým signálom je pomalšie otáčanie štartéra pri štartovaní. Vtedy je čas batériu skontrolovať, skôr než vás nechá stáť. Výmena batérie u nás stojí od 30 €.',
-            'Moderné autá so systémom štart a stop majú špeciálne batérie a pri ich výmene treba dodržať správny typ. Pri výmene vám povieme, aká batéria do vášho auta patrí, aby fungovala spoľahlivo aj pri častom štartovaní v mestskej premávke.',
+            'Moderné autá so systémom štart-stop majú špeciálne batérie a pri ich výmene treba dodržať správny typ. Pri výmene vám povieme, aká batéria do vášho auta patrí, aby fungovala spoľahlivo aj pri častom štartovaní v mestskej premávke.',
         ],
     },
     {

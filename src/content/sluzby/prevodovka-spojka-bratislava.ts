@@ -59,7 +59,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Príznaky opotrebovanej spojky',
         paragraphs: [
-            'Najznámejším príznakom je prekĺzavanie. Pri zrýchľovaní, hlavne na vyšší prevodový stupeň alebo do kopca, otáčky motora vyskočia, ale auto sa nepohne rýchlejšie. Často je cítiť aj zápach spáleného obloženia. Ďalším signálom je spojka, ktorá zaberá vysoko, až na konci pedála.',
+            'Najznámejším príznakom je prekĺzavanie. Pri zrýchľovaní, hlavne na vyššom prevodovom stupni alebo do kopca, otáčky motora vyskočia, ale auto sa nepohne rýchlejšie. Často je cítiť aj zápach spáleného obloženia. Ďalším signálom je spojka, ktorá zaberá vysoko, až na konci pedála.',
             'Spojka sa ohlasuje aj inak: pedál ide ťažšie alebo sa nevracia, pri rozbehu auto trhá, ozýva sa pískanie alebo hrkotanie pri stlačení pedála, alebo sa nedá plynule zaradiť. Niektoré z týchto príznakov môže spôsobiť aj hydraulika spojky, preto auto najprv skontrolujeme a až potom navrhneme opravu.',
         ],
     },
@@ -102,7 +102,7 @@ const content: ServiceContent = [
         heading: 'Ako predĺžiť životnosť spojky',
         paragraphs: [
             'Nedržte nohu na pedáli spojky, keď ho nepotrebujete, a nečakajte na semafore so stlačenou spojkou a zaradenou jednotkou. Aj ľahký tlak na pedál opotrebúva vysúvacie ložisko. Pri rozbehu nepridávajte zbytočne veľa plynu a nedržte auto v kopci na spojke, na to slúži brzda.',
-            'Pri radení zošliapnite spojku celú a nepreskakujte prevodové stupne s veľkými otáčkami. Pri autách s dvojhmotovým zotrvačníkom sa vyhnite jazde v príliš nízkych otáčkach na vysoký prevodový stupeň, kde motor "dusí". Takáto jazda zotrvačník zaťažuje viac než čokoľvek iné.',
+            'Pri radení zošliapnite spojku celú a nepreskakujte prevodové stupne s veľkými otáčkami. Pri autách s dvojhmotovým zotrvačníkom sa vyhnite jazde v príliš nízkych otáčkach na vysokom prevodovom stupni, kde motor „dusí“. Takáto jazda zotrvačník zaťažuje viac než čokoľvek iné.',
         ],
     },
     {
