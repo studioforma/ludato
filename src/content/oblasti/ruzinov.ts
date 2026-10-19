@@ -75,7 +75,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo si nás vyberajú vodiči z Ružinova',
         paragraphs: [
-            'Nie sme anonymná pobočka veľkej siete, ale rodinný servis. O auto sa stará ten, s kým sa rozprávate. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 40 recenzií.',
+            'Nie sme anonymná pobočka veľkej siete, ale rodinný servis. O auto sa stará ten, s kým sa rozprávate. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 50 recenzií.',
             'Ceny sú zverejnené v [cenníku](/cennik) a pred každou opravou vám povieme, čo sme našli a koľko to bude stáť. Ak sa oprava predĺži, požičiame vám [náhradné vozidlo](/sluzby/nahradne-vozidlo-bratislava) za 35 € na deň.',
         ],
     },

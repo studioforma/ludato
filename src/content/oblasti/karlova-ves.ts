@@ -75,7 +75,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo sa oplatí prejsť cez mesto',
         paragraphs: [
-            'Sme rodinný servis. O auto sa stará ten, s kým sa rozprávate, a vždy vám vysvetlíme, čo sme našli. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 40 recenzií.',
+            'Sme rodinný servis. O auto sa stará ten, s kým sa rozprávate, a vždy vám vysvetlíme, čo sme našli. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 50 recenzií.',
             'Ceny sú zverejnené v [cenníku](/cennik) a pred opravou vám povieme, koľko bude stáť. Žiadne prekvapenia na faktúre.',
             'Ak sa vám cesta cez mesto nehodí, nemusíte ju absolvovať vôbec. Auto vyzdvihneme, opravíme a vy medzitým jazdíte náhradným vozidlom, takže vzdialenosť prestane hrať rolu.',
         ],
