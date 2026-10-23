@@ -36,6 +36,8 @@ export default function QuotePage() {
         name: '',
         email: '',
         phone: '',
+        car: '',
+        plate: '',
     });
 
     // ?sluzba=prezutie from a service page CTA pre-selects that service.
@@ -70,6 +72,8 @@ export default function QuotePage() {
         const selectedServices = formState.services.join(', ');
         const fullMessage = `
 Vybrané služby: ${selectedServices || 'Žiadne'}
+Auto: ${formState.car || 'Neuvedené'}
+EČV: ${formState.plate || 'Neuvedené'}
 Vlastný materiál: ${formState.bringOwnMaterial}
 Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
         `.trim();
@@ -268,6 +272,36 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                             className={inputClass}
                                             style={{ fontFamily: 'var(--font-inter)' }}
                                         />
+                                    </div>
+
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                                Auto (značka a model)
+                                            </label>
+                                            <input
+                                                type="text"
+                                                value={formState.car}
+                                                onChange={(e) => setFormState(prev => ({ ...prev, car: e.target.value }))}
+                                                placeholder="napr. Škoda Octavia 2.0 TDI"
+                                                className={inputClass}
+                                                style={{ fontFamily: 'var(--font-inter)' }}
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                                EČV
+                                            </label>
+                                            <input
+                                                type="text"
+                                                value={formState.plate}
+                                                onChange={(e) => setFormState(prev => ({ ...prev, plate: e.target.value.toUpperCase() }))}
+                                                placeholder="BA123XY"
+                                                maxLength={10}
+                                                className={inputClass}
+                                                style={{ fontFamily: 'var(--font-inter)' }}
+                                            />
+                                        </div>
                                     </div>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
