@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import OnlineBookingLink from '@/components/OnlineBookingLink';
 import { getOrderPrefill } from '@/lib/orderPrefill';
@@ -110,26 +109,12 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
     const labelClass = 'block text-white/60 text-xs tracking-widest uppercase mb-2';
 
     return (
-        <div className="min-h-screen bg-[#111111] pt-20 py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden flex flex-col items-center justify-center">
+        <div className="min-h-screen bg-[#111111] pt-32 lg:pt-40 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden flex flex-col items-center">
             <Navbar />
 
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-[#E31C25]/5 to-transparent mix-blend-screen pointer-events-none" />
             <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#E31C25]/5 rounded-full blur-3xl pointer-events-none" />
-
-            {/* Back link */}
-            <div className="w-full max-w-3xl mb-8 relative z-10">
-                <Link
-                    href="/"
-                    className="inline-flex items-center gap-2 text-white/40 hover:text-[#E31C25] text-xs tracking-widest uppercase transition-colors"
-                    style={{ fontFamily: 'var(--font-montserrat)' }}
-                >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
-                    </svg>
-                    Späť na hlavnú stránku
-                </Link>
-            </div>
 
             <div className="bg-[#1D1D1B] border border-white/10 p-8 sm:p-12 w-full max-w-3xl relative z-10 rounded-sm shadow-2xl">
 
