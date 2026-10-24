@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
+import OnlineBookingLink from '@/components/OnlineBookingLink';
 import { getOrderPrefill } from '@/lib/orderPrefill';
 
 const servicesOptions = [
@@ -146,6 +147,20 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                     >
                         OBJEDNAŤ <span className="text-[#E31C25]">SA</span>
                     </h1>
+                </div>
+
+                {/* Bookable services go straight to the Termino calendar */}
+                <div
+                    className="mb-10 border border-[#E31C25]/40 bg-[#E31C25]/10 rounded-sm px-5 py-4 text-center text-sm text-white/80"
+                    style={{ fontFamily: 'var(--font-inter)' }}
+                >
+                    Pneuservis, výmena oleja, diagnostika alebo klimatizácia? Termín si môžete vybrať rovno v našom kalendári.{' '}
+                    <OnlineBookingLink
+                        placement="nacenenie"
+                        className="font-semibold text-white underline decoration-[#E31C25] underline-offset-4 hover:text-[#FF5A60] whitespace-nowrap"
+                    >
+                        Rezervovať online →
+                    </OnlineBookingLink>
                 </div>
 
                 {/* Progress bar */}

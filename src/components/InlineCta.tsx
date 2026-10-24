@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import RichText from '@/components/service/RichText';
 import { GOOGLE_RATING, GOOGLE_REVIEWS, REPAIRED_CARS } from '@/lib/trust';
+import { hasOnlineBooking } from '@/lib/booking';
+import OnlineBookingLink from '@/components/OnlineBookingLink';
 
 export type InlineCtaProps = {
     heading: string;
@@ -9,12 +11,18 @@ export type InlineCtaProps = {
     points?: string[];
     secondaryHref: string;
     secondaryLabel: string;
+    /**
+     * Shows the "book online" link. Defaults to on when secondaryHref points to
+     * a service bookable in Termino (pneuservis, olej, diagnostika, klimatizácia).
+     */
+    onlineBooking?: boolean;
 };
 
 // Red call-to-action box used inside service pages and the area page. The
 // phone is written exactly as 0944 236 257 so Google Ads call tracking
 // can swap it (see README).
-export default function InlineCta({ heading, text, points, secondaryHref, secondaryLabel }: InlineCtaProps) {
+export default function InlineCta({ heading, text, points, secondaryHref, secondaryLabel, onlineBooking }: InlineCtaProps) {
+    const showBooking = onlineBooking ?? hasOnlineBooking(secondaryHref);
     return (
         <aside className="mb-14 relative overflow-hidden rounded-sm bg-[#E31C25] px-6 py-8 sm:px-12 sm:py-12 shadow-[0_20px_60px_rgba(227,28,37,0.25)]">
             {/* Slash accent, same motif as the rest of the site */}
@@ -101,6 +109,14 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                     >
                         {secondaryLabel}
                     </Link>
+                    {showBooking && (
+                        <OnlineBookingLink
+                            placement="cta"
+                            className="text-center text-white text-sm font-semibold underline decoration-white/50 underline-offset-4 hover:decoration-white"
+                        >
+                            Vyberte si termín online v kalendári →
+                        </OnlineBookingLink>
+                    )}
                 </div>
             </div>
         </aside>

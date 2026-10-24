@@ -36,6 +36,7 @@ export default function Home() {
             ]}
             secondaryHref="/nacenenie"
             secondaryLabel="Objednať sa"
+            onlineBooking
           />
         </div>
       </section>
