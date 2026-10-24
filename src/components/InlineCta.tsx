@@ -102,20 +102,6 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                         </svg>
                         0944 236 257
                     </a>
-                    {/* Bookable services: pick a slot in Termino, or get a quote via the form */}
-                    {showBooking && (
-                        <OnlineBookingLink
-                            placement="cta"
-                            className="sm:flex-1 lg:flex-none inline-flex items-center justify-center gap-2 bg-[#1D1D1B] hover:bg-black text-white font-bold px-7 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
-                            style={{ fontFamily: 'var(--font-montserrat)' }}
-                        >
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <rect x="3" y="5" width="18" height="16" rx="2" strokeWidth={2} />
-                                <path strokeLinecap="round" strokeWidth={2} d="M3 10h18M8 3v4M16 3v4" />
-                            </svg>
-                            Objednať sa online
-                        </OnlineBookingLink>
-                    )}
                     <Link
                         href={secondaryHref}
                         className="sm:flex-1 lg:flex-none inline-flex items-center justify-center border border-white/60 hover:border-white hover:bg-white/10 text-white font-semibold px-7 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300 whitespace-nowrap"
@@ -123,6 +109,15 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                     >
                         {showBooking ? 'Naceniť zákrok' : secondaryLabel}
                     </Link>
+                    {/* Bookable services: text link to the Termino calendar under the buttons */}
+                    {showBooking && (
+                        <OnlineBookingLink
+                            placement="cta"
+                            className="basis-full text-center text-white text-sm font-semibold underline decoration-white/50 underline-offset-4 hover:decoration-white"
+                        >
+                            Objednať sa online →
+                        </OnlineBookingLink>
+                    )}
                 </div>
             </div>
         </aside>
