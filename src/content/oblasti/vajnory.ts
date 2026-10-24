@@ -75,7 +75,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo k nám chodia aj z Vajnor',
         paragraphs: [
-            'Sme rodinný servis, kde sa rozprávate priamo s tým, kto robí na vašom aute. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 40 recenzií.',
+            'Sme rodinný servis, kde sa rozprávate priamo s tým, kto robí na vašom aute. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 50 recenzií.',
             'Ceny máme zverejnené v [cenníku](/cennik) a pred každou väčšou opravou vám povieme, čo treba urobiť a koľko to bude stáť. Nemusíte sa báť, že na faktúre nájdete niečo, o čom ste nevedeli.',
         ],
     },

@@ -75,7 +75,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo si nás vyberajú vodiči z Kramárov',
         paragraphs: [
-            'Sme blízko a sme rodinný servis, nie anonymná sieť. O vašom aute sa rozprávate priamo s ľuďmi, ktorí na ňom robia, a cenu opravy poznáte ešte pred začatím práce. Na Google máme hodnotenie 5,0 od viac ako 40 zákazníkov a za sebou cez 1 200 opravených áut.',
+            'Sme blízko a sme rodinný servis, nie anonymná sieť. O vašom aute sa rozprávate priamo s ľuďmi, ktorí na ňom robia, a cenu opravy poznáte ešte pred začatím práce. Na Google máme hodnotenie 5,0 od viac ako 50 zákazníkov a za sebou cez 1 200 opravených áut.',
         ],
     },
     {

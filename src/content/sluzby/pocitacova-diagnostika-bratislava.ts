@@ -5,7 +5,7 @@ const content: ServiceContent = [
         type: 'intro',
         paragraphs: [
             'Počítačová diagnostika je prvý krok pri väčšine modernejších opráv. Vozidlá dnes majú desiatky riadiacich jednotiek, ktoré si medzi sebou vymieňajú informácie, a diagnostika nám povie, kde presne systém hlási problém.',
-            'V Bratislave, Novom Meste, vieme diagnostiku spustiť na vozidlách všetkých značiek. Dôležité je ale povedať si na rovinu, čo diagnostika vie a čo nie, chybový kód je začiatok hľadania príčiny, nie samotná diagnóza.',
+            'V Bratislave, Novom Meste, vieme diagnostiku spustiť na vozidlách všetkých značiek. Dôležité je ale povedať si na rovinu, čo diagnostika vie a čo nie: chybový kód je začiatok hľadania príčiny, nie samotná diagnóza.',
         ],
     },
     {
@@ -50,7 +50,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Elektronika a osvetlenie',
-                text: 'Kontrolujeme funkčnosť svetiel, senzorov a ďalších elektronických modulov. Časté sú problémy so žiarovkami, poistkami alebo konektorami, ktoré sa navonok prejavia ako "záhadná" chyba.',
+                text: 'Kontrolujeme funkčnosť svetiel, senzorov a ďalších elektronických modulov. Časté sú problémy so žiarovkami, poistkami alebo konektorami, ktoré sa navonok prejavia ako „záhadná“ chyba.',
             },
         ],
     },
@@ -59,7 +59,7 @@ const content: ServiceContent = [
         heading: 'Čo diagnostika vie a čo nie',
         paragraphs: [
             'Diagnostika vie povedať, ktorý systém a ktorý senzor nahlásil odchýlku od bežných hodnôt a v akých podmienkach sa to stalo. Nevie ale vždy povedať presnú príčinu, tá istá chyba môže mať viacero rôznych príčin.',
-            'Chybový kód "porucha snímača" napríklad nemusí znamenať, že je snímač pokazený, môže ísť aj o poškodenú kabeláž k nemu, uvoľnený konektor alebo problém v úplne inej časti systému, ktorá snímač len ovplyvňuje. Presne preto k diagnostike vždy pristupujeme ako k prvému kroku, nie k finálnej odpovedi.',
+            'Chybový kód „porucha snímača“ napríklad nemusí znamenať, že je snímač pokazený, môže ísť aj o poškodenú kabeláž k nemu, uvoľnený konektor alebo problém v úplne inej časti systému, ktorá snímač len ovplyvňuje. Presne preto k diagnostike vždy pristupujeme ako k prvému kroku, nie k finálnej odpovedi.',
         ],
     },
     {
@@ -88,7 +88,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Kedy je čas na diagnostiku',
         paragraphs: [
-            'Najčastejší dôvod je rozsvietená kontrolka na palubnej doske, "check engine" alebo iná. Rovnako sa oplatí diagnostiku spustiť pri nepravidelnom chode motora, strate výkonu, zvýšenej spotrebe alebo keď vozidlo robí niečo, čo predtým nerobilo.',
+            'Najčastejší dôvod je rozsvietená kontrolka na palubnej doske, „check engine“ alebo iná. Rovnako sa oplatí diagnostiku spustiť pri nepravidelnom chode motora, strate výkonu, zvýšenej spotrebe alebo keď vozidlo robí niečo, čo predtým nerobilo.',
             'Diagnostiku odporúčame aj pri kúpe jazdeného vozidla, ukáže vám, či niekto pred predajom nevymazal chyby, ktoré by sa mohli po čase objaviť znova.',
         ],
     },
@@ -118,7 +118,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Dobíjanie batérie',
-                text: 'Kontrolka batérie zvyčajne neznamená chybu samotnej batérie, ale problém s dobíjaním, najčastejšie alternátor alebo jeho remeň. Vozidlo vtedy ide na zvyšok energie v batérii a po čase sa jednoducho zastaví.',
+                text: 'Kontrolka batérie zvyčajne neznamená chybu samotnej batérie, ale problém s dobíjaním, najčastejšie s alternátorom alebo jeho remeňom. Vozidlo vtedy ide na zvyšok energie v batérii a po čase sa jednoducho zastaví.',
             },
         ],
     },
@@ -127,7 +127,7 @@ const content: ServiceContent = [
         heading: 'Na čo si dať pozor',
         paragraphs: [
             'Blikajúca kontrolka motora je vážnejší signál než trvalo svietiaca, zvyčajne znamená aktívnu poruchu, napríklad vynechávanie zapaľovania. V takom prípade odporúčame prestať jazdiť vo vyšších otáčkach a nechať vozidlo skontrolovať čo najskôr.',
-            'Vymazanie chyby bez zistenia príčiny je len dočasné riešenie, kontrolka sa po čase rozsvieti znova a niekedy sa medzitým problém ešte zhorší. Rovnako platí, že jedna chyba môže spôsobiť "reťaz" ďalších chybových hlášok v iných systémoch, preto pri diagnostike vždy hľadáme pôvodnú príčinu, nie len najnovšiu hlášku.',
+            'Vymazanie chyby bez zistenia príčiny je len dočasné riešenie, kontrolka sa po čase rozsvieti znova a niekedy sa medzitým problém ešte zhorší. Rovnako platí, že jedna chyba môže spôsobiť „reťaz“ ďalších chybových hlášok v iných systémoch, preto pri diagnostike vždy hľadáme pôvodnú príčinu, nie len najnovšiu hlášku.',
         ],
     },
     {

@@ -89,9 +89,9 @@ export default function AboutSection() {
                             </p>
                             <p>
                                 Autám rozumiem a prácu na nich beriem osobne. Namiesto veľkých
-                                korporátnych fráz a &quot;najmodernejších technológií&quot; tu nájdete
+                                korporátnych fráz a „najmodernejších technológií“ tu nájdete
                                 úprimnosť, poctivú údržbu a férové ceny. Vždy viete, s kým
-                                jednáte a čo presne sa s vaším autom deje.
+                                máte do činenia a čo presne sa s vaším autom deje.
                             </p>
                             <p>
                                 Od otvorenia servisu sme opravili viac ako 1 200 áut a takmer dve
@@ -209,7 +209,7 @@ export default function AboutSection() {
                                 className="mt-8 text-white/30 text-sm leading-relaxed italic"
                                 style={{ fontFamily: 'var(--font-inter)' }}
                             >
-                                &ldquo;Rodina je to, čo nás ženie vpred, a preto nesie aj náš servis ich mená.&rdquo;
+                                „Rodina je to, čo nás ženie vpred, a preto nesie aj náš servis ich mená.“
                             </p>
                         </div>
                     </div>

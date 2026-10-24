@@ -155,7 +155,7 @@ export const services: ServiceMeta[] = [
         title: 'STK a EK Bratislava – Nové Mesto | Kontrola 50 €, sprostredkovanie 150 € | Ludato Family Autoservis',
         description:
             'Príprava a sprostredkovanie STK a EK v Bratislave, Novom Meste. Kontrola pred STK od 50 €, kompletné sprostredkovanie za 150 €.',
-        teaser: 'Kontrola pred STK aj kompletné sprostredkovanie, aby ste na kontrolu prešli na prvýkrát.',
+        teaser: 'Kontrola pred STK aj kompletné sprostredkovanie, aby ste kontrolou prešli na prvýkrát.',
         category: 'specialne',
         related: ['kontrola-pred-kupou-bratislava', 'brzdy-bratislava', 'podvozok-bratislava', 'pocitacova-diagnostika-bratislava'],
         cta: {

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import RichText from '@/components/service/RichText';
 import { GOOGLE_RATING, GOOGLE_REVIEWS, REPAIRED_CARS } from '@/lib/trust';
+import { hasOnlineBooking } from '@/lib/booking';
+import OnlineBookingLink from '@/components/OnlineBookingLink';
 
 export type InlineCtaProps = {
     heading: string;
@@ -9,12 +11,18 @@ export type InlineCtaProps = {
     points?: string[];
     secondaryHref: string;
     secondaryLabel: string;
+    /**
+     * Shows the "book online" link. Defaults to on when secondaryHref points to
+     * a service bookable in Termino (pneuservis, olej, diagnostika, klimatizácia).
+     */
+    onlineBooking?: boolean;
 };
 
 // Red call-to-action box used inside service pages and the area page. The
 // phone is written exactly as 0944 236 257 so Google Ads call tracking
 // can swap it (see README).
-export default function InlineCta({ heading, text, points, secondaryHref, secondaryLabel }: InlineCtaProps) {
+export default function InlineCta({ heading, text, points, secondaryHref, secondaryLabel, onlineBooking }: InlineCtaProps) {
+    const showBooking = onlineBooking ?? hasOnlineBooking(secondaryHref);
     return (
         <aside className="mb-14 relative overflow-hidden rounded-sm bg-[#E31C25] px-6 py-8 sm:px-12 sm:py-12 shadow-[0_20px_60px_rgba(227,28,37,0.25)]">
             {/* Slash accent, same motif as the rest of the site */}
@@ -83,10 +91,10 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                         </span>
                     </div>
                 </div>
-                <div className="relative flex flex-col sm:flex-row lg:flex-col gap-3 lg:min-w-[280px]">
+                <div className="relative flex flex-col sm:flex-row sm:flex-wrap lg:flex-col lg:flex-nowrap gap-3 lg:min-w-[280px]">
                     <a
                         href="tel:+421944236257"
-                        className="inline-flex items-center justify-center gap-3 bg-white hover:bg-[#1D1D1B] text-[#E31C25] hover:text-white font-bold px-7 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300 hover:-translate-y-0.5"
+                        className="sm:flex-1 lg:flex-none inline-flex items-center justify-center gap-3 bg-white hover:bg-[#1D1D1B] text-[#E31C25] hover:text-white font-bold px-7 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300 hover:-translate-y-0.5"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -96,11 +104,20 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                     </a>
                     <Link
                         href={secondaryHref}
-                        className="inline-flex items-center justify-center border border-white/60 hover:border-white hover:bg-white/10 text-white font-semibold px-7 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300"
+                        className="sm:flex-1 lg:flex-none inline-flex items-center justify-center border border-white/60 hover:border-white hover:bg-white/10 text-white font-semibold px-7 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300 whitespace-nowrap"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        {secondaryLabel}
+                        {showBooking ? 'Naceniť zákrok' : secondaryLabel}
                     </Link>
+                    {/* Bookable services: text link to the Termino calendar under the buttons */}
+                    {showBooking && (
+                        <OnlineBookingLink
+                            placement="cta"
+                            className="basis-full text-center text-white text-sm font-semibold underline decoration-white/50 underline-offset-4 hover:decoration-white"
+                        >
+                            Objednať sa online →
+                        </OnlineBookingLink>
+                    )}
                 </div>
             </div>
         </aside>

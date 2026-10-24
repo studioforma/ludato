@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import SocialIcons from '@/components/SocialIcons';
+import OnlineBookingLink from '@/components/OnlineBookingLink';
 
 const navLinks = [
     { href: '/sluzby', label: 'Služby' },
@@ -65,6 +66,16 @@ export default function Navbar() {
                             </svg>
                             0944 236 257
                         </a>
+                        <OnlineBookingLink
+                            placement="nap"
+                            className="hidden md:flex items-center gap-1.5 text-white font-semibold hover:text-[#FF5A60] transition-colors whitespace-nowrap"
+                        >
+                            <svg className="w-3.5 h-3.5 text-[#E31C25]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="5" width="18" height="16" rx="2" strokeWidth={2} />
+                                <path strokeLinecap="round" strokeWidth={2} d="M3 10h18M8 3v4M16 3v4" />
+                            </svg>
+                            Online rezervácia
+                        </OnlineBookingLink>
                     </div>
                     <SocialIcons className="flex-shrink-0 text-white" iconClassName="w-4 h-4" />
                 </div>
@@ -149,6 +160,13 @@ export default function Navbar() {
                                     {link.label}
                                 </Link>
                             ))}
+                            <OnlineBookingLink
+                                placement="mobile-menu"
+                                className="text-white/90 hover:text-[#E31C25] font-semibold tracking-widest uppercase text-sm py-2 border-b border-white/10 transition-colors"
+                                style={{ fontFamily: 'var(--font-montserrat)' }}
+                            >
+                                Online rezervácia ↗
+                            </OnlineBookingLink>
                             <a
                                 href="tel:+421944236257"
                                 onClick={() => setMenuOpen(false)}

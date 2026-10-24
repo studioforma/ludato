@@ -3,6 +3,7 @@ import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
 import CallNumberSwap from "@/components/CallNumberSwap";
+import PhoneClickTracking from "@/components/PhoneClickTracking";
 import StickyCallBar from "@/components/StickyCallBar";
 import { services } from "@/lib/services";
 import { SITE, BUSINESS_ID, areaServedSchema } from "@/lib/schema";
@@ -245,6 +246,7 @@ export default function RootLayout({
         <CookieBanner />
         <StickyCallBar />
         <CallNumberSwap />
+        <PhoneClickTracking />
       </body>
     </html>
   );
