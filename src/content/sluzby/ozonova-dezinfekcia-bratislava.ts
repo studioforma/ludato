@@ -89,7 +89,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Bezpečnosť',
         paragraphs: [
-            'Ozón vo vyššej koncentrácii nie je vhodný na dýchanie, preto počas zákroku v aute nikto nie je a po zákroku auto dôkladne vyvetráme. Keď si auto preberáte, ozón už v ňom nepôsobí. Po zákroku môžete chvíľu cítiť typickú "čerstvú" vôňu, ktorá rýchlo vyprchá.',
+            'Ozón vo vyššej koncentrácii nie je vhodný na dýchanie, preto počas zákroku v aute nikto nie je a po zákroku auto dôkladne vyvetráme. Keď si auto preberáte, ozón už v ňom nepôsobí. Po zákroku môžete chvíľu cítiť typickú „čerstvú“ vôňu, ktorá rýchlo vyprchá.',
             'Ozónovú dezinfekciu nerobte doma sami s lacnými generátormi bez skúseností. Pri nesprávnom použití môže vysoká koncentrácia ozónu dráždiť dýchacie cesty.',
         ],
     },

@@ -75,7 +75,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo sa oplatí prejsť cez mesto',
         paragraphs: [
-            'Sme rodinný servis. O auto sa stará ten, s kým sa rozprávate, a vždy vám vysvetlíme, čo sme našli. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 40 recenzií.',
+            'Sme rodinný servis. O auto sa stará ten, s kým sa rozprávate, a vždy vám vysvetlíme, čo sme našli. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 50 recenzií.',
             'Ceny sú zverejnené v [cenníku](/cennik) a pred opravou vám povieme, koľko bude stáť. Žiadne prekvapenia na faktúre.',
             'Ak sa vám cesta cez mesto nehodí, nemusíte ju absolvovať vôbec. Auto vyzdvihneme, opravíme a vy medzitým jazdíte náhradným vozidlom, takže vzdialenosť prestane hrať rolu.',
         ],
@@ -117,7 +117,7 @@ const content: ServiceContent = [
         paragraphs: [
             'Na jeseň odporúčame prezutie ešte pred prvým mrazom, kopcovité ulice v Karlovej Vsi bývajú namrznuté skôr než rovinaté časti mesta. Pri prezutí rovno skontrolujeme aj brzdy, ktoré sú pri zložených kolesách dobre vidieť.',
             'Na jar po zime je vhodný čas na kontrolu podvozku a bŕzd. Posyp a výtlky im cez zimu dajú zabrať a v kopcoch sa opotrebenie prejaví skôr.',
-            'Pred letom sa oplatí skontrolovať klimatizáciu a pred dlhšou cestou aj kvapaliny a brzdy. Kontrola vozidla pred cestou vás môže ušetriť od poruchy ďaleko od domova.',
+            'Pred letom sa oplatí skontrolovať klimatizáciu a pred dlhšou cestou aj kvapaliny a brzdy. Kontrola vozidla pred cestou vás môže uchrániť pred poruchou ďaleko od domova.',
         ],
     },
     {

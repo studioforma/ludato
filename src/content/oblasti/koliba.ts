@@ -75,7 +75,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Prečo si nás vyberajú vodiči z Koliby',
         paragraphs: [
-            'Sme blízko, v rovnakej mestskej časti, a sme rodinný servis. O vašom aute sa rozprávate priamo s ľuďmi, ktorí na ňom robia, a cenu opravy poznáte vopred. Na Google máme hodnotenie 5,0 od viac ako 40 zákazníkov a za sebou cez 1 200 opravených áut.',
+            'Sme blízko, v rovnakej mestskej časti, a sme rodinný servis. O vašom aute sa rozprávate priamo s ľuďmi, ktorí na ňom robia, a cenu opravy poznáte vopred. Na Google máme hodnotenie 5,0 od viac ako 50 zákazníkov a za sebou cez 1 200 opravených áut.',
         ],
     },
     {

@@ -123,7 +123,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Ako vstrekovače chrániť',
         paragraphs: [
-            'Najväčším nepriateľom vstrekovačov je nekvalitné alebo znečistené palivo. Tankujte na overených čerpacích staniciach a nejazdite dlhodobo na rezervu, keď sa môžu z nádrže nasať usadeniny. Pravidelne meňte palivový filter, ktorý je súčasťou nášho [kompletného servisu pri výmene oleja](/sluzby/vymena-oleja-bratislava).',
+            'Najväčším nepriateľom vstrekovačov je nekvalitné alebo znečistené palivo. Tankujte na overených čerpacích staniciach a nejazdite dlhodobo na rezerve, pretože vtedy sa môžu z nádrže nasať usadeniny. Pravidelne meňte palivový filter, ktorý je súčasťou nášho [kompletného servisu pri výmene oleja](/sluzby/vymena-oleja-bratislava).',
             'Pri naftových motoroch sa vstrekovačom darí lepšie, keď motor pravidelne dostane poriadne zabrať, napríklad pri dlhšej jazde po diaľnici. Prevažne krátke trasy po meste, kde motor nedosiahne prevádzkovú teplotu, prispievajú k usadzovaniu karbónu.',
         ],
     },

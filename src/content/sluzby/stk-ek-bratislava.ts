@@ -5,7 +5,7 @@ const content: ServiceContent = [
         type: 'intro',
         paragraphs: [
             'STK a emisná kontrola sú pre väčšinu vodičov najmenej obľúbená povinnosť roka, hlavne keď auto neprejde na prvý pokus a musíte prísť znova. V Bratislave, Novom Meste, vám vieme vozidlo pripraviť tak, aby prešlo na prvýkrát, alebo vám celú kontrolu aj sprostredkovať.',
-            'Ponúkame dve úrovne, kontrolu pred STK a EK, kde vám povieme presne, čo treba opraviť, alebo kompletné sprostredkovanie, kde sa o všetko postaráme za vás.',
+            'Ponúkame dve úrovne: kontrolu pred STK a EK, kde vám povieme presne, čo treba opraviť, alebo kompletné sprostredkovanie, kde sa o všetko postaráme za vás.',
         ],
     },
     {
@@ -65,7 +65,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Objednanie a odvoz na stanicu',
-                text: 'Dohodneme termín na stanici technickej kontroly a vozidlo tam zabezpečíme dopraviť.',
+                text: 'Dohodneme termín na stanici technickej kontroly a zabezpečíme aj dopravu vozidla.',
             },
             {
                 title: 'Vyzdvihnutie s hotovým výsledkom',
@@ -169,7 +169,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Ako dlho to trvá?',
-                a: 'Kontrola pred STK trvá v rámci jednej návštevy. Pri sprostredkovaní závisí čas aj od voľných termínov na stanici technickej kontroly.',
+                a: 'Kontrolu pred STK zvládneme počas jednej návštevy. Pri sprostredkovaní závisí čas aj od voľných termínov na stanici technickej kontroly.',
             },
             {
                 q: 'Čo ak vozidlo na STK neprejde?',

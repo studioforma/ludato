@@ -87,7 +87,7 @@ const bratislavaServices = [
     },
     {
         name: 'Servis klimatizácie',
-        text: 'Bratislavské leto vie potrápiť aj klimatizáciu, ktorá stojí celý deň na slnku pri ceste bez garáže. Dopĺňame chladivo, čistíme a dezinfikujeme systém, aby ste mali v aute čistý vzduch po celý rok.',
+        text: 'Bratislavské leto vie potrápiť aj klimatizáciu v aute, ktoré stojí celý deň na slnku pri ceste bez garáže. Dopĺňame chladivo, čistíme a dezinfikujeme systém, aby ste mali v aute čistý vzduch po celý rok.',
     },
     {
         name: 'Pneuservis a prezutie',
@@ -118,7 +118,7 @@ const faq = [
     },
     {
         q: 'Ako dlho trvá bežná diagnostika?',
-        a: 'Väčšinu diagnostík zvládneme do jednej až dvoch hodín. Pri komplikovanejších závadách vás vopred informujeme o predpokladanom čase aj cene.',
+        a: 'Väčšinu diagnostík zvládneme do jednej až dvoch hodín. Pri komplikovanejších poruchách vás vopred informujeme o predpokladanom čase aj cene.',
     },
     {
         q: 'Máte kde parkovať pri príchode do servisu?',
@@ -404,7 +404,7 @@ export default function KdePosobime() {
                                     spojku, brzdy aj motor omnoho viac než rovnomerná jazda mimo
                                     mesta. Práve preto sa oplatí mať poruke servis, ktorý pozná
                                     miestne podmienky a vie odhadnúť, kde sa oplatí byť
-                                    obozretný skôr, než sa z malej závady stane veľká.
+                                    obozretný skôr, než sa z malej poruchy stane veľká.
                                 </p>
                                 <p>
                                     Kopce, kolóny a parkovanie na ulici však nie sú len vec Nového
@@ -601,7 +601,7 @@ export default function KdePosobime() {
                                 className="text-white/70 text-base leading-relaxed"
                                 style={{ fontFamily: 'var(--font-inter)' }}
                             >
-                                Zhrnuté, sme rodinný autoservis, ktorý pôsobí priamo v Novom
+                                Stručne povedané: sme rodinný autoservis, ktorý pôsobí priamo v Novom
                                 Meste, poznáme terén, dopravu aj typické opotrebovanie vozidiel
                                 v tejto časti Bratislavy, a k zákazníkom z okolia pristupujeme
                                 osobne, nie ako číslo v systéme. Nech už riešite bežnú servisnú
@@ -714,7 +714,7 @@ export default function KdePosobime() {
                             className="text-white/60 max-w-xl mx-auto mb-6"
                             style={{ fontFamily: 'var(--font-inter)' }}
                         >
-                            Bez ohľadu na to, odkiaľ prichádzate, ponúkame rovnaký rozsah služieb
+                            Bez ohľadu na to, odkiaľ prichádzate, ponúkame rovnaký rozsah služieb:
                             {' '}
                             <Link href="/sluzby" className="text-[#E31C25] hover:text-white transition-colors underline">
                                 diagnostiku, servisné prehliadky, brzdy, klimatizáciu aj pneuservis

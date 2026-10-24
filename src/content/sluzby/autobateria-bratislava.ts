@@ -127,7 +127,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Batéria a zima v Bratislave',
         paragraphs: [
-            'Prvé mrazivé rána sú pre batérie najťažšie a práve vtedy máme najviac telefonátov typu "auto ráno nenaštartovalo". V chlade má batéria nižšiu kapacitu a motor s hustejším olejom sa točí ťažšie, takže slabá batéria to už nezvládne.',
+            'Prvé mrazivé rána sú pre batérie najťažšie a práve vtedy máme najviac telefonátov typu „auto ráno nenaštartovalo“. V chlade má batéria nižšiu kapacitu a motor s hustejším olejom sa točí ťažšie, takže slabá batéria to už nezvládne.',
             'Ak auto už na jeseň štartuje ťažšie, nečakajte na prvý mráz. Výmenu batérie si môžete spojiť napríklad so [sezónnym prezutím](/sluzby/pneuservis-bratislava) alebo [výmenou oleja](/sluzby/vymena-oleja-bratislava) a vybaviť všetko na jednu návštevu.',
         ],
     },

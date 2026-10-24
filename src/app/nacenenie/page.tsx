@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import Navbar from '@/components/Navbar';
+import OnlineBookingLink from '@/components/OnlineBookingLink';
 import { getOrderPrefill } from '@/lib/orderPrefill';
 
 const servicesOptions = [
@@ -36,6 +36,8 @@ export default function QuotePage() {
         name: '',
         email: '',
         phone: '',
+        car: '',
+        plate: '',
     });
 
     // ?sluzba=prezutie from a service page CTA pre-selects that service.
@@ -70,6 +72,8 @@ export default function QuotePage() {
         const selectedServices = formState.services.join(', ');
         const fullMessage = `
 Vybrané služby: ${selectedServices || 'Žiadne'}
+Auto: ${formState.car || 'Neuvedené'}
+EČV: ${formState.plate || 'Neuvedené'}
 Vlastný materiál: ${formState.bringOwnMaterial}
 Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
         `.trim();
@@ -105,26 +109,12 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
     const labelClass = 'block text-white/60 text-xs tracking-widest uppercase mb-2';
 
     return (
-        <div className="min-h-screen bg-[#111111] pt-20 py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden flex flex-col items-center justify-center">
+        <div className="min-h-screen bg-[#111111] pt-32 lg:pt-40 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden flex flex-col items-center">
             <Navbar />
 
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-[#E31C25]/5 to-transparent mix-blend-screen pointer-events-none" />
             <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#E31C25]/5 rounded-full blur-3xl pointer-events-none" />
-
-            {/* Back link */}
-            <div className="w-full max-w-3xl mb-8 relative z-10">
-                <Link
-                    href="/"
-                    className="inline-flex items-center gap-2 text-white/40 hover:text-[#E31C25] text-xs tracking-widest uppercase transition-colors"
-                    style={{ fontFamily: 'var(--font-montserrat)' }}
-                >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
-                    </svg>
-                    Späť na hlavnú stránku
-                </Link>
-            </div>
 
             <div className="bg-[#1D1D1B] border border-white/10 p-8 sm:p-12 w-full max-w-3xl relative z-10 rounded-sm shadow-2xl">
 
@@ -142,6 +132,20 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                     >
                         OBJEDNAŤ <span className="text-[#E31C25]">SA</span>
                     </h1>
+                </div>
+
+                {/* Bookable services go straight to the Termino calendar */}
+                <div
+                    className="mb-10 border border-[#E31C25]/40 bg-[#E31C25]/10 rounded-sm px-5 py-4 text-center text-sm text-white/80"
+                    style={{ fontFamily: 'var(--font-inter)' }}
+                >
+                    Pneuservis, výmena oleja, diagnostika alebo klimatizácia? Termín si môžete vybrať rovno v našom kalendári.{' '}
+                    <OnlineBookingLink
+                        placement="nacenenie"
+                        className="font-semibold text-white underline decoration-[#E31C25] underline-offset-4 hover:text-[#FF5A60] whitespace-nowrap"
+                    >
+                        Rezervovať online →
+                    </OnlineBookingLink>
                 </div>
 
                 {/* Progress bar */}
@@ -268,6 +272,36 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                             className={inputClass}
                                             style={{ fontFamily: 'var(--font-inter)' }}
                                         />
+                                    </div>
+
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                                Auto (značka a model)
+                                            </label>
+                                            <input
+                                                type="text"
+                                                value={formState.car}
+                                                onChange={(e) => setFormState(prev => ({ ...prev, car: e.target.value }))}
+                                                placeholder="napr. Škoda Octavia 2.0 TDI"
+                                                className={inputClass}
+                                                style={{ fontFamily: 'var(--font-inter)' }}
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                                EČV
+                                            </label>
+                                            <input
+                                                type="text"
+                                                value={formState.plate}
+                                                onChange={(e) => setFormState(prev => ({ ...prev, plate: e.target.value.toUpperCase() }))}
+                                                placeholder="BA123XY"
+                                                maxLength={10}
+                                                className={inputClass}
+                                                style={{ fontFamily: 'var(--font-inter)' }}
+                                            />
+                                        </div>
                                     </div>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
