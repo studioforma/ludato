@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
 import CallNumberSwap from "@/components/CallNumberSwap";
@@ -8,17 +8,19 @@ import StickyCallBar from "@/components/StickyCallBar";
 import { services } from "@/lib/services";
 import { SITE, BUSINESS_ID, areaServedSchema } from "@/lib/schema";
 
-const montserrat = Montserrat({
+// Self-hosted variable fonts (see src/fonts/README.md): the build no longer
+// depends on downloading from Google Fonts.
+const montserrat = localFont({
+  src: "../fonts/montserrat.woff2",
   variable: "--font-montserrat",
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: "400 900",
   display: "swap",
 });
 
-const inter = Inter({
+const inter = localFont({
+  src: "../fonts/inter.woff2",
   variable: "--font-inter",
-  subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600"],
+  weight: "300 600",
   display: "swap",
 });
 

@@ -1,10 +1,10 @@
 'use client';
 
-import { Dancing_Script } from 'next/font/google';
+import localFont from 'next/font/local';
 
-const dancingScript = Dancing_Script({
-  subsets: ['latin'],
-  weight: ['400', '700'],
+const dancingScript = localFont({
+  src: '../fonts/dancing-script.woff2',
+  weight: '400 700',
   variable: '--font-dancing',
   display: 'swap',
 });
