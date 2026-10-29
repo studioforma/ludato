@@ -10,6 +10,7 @@ import { areas as areaPages } from '@/lib/areas';
 import { getService } from '@/lib/services';
 import ServiceIcon from '@/components/ServiceIcon';
 import { SITE, breadcrumbSchema } from '@/lib/schema';
+import { OWN_PARTS_POLICY, OWN_PARTS_QUESTION } from '@/lib/ownParts';
 
 const kdePosobimeBreadcrumb = breadcrumbSchema([
     { name: 'Domov', path: '/' },
@@ -131,6 +132,10 @@ const faq = [
     {
         q: 'Robíte aj prípravu na STK a emisnú kontrolu?',
         a: 'Áno, robíme kontrolu pred STK aj EK a vieme vám sprostredkovať aj samotnú kontrolu.',
+    },
+    {
+        q: OWN_PARTS_QUESTION,
+        a: OWN_PARTS_POLICY,
     },
     {
         q: 'Dávate vopred vedieť konečnú cenu opravy?',

@@ -154,6 +154,7 @@ const content: ServiceContent = [
         type: 'prices',
         heading: 'Orientačné ceny',
         categories: ['BRZDY'],
+        ownPartsNote: true,
     },
     {
         type: 'faq',

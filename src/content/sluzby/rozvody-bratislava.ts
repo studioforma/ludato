@@ -161,6 +161,7 @@ const content: ServiceContent = [
         heading: 'Orientačné ceny',
         categories: ['NORMOHODINY'],
         only: ['Ťažká práca – náročné zásahy (rozvody, spojka, turbo, EGR, DPF, opravy motora, elektro, demontáž agregátov)'],
+        ownPartsNote: true,
     },
     {
         type: 'faq',
