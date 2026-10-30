@@ -75,7 +75,7 @@ export default function ContactSection({ asPageHeading = false }: { asPageHeadin
                         className="text-white/50 max-w-lg mx-auto"
                         style={{ fontFamily: 'var(--font-inter)' }}
                     >
-                        Napíšte nám správu alebo si dohodte termín. Ozveme sa vám do 24 hodín.
+                        Napíšte nám správu alebo si dohodte termín. Ozveme sa vám do 48 hodín.
                     </p>
                 </div>
 

@@ -1,4 +1,5 @@
 import type { ServiceContent } from './types';
+import { OWN_PARTS_POLICY } from '@/lib/ownParts';
 
 const content: ServiceContent = [
     {
@@ -159,7 +160,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Môžem si doniesť vlastnú batériu?',
-                a: 'Zavolajte nám a dohodneme sa. Dôležité je, aby batéria zodpovedala tomu, čo vaše auto potrebuje.',
+                a: OWN_PARTS_POLICY,
             },
             {
                 q: 'Svieti mi po výmene batérie kontrolka, čo s tým?',

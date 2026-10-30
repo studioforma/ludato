@@ -1,5 +1,6 @@
 'use client';
 
+import { OWN_PARTS_POLICY_DETAIL } from '@/lib/ownParts';
 import { useState } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
@@ -251,6 +252,21 @@ export default function CennikPage() {
                                 </svg>
                                 Ceny sú uvedené bez DPH. Pri každej cene nájdete aj sumu s DPH 23 %.
                             </p>
+                        </div>
+                        {/* Customer-supplied parts policy, as visible as the VAT note */}
+                        <div className="mt-4 flex justify-center">
+                            <div
+                                className="max-w-2xl border-2 border-[#E31C25] bg-[#E31C25]/10 rounded-sm px-5 py-4 text-left"
+                                style={{ fontFamily: 'var(--font-inter)' }}
+                            >
+                                <p
+                                    className="text-white font-bold text-sm mb-1"
+                                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                                >
+                                    Vlastné diely neprijímame
+                                </p>
+                                <p className="text-white/80 text-sm leading-relaxed">{OWN_PARTS_POLICY_DETAIL}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

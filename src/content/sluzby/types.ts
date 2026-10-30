@@ -21,7 +21,14 @@ export type Section =
      * `only`, when given, keeps just those service names out of the listed
      * categories (for when a cennik category mixes in unrelated items).
      */
-    | { type: 'prices'; heading: string; categories: string[]; only?: string[] }
+    | {
+          type: 'prices';
+          heading: string;
+          categories: string[];
+          only?: string[];
+          /** Shows the short "no customer-supplied parts" note under the table. */
+          ownPartsNote?: boolean;
+      }
     | { type: 'faq'; heading: string; items: { q: string; a: string }[] }
     /**
      * Red call-to-action box inside the article. The phone button always uses

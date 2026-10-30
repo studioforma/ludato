@@ -31,7 +31,6 @@ export default function QuotePage() {
 
     const [formState, setFormState] = useState({
         services: [] as string[],
-        bringOwnMaterial: 'Nie',
         otherDetails: '',
         name: '',
         email: '',
@@ -74,7 +73,6 @@ export default function QuotePage() {
 Vybrané služby: ${selectedServices || 'Žiadne'}
 Auto: ${formState.car || 'Neuvedené'}
 EČV: ${formState.plate || 'Neuvedené'}
-Vlastný materiál: ${formState.bringOwnMaterial}
 Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
         `.trim();
 
@@ -189,36 +187,6 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                                 </button>
                                             );
                                         })}
-                                    </div>
-
-                                    <div className="pt-2">
-                                        <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                            Prinesiete si vlastný materiál? (náhradné diely, olej a pod.) *
-                                        </label>
-                                        <div className="flex gap-4">
-                                            <button
-                                                type="button"
-                                                onClick={() => setFormState(prev => ({ ...prev, bringOwnMaterial: 'Áno' }))}
-                                                className={`flex-1 py-3 px-4 rounded-sm border transition-all duration-200 text-sm ${formState.bringOwnMaterial === 'Áno'
-                                                        ? 'border-[#E31C25] bg-[#E31C25]/10 text-white font-medium'
-                                                        : 'border-white/10 bg-white/5 hover:border-white/30 text-white/70'
-                                                    }`}
-                                                style={{ fontFamily: 'var(--font-inter)' }}
-                                            >
-                                                Áno, prinesiem
-                                            </button>
-                                            <button
-                                                type="button"
-                                                onClick={() => setFormState(prev => ({ ...prev, bringOwnMaterial: 'Nie' }))}
-                                                className={`flex-1 py-3 px-4 rounded-sm border transition-all duration-200 text-sm ${formState.bringOwnMaterial === 'Nie'
-                                                        ? 'border-[#E31C25] bg-[#E31C25]/10 text-white font-medium'
-                                                        : 'border-white/10 bg-white/5 hover:border-white/30 text-white/70'
-                                                    }`}
-                                                style={{ fontFamily: 'var(--font-inter)' }}
-                                            >
-                                                Nie, chcem od vás
-                                            </button>
-                                        </div>
                                     </div>
 
                                     <div className="pt-4">

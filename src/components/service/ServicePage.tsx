@@ -10,6 +10,7 @@ import RichText from '@/components/service/RichText';
 import InlineCta from '@/components/InlineCta';
 import { formatPrice, formatPriceWithVat, getCategory, type PricingCategory } from '@/lib/pricing';
 import { stripLinks } from '@/lib/richText';
+import { OWN_PARTS_SHORT } from '@/lib/ownParts';
 import { getRelated, type ServiceMeta } from '@/lib/services';
 import { SITE, areaServedSchema } from '@/lib/schema';
 import type { Section, ServiceContent } from '@/content/sluzby/types';
@@ -238,6 +239,14 @@ export function SectionBlock({ section }: { section: Section }) {
                             </div>
                         ))}
                     </div>
+                    {section.ownPartsNote && (
+                        <p
+                            className="mt-6 border-l-2 border-[#E31C25] pl-3 text-white/80 text-sm"
+                            style={{ fontFamily: 'var(--font-inter)' }}
+                        >
+                            {OWN_PARTS_SHORT}
+                        </p>
+                    )}
                     <p
                         className="text-white/40 text-xs mt-6"
                         style={{ fontFamily: 'var(--font-inter)' }}
