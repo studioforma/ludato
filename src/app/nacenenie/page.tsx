@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import OnlineBookingLink from '@/components/OnlineBookingLink';
 import { getOrderPrefill } from '@/lib/orderPrefill';
+import { trackLeadThen } from '@/lib/analytics';
 
 const servicesOptions = [
     'Diagnostika vozidla',
@@ -91,7 +92,9 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
             });
             const result = await response.json();
             if (result.success) {
-                window.location.href = '/dakujeme';
+                trackLeadThen('nacenenie', () => {
+                    window.location.href = '/dakujeme';
+                });
             } else {
                 setError('Nastala chyba. Skúste to prosím znova.');
             }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { trackLeadThen } from '@/lib/analytics';
 
 // On /kontakt the section heading is the page H1; on the homepage it stays an H2.
 export default function ContactSection({ asPageHeading = false }: { asPageHeading?: boolean }) {
@@ -38,7 +39,9 @@ export default function ContactSection({ asPageHeading = false }: { asPageHeadin
             });
             const result = await response.json();
             if (result.success) {
-                window.location.href = '/dakujeme';
+                trackLeadThen('kontakt', () => {
+                    window.location.href = '/dakujeme';
+                });
             } else {
                 setError('Nastala chyba. Skúste to prosím znova.');
             }
