@@ -1,5 +1,4 @@
-'use client';
-
+// Server component: no hooks, handlers or browser APIs here, so it ships no JS.
 import localFont from 'next/font/local';
 
 const dancingScript = localFont({

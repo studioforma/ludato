@@ -1,5 +1,4 @@
-'use client';
-
+// Server component: no hooks, handlers or browser APIs here, so it ships no JS.
 import Link from 'next/link';
 import { getService, type ServiceMeta } from '@/lib/services';
 import ServiceIcon from '@/components/ServiceIcon';
