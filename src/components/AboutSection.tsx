@@ -6,6 +6,8 @@ const dancingScript = localFont({
   src: '../fonts/dancing-script.woff2',
   weight: '400 700',
   variable: '--font-dancing',
+  // Used only far below the fold: do not preload it next to the hero fonts.
+  preload: false,
   display: 'swap',
 });
 
