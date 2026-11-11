@@ -214,7 +214,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Kde nás nájdete',
         paragraphs: [
-            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Brzdy u nás riešia aj vodiči z [Kramárov](/kde-posobime/kramare), odkiaľ ste u nás orientačne za 10 minút, a z [Koliby](/kde-posobime/koliba), orientačne 10 až 15 minút autom. Prehľad všetkých mestských častí aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Do tej istej mestskej časti Nové Mesto patria aj [Kramáre](/kde-posobime/kramare) a [Koliba](/kde-posobime/koliba). Prehľad všetkých mestských častí aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
             'Pôsobíme aj v mestských častiach [Rača](/kde-posobime/raca), [Ružinov](/kde-posobime/ruzinov) a [Karlova Ves](/kde-posobime/karlova-ves).',
         ],
     },

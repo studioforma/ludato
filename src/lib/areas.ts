@@ -12,8 +12,9 @@ export type AreaMeta = {
     h1Accent: string;
     title: string;
     description: string;
-    driveTime: string;
-    route: string;
+    /** Omitted where we cannot back the number up (Kramáre, Koliba). */
+    driveTime?: string;
+    route?: string;
     /** Service slugs shown in "Služby, ktoré tu riešime najčastejšie". */
     services: string[];
     cta: {
@@ -131,15 +132,13 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Kramáre',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE KRAMÁRE',
         h1Accent: 'KRAMÁRE',
-        title: 'Autoservis a pneuservis Kramáre | Brzdy, prezutie, podvozok a výmena oleja, orientačne 10 minút na Odborárskej 52 | Ludato Family Autoservis a Pneuservis',
+        title: 'Autoservis a pneuservis Kramáre | Brzdy, podvozok, výmena oleja a prezutie v tej istej mestskej časti, Odborárska 52, Nové Mesto | Ludato Family Autoservis a Pneuservis',
         description:
-            'Autoservis a pneuservis pre Kramáre. Na Odborárskej v Novom Meste sme orientačne 10 minút autom. Brzdy, prezutie, podvozok, výmena oleja aj vyzdvihnutie auta.',
-        driveTime: 'orientačne 10 minút autom',
-        route: 'Cez Račiansku a Pioniersku',
+            'Autoservis a pneuservis pre Kramáre na Odborárskej 52, v tej istej mestskej časti Nové Mesto. Brzdy od 35 €, podvozok, výmena oleja od 35 €, prezutie od 45 € aj vyzdvihnutie auta.',
         services: ['brzdy-bratislava', 'pneuservis-bratislava', 'podvozok-bratislava', 'vymena-oleja-bratislava'],
         cta: {
             question: 'Potrebujete servis a bývate na Kramároch?',
-            subtext: 'Sme vo vašej mestskej časti, orientačne 10 minút autom. Zavolajte a dohodneme termín.',
+            subtext: 'Sme v tej istej mestskej časti, na Odborárskej 52. Zavolajte a dohodneme termín.',
         },
     },
     {
@@ -148,15 +147,13 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Kolibu',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE KOLIBU',
         h1Accent: 'KOLIBU',
-        title: 'Autoservis a pneuservis Koliba | Brzdy, zimné pneumatiky, spojka a podvozok, orientačne 10 až 15 minút z Koliby | Ludato Family Autoservis a Pneuservis',
+        title: 'Autoservis a pneuservis Koliba | Spojka, brzdy, brzdová kvapalina a zimné pneumatiky v tej istej mestskej časti, Odborárska 52, Nové Mesto | Ludato Family Autoservis a Pneuservis',
         description:
-            'Autoservis a pneuservis pre Kolibu. Na Odborárskej v Novom Meste sme orientačne 10 až 15 minút autom. Brzdy, zimné pneumatiky, spojka, podvozok aj vyzdvihnutie auta.',
-        driveTime: 'orientačne 10 až 15 minút autom',
-        route: 'Cez Pioniersku a Jeséniovu',
+            'Autoservis a pneuservis pre Kolibu na Odborárskej 52, v tej istej mestskej časti Nové Mesto. Spojka a dvojhmotový zotrvačník, brzdová kvapalina za 45 €, zimné pneumatiky, podvozok.',
         services: ['brzdy-bratislava', 'pneuservis-bratislava', 'prevodovka-spojka-bratislava', 'podvozok-bratislava'],
         cta: {
             question: 'Potrebujete servis a bývate na Kolibe?',
-            subtext: 'Sme orientačne 10 až 15 minút od vás, a keď nemáte čas, po auto si prídeme sami.',
+            subtext: 'Sme v tej istej mestskej časti, na Odborárskej 52. A keď nemáte čas, po auto si prídeme.',
         },
     },
 ];

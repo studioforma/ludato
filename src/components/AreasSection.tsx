@@ -48,7 +48,9 @@ export default function AreasSection() {
                                     className="text-[#1D1D1B]/60 text-sm mt-1"
                                     style={{ fontFamily: 'var(--font-inter)' }}
                                 >
-                                    {a.driveTime.charAt(0).toUpperCase() + a.driveTime.slice(1)}
+                                    {a.driveTime
+                                        ? a.driveTime.charAt(0).toUpperCase() + a.driveTime.slice(1)
+                                        : 'V tej istej mestskej časti, Nové Mesto'}
                                 </span>
                             </Link>
                         </li>

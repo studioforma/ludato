@@ -183,7 +183,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Kde nás nájdete',
         paragraphs: [
-            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Z [Kramárov](/kde-posobime/kramare) aj zo [Starého Mesta](/kde-posobime/stare-mesto) ste u nás na výmenu oleja orientačne za 10 minút autom. Prehľad všetkých mestských častí aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Do tej istej mestskej časti patria aj [Kramáre](/kde-posobime/kramare). Zo [Starého Mesta](/kde-posobime/stare-mesto) ste u nás na výmenu oleja orientačne za 10 minút autom. Prehľad všetkých mestských častí aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
             'Pôsobíme aj v mestských častiach [Rača](/kde-posobime/raca) a [Vajnory](/kde-posobime/vajnory).',
         ],
     },
