@@ -54,7 +54,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Palivový filter',
-                text: 'Palivový filter chráni vstrekovače a čerpadlo pred nečistotami v palive. Je súčasťou nášho kompletného servisného balíka, keďže sa mení v dlhších intervaloch než ostatné filtre.',
+                text: 'Palivový filter chráni [vstrekovače](/sluzby/vstrekovace-bratislava) a čerpadlo pred nečistotami v palive. Je súčasťou nášho kompletného servisného balíka, keďže sa mení v dlhších intervaloch než ostatné filtre.',
             },
         ],
     },

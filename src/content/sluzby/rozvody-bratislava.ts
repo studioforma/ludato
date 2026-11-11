@@ -62,7 +62,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Vodné čerpadlo',
-                text: 'Na mnohých motoroch poháňa vodné čerpadlo priamo rozvodový remeň. Pri výmene rozvodu je čerpadlo aj tak dostupné, takže jeho výmena znamená len cenu dielu. Ak by odišlo neskôr, rozvod by sa musel rozoberať znova, a netesné čerpadlo navyše môže poškodiť aj nový remeň.',
+                text: 'Na mnohých motoroch poháňa vodné čerpadlo priamo rozvodový remeň. Pri výmene rozvodu je čerpadlo aj tak dostupné, takže jeho výmena znamená len cenu dielu. Ak by odišlo neskôr, rozvod by sa musel rozoberať znova, a netesné čerpadlo navyše môže poškodiť aj nový remeň. Únik chladiacej kvapaliny mimo výmeny rozvodov riešime pri servise [chladiaceho systému a kúrenia](/sluzby/chladenie-kurenie-bratislava).',
             },
         ],
     },

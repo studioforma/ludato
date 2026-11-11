@@ -184,7 +184,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Kde nás nájdete',
         paragraphs: [
-            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Ak sa auto nepohne, zabezpečíme odťah priamo k nám. Prehľad mestských častí, odkiaľ k nám zákazníci chodia, nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Ak sa auto nepohne, zabezpečíme odťah priamo k nám. O tom, ako kopcovitý terén zaťažuje spojku, píšeme aj na stránkach pre [Karlovu Ves](/kde-posobime/karlova-ves) a [Kolibu](/kde-posobime/koliba). Prehľad mestských častí, odkiaľ k nám zákazníci chodia, nájdete na stránke [Kde pôsobíme](/kde-posobime).',
         ],
     },
 ];

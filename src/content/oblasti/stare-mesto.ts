@@ -25,7 +25,7 @@ const content: ServiceContent = [
         heading: 'Ako sa k nám dostanete zo Starého Mesta',
         paragraphs: [
             'Zo Starého Mesta k nám vedie cesta cez Trnavské mýto a Legionársku. Trvá orientačne 10 minút, v špičke môže byť dlhšia. Servis sa dá ľahko spojiť s pochôdzkami v meste: auto necháte u nás a vybavíte si, čo potrebujete.',
-            'Ak nemáte čas alebo chuť jazdiť cez mesto, auto vám vyzdvihneme za 50 €. Nepojazdné auto odtiahneme za 170 €.',
+            'Ak nemáte čas alebo chuť jazdiť cez mesto, auto vám vyzdvihneme za 50 €. Nepojazdné auto [odtiahneme](/sluzby/odtah-vozidla-bratislava) za 170 €.',
         ],
     },
     {

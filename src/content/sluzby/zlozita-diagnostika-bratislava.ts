@@ -77,7 +77,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Vstrekovače',
-                text: 'Opotrebovaný vstrekovač zhorší spaľovanie a ovplyvní hodnoty, ktoré riadiaca jednotka vyhodnocuje pri turbe, emisiách aj chode motora. Máme vlastný tester vstrekovačov, takže ich stav vieme overiť priamo u nás.',
+                text: 'Opotrebovaný vstrekovač zhorší spaľovanie a ovplyvní hodnoty, ktoré riadiaca jednotka vyhodnocuje pri turbe, emisiách aj chode motora. Máme vlastný [tester vstrekovačov](/sluzby/vstrekovace-bratislava), takže ich stav vieme overiť priamo u nás.',
             },
             {
                 title: 'Netesnosti v saní a výfuku',

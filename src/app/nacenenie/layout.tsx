@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import NacenenieInfo from '@/components/NacenenieInfo';
 
 // The page itself is a client component, so its metadata lives here.
 export const metadata: Metadata = {
@@ -9,5 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default function NacenenieLayout({ children }: { children: React.ReactNode }) {
-    return children;
+    return (
+        <>
+            {children}
+            <NacenenieInfo />
+        </>
+    );
 }
