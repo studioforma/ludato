@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import OnlineBookingLink from '@/components/OnlineBookingLink';
 import { getOrderPrefill } from '@/lib/orderPrefill';
 import { trackLeadThen } from '@/lib/analytics';
+import { LEAD_SOURCES, LEAD_SOURCE_LABEL } from '@/lib/leadSource';
 
 const servicesOptions = [
     'Diagnostika vozidla',
@@ -38,6 +39,7 @@ export default function QuotePage() {
         phone: '',
         car: '',
         plate: '',
+        source: '',
     });
 
     // ?sluzba=prezutie from a service page CTA pre-selects that service.
@@ -87,6 +89,7 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                     email: formState.email,
                     phone: formState.phone,
                     message: fullMessage,
+                    source: formState.source || undefined,
                     formType: 'quote',
                 }),
             });
@@ -304,6 +307,27 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                                 style={{ fontFamily: 'var(--font-inter)' }}
                                             />
                                         </div>
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="nacenenie-zdroj" className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                            {LEAD_SOURCE_LABEL} <span className="normal-case tracking-normal">(nepovinné)</span>
+                                        </label>
+                                        <select
+                                            id="nacenenie-zdroj"
+                                            name="source"
+                                            value={formState.source}
+                                            onChange={(e) => setFormState(prev => ({ ...prev, source: e.target.value }))}
+                                            className={`${inputClass} [&_option]:text-[#1D1D1B]`}
+                                            style={{ fontFamily: 'var(--font-inter)' }}
+                                        >
+                                            <option value="">Vyberte možnosť</option>
+                                            {LEAD_SOURCES.map((s) => (
+                                                <option key={s} value={s}>
+                                                    {s}
+                                                </option>
+                                            ))}
+                                        </select>
                                     </div>
 
                                     {error && <p className="text-[#E31C25] text-sm text-center pt-2" style={{ fontFamily: 'var(--font-inter)' }}>{error}</p>}
