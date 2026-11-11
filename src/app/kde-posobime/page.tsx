@@ -30,7 +30,7 @@ const areasListSchema = {
 };
 
 export const metadata: Metadata = {
-    title: 'Kde nás nájdete | Ludato Family Autoservis',
+    title: 'Autoservis pre celú Bratislavu a okolie | Rača, Ružinov, Vajnory, Kramáre, Koliba, Staré Mesto, Karlova Ves a Dúbravka | Ludato Family Autoservis a Pneuservis',
     description:
         'Autoservis na Odborárskej 52 v Novom Meste pre celú Bratislavu aj okolie: Kramáre, Koliba, Rača, Ružinov, Staré Mesto a ďalšie. Po auto si vieme aj prísť.',
     alternates: { canonical: '/kde-posobime' },

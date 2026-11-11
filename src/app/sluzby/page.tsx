@@ -10,7 +10,7 @@ import ServiceIcon from '@/components/ServiceIcon';
 const SITE = 'https://www.ludato.sk';
 
 export const metadata: Metadata = {
-    title: 'Služby autoservisu Bratislava – Nové Mesto | Ludato Family Autoservis',
+    title: 'Služby autoservisu Bratislava – Nové Mesto | Diagnostika, výmena oleja, brzdy, rozvody, pneuservis, klimatizácia a STK | Ludato Family Autoservis a Pneuservis',
     description:
         'Všetky služby autoservisu Ludato Family v Bratislave, Novom Meste: diagnostika, olej, brzdy, klimatizácia, pneuservis aj STK. Pri každej nájdete ceny a postup.',
     alternates: { canonical: `${SITE}/sluzby` },

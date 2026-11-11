@@ -29,7 +29,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Raču',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE RAČU',
         h1Accent: 'RAČU',
-        title: 'Autoservis Rača | 10 až 15 minút od Rače, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Rača | Prezutie, brzdy, olej a diagnostika, orientačne 10 až 15 minút od Rače na Odborárskej 52 | Ludato Family Autoservis a Pneuservis',
         description:
             'Autoservis a pneuservis pre Raču, Krasňany aj Východné. Na Odborárskej v Novom Meste sme orientačne 10 až 15 minút autom. Brzdy, prezutie, diagnostika, výmena oleja.',
         driveTime: 'orientačne 10 až 15 minút autom',
@@ -46,7 +46,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Vajnory',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE VAJNORY',
         h1Accent: 'VAJNORY',
-        title: 'Autoservis Vajnory | 15 až 20 minút od Vajnor, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Vajnory | Prezutie, olej, diagnostika a uskladnenie pneumatík, 15 až 20 minút od Vajnor | Ludato Family Autoservis a Pneuservis',
         description:
             'Autoservis a pneuservis pre Vajnory. Na Odborárskej v Novom Meste sme orientačne 15 až 20 minút autom cez Vajnorskú. Prezutie, výmena oleja, diagnostika, brzdy aj pickup auta.',
         driveTime: 'orientačne 15 až 20 minút autom',
@@ -63,7 +63,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Ružinov',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE RUŽINOV',
         h1Accent: 'RUŽINOV',
-        title: 'Autoservis Ružinov | 15 minút od Ružinova, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Ružinov | Prezutie, geometria, brzdy a uskladnenie pneumatík, orientačne 15 minút od Ružinova | Ludato Family Autoservis a Pneuservis',
         description:
             'Autoservis a pneuservis pre Ružinov, Trnávku, Prievoz aj Štrkovec. Na Odborárskej v Novom Meste sme orientačne 15 minút autom. Geometria, brzdy, prezutie, diagnostika.',
         driveTime: 'orientačne 15 minút autom',
@@ -80,7 +80,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Staré Mesto',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE STARÉ MESTO',
         h1Accent: 'STARÉ MESTO',
-        title: 'Autoservis Staré Mesto | 10 minút od centra, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Staré Mesto | Diagnostika, olej, prezutie a vyzdvihnutie auta, 10 minút z centra Bratislavy | Ludato Family Autoservis a Pneuservis',
         description:
             'Autoservis a pneuservis pre Staré Mesto. Z centra Bratislavy sme na Odborárskej v Novom Meste orientačne 10 minút autom. Diagnostika, batéria, výmena oleja, prezutie, pickup auta.',
         driveTime: 'orientačne 10 minút autom',
@@ -97,7 +97,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Karlovu Ves',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE KARLOVU VES',
         h1Accent: 'KARLOVU VES',
-        title: 'Autoservis Karlova Ves | 20 minút cez most, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Karlova Ves | Brzdy, podvozok, prezutie a náhradné vozidlo, orientačne 20 minút cez most | Ludato Family Autoservis a Pneuservis',
         description:
             'Autoservis a pneuservis pre Karlovu Ves a Dlhé diely. Na Odborárskej v Novom Meste sme orientačne 20 minút autom. Brzdy, podvozok, prezutie, výmena oleja aj pickup auta.',
         driveTime: 'orientačne 20 minút autom',
@@ -114,7 +114,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Dúbravku',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE DÚBRAVKU',
         h1Accent: 'DÚBRAVKU',
-        title: 'Autoservis Dúbravka | 20 až 25 minút, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Dúbravka | Brzdy, prezutie, diagnostika a vyzdvihnutie auta, orientačne 20 až 25 minút | Ludato Family Autoservis a Pneuservis',
         description:
             'Autoservis a pneuservis pre Dúbravku. Na Odborárskej v Novom Meste sme orientačne 20 až 25 minút autom. Brzdy, prezutie, diagnostika, náhradné vozidlo aj pickup auta.',
         driveTime: 'orientačne 20 až 25 minút autom',
@@ -131,7 +131,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Kramáre',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE KRAMÁRE',
         h1Accent: 'KRAMÁRE',
-        title: 'Autoservis Kramáre | Približne 10 minút, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Kramáre | Brzdy, prezutie, podvozok a výmena oleja, orientačne 10 minút na Odborárskej 52 | Ludato Family Autoservis a Pneuservis',
         description:
             'Autoservis a pneuservis pre Kramáre. Na Odborárskej v Novom Meste sme orientačne 10 minút autom. Brzdy, prezutie, podvozok, výmena oleja aj vyzdvihnutie auta.',
         driveTime: 'orientačne 10 minút autom',
@@ -148,7 +148,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Kolibu',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE KOLIBU',
         h1Accent: 'KOLIBU',
-        title: 'Autoservis Koliba | 10 až 15 minút, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Koliba | Brzdy, zimné pneumatiky, spojka a podvozok, orientačne 10 až 15 minút z Koliby | Ludato Family Autoservis a Pneuservis',
         description:
             'Autoservis a pneuservis pre Kolibu. Na Odborárskej v Novom Meste sme orientačne 10 až 15 minút autom. Brzdy, zimné pneumatiky, spojka, podvozok aj vyzdvihnutie auta.',
         driveTime: 'orientačne 10 až 15 minút autom',

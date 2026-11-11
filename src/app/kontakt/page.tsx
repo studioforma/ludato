@@ -18,7 +18,7 @@ const kontaktBreadcrumb = breadcrumbSchema([
 ]);
 
 export const metadata: Metadata = {
-    title: 'Kontakt | Ludato Family Autoservis',
+    title: 'Kontakt autoservis Bratislava – Nové Mesto | Odborárska 52, telefón 0944 236 257, otváracie hodiny a mapa | Ludato Family Autoservis a Pneuservis',
     description:
         'Kontaktujte Ludato Family Autoservis a Pneuservis, Odborárska 52, Bratislava, Nové Mesto. Telefón, email, otváracie hodiny a mapa.',
     alternates: { canonical: '/kontakt' },
