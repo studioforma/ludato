@@ -152,6 +152,16 @@ function CategorySection({
     );
 }
 
+// Service pages linked from the cennik (SEO audit 11. 11. 2026: cennik had no
+// links to services while ranking for "... cena" queries).
+const SERVICE_LINKS = [
+    { href: '/sluzby/vymena-oleja-bratislava', label: 'výmena oleja a filtrov' },
+    { href: '/sluzby/rozvody-bratislava', label: 'výmena rozvodov' },
+    { href: '/sluzby/uskladnenie-pneumatik-bratislava', label: 'uskladnenie pneumatík na sezónu' },
+    { href: '/sluzby/autobateria-bratislava', label: 'výmena autobatérie' },
+    { href: '/sluzby/pneuservis-bratislava', label: 'prezutie a vyváženie' },
+];
+
 const TABS = [
     { id: 'diagnostika', label: 'Diagnostika & STK', categories: ['NORMOHODINY', 'KONTROLY VOZIDLA', 'STK A EK', 'DEZINFEKCIA'] },
     { id: 'podvozok', label: 'Podvozok & Brzdy', categories: ['GEOMETRIA', 'BRZDY', 'PODVOZOK'] },
@@ -270,6 +280,24 @@ export default function CennikPage() {
                         </div>
                     </div>
                 </div>
+
+                {/* Links from the cennik to the service pages. Always rendered, the
+                    tabs below only put the active tab in the HTML. */}
+                <nav
+                    aria-label="Služby z cenníka"
+                    className="max-w-6xl mx-auto px-4 sm:px-6 mb-8 text-center text-sm text-white/60"
+                    style={{ fontFamily: 'var(--font-inter)' }}
+                >
+                    <span className="text-white/80 font-semibold">Podrobnosti o službách: </span>
+                    {SERVICE_LINKS.map((link, i) => (
+                        <span key={link.href}>
+                            {i > 0 && <span aria-hidden="true"> · </span>}
+                            <Link href={link.href} className="text-white underline decoration-[#E31C25] underline-offset-4 hover:text-[#FF5A60]">
+                                {link.label}
+                            </Link>
+                        </span>
+                    ))}
+                </nav>
 
                 {/* Tabs Navigation */}
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-4">

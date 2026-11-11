@@ -21,6 +21,13 @@ const content: ServiceContent = [
         secondaryLabel: 'Objednať prezutie',
     },
     {
+        type: 'text',
+        heading: 'Koľko stojí uskladnenie pneumatík v Bratislave?',
+        paragraphs: [
+            'Sezónne uskladnenie jednej sady pneumatík u nás stojí 40 € na sezónu (s DPH 49,20 €). Pri ďalšom prezutí máme sadu pripravenú v servise a [kompletné prezutie](/sluzby/pneuservis-bratislava) s vyvážením stojí od 45 €. Všetky ceny nájdete v [cenníku](/cennik).',
+        ],
+    },
+    {
         type: 'list',
         heading: 'Čo zahŕňa uskladnenie u nás',
         items: [
