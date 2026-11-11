@@ -104,7 +104,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Klimatizácia v zime',
         paragraphs: [
-            'Klimatizáciu odporúčame nechať bežať aj v zime, aj keď kúrite. Kompresor a tesnenia potrebujú pravidelný pohyb, dlhé odstavenie na niekoľko mesiacov im neprospieva. Zapnutá klíma navyše výrazne pomáha pri odmrazovaní okien, keďže odvádza vlhkosť z interiéru.',
+            'Klimatizáciu odporúčame nechať bežať aj v zime, aj keď kúrite. Kompresor a tesnenia potrebujú pravidelný pohyb, dlhé odstavenie na niekoľko mesiacov im neprospieva. Zapnutá klíma navyše výrazne pomáha pri odmrazovaní okien, keďže odvádza vlhkosť z interiéru. Ak auto v zime slabo kúri, príčina býva v chladiacom okruhu motora, nie v klimatizácii, a riešime ju pri servise [chladiaceho systému a kúrenia](/sluzby/chladenie-kurenie-bratislava).',
         ],
     },
     {

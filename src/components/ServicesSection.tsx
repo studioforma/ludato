@@ -137,7 +137,12 @@ export default function ServicesSection() {
                             </p>
                             <p>
                                 Ku každej službe nižšie nájdete samostatnú stránku s postupom,
-                                orientačnými cenami a odpoveďami na najčastejšie otázky.
+                                orientačnými cenami a odpoveďami na najčastejšie otázky. A keď
+                                auto v zime ráno nenaštartuje, pozrite sa na{' '}
+                                <Link href="/sluzby/autobateria-bratislava" className={inlineLink}>
+                                    výmenu autobatérie
+                                </Link>
+                                .
                             </p>
                         </div>
                     </div>

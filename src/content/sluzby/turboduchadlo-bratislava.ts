@@ -111,7 +111,7 @@ const content: ServiceContent = [
         heading: 'Príčina poruchy turba býva inde',
         paragraphs: [
             'Turbo väčšinou nezlyhá samo od seba. Najčastejšou príčinou je olej: starý, nesprávny alebo ho je málo. Zanesené olejové vedenie, predĺžené intervaly výmeny oleja alebo olej, ktorý nespĺňa normu výrobcu, skracujú životnosť ložísk turba. Pravidelná [výmena oleja](/sluzby/vymena-oleja-bratislava) je preto najlepšia prevencia.',
-            'Ďalšou príčinou býva zanesený DPF filter alebo EGR ventil, ktoré zvyšujú protitlak vo výfuku a zaťažujú turbo. Turbo vedia poškodiť aj nečistoty nasaté cez netesné sanie. A niekedy nie je chyba v turbe vôbec, ako v prípade, keď za opakovanou chybou turba stál skrat v kabeláži, ktorý sme riešili v rámci [zložitej diagnostiky](/sluzby/zlozita-diagnostika-bratislava).',
+            'Ďalšou príčinou býva zanesený DPF filter alebo EGR ventil, ktoré zvyšujú protitlak vo výfuku a zaťažujú turbo. Turbo vedia poškodiť aj nečistoty nasaté cez netesné sanie. A niekedy nie je chyba v turbe vôbec, ako v prípade, keď za opakovanou chybou turba stál skrat v kabeláži, ktorý sme riešili v rámci [zložitej diagnostiky](/sluzby/zlozita-diagnostika-bratislava). Pri dymení alebo nerovnomernom chode motora preto preveríme aj palivovú sústavu, napríklad cez [test vstrekovačov](/sluzby/vstrekovace-bratislava) na vlastnom testeri.',
         ],
     },
     {

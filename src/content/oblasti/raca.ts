@@ -59,7 +59,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Prezutie a pneumatiky',
-                text: 'Kompletné prezutie s vyvážením stojí od 45 € podľa veľkosti diskov. Ak nemáte kam dať druhú sadu, uskladníme vám ju za 40 € na sezónu a pri ďalšom prezutí ju budete mať pripravenú.',
+                text: 'Kompletné prezutie s vyvážením stojí od 45 € podľa veľkosti diskov. Ak nemáte kam dať druhú sadu, [uskladníme vám ju za 40 € na sezónu](/sluzby/uskladnenie-pneumatik-bratislava) a pri ďalšom prezutí ju budete mať pripravenú.',
             },
             {
                 title: 'Výmena oleja',

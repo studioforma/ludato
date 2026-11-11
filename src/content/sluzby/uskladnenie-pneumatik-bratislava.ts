@@ -199,7 +199,8 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Kde nás nájdete',
         paragraphs: [
-            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Autom k nám chodia zákazníci aj z okolitých mestských častí, prehľad aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Pneumatiky si u nás uskladníte, aj keď bývate v [Ružinove](/kde-posobime/ruzinov), v [Rači](/kde-posobime/raca) alebo vo [Vajnoroch](/kde-posobime/vajnory), cesta k nám trvá orientačne 10 až 20 minút autom. Prehľad všetkých mestských častí aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Pôsobíme aj v mestských častiach [Kramáre](/kde-posobime/kramare) a [Koliba](/kde-posobime/koliba).',
         ],
     },
 ];

@@ -67,7 +67,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Prezutie',
-                text: 'Kompletné prezutie s vyvážením od 45 € podľa veľkosti diskov. Druhú sadu vám uskladníme za 40 € na sezónu.',
+                text: 'Kompletné prezutie s vyvážením od 45 € podľa veľkosti diskov. Druhú sadu vám [uskladníme za 40 € na sezónu](/sluzby/uskladnenie-pneumatik-bratislava).',
             },
         ],
     },
