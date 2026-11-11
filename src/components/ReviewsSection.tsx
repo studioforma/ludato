@@ -4,38 +4,28 @@ import { GOOGLE_RATING, GOOGLE_REVIEWS, GOOGLE_REVIEWS_URL } from '@/lib/trust';
 
 // Full, unedited texts of real Google reviews (export from 23. 9. 2026,
 // klienti/ludato/ludato-recenzie.pdf), names exactly as shown on Google.
-// Picked because each one names a service, and one names a district.
-const reviews: { name: string; rating: number; text: string; initials: string; lang?: string }[] = [
+// Three reviews, each about a different service; the tag names that service.
+const reviews: { name: string; rating: number; text: string; initials: string; service: string }[] = [
     {
         name: 'Sandra Braunova',
         rating: 5,
         text: 'Výborná skúsenosť - príjemný a ochotný prístup. Náhodou sme pri výmene oleja poprosili o kontrolu rozvodov, kde zistili chybu a rýchlo sa nám prispôsobili aby to vedeli asap napraviť. Môžeme len odporúčit.',
         initials: 'SB',
+        service: 'Výmena oleja a rozvody',
     },
     {
         name: 'Sabína Diaz',
         rating: 5,
         text: 'Super. Potrebovala som vymeniť pneu, kvôli defektu. Cez obed som volala, poobede vybavené. Odporúčam aj cenovo.',
         initials: 'SD',
-    },
-    {
-        name: 'Marco Cataudella',
-        rating: 5,
-        text: 'Excellent service! The communication was perfect, and they fixed my car very quickly. The staff is very kind and nice. Highly recommended car service in Rača, we will come back!',
-        initials: 'MC',
-        lang: 'en',
+        service: 'Defekt pneumatiky',
     },
     {
         name: 'Jaro Sifra',
         rating: 5,
         text: 'Využil som kontrolu auta pred kúpou. Poradili, čo je potrebné vymeniť, nezáväzne nacenili a odporučili aj cenu, za akú auto kúpiť.',
         initials: 'JS',
-    },
-    {
-        name: 'Patrik Olsovsky',
-        rating: 5,
-        text: 'Perfektný prístup chlapci sú šikovný slušný olejový servis na počkanie super cena.Odporúčam',
-        initials: 'PO',
+        service: 'Kontrola pred kúpou',
     },
 ];
 
@@ -92,7 +82,7 @@ export default function ReviewsSection() {
                 </div>
 
                 {/* Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {reviews.map((review) => (
                         <div
                             key={review.name}
@@ -105,8 +95,14 @@ export default function ReviewsSection() {
                             <StarRating count={review.rating} />
 
                             {/* Text */}
+                            <span
+                                className="self-start mt-4 inline-block border border-[#E31C25]/30 bg-[#E31C25]/5 text-[#E31C25] text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-sm"
+                                style={{ fontFamily: 'var(--font-montserrat)' }}
+                            >
+                                {review.service}
+                            </span>
+
                             <p
-                                lang={review.lang}
                                 className="text-[#1D1D1B]/75 text-sm leading-relaxed mt-4 mb-6 flex-1"
                                 style={{ fontFamily: 'var(--font-inter)' }}
                             >
