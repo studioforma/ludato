@@ -13,9 +13,9 @@ const content: ServiceContent = [
         heading: 'Je to pre vás do servisu ďaleko?',
         text: 'Po auto si do Dúbravky prídeme sami a počas dlhšej opravy vám požičiame náhradné auto. Vy nemusíte nikam cestovať.',
         points: [
-            'Vyzdvihnutie auta v Bratislave a okolí za 50 €',
-            'Náhradné vozidlo za 35 € na deň, nad 1000 € zadarmo',
-            'Kompletné prezutie od 45 € vrátane vyváženia',
+            'Vyzdvihnutie auta v Bratislave a okolí za 50 € (s DPH 61,50 €)',
+            'Náhradné vozidlo za 35 € na deň (s DPH 43,05 €), nad 1000 € zadarmo',
+            'Kompletné prezutie od 45 € vrátane vyváženia (s DPH od 55,35 €)',
         ],
         secondaryHref: '/nacenenie?sluzba=pickup',
         secondaryLabel: 'Objednať sa',

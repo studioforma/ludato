@@ -290,7 +290,7 @@ export const services: ServiceMeta[] = [
         name: 'Zložitá diagnostika',
         h1: 'ZLOŽITÁ DIAGNOSTIKA BRATISLAVA – NOVÉ MESTO',
         h1Accent: 'BRATISLAVA',
-        title: 'Zložitá diagnostika Bratislava – Nové Mesto | Keď iný servis chybu nenašiel, poruchy elektroniky, turba a kabeláže | Ludato Family Autoservis a Pneuservis',
+        title: 'Zložitá diagnostika Bratislava, Nové Mesto | Keď iný servis chybu nenašiel | Diagnostika riadiacej jednotky 40 €, elektrika, motor, snímače | Ludato Family Autoservis',
         description:
             'Zložitá diagnostika v Bratislave, Novom Meste: poruchy, ktoré sa vracajú, skraty v kabeláži, klamúce snímače. Hľadáme skutočnú príčinu, nie prvý diel z kódu.',
         teaser: 'Keď sa kontrolka stále vracia alebo chybu inde nenašli. Hľadáme skutočnú príčinu, nie prvý diel.',

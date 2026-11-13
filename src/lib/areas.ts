@@ -30,7 +30,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Raču',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE RAČU',
         h1Accent: 'RAČU',
-        title: 'Autoservis a pneuservis Rača | Prezutie, brzdy, olej a diagnostika, orientačne 10 až 15 minút od Rače na Odborárskej 52 | Ludato Family Autoservis a Pneuservis',
+        title: 'Autoservis Rača, 10 až 15 minút na Odborársku 52 | Prezutie od 45 €, kontrola bŕzd 35 €, uskladnenie pneu 40 € na sezónu, odťah 170 € | Ludato Family Autoservis',
         description:
             'Autoservis a pneuservis pre Raču, Krasňany aj Východné. Na Odborárskej v Novom Meste sme orientačne 10 až 15 minút autom. Brzdy, prezutie, diagnostika, výmena oleja.',
         driveTime: 'orientačne 10 až 15 minút autom',
@@ -64,7 +64,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Ružinov',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE RUŽINOV',
         h1Accent: 'RUŽINOV',
-        title: 'Autoservis a pneuservis Ružinov | Prezutie, geometria, brzdy a uskladnenie pneumatík, orientačne 15 minút od Ružinova | Ludato Family Autoservis a Pneuservis',
+        title: 'Autoservis Ružinov, 15 minút na Odborársku 52 | Prezutie od 45 €, geometria 16 €, kontrola bŕzd 35 €, výmena oleja od 35 € | Ludato Family Autoservis Bratislava',
         description:
             'Autoservis a pneuservis pre Ružinov, Trnávku, Prievoz aj Štrkovec. Na Odborárskej v Novom Meste sme orientačne 15 minút autom. Geometria, brzdy, prezutie, diagnostika.',
         driveTime: 'orientačne 15 minút autom',
@@ -115,7 +115,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Dúbravku',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE DÚBRAVKU',
         h1Accent: 'DÚBRAVKU',
-        title: 'Autoservis a pneuservis Dúbravka | Brzdy, prezutie, diagnostika a vyzdvihnutie auta, orientačne 20 až 25 minút | Ludato Family Autoservis a Pneuservis',
+        title: 'Autoservis Dúbravka, 20 až 25 minút na Odborársku 52 | Prezutie od 45 €, výmena oleja od 35 €, diagnostika 40 €, vyzdvihnutie auta 50 € | Ludato Family Autoservis',
         description:
             'Autoservis a pneuservis pre Dúbravku. Na Odborárskej v Novom Meste sme orientačne 20 až 25 minút autom. Brzdy, prezutie, diagnostika, náhradné vozidlo aj pickup auta.',
         driveTime: 'orientačne 20 až 25 minút autom',

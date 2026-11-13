@@ -13,9 +13,9 @@ const content: ServiceContent = [
         heading: 'Ťahá vám auto po náraze do obrubníka do strany?',
         text: 'Parkovanie na sídlisku a výtlky nenápadne rozladia geometriu a zjedajú pneumatiky. Skontrolujeme to skôr, než budete meniť novú sadu.',
         points: [
-            'Kontrola geometrie za 16 €',
-            'Kontrola bŕzd za 35 €',
-            'Kompletné prezutie od 45 € vrátane vyváženia',
+            'Kontrola geometrie za 16 € (s DPH 19,68 €)',
+            'Kontrola bŕzd za 35 € (s DPH 43,05 €)',
+            'Kompletné prezutie od 45 € vrátane vyváženia (s DPH od 55,35 €)',
         ],
         secondaryHref: '/nacenenie?sluzba=geometria',
         secondaryLabel: 'Objednať sa',

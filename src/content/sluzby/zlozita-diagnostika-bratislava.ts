@@ -13,7 +13,7 @@ const content: ServiceContent = [
         heading: 'Vracia sa vám tá istá porucha?',
         text: 'Každé ďalšie skúšanie dielov stojí peniaze a porucha medzitým môže poškodiť turbo či katalyzátor. Nájdeme skutočnú príčinu.',
         points: [
-            'Diagnostika riadiacej jednotky za 40 €',
+            'Diagnostika riadiacej jednotky za 40 € (s DPH 49,20 €)',
             'Meranie snímačov a kabeláže priamo na aute',
             'Vlastný tester vstrekovačov',
         ],

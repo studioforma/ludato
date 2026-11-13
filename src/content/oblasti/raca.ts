@@ -13,9 +13,9 @@ const content: ServiceContent = [
         heading: 'Nemáte čas prísť do servisu?',
         text: 'Po auto si do Rače prídeme sami. Vy zostanete doma alebo v práci a my sa postaráme o zvyšok.',
         points: [
-            'Vyzdvihnutie auta v Bratislave a okolí za 50 €',
-            'Náhradné vozidlo za 35 € na deň',
-            'Kompletné prezutie od 45 € vrátane vyváženia',
+            'Vyzdvihnutie auta v Bratislave a okolí za 50 € (s DPH 61,50 €)',
+            'Náhradné vozidlo za 35 € na deň (s DPH 43,05 €)',
+            'Kompletné prezutie od 45 € vrátane vyváženia (s DPH od 55,35 €)',
         ],
         secondaryHref: '/nacenenie?sluzba=pickup',
         secondaryLabel: 'Objednať sa',
