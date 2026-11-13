@@ -126,7 +126,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Odkiaľ k nám auto dovezieme',
         paragraphs: [
-            'Vyzdvihnutie robíme v rámci Bratislavy a okolia. Najčastejšie chodíme do mestských častí v našom okolí, ako sú [Rača](/kde-posobime/raca), Vajnory, Ružinov či Staré Mesto, ale aj na druhú stranu mesta do Karlovej Vsi a Dúbravky. Odťah zabezpečíme aj z väčšej vzdialenosti, vrátane zahraničia.',
+            'Vyzdvihnutie robíme v rámci Bratislavy a okolia. Najčastejšie chodíme do mestských častí v našom okolí, ako sú [Rača](/kde-posobime/raca), Vajnory, Ružinov či [Staré Mesto](/kde-posobime/stare-mesto), ale aj na druhú stranu mesta do [Karlovej Vsi](/kde-posobime/karlova-ves) a [Dúbravky](/kde-posobime/dubravka). Odťah zabezpečíme aj z väčšej vzdialenosti, vrátane zahraničia.',
             'Z Odborárskej je to blízko na Račiansku, Vajnorskú aj Trnavskú cestu, takže sa k vám dostaneme rýchlo. Prehľad mestských častí a trás nájdete na stránke [Kde pôsobíme](/kde-posobime).',
         ],
     },

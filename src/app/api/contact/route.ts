@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { buildContactEmailHtml, buildContactEmailText } from '@/lib/contact-email';
+import { cleanLeadSource } from '@/lib/leadSource';
 
 interface ContactPayload {
     name: string;
@@ -8,6 +9,7 @@ interface ContactPayload {
     phone?: string;
     message: string;
     subject: string;
+    source?: string;
     formType?: 'contact' | 'quote';
 }
 
@@ -29,13 +31,14 @@ export async function POST(request: NextRequest) {
     }
 
     const { name, email, phone, message, subject, formType } = payload;
+    const source = cleanLeadSource(payload.source);
 
     if (!name || !email || !message || !subject) {
         return NextResponse.json({ success: false, error: 'Missing required fields' }, { status: 400 });
     }
 
     const copy = FORM_COPY[formType ?? 'contact'];
-    const fields = { ...copy, name, email, phone, message };
+    const fields = { ...copy, name, email, phone, message, source };
 
     try {
         const resend = new Resend(process.env.RESEND_API_KEY);

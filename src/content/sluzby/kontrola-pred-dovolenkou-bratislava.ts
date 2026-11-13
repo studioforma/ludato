@@ -47,7 +47,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Chladenie a klimatizácia',
-                text: 'Kolóny v lete a stúpania do hôr preveria chladiaci systém motora. Klimatizácia, ktorá chladí slabo, na dlhej ceste unavuje vodiča aj posádku. Ak nechladí, [servis klimatizácie](/sluzby/servis-klimatizacie-bratislava) stojí od 40 €.',
+                text: 'Kolóny v lete a stúpania do hôr preveria [chladiaci systém motora](/sluzby/chladenie-kurenie-bratislava). Klimatizácia, ktorá chladí slabo, na dlhej ceste unavuje vodiča aj posádku. Ak nechladí, [servis klimatizácie](/sluzby/servis-klimatizacie-bratislava) stojí od 40 €.',
             },
             {
                 title: 'Batéria',

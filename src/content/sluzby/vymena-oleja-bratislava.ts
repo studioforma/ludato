@@ -54,7 +54,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Palivový filter',
-                text: 'Palivový filter chráni vstrekovače a čerpadlo pred nečistotami v palive. Je súčasťou nášho kompletného servisného balíka, keďže sa mení v dlhších intervaloch než ostatné filtre.',
+                text: 'Palivový filter chráni [vstrekovače](/sluzby/vstrekovace-bratislava) a čerpadlo pred nečistotami v palive. Je súčasťou nášho kompletného servisného balíka, keďže sa mení v dlhších intervaloch než ostatné filtre.',
             },
         ],
     },
@@ -183,7 +183,8 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Kde nás nájdete',
         paragraphs: [
-            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Autom k nám chodia zákazníci aj z okolitých mestských častí, prehľad aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Do tej istej mestskej časti patria aj [Kramáre](/kde-posobime/kramare). Zo [Starého Mesta](/kde-posobime/stare-mesto) ste u nás na výmenu oleja orientačne za 10 minút autom. Prehľad všetkých mestských častí aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Pôsobíme aj v mestských častiach [Rača](/kde-posobime/raca) a [Vajnory](/kde-posobime/vajnory).',
         ],
     },
 ];

@@ -1,5 +1,4 @@
-'use client';
-
+// Server component: no hooks, handlers or browser APIs here, so it ships no JS.
 import Link from 'next/link';
 import { getService, type ServiceMeta } from '@/lib/services';
 import ServiceIcon from '@/components/ServiceIcon';
@@ -137,7 +136,12 @@ export default function ServicesSection() {
                             </p>
                             <p>
                                 Ku každej službe nižšie nájdete samostatnú stránku s postupom,
-                                orientačnými cenami a odpoveďami na najčastejšie otázky.
+                                orientačnými cenami a odpoveďami na najčastejšie otázky. A keď
+                                auto v zime ráno nenaštartuje, pozrite sa na{' '}
+                                <Link href="/sluzby/autobateria-bratislava" className={inlineLink}>
+                                    výmenu autobatérie
+                                </Link>
+                                .
                             </p>
                         </div>
                     </div>

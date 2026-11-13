@@ -6,7 +6,7 @@ import Breadcrumbs from '@/components/service/Breadcrumbs';
 import CookieSettingsButton from '@/components/CookieSettingsButton';
 
 export const metadata: Metadata = {
-    title: 'Ochrana osobných údajov a cookies | Ludato Family Autoservis a Pneuservis',
+    title: 'Ochrana osobných údajov a cookies | Ako spracúvame údaje z formulárov, meranie návštevnosti a reklamy | Ludato Family Autoservis a Pneuservis',
     description:
         'Ako Ludato Family s. r. o. spracúva osobné údaje z formulárov a aké súbory cookies používa web ludato.sk, vrátane Google Analytics a Google Ads.',
     alternates: { canonical: '/ochrana-osobnych-udajov' },

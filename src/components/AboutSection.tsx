@@ -1,11 +1,12 @@
-'use client';
-
+// Server component: no hooks, handlers or browser APIs here, so it ships no JS.
 import localFont from 'next/font/local';
 
 const dancingScript = localFont({
   src: '../fonts/dancing-script.woff2',
   weight: '400 700',
   variable: '--font-dancing',
+  // Used only far below the fold: do not preload it next to the hero fonts.
+  preload: false,
   display: 'swap',
 });
 

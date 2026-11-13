@@ -37,6 +37,7 @@ export default function StickyCallBar() {
             {/* Keeps the end of the page (footer) from hiding under the bar */}
             <div className="lg:hidden h-[72px]" aria-hidden="true" />
             <div
+                data-phone-location="spodny_pruh"
                 className="lg:hidden fixed bottom-0 left-0 right-0 z-[90] bg-[#E31C25] shadow-[0_-8px_30px_rgba(0,0,0,0.35)]"
                 style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
             >

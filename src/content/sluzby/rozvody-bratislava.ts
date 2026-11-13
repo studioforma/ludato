@@ -62,7 +62,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Vodné čerpadlo',
-                text: 'Na mnohých motoroch poháňa vodné čerpadlo priamo rozvodový remeň. Pri výmene rozvodu je čerpadlo aj tak dostupné, takže jeho výmena znamená len cenu dielu. Ak by odišlo neskôr, rozvod by sa musel rozoberať znova, a netesné čerpadlo navyše môže poškodiť aj nový remeň.',
+                text: 'Na mnohých motoroch poháňa vodné čerpadlo priamo rozvodový remeň. Pri výmene rozvodu je čerpadlo aj tak dostupné, takže jeho výmena znamená len cenu dielu. Ak by odišlo neskôr, rozvod by sa musel rozoberať znova, a netesné čerpadlo navyše môže poškodiť aj nový remeň. Únik chladiacej kvapaliny mimo výmeny rozvodov riešime pri servise [chladiaceho systému a kúrenia](/sluzby/chladenie-kurenie-bratislava).',
             },
         ],
     },
@@ -146,7 +146,7 @@ const content: ServiceContent = [
         heading: 'Na čo si dať pozor',
         paragraphs: [
             'Neodkladajte výmenu len preto, že auto zatiaľ jazdí bez problémov. Pri remeni je to presne ten stav, v ktorom býva tesne pred prasknutím. A pri reťazi nepomôže ani to, že ju výrobca označil za bezúdržbovú. Pravidelná výmena kvalitného oleja podľa špecifikácie je najlepšia prevencia proti jej vyťahovaniu, viac o tom nájdete pri [výmene oleja](/sluzby/vymena-oleja-bratislava).',
-            'Pozor aj na lacné sady neznámeho pôvodu. Rozvod je presne to miesto, kde sa neoplatí šetriť na dieloch, pretože ich zlyhanie zničí motor. Pri kúpe jazdeného auta bez dokladu o výmene rozvodov rátajte s tým, že výmena bude jedna z prvých vecí, ktoré treba spraviť.',
+            'Pozor aj na lacné sady neznámeho pôvodu. Rozvod je presne to miesto, kde sa neoplatí šetriť na dieloch, pretože ich zlyhanie zničí motor. Pri kúpe jazdeného auta bez dokladu o výmene rozvodov rátajte s tým, že výmena bude jedna z prvých vecí, ktoré treba spraviť. Pri aute s väčším nájazdom sa oplatí preveriť aj spojku, viac nájdete pri [výmene spojky](/sluzby/prevodovka-spojka-bratislava).',
         ],
     },
     {

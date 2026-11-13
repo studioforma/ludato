@@ -30,7 +30,7 @@ const areasListSchema = {
 };
 
 export const metadata: Metadata = {
-    title: 'Kde nás nájdete | Ludato Family Autoservis',
+    title: 'Autoservis pre celú Bratislavu a okolie | Rača, Ružinov, Vajnory, Kramáre, Koliba, Staré Mesto, Karlova Ves a Dúbravka | Ludato Family Autoservis a Pneuservis',
     description:
         'Autoservis na Odborárskej 52 v Novom Meste pre celú Bratislavu aj okolie: Kramáre, Koliba, Rača, Ružinov, Staré Mesto a ďalšie. Po auto si vieme aj prísť.',
     alternates: { canonical: '/kde-posobime' },
@@ -38,12 +38,13 @@ export const metadata: Metadata = {
 
 type Area = {
     name: string;
-    driveTime: string;
+    /** Kramáre and Koliba have no time or route: we cannot back them up. */
+    driveTime?: string;
     /** Big number on the card, e.g. "10-15". */
-    minutes: string;
+    minutes?: string;
     /** Rough position relative to Odborárska 52 in km (x east, y north), for the mini map. */
     pos: [number, number];
-    route: string;
+    route?: string;
 };
 
 const whyNoveMesto = [
@@ -183,17 +184,11 @@ const faqSchema = {
 const areas: Area[] = [
     {
         name: 'Kramáre',
-        driveTime: 'orientačne 10 min autom',
-        minutes: '10',
         pos: [-1.8, -0.9],
-        route: 'Cez Račiansku a Pioniersku.',
     },
     {
         name: 'Koliba',
-        driveTime: 'orientačne 10 - 15 min autom',
-        minutes: '10-15',
         pos: [-2.9, -0.1],
-        route: 'Cez Pioniersku a Jeséniovu.',
     },
     {
         name: 'Rača',
@@ -544,8 +539,8 @@ export default function KdePosobime() {
                                     Sme na Odborárskej 52 v Bratislave, Novom Meste. Parkovanie je
                                     možné priamo pred prevádzkou aj popri ceste vedľa nášho
                                     areálu, takže sa nemusíte obávať, že nebudete mať kde
-                                    zastaviť. Zo sídlisk Kramáre, Vinohrady a Koliba ste u nás autom za
-                                    pár minút, z centra Bratislavy je to tiež len krátka jazda.
+                                    zastaviť. Kramáre, Vinohrady aj Koliba patria do rovnakej mestskej časti
+                                    ako náš servis, z centra Bratislavy je to tiež len krátka jazda.
                                     Trasy z ostatných mestských častí nájdete pri kartách nižšie.
                                 </p>
                                 <p>
@@ -677,15 +672,21 @@ export default function KdePosobime() {
                                             >
                                                 {area.name}
                                             </h2>
-                                            <div className="mt-1 flex items-baseline gap-1.5" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                                <span className="text-[#E31C25] font-black text-2xl leading-none">{area.minutes}</span>
-                                                <span className="text-white/50 text-xs font-bold uppercase tracking-wider">min autom</span>
-                                            </div>
+                                            {area.minutes ? (
+                                                <div className="mt-1 flex items-baseline gap-1.5" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                                    <span className="text-[#E31C25] font-black text-2xl leading-none">{area.minutes}</span>
+                                                    <span className="text-white/50 text-xs font-bold uppercase tracking-wider">min autom</span>
+                                                </div>
+                                            ) : (
+                                                <div className="mt-1 text-[#E31C25] text-xs font-bold uppercase tracking-wider" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                                    Nové Mesto, ako náš servis
+                                                </div>
+                                            )}
                                             <p
                                                 className="mt-1.5 text-white/45 text-xs"
                                                 style={{ fontFamily: 'var(--font-inter)' }}
                                             >
-                                                {area.route}
+                                                {area.route ?? 'Rovnaká mestská časť ako Odborárska 52.'}
                                             </p>
                                         </div>
                                     </div>

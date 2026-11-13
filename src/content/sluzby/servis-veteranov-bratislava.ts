@@ -74,7 +74,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Prevodovka a pohon',
-                text: 'Staré prevodovky, rozvodovky a kĺby majú svoje náplne a svoje vôle. Kontrolujeme úniky, stav náplní a opotrebenie, aby auto bezpečne zvládlo jazdu aj po dlhom státí.',
+                text: 'Staré prevodovky, rozvodovky a kĺby majú svoje náplne a svoje vôle. Kontrolujeme úniky, stav náplní a opotrebenie, aby auto bezpečne zvládlo jazdu aj po dlhom státí. Na novších autách robíme aj [výmenu spojky a opravy prevodoviek](/sluzby/prevodovka-spojka-bratislava).',
             },
             {
                 title: 'Elektrika',

@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { trackLeadThen } from '@/lib/analytics';
+import { LEAD_SOURCES, LEAD_SOURCE_LABEL } from '@/lib/leadSource';
 
 // On /kontakt the section heading is the page H1; on the homepage it stays an H2.
 export default function ContactSection({ asPageHeading = false }: { asPageHeading?: boolean }) {
@@ -10,12 +12,13 @@ export default function ContactSection({ asPageHeading = false }: { asPageHeadin
         email: '',
         phone: '',
         message: '',
+        source: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState('');
 
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     };
 
@@ -32,13 +35,16 @@ export default function ContactSection({ asPageHeading = false }: { asPageHeadin
                     email: formData.email,
                     phone: formData.phone,
                     message: formData.message,
+                    source: formData.source || undefined,
                     subject: `Nová správa od ${formData.name} – LUDATO Cars Services`,
                     formType: 'contact',
                 }),
             });
             const result = await response.json();
             if (result.success) {
-                window.location.href = '/dakujeme';
+                trackLeadThen('kontakt', () => {
+                    window.location.href = '/dakujeme';
+                });
             } else {
                 setError('Nastala chyba. Skúste to prosím znova.');
             }
@@ -112,6 +118,19 @@ export default function ContactSection({ asPageHeading = false }: { asPageHeadin
                                     Správa *
                                 </label>
                                 <textarea name="message" required rows={5} value={formData.message} onChange={handleChange} placeholder="Opíšte váš problém alebo otázku..." className={`${inputClass} resize-none`} />
+                            </div>
+                            <div>
+                                <label htmlFor="kontakt-zdroj" className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                    {LEAD_SOURCE_LABEL} <span className="normal-case tracking-normal">(nepovinné)</span>
+                                </label>
+                                <select id="kontakt-zdroj" name="source" value={formData.source} onChange={handleChange} className={`${inputClass} [&_option]:text-[#1D1D1B]`}>
+                                    <option value="">Vyberte možnosť</option>
+                                    {LEAD_SOURCES.map((s) => (
+                                        <option key={s} value={s}>
+                                            {s}
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
                             {error && <p className="text-[#E31C25] text-sm">{error}</p>}
                             <button

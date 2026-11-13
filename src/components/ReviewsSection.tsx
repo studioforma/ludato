@@ -2,24 +2,30 @@
 
 import { GOOGLE_RATING, GOOGLE_REVIEWS, GOOGLE_REVIEWS_URL } from '@/lib/trust';
 
-const reviews = [
+// Full, unedited texts of real Google reviews (export from 23. 9. 2026,
+// klienti/ludato/ludato-recenzie.pdf), names exactly as shown on Google.
+// Three reviews, each about a different service; the tag names that service.
+const reviews: { name: string; rating: number; text: string; initials: string; service: string }[] = [
     {
-        name: 'Henrieta T.',
+        name: 'Sandra Braunova',
         rating: 5,
-        text: '... poruchu rýchlo identifikovali, zabezpečili potrebný náhradný diel a auto dali do poriadku približne do 2 hodín...',
-        initials: 'HT',
+        text: 'Výborná skúsenosť - príjemný a ochotný prístup. Náhodou sme pri výmene oleja poprosili o kontrolu rozvodov, kde zistili chybu a rýchlo sa nám prispôsobili aby to vedeli asap napraviť. Môžeme len odporúčit.',
+        initials: 'SB',
+        service: 'Výmena oleja a rozvody',
     },
     {
-        name: 'Ema F.',
+        name: 'Sabína Diaz',
         rating: 5,
-        text: '... všetko mi vysvetlili a informovali telefónom aj cez sms. Komunikácia 10/10, výmena bŕzd a STK boli priam bleskové...',
-        initials: 'EF',
+        text: 'Super. Potrebovala som vymeniť pneu, kvôli defektu. Cez obed som volala, poobede vybavené. Odporúčam aj cenovo.',
+        initials: 'SD',
+        service: 'Defekt pneumatiky',
     },
     {
-        name: 'Pavel P.',
+        name: 'Jaro Sifra',
         rating: 5,
-        text: '... auto po servise funguje bez problémov, motor beží hladko a spojka pracuje výborne. Použili kvalitné náhradné diely...',
-        initials: 'PP',
+        text: 'Využil som kontrolu auta pred kúpou. Poradili, čo je potrebné vymeniť, nezáväzne nacenili a odporučili aj cenu, za akú auto kúpiť.',
+        initials: 'JS',
+        service: 'Kontrola pred kúpou',
     },
 ];
 
@@ -80,7 +86,7 @@ export default function ReviewsSection() {
                     {reviews.map((review) => (
                         <div
                             key={review.name}
-                            className="relative bg-white border border-black/10 rounded-sm p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-colors duration-300 group"
+                            className="relative flex flex-col bg-white border border-black/10 rounded-sm p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-colors duration-300 group"
                         >
                             {/* Review source */}
                             <GoogleG className="absolute top-6 right-6 w-6 h-6" />
@@ -89,8 +95,15 @@ export default function ReviewsSection() {
                             <StarRating count={review.rating} />
 
                             {/* Text */}
+                            <span
+                                className="self-start mt-4 inline-block border border-[#E31C25]/30 bg-[#E31C25]/5 text-[#E31C25] text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-sm"
+                                style={{ fontFamily: 'var(--font-montserrat)' }}
+                            >
+                                {review.service}
+                            </span>
+
                             <p
-                                className="text-[#1D1D1B]/75 text-sm leading-relaxed mt-4 mb-6"
+                                className="text-[#1D1D1B]/75 text-sm leading-relaxed mt-4 mb-6 flex-1"
                                 style={{ fontFamily: 'var(--font-inter)' }}
                             >
                                 {review.text}

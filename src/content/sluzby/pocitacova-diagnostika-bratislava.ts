@@ -118,7 +118,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Dobíjanie batérie',
-                text: 'Kontrolka batérie zvyčajne neznamená chybu samotnej batérie, ale problém s dobíjaním, najčastejšie s alternátorom alebo jeho remeňom. Vozidlo vtedy ide na zvyšok energie v batérii a po čase sa jednoducho zastaví.',
+                text: 'Kontrolka batérie zvyčajne neznamená chybu samotnej batérie, ale problém s dobíjaním, najčastejšie s alternátorom alebo jeho remeňom. Vozidlo vtedy ide na zvyšok energie v batérii a po čase sa jednoducho zastaví. Ak sa ukáže, že dosluhuje samotná batéria, nasleduje [výmena autobatérie](/sluzby/autobateria-bratislava).',
             },
         ],
     },
@@ -210,7 +210,8 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Kde nás nájdete',
         paragraphs: [
-            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Autom k nám chodia zákazníci aj z okolitých mestských častí, prehľad aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Na diagnostiku ste u nás zo [Starého Mesta](/kde-posobime/stare-mesto) orientačne za 10 minút a z [Rače](/kde-posobime/raca) za 10 až 15 minút autom. Prehľad všetkých mestských častí aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Pôsobíme aj v mestských častiach [Vajnory](/kde-posobime/vajnory) a [Dúbravka](/kde-posobime/dubravka).',
         ],
     },
 ];

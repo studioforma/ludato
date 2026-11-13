@@ -77,14 +77,14 @@ const content: ServiceContent = [
         paragraphs: [
             'Sme rodinný servis. O auto sa stará ten, s kým sa rozprávate, a vždy vám vysvetlíme, čo sme našli. Od otvorenia sme opravili viac ako 1 200 áut a na Google máme hodnotenie 5,0 z viac ako 50 recenzií.',
             'Ceny sú zverejnené v [cenníku](/cennik) a pred opravou vám povieme, koľko bude stáť. Žiadne prekvapenia na faktúre.',
-            'Ak sa vám cesta cez mesto nehodí, nemusíte ju absolvovať vôbec. Auto vyzdvihneme, opravíme a vy medzitým jazdíte náhradným vozidlom, takže vzdialenosť prestane hrať rolu.',
+            'Ak sa vám cesta cez mesto nehodí, nemusíte ju absolvovať vôbec. Auto vyzdvihneme, opravíme a vy medzitým jazdíte náhradným vozidlom, takže vzdialenosť prestane hrať rolu. Nepojazdné auto riešime [odťahom](/sluzby/odtah-vozidla-bratislava).',
         ],
     },
     {
         type: 'text',
         heading: 'Spojka a podvozok v kopcovitom teréne',
         paragraphs: [
-            'Pri rozbiehaní do kopca spojka prenáša väčšiu silu a pri častom státí v stúpaní sa trecí materiál opotrebúva rýchlejšie. Opotrebovanú spojku spoznáte podľa toho, že motor zvyšuje otáčky, no auto nezrýchľuje primerane, alebo že pedál zaberá až vysoko. Čím skôr sa na to pozrieme, tým menšie riziko, že vás spojka nechá stáť v najmenej vhodnej chvíli.',
+            'Pri rozbiehaní do kopca spojka prenáša väčšiu silu a pri častom státí v stúpaní sa trecí materiál opotrebúva rýchlejšie. Opotrebovanú spojku spoznáte podľa toho, že motor zvyšuje otáčky, no auto nezrýchľuje primerane, alebo že pedál zaberá až vysoko. Čím skôr sa na to pozrieme, tým menšie riziko, že vás spojka nechá stáť v najmenej vhodnej chvíli. Postup a príznaky podrobnejšie nájdete pri [výmene spojky](/sluzby/prevodovka-spojka-bratislava).',
             'Kopce a nerovné ulice zaťažujú aj podvozok. Tlmiče, ktoré stratili účinnosť, predlžujú brzdnú dráhu a zhoršujú stabilitu v zákrute. Kontrola podvozku stojí 30 €, auto pri nej zdvihneme a prejdeme tlmiče, ramená, silentbloky aj ložiská kolies.',
             'Po výmene dielov podvozku, ako sú ramená alebo tlmiče, sa takmer vždy posunie geometria. Preto po takejto oprave odporúčame jej kontrolu, ktorá stojí 16 €. Ušetríte tak nové pneumatiky, ktoré by sa inak nerovnomerne zjedali.',
         ],

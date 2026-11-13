@@ -12,8 +12,9 @@ export type AreaMeta = {
     h1Accent: string;
     title: string;
     description: string;
-    driveTime: string;
-    route: string;
+    /** Omitted where we cannot back the number up (Kramáre, Koliba). */
+    driveTime?: string;
+    route?: string;
     /** Service slugs shown in "Služby, ktoré tu riešime najčastejšie". */
     services: string[];
     cta: {
@@ -29,7 +30,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Raču',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE RAČU',
         h1Accent: 'RAČU',
-        title: 'Autoservis Rača | 10 až 15 minút od Rače, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis Rača, 10 až 15 minút na Odborársku 52 | Prezutie od 45 €, kontrola bŕzd 35 €, uskladnenie pneu 40 € na sezónu, odťah 170 € | Ludato Family Autoservis',
         description:
             'Autoservis a pneuservis pre Raču, Krasňany aj Východné. Na Odborárskej v Novom Meste sme orientačne 10 až 15 minút autom. Brzdy, prezutie, diagnostika, výmena oleja.',
         driveTime: 'orientačne 10 až 15 minút autom',
@@ -46,7 +47,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Vajnory',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE VAJNORY',
         h1Accent: 'VAJNORY',
-        title: 'Autoservis Vajnory | 15 až 20 minút od Vajnor, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Vajnory | Prezutie, olej, diagnostika a uskladnenie pneumatík, 15 až 20 minút od Vajnor | Ludato Family Autoservis a Pneuservis',
         description:
             'Autoservis a pneuservis pre Vajnory. Na Odborárskej v Novom Meste sme orientačne 15 až 20 minút autom cez Vajnorskú. Prezutie, výmena oleja, diagnostika, brzdy aj pickup auta.',
         driveTime: 'orientačne 15 až 20 minút autom',
@@ -63,7 +64,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Ružinov',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE RUŽINOV',
         h1Accent: 'RUŽINOV',
-        title: 'Autoservis Ružinov | 15 minút od Ružinova, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis Ružinov, 15 minút na Odborársku 52 | Prezutie od 45 €, geometria 16 €, kontrola bŕzd 35 €, výmena oleja od 35 € | Ludato Family Autoservis Bratislava',
         description:
             'Autoservis a pneuservis pre Ružinov, Trnávku, Prievoz aj Štrkovec. Na Odborárskej v Novom Meste sme orientačne 15 minút autom. Geometria, brzdy, prezutie, diagnostika.',
         driveTime: 'orientačne 15 minút autom',
@@ -80,7 +81,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Staré Mesto',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE STARÉ MESTO',
         h1Accent: 'STARÉ MESTO',
-        title: 'Autoservis Staré Mesto | 10 minút od centra, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Staré Mesto | Diagnostika, olej, prezutie a vyzdvihnutie auta, 10 minút z centra Bratislavy | Ludato Family Autoservis a Pneuservis',
         description:
             'Autoservis a pneuservis pre Staré Mesto. Z centra Bratislavy sme na Odborárskej v Novom Meste orientačne 10 minút autom. Diagnostika, batéria, výmena oleja, prezutie, pickup auta.',
         driveTime: 'orientačne 10 minút autom',
@@ -97,7 +98,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Karlovu Ves',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE KARLOVU VES',
         h1Accent: 'KARLOVU VES',
-        title: 'Autoservis Karlova Ves | 20 minút cez most, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Karlova Ves | Brzdy, podvozok, prezutie a náhradné vozidlo, orientačne 20 minút cez most | Ludato Family Autoservis a Pneuservis',
         description:
             'Autoservis a pneuservis pre Karlovu Ves a Dlhé diely. Na Odborárskej v Novom Meste sme orientačne 20 minút autom. Brzdy, podvozok, prezutie, výmena oleja aj pickup auta.',
         driveTime: 'orientačne 20 minút autom',
@@ -114,7 +115,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Dúbravku',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE DÚBRAVKU',
         h1Accent: 'DÚBRAVKU',
-        title: 'Autoservis Dúbravka | 20 až 25 minút, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis Dúbravka, 20 až 25 minút na Odborársku 52 | Prezutie od 45 €, výmena oleja od 35 €, diagnostika 40 €, vyzdvihnutie auta 50 € | Ludato Family Autoservis',
         description:
             'Autoservis a pneuservis pre Dúbravku. Na Odborárskej v Novom Meste sme orientačne 20 až 25 minút autom. Brzdy, prezutie, diagnostika, náhradné vozidlo aj pickup auta.',
         driveTime: 'orientačne 20 až 25 minút autom',
@@ -131,15 +132,13 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Kramáre',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE KRAMÁRE',
         h1Accent: 'KRAMÁRE',
-        title: 'Autoservis Kramáre | Približne 10 minút, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Kramáre | Brzdy, podvozok, výmena oleja a prezutie v tej istej mestskej časti, Odborárska 52, Nové Mesto | Ludato Family Autoservis a Pneuservis',
         description:
-            'Autoservis a pneuservis pre Kramáre. Na Odborárskej v Novom Meste sme orientačne 10 minút autom. Brzdy, prezutie, podvozok, výmena oleja aj vyzdvihnutie auta.',
-        driveTime: 'orientačne 10 minút autom',
-        route: 'Cez Račiansku a Pioniersku',
+            'Autoservis a pneuservis pre Kramáre na Odborárskej 52, v tej istej mestskej časti Nové Mesto. Brzdy od 35 €, podvozok, výmena oleja od 35 €, prezutie od 45 € aj vyzdvihnutie auta.',
         services: ['brzdy-bratislava', 'pneuservis-bratislava', 'podvozok-bratislava', 'vymena-oleja-bratislava'],
         cta: {
             question: 'Potrebujete servis a bývate na Kramároch?',
-            subtext: 'Sme vo vašej mestskej časti, orientačne 10 minút autom. Zavolajte a dohodneme termín.',
+            subtext: 'Sme v tej istej mestskej časti, na Odborárskej 52. Zavolajte a dohodneme termín.',
         },
     },
     {
@@ -148,15 +147,13 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Kolibu',
         h1: 'AUTOSERVIS A PNEUSERVIS PRE KOLIBU',
         h1Accent: 'KOLIBU',
-        title: 'Autoservis Koliba | 10 až 15 minút, Odborárska 52 | Ludato Family Autoservis',
+        title: 'Autoservis a pneuservis Koliba | Spojka, brzdy, brzdová kvapalina a zimné pneumatiky v tej istej mestskej časti, Odborárska 52, Nové Mesto | Ludato Family Autoservis a Pneuservis',
         description:
-            'Autoservis a pneuservis pre Kolibu. Na Odborárskej v Novom Meste sme orientačne 10 až 15 minút autom. Brzdy, zimné pneumatiky, spojka, podvozok aj vyzdvihnutie auta.',
-        driveTime: 'orientačne 10 až 15 minút autom',
-        route: 'Cez Pioniersku a Jeséniovu',
+            'Autoservis a pneuservis pre Kolibu na Odborárskej 52, v tej istej mestskej časti Nové Mesto. Spojka a dvojhmotový zotrvačník, brzdová kvapalina za 45 €, zimné pneumatiky, podvozok.',
         services: ['brzdy-bratislava', 'pneuservis-bratislava', 'prevodovka-spojka-bratislava', 'podvozok-bratislava'],
         cta: {
             question: 'Potrebujete servis a bývate na Kolibe?',
-            subtext: 'Sme orientačne 10 až 15 minút od vás, a keď nemáte čas, po auto si prídeme sami.',
+            subtext: 'Sme v tej istej mestskej časti, na Odborárskej 52. A keď nemáte čas, po auto si prídeme.',
         },
     },
 ];
