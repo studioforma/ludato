@@ -122,9 +122,9 @@ const content: ServiceContent = [
         type: 'prices',
         heading: 'Orientačné ceny',
         categories: [
-            'KOMPLETNÉ PREZUTIE',
-            'PREVÁŽENIE A PREHODENIE KOLIES NA DISKU',
-            'USKLADNENIE A OPRAVA PNEUMATÍK',
+            'Kompletné prezutie',
+            'Preváženie a prehodenie kolies na disku',
+            'Uskladnenie a oprava pneumatík',
         ],
     },
     {

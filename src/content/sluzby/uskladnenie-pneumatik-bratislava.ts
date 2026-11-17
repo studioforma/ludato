@@ -150,7 +150,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['USKLADNENIE A OPRAVA PNEUMATÍK'],
+        categories: ['Uskladnenie a oprava pneumatík'],
         only: ['Sezónne uskladnenie pneumatík'],
     },
     {

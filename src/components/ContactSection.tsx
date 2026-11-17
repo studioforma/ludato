@@ -72,10 +72,10 @@ export default function ContactSection({ asPageHeading = false }: { asPageHeadin
                         <span className="font-black">//</span> Sme tu pre vás
                     </p>
                     <Heading
-                        className="text-4xl md:text-5xl font-black text-white mb-4"
+                        className="uppercase text-4xl md:text-5xl font-black text-white mb-4"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        KONTAKTUJTE <span className="text-[#E31C25]">NÁS</span>
+                        Kontaktujte <span className="text-[#E31C25]">nás</span>
                     </Heading>
                     <p
                         className="text-white/50 max-w-lg mx-auto"

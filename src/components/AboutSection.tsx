@@ -70,11 +70,11 @@ export default function AboutSection() {
 
                         {/* Heading */}
                         <h2
-                            className="text-4xl md:text-5xl font-black text-[#1D1D1B] mb-6 leading-tight"
+                            className="uppercase text-4xl md:text-5xl font-black text-[#1D1D1B] mb-6 leading-tight"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            <span className="text-[#E31C25]">//</span> NAŠA HISTÓRIA,{' '}
-                            <span className="block">VAŠA DÔVERA.</span>
+                            <span className="text-[#E31C25]">//</span> Naša história,{' '}
+                            <span className="block">vaša dôvera.</span>
                         </h2>
 
                         {/* Body */}

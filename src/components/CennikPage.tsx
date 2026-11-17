@@ -163,10 +163,10 @@ const SERVICE_LINKS = [
 ];
 
 const TABS = [
-    { id: 'diagnostika', label: 'Diagnostika & STK', categories: ['NORMOHODINY', 'KONTROLY VOZIDLA', 'STK A EK', 'DEZINFEKCIA'] },
-    { id: 'podvozok', label: 'Podvozok & Brzdy', categories: ['GEOMETRIA', 'BRZDY', 'PODVOZOK'] },
-    { id: 'pneuservis', label: 'Pneuservis', categories: ['KOMPLETNÉ PREZUTIE', 'PREVÁŽENIE A PREHODENIE KOLIES NA DISKU', 'USKLADNENIE A OPRAVA PNEUMATÍK'] },
-    { id: 'kvapaliny', label: 'Kvapaliny & Servis', categories: ['OLEJOVÝ SERVIS', 'PREVODOVKY', 'KLIMATIZÁCIA', 'PREVÁDZKOVÉ KVAPALINY', 'ĎALŠIE SLUŽBY', 'NÁHRADNÉ VOZIDLO'] },
+    { id: 'diagnostika', label: 'Diagnostika & STK', categories: ['Normohodiny', 'Kontroly vozidla', 'STK a EK', 'Dezinfekcia'] },
+    { id: 'podvozok', label: 'Podvozok & Brzdy', categories: ['Geometria', 'Brzdy', 'Podvozok'] },
+    { id: 'pneuservis', label: 'Pneuservis', categories: ['Kompletné prezutie', 'Preváženie a prehodenie kolies na disku', 'Uskladnenie a oprava pneumatík'] },
+    { id: 'kvapaliny', label: 'Kvapaliny & Servis', categories: ['Olejový servis', 'Prevodovky', 'Klimatizácia', 'Prevádzkové kvapaliny', 'Ďalšie služby', 'Náhradné vozidlo'] },
 ];
 
 export default function CennikPage() {
@@ -197,10 +197,10 @@ export default function CennikPage() {
                             <span className="font-black">//</span> Transparentné ceny
                         </p>
                         <h1
-                            className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tight"
+                            className="uppercase text-5xl md:text-6xl font-black text-white mb-4 tracking-tight"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            CENNÍK <span className="text-[#E31C25]">SERVISU</span>
+                            Cenník <span className="text-[#E31C25]">servisu</span>
                         </h1>
                         <p
                             className="text-white/50 max-w-xl mx-auto text-base"
@@ -352,10 +352,10 @@ export default function CennikPage() {
                         className="bg-white/5 border border-white/10 rounded-sm p-8"
                     >
                         <h2
-                            className="text-white font-black text-lg mb-6 flex items-center gap-2"
+                            className="uppercase text-white font-black text-lg mb-6 flex items-center gap-2"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            <span className="text-[#E31C25]">//</span> OTVÁRACIE HODINY
+                            <span className="text-[#E31C25]">//</span> Otváracie hodiny
                         </h2>
                         <div className="space-y-4">
                             {hours.map((h) => (
@@ -384,10 +384,10 @@ export default function CennikPage() {
                         className="bg-white/5 border border-white/10 rounded-sm p-8"
                     >
                         <h2
-                            className="text-white font-black text-lg mb-6 flex items-center gap-2"
+                            className="uppercase text-white font-black text-lg mb-6 flex items-center gap-2"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            <span className="text-[#E31C25]">//</span> INFORMÁCIE O FIRME
+                            <span className="text-[#E31C25]">//</span> Informácie o firme
                         </h2>
                         <ul className="space-y-3 text-white/70 text-sm" style={{ fontFamily: 'var(--font-inter)' }}>
                             <li className="flex items-start gap-3">

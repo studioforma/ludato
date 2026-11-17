@@ -293,10 +293,10 @@ export default function KdePosobime() {
                             <span className="font-black">//</span> Kde nás nájdete
                         </p>
                         <h1
-                            className="text-4xl md:text-5xl font-black text-white mb-6"
+                            className="uppercase text-4xl md:text-5xl font-black text-white mb-6"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            AUTOSERVIS PRE CELÚ <span className="text-[#E31C25]">BRATISLAVU</span>
+                            Autoservis pre celú <span className="text-[#E31C25]">Bratislavu</span>
                         </h1>
                         <p
                             className="text-white/60 max-w-2xl mx-auto text-base leading-relaxed"
@@ -331,10 +331,10 @@ export default function KdePosobime() {
                                 <span className="font-black">//</span> Naša domovská mestská časť
                             </p>
                             <h2
-                                className="text-3xl md:text-4xl font-black text-white"
+                                className="uppercase text-3xl md:text-4xl font-black text-white"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                AUTOSERVIS V <span className="text-[#E31C25]">NOVOM MESTE</span>
+                                Autoservis v <span className="text-[#E31C25]">Novom Meste</span>
                             </h2>
                         </div>
 
@@ -623,10 +623,10 @@ export default function KdePosobime() {
                                 <span className="font-black">//</span> Časté otázky
                             </p>
                             <h2
-                                className="text-3xl md:text-4xl font-black text-white"
+                                className="uppercase text-3xl md:text-4xl font-black text-white"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                ČASTO KLADENÉ <span className="text-[#E31C25]">OTÁZKY</span>
+                                Často kladené <span className="text-[#E31C25]">otázky</span>
                             </h2>
                         </div>
                         <FaqAccordion items={faq} />
@@ -635,10 +635,10 @@ export default function KdePosobime() {
                     {/* Ostatné oblasti header */}
                     <div id="okolite-casti" className="text-center mb-10 scroll-mt-28">
                         <h2
-                            className="text-2xl md:text-3xl font-black text-white"
+                            className="uppercase text-2xl md:text-3xl font-black text-white"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            OBSLUHUJEME AJ <span className="text-[#E31C25]">OKOLITÉ ČASTI</span>
+                            Obsluhujeme aj <span className="text-[#E31C25]">okolité časti</span>
                         </h2>
                         <div
                             className="mt-4 flex items-center justify-center gap-5 text-white/50 text-xs"

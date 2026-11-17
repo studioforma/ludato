@@ -131,10 +131,10 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                         <span className="font-black">//</span> Nezáväzná kalkulácia a rezervácia
                     </p>
                     <h1
-                        className="text-3xl sm:text-4xl font-black text-white"
+                        className="uppercase text-3xl sm:text-4xl font-black text-white"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        OBJEDNAŤ <span className="text-[#E31C25]">SA</span>
+                        Objednať <span className="text-[#E31C25]">sa</span>
                     </h1>
                 </div>
 

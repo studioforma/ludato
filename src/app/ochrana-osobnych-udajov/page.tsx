@@ -65,10 +65,10 @@ export default function OchranaOsobnychUdajov() {
                     <Breadcrumbs items={[{ label: 'Domov', href: '/' }, { label: 'Ochrana osobných údajov' }]} />
 
                     <h1
-                        className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight"
+                        className="uppercase text-3xl md:text-5xl font-black text-white mb-4 leading-tight"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        OCHRANA OSOBNÝCH ÚDAJOV <span className="text-[#E31C25]">A COOKIES</span>
+                        Ochrana osobných údajov <span className="text-[#E31C25]">a cookies</span>
                     </h1>
                     <p className="text-white/40 text-sm mb-12" style={{ fontFamily: 'var(--font-inter)' }}>
                         Platné od 30. 9. 2026

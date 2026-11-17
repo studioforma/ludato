@@ -133,7 +133,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['KLIMATIZÁCIA'],
+        categories: ['Klimatizácia'],
     },
     {
         type: 'faq',

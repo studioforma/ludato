@@ -133,7 +133,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['ĎALŠIE SLUŽBY', 'NÁHRADNÉ VOZIDLO'],
+        categories: ['Ďalšie služby', 'Náhradné vozidlo'],
         only: [
             'Pickup vozidla',
             'Odťah vozidla',

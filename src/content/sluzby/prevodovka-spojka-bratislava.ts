@@ -131,7 +131,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['PREVODOVKY', 'NORMOHODINY'],
+        categories: ['Prevodovky', 'Normohodiny'],
         only: [
             'Automatická prevodovka – výmena náplne',
             'Manuálna prevodovka – výmena náplne',

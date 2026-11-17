@@ -138,7 +138,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['OLEJOVÝ SERVIS'],
+        categories: ['Olejový servis'],
         ownPartsNote: true,
     },
     {

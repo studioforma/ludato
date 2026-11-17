@@ -153,7 +153,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['BRZDY'],
+        categories: ['Brzdy'],
         ownPartsNote: true,
     },
     {

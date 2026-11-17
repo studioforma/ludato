@@ -156,7 +156,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['KONTROLY VOZIDLA', 'STK A EK'],
+        categories: ['Kontroly vozidla', 'STK a EK'],
         only: ['Kontrola pred STK + EK', 'Sprostredkovanie kontroly STK + EK'],
     },
     {

@@ -98,7 +98,7 @@ export default function AreaPage({ meta, content }: { meta: AreaMeta; content: S
                             <span className="font-black">//</span> Kde pôsobíme
                         </p>
                         <h1
-                            className="text-4xl md:text-5xl font-black text-white mb-6"
+                            className="uppercase text-4xl md:text-5xl font-black text-white mb-6"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             {beforeAccent}

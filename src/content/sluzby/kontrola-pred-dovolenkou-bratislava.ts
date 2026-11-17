@@ -155,7 +155,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['KONTROLY VOZIDLA', 'BRZDY', 'KLIMATIZÁCIA'],
+        categories: ['Kontroly vozidla', 'Brzdy', 'Klimatizácia'],
         only: [
             'Všeobecná kontrola vozidla',
             'Kontrola bŕzd',

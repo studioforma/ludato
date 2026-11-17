@@ -40,8 +40,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'pneuservis-bratislava',
         name: 'Pneuservis',
-        h1: 'PNEUSERVIS BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Pneuservis Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Pneuservis Bratislava – Nové Mesto | Prezutie a výmena pneumatík od 45 € vrátane vyváženia, oprava defektu, uskladnenie | Ludato Family Autoservis a Pneuservis',
         description:
             'Pneuservis Ludato Family Autoservis v Bratislave, Novom Meste: kompletné prezutie, vyváženie, oprava defektu a uskladnenie pneumatík. Rýchlo, presne, bez zbytočného čakania.',
@@ -62,8 +62,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'vymena-oleja-bratislava',
         name: 'Výmena oleja',
-        h1: 'VÝMENA OLEJA A FILTROV BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Výmena oleja a filtrov Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Výmena oleja Bratislava – Nové Mesto | Olej a filtre od 35 €, kompletný servis za 65 € podľa špecifikácie výrobcu | Ludato Family Autoservis a Pneuservis',
         description:
             'Výmena oleja a filtrov v Bratislave, Novom Meste. Motorový olej podľa špecifikácie výrobcu, olejový, vzduchový, kabínový aj palivový filter. Ceny od 35 €.',
@@ -84,8 +84,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'brzdy-bratislava',
         name: 'Brzdy',
-        h1: 'BRZDY BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Brzdy Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Výmena bŕzd Bratislava – Nové Mesto | Kotúče a platničky od 45 €, kontrola bŕzd 35 €, výmena brzdovej kvapaliny 45 € | Ludato Family Autoservis a Pneuservis',
         description:
             'Servis bŕzd v Bratislave, Novom Meste: kontrola, výmena kotúčov a platničiek na oboch nápravách, výmena brzdovej kvapaliny. Ceny od 45 €.',
@@ -106,8 +106,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'pocitacova-diagnostika-bratislava',
         name: 'Počítačová diagnostika',
-        h1: 'POČÍTAČOVÁ DIAGNOSTIKA BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Počítačová diagnostika Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Počítačová diagnostika auta Bratislava – Nové Mesto | Načítanie chýb za 40 €, kontrolka motora, ESP, ABS, airbag | Ludato Family Autoservis a Pneuservis',
         description:
             'Počítačová diagnostika vozidiel v Bratislave, Novom Meste. OBD II, ESP, ABS, airbag, riadiaca jednotka, elektronika a osvetlenie. Diagnostika za 40 €.',
@@ -128,8 +128,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'servis-klimatizacie-bratislava',
         name: 'Servis klimatizácie',
-        h1: 'SERVIS KLIMATIZÁCIE BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Servis klimatizácie Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Servis klimatizácie Bratislava – Nové Mesto | Plnenie a tlakovanie od 40 €, chladivo R134a aj R1234yf, dezinfekcia | Ludato Family Autoservis a Pneuservis',
         description:
             'Servis klimatizácie v Bratislave, Novom Meste: kontrola, tlakovanie a preplnenie chladivom R134a aj R1234yf, riešenie zápachu z ventilácie.',
@@ -150,8 +150,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'stk-ek-bratislava',
         name: 'STK a EK',
-        h1: 'STK A EK BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'STK a EK Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'STK a emisná kontrola Bratislava – Nové Mesto | Kontrola pred STK 50 €, kompletné sprostredkovanie STK a EK 150 € | Ludato Family Autoservis a Pneuservis',
         description:
             'Príprava a sprostredkovanie STK a EK v Bratislave, Novom Meste. Kontrola pred STK od 50 €, kompletné sprostredkovanie za 150 €.',
@@ -168,8 +168,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'geometria-bratislava',
         name: 'Geometria',
-        h1: 'GEOMETRIA BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Geometria Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Geometria a nastavenie kolies Bratislava – Nové Mesto | Kontrola od 16 €, predná náprava 40 €, obe nápravy 55 € | Ludato Family Autoservis a Pneuservis',
         description:
             'Geometria kolies v Bratislave, Novom Meste: kontrola a nastavenie zbiehavosti a odklonu na prednej aj zadnej náprave podľa výrobcu. Kontrola od 16 €.',
@@ -186,8 +186,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'podvozok-bratislava',
         name: 'Podvozok',
-        h1: 'OPRAVA PODVOZKU BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Oprava podvozku Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Oprava podvozku Bratislava – Nové Mesto | Tlmiče, ramená, silentbloky a ložiská, kontrola podvozku od 30 € | Ludato Family Autoservis a Pneuservis',
         description:
             'Kontrola a oprava podvozku v Bratislave, Novom Meste: tlmiče, horné uloženie, ramená, silentbloky, stabilizátory, ložiská kolies a čapy. Kontrola od 30 €.',
@@ -208,8 +208,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'rozvody-bratislava',
         name: 'Rozvody',
-        h1: 'VÝMENA ROZVODOV BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Výmena rozvodov Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Výmena rozvodov Bratislava – Nové Mesto | Rozvodový remeň aj reťaz, napínač, vodné čerpadlo, cena vopred | Ludato Family Autoservis a Pneuservis',
         description:
             'Výmena rozvodov v Bratislave, Novom Meste: rozvodový remeň aj reťaz, napínač, vodiace lišty, kladky a vodné čerpadlo. Postup podľa výrobcu, cena vopred.',
@@ -230,8 +230,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'uskladnenie-pneumatik-bratislava',
         name: 'Uskladnenie pneumatík',
-        h1: 'USKLADNENIE PNEUMATÍK BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Uskladnenie pneumatík Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Uskladnenie pneumatík Bratislava – Nové Mesto | 40 € na sezónu, sada pripravená pri ďalšom prezutí od 45 € | Ludato Family Autoservis a Pneuservis',
         description:
             'Sezónne uskladnenie pneumatík v Bratislave, Novom Meste za 40 € na sezónu. Kontrola dezénu pri uskladnení a sada pripravená priamo pri ďalšom prezutí.',
@@ -248,8 +248,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'predaj-pneumatik-bratislava',
         name: 'Predaj pneumatík',
-        h1: 'PREDAJ PNEUMATÍK BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Predaj pneumatík Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Predaj pneumatík Bratislava – Nové Mesto | Pirelli, Michelin, Nexen a Matador na objednávku s montážou od 45 € | Ludato Family Autoservis a Pneuservis',
         description:
             'Nové pneumatiky Pirelli, Michelin, Nexen a Matador na objednávku v Bratislave, Novom Meste. Pomôžeme s výberom, dodáme cez overených partnerov a rovno namontujeme.',
@@ -266,8 +266,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'nahradne-vozidlo-bratislava',
         name: 'Náhradné vozidlo',
-        h1: 'NÁHRADNÉ VOZIDLO POČAS OPRAVY BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Náhradné vozidlo počas opravy Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Náhradné vozidlo počas opravy Bratislava – Nové Mesto | 35 € na deň, pri servise nad 1000 € zadarmo, Škoda aj VW | Ludato Family Autoservis a Pneuservis',
         description:
             'Náhradné vozidlo počas opravy v Bratislave, Novom Meste: 35 € na deň, pri servise nad 1000 € zadarmo, pri poistnej udalosti ho hradí poisťovňa.',
@@ -288,8 +288,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'zlozita-diagnostika-bratislava',
         name: 'Zložitá diagnostika',
-        h1: 'ZLOŽITÁ DIAGNOSTIKA BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Zložitá diagnostika Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Zložitá diagnostika Bratislava, Nové Mesto | Keď iný servis chybu nenašiel | Diagnostika riadiacej jednotky 40 €, elektrika, motor, snímače | Ludato Family Autoservis',
         description:
             'Zložitá diagnostika v Bratislave, Novom Meste: poruchy, ktoré sa vracajú, skraty v kabeláži, klamúce snímače. Hľadáme skutočnú príčinu, nie prvý diel z kódu.',
@@ -310,8 +310,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'turboduchadlo-bratislava',
         name: 'Turbodúchadlo',
-        h1: 'OPRAVA TURBODÚCHADLA BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Oprava turbodúchadla Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Oprava a výmena turba Bratislava – Nové Mesto | Repas aj nové turbodúchadlo, kontrola olejových vedení a príčiny | Ludato Family Autoservis a Pneuservis',
         description:
             'Repas a výmena turbodúchadla v Bratislave, Novom Meste. Diagnostika tlaku plnenia, kontrola olejových vedení, DPF a EGR. Hľadáme aj príčinu, prečo turbo odišlo.',
@@ -332,8 +332,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'servis-veteranov-bratislava',
         name: 'Servis veteránov',
-        h1: 'SERVIS VETERÁNOV BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Servis veteránov Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Servis veteránov Bratislava – Nové Mesto | Oprava a údržba starších áut, zháňanie nových aj repasovaných dielov | Ludato Family Autoservis a Pneuservis',
         description:
             'Servis a opravy veteránov v Bratislave, Novom Meste. Podvozok, motor, brzdy aj elektrika, zháňanie nových aj repasovaných dielov a príprava na sezónu.',
@@ -354,8 +354,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'odtah-vozidla-bratislava',
         name: 'Odťah a vyzdvihnutie auta',
-        h1: 'ODŤAH A VYZDVIHNUTIE AUTA BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Odťah a vyzdvihnutie auta Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Odťah a vyzdvihnutie auta Bratislava | Vyzdvihnutie auta za 50 €, odťah nepojazdného auta 170 €, aj zo zahraničia | Ludato Family Autoservis a Pneuservis',
         description:
             'Vyzdvihnutie auta do servisu v Bratislave a okolí za 50 €, odťah nepojazdného auta za 170 €, odťah zo zahraničia 1,50 € za km. Ludato Family Autoservis, Nové Mesto.',
@@ -372,8 +372,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'autobateria-bratislava',
         name: 'Autobatéria',
-        h1: 'VÝMENA AUTOBATÉRIE BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Výmena autobatérie Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Výmena autobatérie Bratislava – Nové Mesto | Výmena batérie od 30 €, kontrola nabíjania, keď auto ráno nenaštartuje | Ludato Family Autoservis a Pneuservis',
         description:
             'Výmena autobatérie v Bratislave, Novom Meste od 30 €. Auto ťažko štartuje, batéria sa vybíja alebo vás nechala stáť? Zistíme príčinu a batériu vymeníme.',
@@ -394,8 +394,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'prevodovka-spojka-bratislava',
         name: 'Prevodovka a spojka',
-        h1: 'PREVODOVKA A SPOJKA BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Prevodovka a spojka Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Výmena spojky a prevodovka Bratislava – Nové Mesto | Spojka, dvojhmotový zotrvačník, olej v prevodovke od 75 € | Ludato Family Autoservis a Pneuservis',
         description:
             'Výmena spojky, dvojhmotového zotrvačníka a oleja v prevodovke v Bratislave, Novom Meste. Manuálne aj automatické prevodovky, olej od 75 €, cena opravy vopred.',
@@ -412,8 +412,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'vstrekovace-bratislava',
         name: 'Vstrekovače',
-        h1: 'VSTREKOVAČE BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Vstrekovače Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Vstrekovače Bratislava – Nové Mesto | Test na vlastnom testeri, výmena a kódovanie, naftové aj benzínové motory | Ludato Family Autoservis a Pneuservis',
         description:
             'Test vstrekovačov na vlastnom testeri, výmena a kódovanie do riadiacej jednotky v Bratislave, Novom Meste. Naftové aj benzínové motory, všetky bežné úkony okolo vstrekovania.',
@@ -434,8 +434,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'kontrola-pred-dovolenkou-bratislava',
         name: 'Kontrola pred dovolenkou',
-        h1: 'KONTROLA AUTA PRED DOVOLENKOU BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Kontrola auta pred dovolenkou Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Kontrola auta pred dovolenkou Bratislava – Nové Mesto | Všeobecná kontrola vozidla za 50 € pred dlhou cestou | Ludato Family Autoservis a Pneuservis',
         description:
             'Všeobecná kontrola auta pred dovolenkou alebo dlhou cestou v Bratislave, Novom Meste za 50 €. Brzdy, pneumatiky, kvapaliny, svetlá aj podvozok, aby vás auto nenechalo na ceste.',
@@ -452,8 +452,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'ozonova-dezinfekcia-bratislava',
         name: 'Ozónová dezinfekcia',
-        h1: 'OZÓNOVÁ DEZINFEKCIA AUTA BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Ozónová dezinfekcia auta Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Ozónová dezinfekcia auta Bratislava – Nové Mesto | Za 30 € proti zápachu z cigariet, zvierat, vlhkosti a klimatizácie | Ludato Family Autoservis a Pneuservis',
         description:
             'Ozónová dezinfekcia interiéru auta v Bratislave, Novom Meste za 30 €. Pomáha proti zápachu z cigariet, zvierat, vlhkosti aj z klimatizácie.',
@@ -470,8 +470,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'tepovanie-interieru-bratislava',
         name: 'Tepovanie interiéru',
-        h1: 'TEPOVANIE INTERIÉRU AUTA BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Tepovanie interiéru auta Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Tepovanie auta Bratislava – Nové Mesto | Tepovanie sedadiel cez deň od 50 €, v noci od 80 €, čistenie interiéru 45 € | Ludato Family Autoservis a Pneuservis',
         description:
             'Tepovanie sedadiel a interiéru auta v Bratislave, Novom Meste. Cez deň od 50 €, v noci od 80 €, čistenie interiéru s vysávaním za 45 €.',
@@ -488,8 +488,8 @@ export const services: ServiceMeta[] = [
     {
         slug: 'chladenie-kurenie-bratislava',
         name: 'Chladenie a kúrenie',
-        h1: 'CHLADIACI SYSTÉM A KÚRENIE BRATISLAVA – NOVÉ MESTO',
-        h1Accent: 'BRATISLAVA',
+        h1: 'Chladiaci systém a kúrenie Bratislava – Nové Mesto',
+        h1Accent: 'Bratislava',
         title: 'Chladiaci systém a kúrenie Bratislava – Nové Mesto | Chladiaca kvapalina, termostat, únik, prehrievanie motora | Ludato Family Autoservis a Pneuservis',
         description:
             'Oprava chladiaceho systému a kúrenia v Bratislave, Novom Meste. Výmena chladiacej kvapaliny G12 a G13, hľadanie úniku, termostat, vodné čerpadlo a chladič.',

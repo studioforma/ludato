@@ -16,10 +16,10 @@ export default function ComfortSection() {
                             <span className="font-black">//</span> Počas čakania
                         </p>
                         <h2
-                            className="text-4xl md:text-5xl font-black text-white mb-6"
+                            className="uppercase text-4xl md:text-5xl font-black text-white mb-6"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            POSEDÍTE SI U NÁS <span className="text-[#E31C25]">V POHODLÍ</span>
+                            Posedíte si u nás <span className="text-[#E31C25]">v pohodlí</span>
                         </h2>
                         <p
                             className="text-white/60 text-base leading-relaxed"

@@ -70,10 +70,10 @@ export default function Sluzby() {
                             <span className="font-black">//</span> Čo robíme
                         </p>
                         <h1
-                            className="text-4xl md:text-5xl font-black text-white mb-6"
+                            className="uppercase text-4xl md:text-5xl font-black text-white mb-6"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            SLUŽBY AUTOSERVISU <span className="text-[#E31C25]">BRATISLAVA</span> – NOVÉ MESTO
+                            Služby autoservisu <span className="text-[#E31C25]">Bratislava</span> – Nové Mesto
                         </h1>
                         <div
                             className="text-white/60 text-base leading-relaxed space-y-4"

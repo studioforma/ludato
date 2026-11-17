@@ -163,7 +163,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['PODVOZOK', 'KONTROLY VOZIDLA'],
+        categories: ['Podvozok', 'Kontroly vozidla'],
         only: ['Kontrola podvozku', 'Opravy (tlmiče, ramená, ložiská…)', 'Kontrola podvozku a náprav'],
         ownPartsNote: true,
     },

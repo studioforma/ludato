@@ -439,7 +439,7 @@ export default function ServicePage({
                                 <span className="font-black">//</span> Služby
                             </p>
                             <h1
-                                className="text-4xl md:text-5xl font-black text-white mb-6"
+                                className="uppercase text-4xl md:text-5xl font-black text-white mb-6"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
                                 {beforeAccent}

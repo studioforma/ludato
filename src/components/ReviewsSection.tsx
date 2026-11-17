@@ -68,10 +68,10 @@ export default function ReviewsSection() {
                         <span className="font-black">//</span> Čo o nás hovoria
                     </p>
                     <h2
-                        className="text-4xl md:text-5xl font-black text-[#1D1D1B] mb-4"
+                        className="uppercase text-4xl md:text-5xl font-black text-[#1D1D1B] mb-4"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        RECENZIE <span className="text-[#E31C25]">ZÁKAZNÍKOV</span>
+                        Recenzie <span className="text-[#E31C25]">zákazníkov</span>
                     </h2>
                     <p
                         className="text-[#1D1D1B]/55 max-w-lg mx-auto"

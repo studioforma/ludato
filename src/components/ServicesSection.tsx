@@ -108,10 +108,10 @@ export default function ServicesSection() {
                             <span className="text-[#E31C25] font-black">//</span> Čo robíme najlepšie
                         </p>
                         <h2
-                            className="text-4xl md:text-5xl font-black text-[#1D1D1B] mb-6"
+                            className="uppercase text-4xl md:text-5xl font-black text-[#1D1D1B] mb-6"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            NAŠE <span className="text-[#E31C25]">SLUŽBY</span>
+                            Naše <span className="text-[#E31C25]">služby</span>
                         </h2>
                         <div
                             className="text-[#1D1D1B]/60 max-w-3xl mx-auto text-base leading-relaxed space-y-4"

@@ -16,10 +16,10 @@ export default function AreasSection() {
                         <span className="font-black">//</span> Kde pôsobíme
                     </p>
                     <h2
-                        className="text-3xl md:text-4xl font-black text-[#1D1D1B] mb-5"
+                        className="uppercase text-3xl md:text-4xl font-black text-[#1D1D1B] mb-5"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        AUTOSERVIS A PNEUSERVIS PRE <span className="text-[#E31C25]">CELÚ BRATISLAVU</span>
+                        Autoservis a pneuservis pre <span className="text-[#E31C25]">celú Bratislavu</span>
                     </h2>
                     <p
                         className="text-[#1D1D1B]/60 max-w-3xl mx-auto text-base leading-relaxed"

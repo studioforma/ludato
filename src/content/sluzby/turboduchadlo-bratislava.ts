@@ -148,7 +148,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['KONTROLY VOZIDLA', 'NORMOHODINY'],
+        categories: ['Kontroly vozidla', 'Normohodiny'],
         only: [
             'Diagnostika riadiacej jednotky',
             'Ťažká práca – náročné zásahy (rozvody, spojka, turbo, EGR, DPF, opravy motora, elektro, demontáž agregátov)',

@@ -149,7 +149,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['KONTROLY VOZIDLA'],
+        categories: ['Kontroly vozidla'],
         only: ['Diagnostika riadiacej jednotky', 'Kontrola elektroniky a osvetlenia'],
     },
     {

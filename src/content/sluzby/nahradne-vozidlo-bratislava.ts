@@ -167,7 +167,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Ceny',
-        categories: ['NÁHRADNÉ VOZIDLO', 'ĎALŠIE SLUŽBY'],
+        categories: ['Náhradné vozidlo', 'Ďalšie služby'],
         only: [
             'Náhradné vozidlo počas opravy',
             'Náhradné vozidlo pri servise nad 1000 €',
