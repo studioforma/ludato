@@ -156,6 +156,10 @@ const content: ServiceContent = [
                 a: 'Bežné veľkosti od 12" do 21".',
             },
             {
+                q: 'Prezúvate aj Run Flat pneumatiky?',
+                a: 'Nie, pneumatiky Run Flat neprezúvame.',
+            },
+            {
                 q: 'Ako dlho trvá kompletné prezutie?',
                 a: 'Bežné prezutie zvládneme v rámci jednej návštevy, presný čas závisí od aktuálnej vyťaženosti servisu.',
             },

@@ -106,6 +106,7 @@ export const pricingCategories: PricingCategory[] = [
             { service: '15" – 17"', price: '55', sub: '1 ks pneumatika a disk: 13,55 €' },
             { service: '18" – 21"', price: '65', sub: '1 ks pneumatika a disk: 16,25 €' },
         ],
+        footnote: '* Pneumatiky Run Flat neprezúvame.',
     },
     {
         category: 'PREVÁŽENIE A PREHODENIE KOLIES NA DISKU',
