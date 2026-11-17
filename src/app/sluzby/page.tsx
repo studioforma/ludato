@@ -10,7 +10,7 @@ import ServiceIcon from '@/components/ServiceIcon';
 const SITE = 'https://www.ludato.sk';
 
 export const metadata: Metadata = {
-    title: 'Služby autoservisu Bratislava – Nové Mesto | Ludato Family Autoservis',
+    title: 'Služby autoservisu Bratislava – Nové Mesto | Diagnostika, výmena oleja, brzdy, rozvody, pneuservis, klimatizácia a STK | Ludato Family Autoservis a Pneuservis',
     description:
         'Všetky služby autoservisu Ludato Family v Bratislave, Novom Meste: diagnostika, olej, brzdy, klimatizácia, pneuservis aj STK. Pri každej nájdete ceny a postup.',
     alternates: { canonical: `${SITE}/sluzby` },
@@ -70,10 +70,10 @@ export default function Sluzby() {
                             <span className="font-black">//</span> Čo robíme
                         </p>
                         <h1
-                            className="text-4xl md:text-5xl font-black text-white mb-6"
+                            className="uppercase text-4xl md:text-5xl font-black text-white mb-6"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            SLUŽBY AUTOSERVISU <span className="text-[#E31C25]">BRATISLAVA</span> – NOVÉ MESTO
+                            Služby autoservisu <span className="text-[#E31C25]">Bratislava</span> – Nové Mesto
                         </h1>
                         <div
                             className="text-white/60 text-base leading-relaxed space-y-4"

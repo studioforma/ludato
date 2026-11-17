@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import OnlineBookingLink from '@/components/OnlineBookingLink';
 import { getOrderPrefill } from '@/lib/orderPrefill';
+import { trackLeadThen } from '@/lib/analytics';
+import { LEAD_SOURCES, LEAD_SOURCE_LABEL } from '@/lib/leadSource';
 
 const servicesOptions = [
     'Diagnostika vozidla',
@@ -37,6 +39,7 @@ export default function QuotePage() {
         phone: '',
         car: '',
         plate: '',
+        source: '',
     });
 
     // ?sluzba=prezutie from a service page CTA pre-selects that service.
@@ -86,12 +89,15 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                     email: formState.email,
                     phone: formState.phone,
                     message: fullMessage,
+                    source: formState.source || undefined,
                     formType: 'quote',
                 }),
             });
             const result = await response.json();
             if (result.success) {
-                window.location.href = '/dakujeme';
+                trackLeadThen('nacenenie', () => {
+                    window.location.href = '/dakujeme';
+                });
             } else {
                 setError('Nastala chyba. Skúste to prosím znova.');
             }
@@ -125,10 +131,10 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                         <span className="font-black">//</span> Nezáväzná kalkulácia a rezervácia
                     </p>
                     <h1
-                        className="text-3xl sm:text-4xl font-black text-white"
+                        className="uppercase text-3xl sm:text-4xl font-black text-white"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        OBJEDNAŤ <span className="text-[#E31C25]">SA</span>
+                        Objednať <span className="text-[#E31C25]">sa</span>
                     </h1>
                 </div>
 
@@ -301,6 +307,27 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                                 style={{ fontFamily: 'var(--font-inter)' }}
                                             />
                                         </div>
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="nacenenie-zdroj" className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                            {LEAD_SOURCE_LABEL} <span className="normal-case tracking-normal">(nepovinné)</span>
+                                        </label>
+                                        <select
+                                            id="nacenenie-zdroj"
+                                            name="source"
+                                            value={formState.source}
+                                            onChange={(e) => setFormState(prev => ({ ...prev, source: e.target.value }))}
+                                            className={`${inputClass} [&_option]:text-[#1D1D1B]`}
+                                            style={{ fontFamily: 'var(--font-inter)' }}
+                                        >
+                                            <option value="">Vyberte možnosť</option>
+                                            {LEAD_SOURCES.map((s) => (
+                                                <option key={s} value={s}>
+                                                    {s}
+                                                </option>
+                                            ))}
+                                        </select>
                                     </div>
 
                                     {error && <p className="text-[#E31C25] text-sm text-center pt-2" style={{ fontFamily: 'var(--font-inter)' }}>{error}</p>}

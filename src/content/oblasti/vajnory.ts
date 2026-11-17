@@ -116,7 +116,7 @@ const content: ServiceContent = [
         paragraphs: [
             'Pred zimou odporúčame prezutie a kontrolu batérie. Na okraji mesta sú rána chladnejšie a slabá batéria sa prejaví ako prvá. Kompletné prezutie s vyvážením stojí od 45 € a výmena batérie od 30 €.',
             'Na jar je čas prezuť späť na letné pneumatiky a pri vyššom nájazde rovno vymeniť aj olej. Pred letom sa oplatí skontrolovať klimatizáciu, aby pri dochádzaní do mesta v horúčavách chladila, ako má.',
-            'Ak pneumatiky na zimu uskladňujete doma, v pivnici alebo v garáži, skontrolujte, či nie sú na slnku alebo vo vlhku. U nás ich uskladníte za 40 € na sezónu a pri ďalšom prezutí budú pripravené.',
+            'Ak pneumatiky na zimu uskladňujete doma, v pivnici alebo v garáži, skontrolujte, či nie sú na slnku alebo vo vlhku. U nás ich [uskladníte za 40 € na sezónu](/sluzby/uskladnenie-pneumatik-bratislava) a pri ďalšom prezutí budú pripravené.',
         ],
     },
     {

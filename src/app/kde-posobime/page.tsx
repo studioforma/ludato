@@ -30,7 +30,7 @@ const areasListSchema = {
 };
 
 export const metadata: Metadata = {
-    title: 'Kde nás nájdete | Ludato Family Autoservis',
+    title: 'Autoservis pre celú Bratislavu a okolie | Rača, Ružinov, Vajnory, Kramáre, Koliba, Staré Mesto, Karlova Ves a Dúbravka | Ludato Family Autoservis a Pneuservis',
     description:
         'Autoservis na Odborárskej 52 v Novom Meste pre celú Bratislavu aj okolie: Kramáre, Koliba, Rača, Ružinov, Staré Mesto a ďalšie. Po auto si vieme aj prísť.',
     alternates: { canonical: '/kde-posobime' },
@@ -38,12 +38,13 @@ export const metadata: Metadata = {
 
 type Area = {
     name: string;
-    driveTime: string;
+    /** Kramáre and Koliba have no time or route: we cannot back them up. */
+    driveTime?: string;
     /** Big number on the card, e.g. "10-15". */
-    minutes: string;
+    minutes?: string;
     /** Rough position relative to Odborárska 52 in km (x east, y north), for the mini map. */
     pos: [number, number];
-    route: string;
+    route?: string;
 };
 
 const whyNoveMesto = [
@@ -183,17 +184,11 @@ const faqSchema = {
 const areas: Area[] = [
     {
         name: 'Kramáre',
-        driveTime: 'orientačne 10 min autom',
-        minutes: '10',
         pos: [-1.8, -0.9],
-        route: 'Cez Račiansku a Pioniersku.',
     },
     {
         name: 'Koliba',
-        driveTime: 'orientačne 10 - 15 min autom',
-        minutes: '10-15',
         pos: [-2.9, -0.1],
-        route: 'Cez Pioniersku a Jeséniovu.',
     },
     {
         name: 'Rača',
@@ -298,10 +293,10 @@ export default function KdePosobime() {
                             <span className="font-black">//</span> Kde nás nájdete
                         </p>
                         <h1
-                            className="text-4xl md:text-5xl font-black text-white mb-6"
+                            className="uppercase text-4xl md:text-5xl font-black text-white mb-6"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            AUTOSERVIS PRE CELÚ <span className="text-[#E31C25]">BRATISLAVU</span>
+                            Autoservis pre celú <span className="text-[#E31C25]">Bratislavu</span>
                         </h1>
                         <p
                             className="text-white/60 max-w-2xl mx-auto text-base leading-relaxed"
@@ -336,10 +331,10 @@ export default function KdePosobime() {
                                 <span className="font-black">//</span> Naša domovská mestská časť
                             </p>
                             <h2
-                                className="text-3xl md:text-4xl font-black text-white"
+                                className="uppercase text-3xl md:text-4xl font-black text-white"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                AUTOSERVIS V <span className="text-[#E31C25]">NOVOM MESTE</span>
+                                Autoservis v <span className="text-[#E31C25]">Novom Meste</span>
                             </h2>
                         </div>
 
@@ -544,8 +539,8 @@ export default function KdePosobime() {
                                     Sme na Odborárskej 52 v Bratislave, Novom Meste. Parkovanie je
                                     možné priamo pred prevádzkou aj popri ceste vedľa nášho
                                     areálu, takže sa nemusíte obávať, že nebudete mať kde
-                                    zastaviť. Zo sídlisk Kramáre, Vinohrady a Koliba ste u nás autom za
-                                    pár minút, z centra Bratislavy je to tiež len krátka jazda.
+                                    zastaviť. Kramáre, Vinohrady aj Koliba patria do rovnakej mestskej časti
+                                    ako náš servis, z centra Bratislavy je to tiež len krátka jazda.
                                     Trasy z ostatných mestských častí nájdete pri kartách nižšie.
                                 </p>
                                 <p>
@@ -628,10 +623,10 @@ export default function KdePosobime() {
                                 <span className="font-black">//</span> Časté otázky
                             </p>
                             <h2
-                                className="text-3xl md:text-4xl font-black text-white"
+                                className="uppercase text-3xl md:text-4xl font-black text-white"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                ČASTO KLADENÉ <span className="text-[#E31C25]">OTÁZKY</span>
+                                Často kladené <span className="text-[#E31C25]">otázky</span>
                             </h2>
                         </div>
                         <FaqAccordion items={faq} />
@@ -640,10 +635,10 @@ export default function KdePosobime() {
                     {/* Ostatné oblasti header */}
                     <div id="okolite-casti" className="text-center mb-10 scroll-mt-28">
                         <h2
-                            className="text-2xl md:text-3xl font-black text-white"
+                            className="uppercase text-2xl md:text-3xl font-black text-white"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            OBSLUHUJEME AJ <span className="text-[#E31C25]">OKOLITÉ ČASTI</span>
+                            Obsluhujeme aj <span className="text-[#E31C25]">okolité časti</span>
                         </h2>
                         <div
                             className="mt-4 flex items-center justify-center gap-5 text-white/50 text-xs"
@@ -677,15 +672,21 @@ export default function KdePosobime() {
                                             >
                                                 {area.name}
                                             </h2>
-                                            <div className="mt-1 flex items-baseline gap-1.5" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                                <span className="text-[#E31C25] font-black text-2xl leading-none">{area.minutes}</span>
-                                                <span className="text-white/50 text-xs font-bold uppercase tracking-wider">min autom</span>
-                                            </div>
+                                            {area.minutes ? (
+                                                <div className="mt-1 flex items-baseline gap-1.5" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                                    <span className="text-[#E31C25] font-black text-2xl leading-none">{area.minutes}</span>
+                                                    <span className="text-white/50 text-xs font-bold uppercase tracking-wider">min autom</span>
+                                                </div>
+                                            ) : (
+                                                <div className="mt-1 text-[#E31C25] text-xs font-bold uppercase tracking-wider" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                                    Nové Mesto, ako náš servis
+                                                </div>
+                                            )}
                                             <p
                                                 className="mt-1.5 text-white/45 text-xs"
                                                 style={{ fontFamily: 'var(--font-inter)' }}
                                             >
-                                                {area.route}
+                                                {area.route ?? 'Rovnaká mestská časť ako Odborárska 52.'}
                                             </p>
                                         </div>
                                     </div>

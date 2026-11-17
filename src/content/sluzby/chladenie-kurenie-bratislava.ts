@@ -147,7 +147,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['PREVÁDZKOVÉ KVAPALINY', 'KONTROLY VOZIDLA', 'NORMOHODINY'],
+        categories: ['Prevádzkové kvapaliny', 'Kontroly vozidla', 'Normohodiny'],
         only: [
             'Chladiaca kvapalina G12',
             'Chladiaca kvapalina G13',

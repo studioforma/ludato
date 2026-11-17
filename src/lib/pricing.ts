@@ -24,7 +24,7 @@ export type PricingCategory = {
 
 export const pricingCategories: PricingCategory[] = [
     {
-        category: 'NORMOHODINY',
+        category: 'Normohodiny',
         items: [
             {
                 service: 'Ľahká práca – jednoduché, rýchle úkony bez väčšej demontáže',
@@ -45,7 +45,7 @@ export const pricingCategories: PricingCategory[] = [
         ],
     },
     {
-        category: 'KONTROLY VOZIDLA',
+        category: 'Kontroly vozidla',
         items: [
             { service: 'Všeobecná kontrola vozidla', price: '50' },
             { service: 'Kontrola podvozku a náprav', price: '40' },
@@ -55,7 +55,7 @@ export const pricingCategories: PricingCategory[] = [
         ],
     },
     {
-        category: 'GEOMETRIA',
+        category: 'Geometria',
         items: [
             { service: 'Kontrola nastavenia geometrie', price: '16', oldPrice: '20', highlight: true },
             { service: 'Geometria prednej nápravy', price: '40' },
@@ -63,7 +63,7 @@ export const pricingCategories: PricingCategory[] = [
         ],
     },
     {
-        category: 'OLEJOVÝ SERVIS',
+        category: 'Olejový servis',
         items: [
             { service: 'Výmena oleja + olejový filter', price: '35' },
             { service: 'Výmena oleja + olejový filter + vzduchový filter', price: '45' },
@@ -73,7 +73,7 @@ export const pricingCategories: PricingCategory[] = [
         footnote: '* Materiál naceňujeme individuálne podľa EČV',
     },
     {
-        category: 'BRZDY',
+        category: 'Brzdy',
         items: [
             { service: 'Kontrola bŕzd', price: '35' },
             { service: 'Výmena brzdovej kvapaliny', price: '45' },
@@ -84,7 +84,7 @@ export const pricingCategories: PricingCategory[] = [
         ],
     },
     {
-        category: 'PREVODOVKY',
+        category: 'Prevodovky',
         items: [
             { service: 'Automatická prevodovka – výmena náplne', price: '85', prefix: 'od' },
             { service: 'Manuálna prevodovka – výmena náplne', price: '75', prefix: 'od' },
@@ -92,7 +92,7 @@ export const pricingCategories: PricingCategory[] = [
         footnote: '* Materiál naceňujeme individuálne',
     },
     {
-        category: 'PODVOZOK',
+        category: 'Podvozok',
         items: [
             { service: 'Kontrola podvozku', price: '30' },
             { service: 'Opravy (tlmiče, ramená, ložiská…)', price: null },
@@ -100,15 +100,16 @@ export const pricingCategories: PricingCategory[] = [
         footnote: '* Opravy – individuálne nacenenie',
     },
     {
-        category: 'KOMPLETNÉ PREZUTIE',
+        category: 'Kompletné prezutie',
         items: [
             { service: '12" – 14"', price: '45', sub: '1 ks pneumatika a disk: 11,25 €' },
             { service: '15" – 17"', price: '55', sub: '1 ks pneumatika a disk: 13,55 €' },
             { service: '18" – 21"', price: '65', sub: '1 ks pneumatika a disk: 16,25 €' },
         ],
+        footnote: '* Pneumatiky Run Flat neprezúvame.',
     },
     {
-        category: 'PREVÁŽENIE A PREHODENIE KOLIES NA DISKU',
+        category: 'Preváženie a prehodenie kolies na disku',
         items: [
             { service: '12" – 14"', price: '40', sub: '1 ks pneumatika a disk: 10,00 €' },
             { service: '15" – 17"', price: '45', sub: '1 ks pneumatika a disk: 11,25 €' },
@@ -116,7 +117,7 @@ export const pricingCategories: PricingCategory[] = [
         ],
     },
     {
-        category: 'USKLADNENIE A OPRAVA PNEUMATÍK',
+        category: 'Uskladnenie a oprava pneumatík',
         items: [
             { service: 'Sezónne uskladnenie pneumatík', price: '40', unit: '/sezóna' },
             { service: 'Oprava defektu', price: null },
@@ -124,13 +125,13 @@ export const pricingCategories: PricingCategory[] = [
         footnote: '* Oprava defektu – individuálne nacenenie podľa stavu pneumatiky',
     },
     {
-        category: 'STK A EK',
+        category: 'STK a EK',
         items: [
             { service: 'Sprostredkovanie kontroly STK + EK', price: '150', highlight: true },
         ],
     },
     {
-        category: 'KLIMATIZÁCIA',
+        category: 'Klimatizácia',
         items: [
             { service: 'Kontrola, tlakovanie a preplnenie klimatizácie – staré chladivo R134a', price: '40' },
             { service: 'Kontrola, tlakovanie a preplnenie klimatizácie – nové chladivo R1234yf', price: '48' },
@@ -138,13 +139,13 @@ export const pricingCategories: PricingCategory[] = [
         footnote: '* Uvedené ceny sú bez materiálu. Chladivo R134a – 0,17 € bez DPH / 1 g, chladivo R1234yf – 0,28 € bez DPH / 1 g',
     },
     {
-        category: 'DEZINFEKCIA',
+        category: 'Dezinfekcia',
         items: [
             { service: 'Ozónová dezinfekcia interiéru', price: '30' },
         ],
     },
     {
-        category: 'PREVÁDZKOVÉ KVAPALINY',
+        category: 'Prevádzkové kvapaliny',
         items: [
             { service: 'Ostrekovač', price: '3', unit: '/l' },
             { service: 'Chladiaca kvapalina G12', price: '22', unit: '/6 l' },
@@ -156,7 +157,7 @@ export const pricingCategories: PricingCategory[] = [
         ],
     },
     {
-        category: 'ĎALŠIE SLUŽBY',
+        category: 'Ďalšie služby',
         items: [
             { service: 'Tepovanie cez deň', price: '50', prefix: 'od' },
             { service: 'Tepovanie v noci', price: '80', prefix: 'od' },
@@ -168,7 +169,7 @@ export const pricingCategories: PricingCategory[] = [
         footnote: '* Pickup v rámci Bratislavy a okolia. Odťah zabezpečíme aj mimo Slovenska, cena podľa vzdialenosti.',
     },
     {
-        category: 'NÁHRADNÉ VOZIDLO',
+        category: 'Náhradné vozidlo',
         items: [
             { service: 'Náhradné vozidlo počas opravy', price: '35', unit: '/deň' },
             { service: 'Náhradné vozidlo pri servise nad 1000 €', price: null, priceLabel: 'Zadarmo', highlight: true },

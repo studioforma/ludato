@@ -163,7 +163,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['PODVOZOK', 'KONTROLY VOZIDLA'],
+        categories: ['Podvozok', 'Kontroly vozidla'],
         only: ['Kontrola podvozku', 'Opravy (tlmiče, ramená, ložiská…)', 'Kontrola podvozku a náprav'],
         ownPartsNote: true,
     },
@@ -218,6 +218,7 @@ const content: ServiceContent = [
         heading: 'Kde nás nájdete',
         paragraphs: [
             'Sme na Odborárskej 52 v Bratislave, Novom Meste. Autom k nám chodia zákazníci aj z okolitých mestských častí, prehľad aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Podvozok patrí medzi služby, ktoré najčastejšie riešime pre [Staré Mesto](/kde-posobime/stare-mesto) aj [Karlovu Ves](/kde-posobime/karlova-ves).',
         ],
     },
 ];

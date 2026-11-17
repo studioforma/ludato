@@ -122,9 +122,9 @@ const content: ServiceContent = [
         type: 'prices',
         heading: 'Orientačné ceny',
         categories: [
-            'KOMPLETNÉ PREZUTIE',
-            'PREVÁŽENIE A PREHODENIE KOLIES NA DISKU',
-            'USKLADNENIE A OPRAVA PNEUMATÍK',
+            'Kompletné prezutie',
+            'Preváženie a prehodenie kolies na disku',
+            'Uskladnenie a oprava pneumatík',
         ],
     },
     {
@@ -156,6 +156,10 @@ const content: ServiceContent = [
                 a: 'Bežné veľkosti od 12" do 21".',
             },
             {
+                q: 'Prezúvate aj Run Flat pneumatiky?',
+                a: 'Nie, pneumatiky Run Flat neprezúvame.',
+            },
+            {
                 q: 'Ako dlho trvá kompletné prezutie?',
                 a: 'Bežné prezutie zvládneme v rámci jednej návštevy, presný čas závisí od aktuálnej vyťaženosti servisu.',
             },
@@ -181,7 +185,8 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Kde nás nájdete',
         paragraphs: [
-            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Autom k nám chodia zákazníci aj z okolitých mestských častí, prehľad aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Sme na Odborárskej 52 v Bratislave, Novom Meste. Robíme [pneuservis pre Ružinov](/kde-posobime/ruzinov), odkiaľ ste u nás orientačne za 15 minút, [prezutie pre vodičov z Rače](/kde-posobime/raca) orientačne za 10 až 15 minút a [pneuservis aj pre Vajnory](/kde-posobime/vajnory), kam je to cez Vajnorskú 15 až 20 minút. Prehľad všetkých mestských častí aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Pôsobíme aj v mestských častiach [Kramáre](/kde-posobime/kramare) a [Koliba](/kde-posobime/koliba).',
         ],
     },
 ];

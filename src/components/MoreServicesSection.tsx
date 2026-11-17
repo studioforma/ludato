@@ -9,7 +9,7 @@ const extras = [
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 17h14M5 17a2 2 0 100 4 2 2 0 000-4zm14 0a2 2 0 100 4 2 2 0 000-4zM5 17l1.5-6.5A2 2 0 018.42 9h7.16a2 2 0 011.92 1.5L19 17M6.5 10.5h11" />
             </svg>
         ),
-        title: 'NÁHRADNÉ VOZIDLO',
+        title: 'Náhradné vozidlo',
         description:
             'Počas dlhšej opravy vám požičiame náhradné auto za 35 € na deň, pri servise nad 1000 € zadarmo.',
         href: '/sluzby/nahradne-vozidlo-bratislava',
@@ -22,7 +22,7 @@ const extras = [
                 <path strokeLinecap="round" strokeLinejoin="round" d="M20 20l-3.5-3.5M8.5 11h5M11 8.5v5" />
             </svg>
         ),
-        title: 'KEĎ INÝ SERVIS NEVEDEL',
+        title: 'Keď iný servis nevedel',
         description:
             'Kontrolka sa stále vracia alebo chybu inde nenašli? Hľadáme skutočnú príčinu, nie prvý diel, ktorý ukáže diagnostika.',
         href: '/sluzby/zlozita-diagnostika-bratislava',
@@ -34,7 +34,7 @@ const extras = [
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 7l9-4 9 4-9 4-9-4zm0 0v10l9 4m0-10v10m0-10l9-4v10l-9 4" />
             </svg>
         ),
-        title: 'USKLADNENIE PNEUMATÍK',
+        title: 'Uskladnenie pneumatík',
         description:
             'Sezónnu sadu pneumatík vám medzi prezutiami radi uskladníme, aby ste sa o ne nemuseli starať doma.',
         href: '/sluzby/uskladnenie-pneumatik-bratislava',
@@ -52,7 +52,7 @@ function ExtraCard({ item }: { item: Extra }) {
         >
             <div className="text-[#E31C25] mb-5">{item.icon}</div>
             <h3
-                className="font-black text-white text-lg mb-3"
+                className="uppercase font-black text-white text-lg mb-3"
                 style={{ fontFamily: 'var(--font-montserrat)' }}
             >
                 <span className="text-[#E31C25] mr-1">//</span>
@@ -87,10 +87,10 @@ export default function MoreServicesSection() {
                         <span className="font-black">//</span> Prečo Ludato
                     </p>
                     <h2
-                        className="text-3xl md:text-4xl font-black text-white"
+                        className="uppercase text-3xl md:text-4xl font-black text-white"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        PREČO SA K NÁM KLIENTI <span className="text-[#E31C25]">VRACAJÚ</span>
+                        Prečo sa k nám klienti <span className="text-[#E31C25]">vracajú</span>
                     </h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">

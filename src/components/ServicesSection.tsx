@@ -1,5 +1,4 @@
-'use client';
-
+// Server component: no hooks, handlers or browser APIs here, so it ships no JS.
 import Link from 'next/link';
 import { getService, type ServiceMeta } from '@/lib/services';
 import ServiceIcon from '@/components/ServiceIcon';
@@ -109,10 +108,10 @@ export default function ServicesSection() {
                             <span className="text-[#E31C25] font-black">//</span> Čo robíme najlepšie
                         </p>
                         <h2
-                            className="text-4xl md:text-5xl font-black text-[#1D1D1B] mb-6"
+                            className="uppercase text-4xl md:text-5xl font-black text-[#1D1D1B] mb-6"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
-                            NAŠE <span className="text-[#E31C25]">SLUŽBY</span>
+                            Naše <span className="text-[#E31C25]">služby</span>
                         </h2>
                         <div
                             className="text-[#1D1D1B]/60 max-w-3xl mx-auto text-base leading-relaxed space-y-4"
@@ -137,7 +136,12 @@ export default function ServicesSection() {
                             </p>
                             <p>
                                 Ku každej službe nižšie nájdete samostatnú stránku s postupom,
-                                orientačnými cenami a odpoveďami na najčastejšie otázky.
+                                orientačnými cenami a odpoveďami na najčastejšie otázky. A keď
+                                auto v zime ráno nenaštartuje, pozrite sa na{' '}
+                                <Link href="/sluzby/autobateria-bratislava" className={inlineLink}>
+                                    výmenu autobatérie
+                                </Link>
+                                .
                             </p>
                         </div>
                     </div>

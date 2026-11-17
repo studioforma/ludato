@@ -4,6 +4,7 @@ import ServicesSection from '@/components/ServicesSection';
 import AboutSection from '@/components/AboutSection';
 import ComfortSection from '@/components/ComfortSection';
 import MoreServicesSection from '@/components/MoreServicesSection';
+import AreasSection from '@/components/AreasSection';
 import CtaBanner from '@/components/CtaBanner';
 import InlineCta from '@/components/InlineCta';
 import ReviewsSection from '@/components/ReviewsSection';
@@ -51,6 +52,7 @@ export default function Home() {
       <AboutSection />
       <ComfortSection />
       <MoreServicesSection />
+      <AreasSection />
       <CtaBanner
         question="Blíži sa vám STK?"
         subtext="Pripravíme vaše auto tak, aby prešlo na prvýkrát, bez zbytočného stresu."

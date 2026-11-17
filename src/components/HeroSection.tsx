@@ -36,12 +36,12 @@ export default function HeroSection() {
 
                 {/* Main Headline */}
                 <h1
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 tracking-tight"
+                    className="uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 tracking-tight"
                     style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
-                    AUTOSERVIS{' '}
-                    <span className="block text-[#E31C25]">BRATISLAVA</span>
-                    <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl">NOVÉ MESTO</span>
+                    Autoservis{' '}
+                    <span className="block text-[#E31C25]">Bratislava</span>
+                    <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Nové Mesto</span>
                 </h1>
 
                 {/* Sub-headline */}

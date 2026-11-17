@@ -24,10 +24,10 @@ export default function Dakujeme() {
                         </svg>
                     </div>
                     <h1
-                        className="text-4xl sm:text-5xl font-black text-white mb-4"
+                        className="uppercase text-4xl sm:text-5xl font-black text-white mb-4"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        ĎAKUJEME<span className="text-[#E31C25]">!</span>
+                        Ďakujeme<span className="text-[#E31C25]">!</span>
                     </h1>
                     <p
                         className="text-white/60 text-base mb-2"

@@ -10,6 +10,8 @@ export interface ContactEmailFields {
     email: string;
     phone?: string;
     message: string;
+    /** Answer to "Ako ste sa o nás dozvedeli?", optional. */
+    source?: string;
 }
 
 function escapeHtml(value: string) {
@@ -37,7 +39,7 @@ function row(label: string, value: string, href?: string) {
     `;
 }
 
-export function buildContactEmailHtml({ eyebrow, title, name, email, phone, message }: ContactEmailFields) {
+export function buildContactEmailHtml({ eyebrow, title, name, email, phone, message, source }: ContactEmailFields) {
     return `
         <!DOCTYPE html>
         <html>
@@ -71,6 +73,7 @@ export function buildContactEmailHtml({ eyebrow, title, name, email, phone, mess
                                         ${row('Meno', name)}
                                         ${row('Email', email, `mailto:${email}`)}
                                         ${phone ? row('Telefón', phone, `tel:${phone.replace(/\s/g, '')}`) : ''}
+                                        ${source ? row('Ako sa o nás dozvedel', source) : ''}
                                     </table>
                                 </td>
                             </tr>
@@ -101,7 +104,7 @@ ${escapeHtml(message)}
     `;
 }
 
-export function buildContactEmailText({ eyebrow, title, name, email, phone, message }: ContactEmailFields) {
+export function buildContactEmailText({ eyebrow, title, name, email, phone, message, source }: ContactEmailFields) {
     return [
         `${eyebrow.toUpperCase()}`,
         title.toUpperCase(),
@@ -109,6 +112,7 @@ export function buildContactEmailText({ eyebrow, title, name, email, phone, mess
         `Meno: ${name}`,
         `Email: ${email}`,
         phone ? `Telefón: ${phone}` : '',
+        source ? `Ako sa o nás dozvedel: ${source}` : '',
         '',
         'Správa:',
         message,

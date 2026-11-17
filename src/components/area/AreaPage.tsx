@@ -98,7 +98,7 @@ export default function AreaPage({ meta, content }: { meta: AreaMeta; content: S
                             <span className="font-black">//</span> Kde pôsobíme
                         </p>
                         <h1
-                            className="text-4xl md:text-5xl font-black text-white mb-6"
+                            className="uppercase text-4xl md:text-5xl font-black text-white mb-6"
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             {beforeAccent}
@@ -122,8 +122,8 @@ export default function AreaPage({ meta, content }: { meta: AreaMeta; content: S
                             style={{ fontFamily: 'var(--font-inter)' }}
                         >
                             <span className="border border-white/15 rounded-sm px-3 py-1.5">📍 Odborárska 52, Nové Mesto</span>
-                            <span className="border border-white/15 rounded-sm px-3 py-1.5">🚗 {meta.driveTime}</span>
-                            <span className="border border-white/15 rounded-sm px-3 py-1.5">🛣️ {meta.route}</span>
+                            {meta.driveTime && <span className="border border-white/15 rounded-sm px-3 py-1.5">🚗 {meta.driveTime}</span>}
+                            {meta.route && <span className="border border-white/15 rounded-sm px-3 py-1.5">🛣️ {meta.route}</span>}
                         </div>
                     </div>
 

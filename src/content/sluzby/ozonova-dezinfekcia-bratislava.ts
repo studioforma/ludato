@@ -143,7 +143,7 @@ const content: ServiceContent = [
     {
         type: 'prices',
         heading: 'Orientačné ceny',
-        categories: ['DEZINFEKCIA', 'ĎALŠIE SLUŽBY'],
+        categories: ['Dezinfekcia', 'Ďalšie služby'],
         only: ['Ozónová dezinfekcia interiéru', 'Tepovanie cez deň', 'Tepovanie v noci', 'Čistenie interiéru + vysávanie'],
     },
     {

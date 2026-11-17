@@ -4,7 +4,7 @@ import { pricingCategories } from '@/lib/pricing';
 import { SITE, BUSINESS_ID, breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-    title: 'Cenník | LUDATO FAMILY Cars Services',
+    title: 'Cenník autoservisu Bratislava – Nové Mesto | Výmena oleja od 35 €, prezutie od 45 €, diagnostika 40 €, normohodina od 32 € | Ludato Family Autoservis a Pneuservis',
     description:
         'Cenník autoservisných služieb LUDATO FAMILY. Výmena oleja, diagnostika, brzdy, pneumatiky, klimatizácia a ďalšie. Normohodina od 32 €.',
     alternates: { canonical: '/cennik' },
