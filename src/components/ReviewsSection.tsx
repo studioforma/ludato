@@ -71,7 +71,7 @@ export default function ReviewsSection() {
 
                             {/* Text */}
                             <span
-                                className="self-start mt-4 inline-block border border-[#E31C25]/30 bg-[#E31C25]/5 text-[#E31C25] text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-sm"
+                                className="self-start mt-4 inline-block border border-[#E31C25]/30 bg-[#E31C25]/5 text-[#E31C25] text-xs md:text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-sm"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
                                 {review.service}

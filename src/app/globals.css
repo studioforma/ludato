@@ -15,6 +15,15 @@
   --foreground: #1D1D1B;
 }
 
+/* Mobile (80 % of visits): text-xs is 14 px and text-sm 16 px, so body text is
+   16 px and labels and notes at least 14 px. Desktop keeps the default sizes. */
+@media (max-width: 767.98px) {
+  :root {
+    --text-xs: 0.875rem;
+    --text-sm: 1rem;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;

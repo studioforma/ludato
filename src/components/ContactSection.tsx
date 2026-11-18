@@ -6,8 +6,20 @@ import { LEAD_SOURCES, LEAD_SOURCE_LABEL } from '@/lib/leadSource';
 import { readLeadOrigin } from '@/lib/leadOrigin';
 
 // On /kontakt the section heading is the page H1; on the homepage it stays an H2.
-export default function ContactSection({ asPageHeading = false }: { asPageHeading?: boolean }) {
+// The Google Ads landing pages use the same form with formOnly (no heading,
+// contact pills or map, the LP has its own) and variant="light" (light page).
+// Defaults keep the homepage and /kontakt exactly as they are.
+export default function ContactSection({
+    asPageHeading = false,
+    variant = 'dark',
+    formOnly = false,
+}: {
+    asPageHeading?: boolean;
+    variant?: 'dark' | 'light';
+    formOnly?: boolean;
+}) {
     const Heading = asPageHeading ? 'h1' : 'h2';
+    const light = variant === 'light';
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -59,8 +71,73 @@ export default function ContactSection({ asPageHeading = false }: { asPageHeadin
         }
     };
 
-    const inputClass =
-        'w-full bg-white/5 border border-white/10 hover:border-[#E31C25]/40 focus:border-[#E31C25] focus:outline-none text-white placeholder-white/30 px-4 py-3 rounded-sm text-sm transition-colors duration-300';
+    const inputClass = light
+        ? 'w-full bg-white border border-black/20 hover:border-[#E31C25]/50 focus:border-[#E31C25] focus:outline-none text-[#1D1D1B] placeholder-[#1D1D1B]/45 px-4 py-3 rounded-sm text-sm transition-colors duration-300'
+        : 'w-full bg-white/5 border border-white/10 hover:border-[#E31C25]/40 focus:border-[#E31C25] focus:outline-none text-white placeholder-white/30 px-4 py-3 rounded-sm text-sm transition-colors duration-300';
+    const labelClass = `block ${light ? 'text-[#1D1D1B]/75' : 'text-white/60'} text-xs tracking-widest uppercase mb-2`;
+
+    const form = (
+        <form
+            onSubmit={handleSubmit}
+            className="space-y-4"
+            style={{ fontFamily: 'var(--font-inter)' }}
+        >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
+                        Meno *
+                    </label>
+                    <input type="text" name="name" required value={formData.name} onChange={handleChange} placeholder="Vaše meno" className={inputClass} />
+                </div>
+                <div>
+                    <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
+                        Telefón
+                    </label>
+                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+421 9XX XXX XXX" className={inputClass} />
+                </div>
+            </div>
+            <div>
+                <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
+                    Email *
+                </label>
+                <input type="email" name="email" required value={formData.email} onChange={handleChange} placeholder="vas@email.sk" className={inputClass} />
+            </div>
+            <div>
+                <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
+                    Správa *
+                </label>
+                <textarea name="message" required rows={5} value={formData.message} onChange={handleChange} placeholder="Opíšte váš problém alebo otázku..." className={`${inputClass} resize-none`} />
+            </div>
+            <div>
+                <label htmlFor="kontakt-zdroj" className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
+                    {LEAD_SOURCE_LABEL} <span className="normal-case tracking-normal">(nepovinné)</span>
+                </label>
+                <select id="kontakt-zdroj" name="source" value={formData.source} onChange={handleChange} className={`${inputClass} [&_option]:text-[#1D1D1B]`}>
+                    <option value="">Vyberte možnosť</option>
+                    {LEAD_SOURCES.map((s) => (
+                        <option key={s} value={s}>
+                            {s}
+                        </option>
+                    ))}
+                </select>
+            </div>
+            {error && <p className="text-[#E31C25] text-sm">{error}</p>}
+            <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-[#E31C25] hover:bg-[#c0151d] disabled:opacity-60 text-white font-black py-4 rounded-sm tracking-widest uppercase text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#E31C25]/40 hover:-translate-y-0.5 group relative overflow-hidden"
+                style={{ fontFamily: 'var(--font-montserrat)' }}
+            >
+                <span className="relative z-10">{isSubmitting ? 'Odosiela sa...' : 'ODOSLAŤ SPRÁVU'}</span>
+                <span className="absolute inset-0 bg-white/10 translate-x-full group-hover:translate-x-0 transition-transform duration-300 skew-x-12" />
+            </button>
+            <p className={`${light ? 'text-[#1D1D1B]/65' : 'text-white/30'} text-xs text-center`} style={{ fontFamily: 'var(--font-inter)' }}>
+                * Povinné polia. Vaše údaje sú v bezpečí.
+            </p>
+        </form>
+    );
+
+    if (formOnly) return form;
 
     return (
         <section id="kontakt" className="bg-[#111111] py-24 lg:py-32">
@@ -92,64 +169,7 @@ export default function ContactSection({ asPageHeading = false }: { asPageHeadin
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Form */}
                     <div>
-                        <form
-                            onSubmit={handleSubmit}
-                            className="space-y-4"
-                            style={{ fontFamily: 'var(--font-inter)' }}
-                        >
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                        Meno *
-                                    </label>
-                                    <input type="text" name="name" required value={formData.name} onChange={handleChange} placeholder="Vaše meno" className={inputClass} />
-                                </div>
-                                <div>
-                                    <label className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                        Telefón
-                                    </label>
-                                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+421 9XX XXX XXX" className={inputClass} />
-                                </div>
-                            </div>
-                            <div>
-                                <label className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                    Email *
-                                </label>
-                                <input type="email" name="email" required value={formData.email} onChange={handleChange} placeholder="vas@email.sk" className={inputClass} />
-                            </div>
-                            <div>
-                                <label className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                    Správa *
-                                </label>
-                                <textarea name="message" required rows={5} value={formData.message} onChange={handleChange} placeholder="Opíšte váš problém alebo otázku..." className={`${inputClass} resize-none`} />
-                            </div>
-                            <div>
-                                <label htmlFor="kontakt-zdroj" className="block text-white/60 text-xs tracking-widest uppercase mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                    {LEAD_SOURCE_LABEL} <span className="normal-case tracking-normal">(nepovinné)</span>
-                                </label>
-                                <select id="kontakt-zdroj" name="source" value={formData.source} onChange={handleChange} className={`${inputClass} [&_option]:text-[#1D1D1B]`}>
-                                    <option value="">Vyberte možnosť</option>
-                                    {LEAD_SOURCES.map((s) => (
-                                        <option key={s} value={s}>
-                                            {s}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-                            {error && <p className="text-[#E31C25] text-sm">{error}</p>}
-                            <button
-                                type="submit"
-                                disabled={isSubmitting}
-                                className="w-full bg-[#E31C25] hover:bg-[#c0151d] disabled:opacity-60 text-white font-black py-4 rounded-sm tracking-widest uppercase text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#E31C25]/40 hover:-translate-y-0.5 group relative overflow-hidden"
-                                style={{ fontFamily: 'var(--font-montserrat)' }}
-                            >
-                                <span className="relative z-10">{isSubmitting ? 'Odosiela sa...' : 'ODOSLAŤ SPRÁVU'}</span>
-                                <span className="absolute inset-0 bg-white/10 translate-x-full group-hover:translate-x-0 transition-transform duration-300 skew-x-12" />
-                            </button>
-                            <p className="text-white/30 text-xs text-center" style={{ fontFamily: 'var(--font-inter)' }}>
-                                * Povinné polia. Vaše údaje sú v bezpečí.
-                            </p>
-                        </form>
+                        {form}
                     </div>
 
                     {/* Map & Info */}

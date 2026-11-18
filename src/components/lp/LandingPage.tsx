@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import OnlineBookingLink from '@/components/OnlineBookingLink';
-import LpQuoteForm from '@/components/lp/LpQuoteForm';
+import ContactSection from '@/components/ContactSection';
+import InlineCta from '@/components/InlineCta';
 import CookieSettingsButton from '@/components/CookieSettingsButton';
 import { getCategory, formatPrice, formatPriceWithVat, type PriceItem } from '@/lib/pricing';
 import { GOOGLE_RATING, GOOGLE_REVIEWS, REPAIRED_CARS } from '@/lib/trust';
@@ -204,7 +205,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
             {/* 1. Hero */}
             <section className="px-4 sm:px-6 pt-12 pb-14 lg:pt-20 lg:pb-20 bg-gradient-to-b from-white to-[#F4F4F3] border-b border-black/10">
                 <div className="max-w-3xl mx-auto text-center">
-                    <p className="text-[#C0151D] text-sm tracking-[0.25em] uppercase mb-5 font-semibold" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                    <p className="text-[#C0151D] text-xs md:text-sm tracking-[0.25em] uppercase mb-5 font-semibold" style={{ fontFamily: 'var(--font-montserrat)' }}>
                         Odborárska 52, Nové Mesto
                     </p>
                     <h1 className="text-[#1D1D1B] uppercase text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6" style={{ fontFamily: 'var(--font-montserrat)' }}>
@@ -252,16 +253,6 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                 </div>
             </section>
 
-            {/* 3b. Quote form (Autoservis) */}
-            {config.primaryCta === 'quote' && (
-                <section id={QUOTE_ANCHOR} className="scroll-mt-4 px-4 sm:px-6 pb-16">
-                    <div className="max-w-2xl mx-auto bg-[#F4F4F3] border border-black/10 rounded-sm p-6 sm:p-8">
-                        <SectionHeading>Nezáväzná cenová ponuka</SectionHeading>
-                        <p className="text-[#1D1D1B] font-semibold -mt-4 mb-6">Cenovú ponuku pošleme do 48 hodín.</p>
-                        <LpQuoteForm lpKey={k} />
-                    </div>
-                </section>
-            )}
 
             {/* 4. Prices */}
             <section className="px-4 sm:px-6 py-16 bg-[#F4F4F3]">
@@ -306,9 +297,18 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                             <p key={n} className="text-[#1D1D1B]/65 text-sm">{n}</p>
                         ))}
                     </div>
-                    {/* Same buttons as the hero, right after the prices */}
-                    <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-                        <CtaButtons config={config} place="ceny" />
+                    {/* Same red CTA band as under the prices on /sluzby/* (InlineCta). The
+                        wrapper sets the call location for PhoneClickTracking. */}
+                    <div data-phone-location={`${k}_ceny`} className="mt-10 [&>aside]:mb-0">
+                        {config.primaryCta === 'quote' && (
+                            <InlineCta secondaryHref={`#${QUOTE_ANCHOR}`} secondaryLabel="Nezáväzná cenová ponuka" secondaryFirst onlineBooking={false} />
+                        )}
+                        {config.primaryCta === 'booking' && (
+                            <InlineCta secondaryBooking={`${k}_ceny`} secondaryLabel="Rezervovať termín" secondaryFirst onlineBooking={false} />
+                        )}
+                        {config.primaryCta === 'call' && (
+                            <InlineCta secondaryBooking={`${k}_ceny`} secondaryLabel="Rezervovať termín" onlineBooking={false} />
+                        )}
                     </div>
                 </div>
             </section>
@@ -418,6 +418,23 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                     </div>
                 </div>
             </section>
+
+            {/* Quote form (Autoservis): the site's contact form, at the end before the
+                footer as on the homepage. */}
+            {config.primaryCta === 'quote' && (
+                <section id={QUOTE_ANCHOR} className="scroll-mt-4 px-4 sm:px-6 py-16 bg-white">
+                    <div className="max-w-2xl mx-auto bg-[#F4F4F3] border border-black/10 rounded-sm p-6 sm:p-8">
+                        <SectionHeading>Nezáväzná cenová ponuka</SectionHeading>
+                        <p className="text-[#1D1D1B] font-semibold -mt-4 mb-6">Cenovú ponuku pošleme do 48 hodín.</p>
+                        <ContactSection variant="light" formOnly />
+                        <p className="text-center text-base mt-5">
+                            <OnlineBookingLink placement={`${k}_formular`} className="text-[#1D1D1B] font-semibold underline hover:text-[#C0151D]">
+                                Radšej si rezervujte termín online
+                            </OnlineBookingLink>
+                        </p>
+                    </div>
+                </section>
+            )}
 
             {/* NAP plus small links to the homepage and the privacy page */}
             <footer className="px-4 sm:px-6 py-8 text-center text-sm text-[#1D1D1B]/70 space-y-2 bg-white">

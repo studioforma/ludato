@@ -222,7 +222,7 @@ export default function CennikPage() {
                                     className={`flex flex-col items-center px-6 py-5 gap-1 ${tier.accent ? 'bg-[#E31C25]/15' : ''}`}
                                 >
                                     <span
-                                        className="text-white/50 text-[10px] uppercase tracking-widest font-semibold"
+                                        className="text-white/50 text-xs md:text-[10px] uppercase tracking-widest font-semibold"
                                         style={{ fontFamily: 'var(--font-montserrat)' }}
                                     >
                                         {tier.label}
@@ -235,13 +235,13 @@ export default function CennikPage() {
                                         <span className="text-sm font-medium text-white/40">/NH</span>
                                     </span>
                                     <span
-                                        className="text-white/55 text-[11px] font-semibold"
+                                        className="text-white/55 text-xs md:text-[11px] font-semibold"
                                         style={{ fontFamily: 'var(--font-inter)' }}
                                     >
                                         s DPH {withVat(tier.price)} €
                                     </span>
                                     <span
-                                        className="text-white/35 text-[10px]"
+                                        className="text-white/35 text-xs md:text-[10px]"
                                         style={{ fontFamily: 'var(--font-inter)' }}
                                     >
                                         {tier.note}
@@ -413,7 +413,7 @@ export default function CennikPage() {
                         <div className="mt-6">
                             <a
                                 href="/#kontakt"
-                                className="inline-flex items-center gap-2 bg-[#E31C25] hover:bg-[#c0151d] text-white font-bold text-xs px-5 py-3 rounded-sm tracking-widest uppercase transition-all duration-300 hover:shadow-lg hover:shadow-[#E31C25]/40"
+                                className="inline-flex items-center gap-2 bg-[#E31C25] hover:bg-[#c0151d] text-white font-bold text-sm md:text-xs max-md:min-h-[48px] px-5 py-3 rounded-sm tracking-widest uppercase transition-all duration-300 hover:shadow-lg hover:shadow-[#E31C25]/40"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
                                 REZERVOVAŤ TERMÍN
