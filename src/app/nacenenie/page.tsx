@@ -6,25 +6,8 @@ import OnlineBookingLink from '@/components/OnlineBookingLink';
 import { getOrderPrefill } from '@/lib/orderPrefill';
 import { trackLeadThen } from '@/lib/analytics';
 import { LEAD_SOURCES, LEAD_SOURCE_LABEL } from '@/lib/leadSource';
-
-const servicesOptions = [
-    'Diagnostika vozidla',
-    'Kontrola pred STK + EK',
-    'Sprostredkovanie STK + EK',
-    'Olejový servis (výmena oleja + filtre)',
-    'Výmena bŕzd + odvzdušnenie',
-    'Geometria',
-    'Kompletné prezutie kolies',
-    'Preváženie a prehodenie kolies na disku',
-    'Oprava podvozku',
-    'Výmena náplne prevodovky',
-    'Ozónová dezinfekcia interiéru',
-    'Tepovanie',
-    'Čistenie interiéru + vysávanie',
-    'Výmena batérie',
-    'Pickup / odťah vozidla',
-    'Iné (špecifikujte v správe)',
-];
+import { QUOTE_SERVICES } from '@/lib/quoteServices';
+import { readLeadOrigin } from '@/lib/leadOrigin';
 
 export default function QuotePage() {
     const [step, setStep] = useState(1);
@@ -91,6 +74,10 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                     message: fullMessage,
                     source: formState.source || undefined,
                     formType: 'quote',
+                    // Statistics only (no personal data), see lib/leadStats.ts.
+                    sluzby: formState.services,
+                    stranka: window.location.pathname,
+                    zdroj: readLeadOrigin(),
                 }),
             });
             const result = await response.json();
@@ -167,7 +154,7 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                     <h2 className="text-xl font-bold text-white mb-6" style={{ fontFamily: 'var(--font-montserrat)' }}>Krok 1: O aké služby máte záujem?</h2>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" style={{ fontFamily: 'var(--font-inter)' }}>
-                                        {servicesOptions.map((service) => {
+                                        {QUOTE_SERVICES.map((service) => {
                                             const isSelected = formState.services.includes(service);
                                             return (
                                                 <button

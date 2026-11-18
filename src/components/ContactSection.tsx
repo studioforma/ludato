@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { trackLeadThen } from '@/lib/analytics';
 import { LEAD_SOURCES, LEAD_SOURCE_LABEL } from '@/lib/leadSource';
+import { readLeadOrigin } from '@/lib/leadOrigin';
 
 // On /kontakt the section heading is the page H1; on the homepage it stays an H2.
 export default function ContactSection({ asPageHeading = false }: { asPageHeading?: boolean }) {
@@ -38,6 +39,9 @@ export default function ContactSection({ asPageHeading = false }: { asPageHeadin
                     source: formData.source || undefined,
                     subject: `Nová správa od ${formData.name} – LUDATO Cars Services`,
                     formType: 'contact',
+                    // Statistics only (no personal data), see lib/leadStats.ts.
+                    stranka: window.location.pathname,
+                    zdroj: readLeadOrigin(),
                 }),
             });
             const result = await response.json();
