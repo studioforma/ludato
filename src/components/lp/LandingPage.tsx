@@ -20,7 +20,9 @@ export type PriceTable = { heading: string; rows: PriceRef[]; footnotes?: string
 
 export type LandingConfig = {
     /** Where the page is, sent with GA4 phone_click / online_booking_click. */
-    key: 'lp_autoservis' | 'lp_pneuservis';
+    key: 'lp_autoservis' | 'lp_pneuservis' | 'lp_prezutie';
+    /** Name of the review to show first (the one closest to the page topic). */
+    leadReview?: string;
     h1: string;
     heroText: string;
     /** Short highlighted lines in the hero (offer, prices). */
@@ -240,7 +242,9 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                 <div className="max-w-5xl mx-auto">
                     <SectionHeading light>Recenzie z Google</SectionHeading>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {reviews.map((r) => (
+                        {[...reviews]
+                            .sort((a, b) => Number(b.name === config.leadReview) - Number(a.name === config.leadReview))
+                            .map((r) => (
                             <figure key={r.name} className="flex flex-col border border-black/10 rounded-sm p-6 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
                                 <Stars />
                                 <blockquote className="text-[#1D1D1B]/75 text-sm leading-relaxed mt-3 mb-4 flex-1">{r.text}</blockquote>
