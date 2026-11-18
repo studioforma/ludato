@@ -1,7 +1,8 @@
 // Where a visitor came from on their first page view in this tab: UTM tags,
 // whether an ad click id was present, the referring site and the landing
-// path. No personal data. Kept in sessionStorage by LeadOriginCapture and
-// sent along with a form so /api/contact can write one statistics row.
+// path. No personal data. Kept in sessionStorage by LeadOriginCapture, only
+// with cookie consent, and sent along with a form so /api/contact can write
+// one statistics row.
 export const LEAD_ORIGIN_KEY = 'ludato_zdroj';
 
 export interface LeadOrigin {
@@ -50,9 +51,19 @@ export function cleanLeadOrigin(value: unknown): LeadOrigin {
     };
 }
 
-/** Browser only: the origin stored on the first page view, if any. */
+/** Browser only: true when the visitor accepted cookies in the cookie bar. */
+export function hasCookieConsent(): boolean {
+    try {
+        return window.localStorage.getItem('ludato_cookie_consent') === 'accepted';
+    } catch {
+        return false;
+    }
+}
+
+/** Browser only: the stored origin, only while cookie consent is given. */
 export function readLeadOrigin(): LeadOrigin | undefined {
     try {
+        if (!hasCookieConsent()) return undefined;
         const raw = window.sessionStorage.getItem(LEAD_ORIGIN_KEY);
         return raw ? cleanLeadOrigin(JSON.parse(raw)) : undefined;
     } catch {
