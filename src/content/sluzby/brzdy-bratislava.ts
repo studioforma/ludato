@@ -156,6 +156,7 @@ const content: ServiceContent = [
         categories: ['Brzdy'],
         ownPartsNote: true,
     },
+    { type: 'reviews', ids: ['ema-f', 'cyntia', 'boris-b'] },
     {
         type: 'faq',
         heading: 'Časté otázky',

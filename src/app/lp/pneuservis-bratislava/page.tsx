@@ -76,7 +76,7 @@ const config: LandingConfig = {
         { title: 'Pozrieme sa', text: 'Skontrolujeme pneumatiky, dezén aj tlak a pri defekte vám povieme, či sa dá opraviť a koľko to bude stáť.' },
         { title: 'Hotovo', text: 'Opravené alebo vyvážené kolesá vám dotiahneme na predpísaný uťahovací moment.' },
     ],
-    leadReview: 'Sabína Diaz',
+    reviews: ['sabina-d', 'robert-p', 'ivana-s', 'pavol-d'],
     areas: ['raca', 'ruzinov', 'karlova-ves'],
     faq: [
         {

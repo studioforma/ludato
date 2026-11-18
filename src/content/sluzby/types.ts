@@ -2,6 +2,7 @@
 // template and a layout change is a single edit.
 //
 // Paragraph strings support inline links in markdown form: [text](/cesta).
+import type { TopicReviewId } from '@/lib/topicReviews';
 
 export type Section =
     | { type: 'intro'; paragraphs: string[] }
@@ -29,6 +30,8 @@ export type Section =
           /** Shows the short "no customer-supplied parts" note under the table. */
           ownPartsNote?: boolean;
       }
+    /** Real Google reviews about the page topic (lib/topicReviews.ts), shown as quotes. */
+    | { type: 'reviews'; ids: TopicReviewId[] }
     | { type: 'faq'; heading: string; items: { q: string; a: string }[] }
     /**
      * Red call-to-action box inside the article. The phone button always uses

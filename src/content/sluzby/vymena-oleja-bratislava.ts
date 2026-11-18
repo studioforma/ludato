@@ -141,6 +141,7 @@ const content: ServiceContent = [
         categories: ['Olejový servis'],
         ownPartsNote: true,
     },
+    { type: 'reviews', ids: ['patrik-o', 'elnur-k', 'peter-d'] },
     {
         type: 'faq',
         heading: 'Časté otázky',

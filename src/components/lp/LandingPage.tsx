@@ -5,7 +5,7 @@ import InlineCta from '@/components/InlineCta';
 import CookieSettingsButton from '@/components/CookieSettingsButton';
 import { getCategory, formatPrice, formatPriceWithVat, type PriceItem } from '@/lib/pricing';
 import { GOOGLE_RATING, GOOGLE_REVIEWS, REPAIRED_CARS } from '@/lib/trust';
-import { reviews } from '@/lib/reviews';
+import { TOPIC_REVIEWS, type TopicReviewId } from '@/lib/topicReviews';
 import { getArea } from '@/lib/areas';
 
 // Google Ads landing pages (/lp/*). One template, two pages. No main menu and
@@ -27,8 +27,8 @@ export type LandingConfig = {
      * puts the quote form on the page; the second button is always the other
      * of call / booking (call for quote and booking, booking for call). */
     primaryCta: 'quote' | 'booking' | 'call';
-    /** Name of the review to show first (the one closest to the page topic). */
-    leadReview?: string;
+    /** Real Google reviews about this page's topic (lib/topicReviews.ts), in display order. */
+    reviews: TopicReviewId[];
     h1: string;
     heroText: string;
     /** Short highlighted lines in the hero (offer, prices). */
@@ -353,16 +353,14 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
             <section className="px-4 sm:px-6 py-16 bg-white border-t border-black/10">
                 <div className="max-w-5xl mx-auto">
                     <SectionHeading>Recenzie z Google</SectionHeading>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {[...reviews]
-                            .sort((a, b) => Number(b.name === config.leadReview) - Number(a.name === config.leadReview))
-                            .map((r) => (
+                    <div className={`grid grid-cols-1 gap-4 ${config.reviews.length === 4 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
+                        {config.reviews.map((id) => TOPIC_REVIEWS[id]).map((r) => (
                             <figure key={r.name} className="flex flex-col border border-black/10 rounded-sm p-6 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
                                 <Stars />
                                 <blockquote className="text-[#1D1D1B]/75 text-base leading-relaxed mt-3 mb-4 flex-1">{r.text}</blockquote>
                                 <figcaption className="text-[#1D1D1B] text-base font-bold" style={{ fontFamily: 'var(--font-montserrat)' }}>
                                     {r.name}
-                                    <span className="block text-[#1D1D1B]/65 text-sm font-normal">Recenzia na Google</span>
+                                    <span className="block text-[#1D1D1B]/65 text-sm font-normal">Recenzia na Google · {r.date}</span>
                                 </figcaption>
                             </figure>
                         ))}

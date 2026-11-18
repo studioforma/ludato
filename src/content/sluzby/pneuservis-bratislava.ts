@@ -127,6 +127,7 @@ const content: ServiceContent = [
             'Uskladnenie a oprava pneumatík',
         ],
     },
+    { type: 'reviews', ids: ['sabina-d', 'robert-p', 'ivana-s'] },
     {
         type: 'faq',
         heading: 'Časté otázky',
