@@ -62,11 +62,14 @@ function PhoneButton({ location, className }: { location: string; className?: st
     );
 }
 
-function BookingButton({ placement, className }: { placement: string; className?: string }) {
+function BookingButton({ placement, onRed = false, className }: { placement: string; onRed?: boolean; className?: string }) {
+    const tone = onRed
+        ? 'border-white/80 hover:border-white text-white'
+        : 'border-[#1D1D1B] hover:bg-[#1D1D1B] hover:text-white text-[#1D1D1B]';
     return (
         <OnlineBookingLink
             placement={placement}
-            className={`inline-flex items-center justify-center gap-2 border-2 border-white/80 hover:border-white text-white font-bold px-8 py-[14px] text-sm tracking-widest uppercase rounded-sm transition-colors ${className ?? ''}`}
+            className={`inline-flex items-center justify-center gap-2 border-2 ${tone} font-bold px-8 py-[14px] text-sm tracking-widest uppercase rounded-sm transition-colors ${className ?? ''}`}
             style={{ fontFamily: 'var(--font-montserrat)' }}
         >
             Rezervovať termín
@@ -74,10 +77,10 @@ function BookingButton({ placement, className }: { placement: string; className?
     );
 }
 
-function SectionHeading({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
+function SectionHeading({ children }: { children: React.ReactNode }) {
     return (
         <h2
-            className={`uppercase text-2xl md:text-3xl font-black mb-8 ${light ? 'text-[#1D1D1B]' : 'text-white'}`}
+            className="uppercase text-2xl md:text-3xl font-black mb-8 text-[#1D1D1B]"
             style={{ fontFamily: 'var(--font-montserrat)' }}
         >
             <span className="text-[#E31C25]">//</span> {children}
@@ -98,12 +101,12 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
     const areas = (config.areas ?? []).map((slug) => getArea(slug)).filter((a) => a !== undefined);
 
     return (
-        <main id="top" className="bg-[#111111] text-white pb-[72px] lg:pb-0" style={{ fontFamily: 'var(--font-inter)' }}>
+        <main id="top" className="bg-white text-[#1D1D1B] pb-[72px] lg:pb-0" style={{ fontFamily: 'var(--font-inter)' }}>
             {/* The site-wide call bar is replaced here by the bar with both buttons. */}
             <style>{'[data-phone-location="spodny_pruh"],div:has(+[data-phone-location="spodny_pruh"]){display:none!important}'}</style>
 
             {/* Header: logo only, not a link away */}
-            <header className="border-b border-white/10">
+            <header className="bg-[#1D1D1B]">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
                     <a href="#top" aria-label="Ludato Family Autoservis a Pneuservis">
                         <Image src="/logo.svg" alt="Ludato Family Autoservis a Pneuservis" width={70} height={56} priority />
@@ -120,24 +123,24 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
             </header>
 
             {/* 1. Hero */}
-            <section className="px-4 sm:px-6 pt-12 pb-14 lg:pt-20 lg:pb-20 bg-gradient-to-br from-[#1D1D1B] via-[#111111] to-[#0a0a0a]">
+            <section className="px-4 sm:px-6 pt-12 pb-14 lg:pt-20 lg:pb-20 bg-gradient-to-b from-white to-[#F4F4F3] border-b border-black/10">
                 <div className="max-w-3xl mx-auto text-center">
-                    <p className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-5 font-semibold" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                    <p className="text-[#C0151D] text-xs tracking-[0.4em] uppercase mb-5 font-semibold" style={{ fontFamily: 'var(--font-montserrat)' }}>
                         Odborárska 52, Nové Mesto
                     </p>
-                    <h1 className="uppercase text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                    <h1 className="text-[#1D1D1B] uppercase text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6" style={{ fontFamily: 'var(--font-montserrat)' }}>
                         {config.h1}
                     </h1>
-                    <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8">{config.heroText}</p>
+                    <p className="text-[#1D1D1B]/75 text-base sm:text-lg leading-relaxed mb-8">{config.heroText}</p>
                     <ul className="inline-flex flex-col gap-2 text-left mb-3">
                         {config.heroPoints.map((p) => (
-                            <li key={p} className="flex gap-3 text-white font-semibold">
-                                <span className="text-[#E31C25]" aria-hidden="true">✓</span>
+                            <li key={p} className="flex gap-3 text-[#1D1D1B] font-semibold">
+                                <span className="text-[#C0151D]" aria-hidden="true">✓</span>
                                 <span>{p}</span>
                             </li>
                         ))}
                     </ul>
-                    {config.heroNote && <p className="text-white/50 text-xs mb-8">{config.heroNote}</p>}
+                    {config.heroNote && <p className="text-[#1D1D1B]/65 text-xs mb-8">{config.heroNote}</p>}
                     <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
                         <PhoneButton location={`${k}_hero`} />
                         <BookingButton placement={`${k}_hero`} />
@@ -146,10 +149,10 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
             </section>
 
             {/* 2. Trust row */}
-            <section className="border-y border-white/10 bg-[#1D1D1B] px-4 sm:px-6 py-5">
-                <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-white/80">
-                    <span><Stars /> <strong className="text-white">{GOOGLE_RATING}</strong> na Google, {GOOGLE_REVIEWS} recenzií</span>
-                    <span><strong className="text-white">{REPAIRED_CARS}</strong> opravených áut</span>
+            <section className="border-b border-black/10 bg-white px-4 sm:px-6 py-5">
+                <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-[#1D1D1B]/75">
+                    <span><Stars /> <strong className="text-[#1D1D1B]">{GOOGLE_RATING}</strong> na Google, {GOOGLE_REVIEWS} recenzií</span>
+                    <span><strong className="text-[#1D1D1B]">{REPAIRED_CARS}</strong> opravených áut</span>
                     <span>Autá všetkých značiek</span>
                 </div>
             </section>
@@ -160,11 +163,11 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                     <SectionHeading>Prečo Ludato</SectionHeading>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {config.reasons.map((r) => (
-                            <div key={r.title} className="bg-[#1D1D1B] border border-white/10 rounded-sm p-6">
-                                <h3 className="uppercase font-black text-white mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                            <div key={r.title} className="bg-[#F4F4F3] border border-black/10 rounded-sm p-6">
+                                <h3 className="uppercase font-black text-[#1D1D1B] mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
                                     {r.title}
                                 </h3>
-                                <p className="text-white/65 text-sm leading-relaxed">{r.text}</p>
+                                <p className="text-[#1D1D1B]/75 text-sm leading-relaxed">{r.text}</p>
                             </div>
                         ))}
                     </div>
@@ -172,14 +175,14 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
             </section>
 
             {/* 4. Prices */}
-            <section className="px-4 sm:px-6 py-16 bg-[#0a0a0a]">
+            <section className="px-4 sm:px-6 py-16 bg-[#F4F4F3]">
                 <div className="max-w-5xl mx-auto">
                     <SectionHeading>Ceny</SectionHeading>
-                    <p className="text-white/70 text-sm mb-8">{config.priceIntro}</p>
+                    <p className="text-[#1D1D1B]/75 text-sm mb-8">{config.priceIntro}</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {config.priceTables.map((t) => (
                             <div key={t.heading}>
-                                <h3 className="uppercase text-white/60 text-xs tracking-[0.3em] font-bold mb-3" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                <h3 className="uppercase text-[#1D1D1B]/70 text-xs tracking-[0.3em] font-bold mb-3" style={{ fontFamily: 'var(--font-montserrat)' }}>
                                     {t.heading}
                                 </h3>
                                 <ul className="space-y-2">
@@ -187,31 +190,31 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                                         const item = priceItem(ref);
                                         const vat = formatPriceWithVat(item);
                                         return (
-                                            <li key={ref.category + ref.service} className="flex items-start justify-between gap-4 bg-[#1D1D1B] border border-white/10 rounded-sm px-4 py-3">
-                                                <span className="text-sm text-white font-semibold">
+                                            <li key={ref.category + ref.service} className="flex items-start justify-between gap-4 bg-white border border-black/10 rounded-sm px-4 py-3">
+                                                <span className="text-sm text-[#1D1D1B] font-semibold">
                                                     {ref.label ?? item.service}
-                                                    {item.sub && <span className="block text-white/45 text-xs font-normal mt-0.5">{item.sub}</span>}
+                                                    {item.sub && <span className="block text-[#1D1D1B]/65 text-xs font-normal mt-0.5">{item.sub}</span>}
                                                 </span>
                                                 <span className="text-right shrink-0">
-                                                    <span className="block text-white font-black" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                                    <span className="block text-[#1D1D1B] font-black" style={{ fontFamily: 'var(--font-montserrat)' }}>
                                                         {formatPrice(item)}
                                                     </span>
-                                                    {vat && <span className="block text-white/45 text-xs">{vat}</span>}
+                                                    {vat && <span className="block text-[#1D1D1B]/65 text-xs">{vat}</span>}
                                                 </span>
                                             </li>
                                         );
                                     })}
                                 </ul>
                                 {t.footnotes?.map((f) => (
-                                    <p key={f} className="text-white/55 text-xs mt-2">{f}</p>
+                                    <p key={f} className="text-[#1D1D1B]/65 text-xs mt-2">{f}</p>
                                 ))}
                             </div>
                         ))}
                     </div>
                     <div className="mt-6 space-y-1">
-                        <p className="text-white/55 text-xs">Ceny sú uvedené bez DPH, pod každou nájdete aj sumu s DPH 23 %.</p>
+                        <p className="text-[#1D1D1B]/65 text-xs">Ceny sú uvedené bez DPH, pod každou nájdete aj sumu s DPH 23 %.</p>
                         {config.priceNotes?.map((n) => (
-                            <p key={n} className="text-white/55 text-xs">{n}</p>
+                            <p key={n} className="text-[#1D1D1B]/65 text-xs">{n}</p>
                         ))}
                     </div>
                 </div>
@@ -223,14 +226,14 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                     <SectionHeading>Ako to prebieha</SectionHeading>
                     <ol className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {config.steps.map((s, i) => (
-                            <li key={s.title} className="bg-[#1D1D1B] border border-white/10 rounded-sm p-6">
+                            <li key={s.title} className="bg-[#F4F4F3] border border-black/10 rounded-sm p-6">
                                 <span className="text-[#E31C25] font-black text-3xl" style={{ fontFamily: 'var(--font-montserrat)' }}>
                                     {i + 1}
                                 </span>
-                                <h3 className="uppercase font-black text-white mt-2 mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                <h3 className="uppercase font-black text-[#1D1D1B] mt-2 mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
                                     {s.title}
                                 </h3>
-                                <p className="text-white/65 text-sm leading-relaxed">{s.text}</p>
+                                <p className="text-[#1D1D1B]/75 text-sm leading-relaxed">{s.text}</p>
                             </li>
                         ))}
                     </ol>
@@ -238,9 +241,9 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
             </section>
 
             {/* 6. Reviews */}
-            <section className="px-4 sm:px-6 py-16 bg-white">
+            <section className="px-4 sm:px-6 py-16 bg-white border-t border-black/10">
                 <div className="max-w-5xl mx-auto">
-                    <SectionHeading light>Recenzie z Google</SectionHeading>
+                    <SectionHeading>Recenzie z Google</SectionHeading>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {[...reviews]
                             .sort((a, b) => Number(b.name === config.leadReview) - Number(a.name === config.leadReview))
@@ -250,7 +253,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                                 <blockquote className="text-[#1D1D1B]/75 text-sm leading-relaxed mt-3 mb-4 flex-1">{r.text}</blockquote>
                                 <figcaption className="text-[#1D1D1B] text-sm font-bold" style={{ fontFamily: 'var(--font-montserrat)' }}>
                                     {r.name}
-                                    <span className="block text-[#1D1D1B]/45 text-xs font-normal">Recenzia na Google</span>
+                                    <span className="block text-[#1D1D1B]/65 text-xs font-normal">Recenzia na Google</span>
                                 </figcaption>
                             </figure>
                         ))}
@@ -264,16 +267,16 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                     <SectionHeading>Kde nás nájdete</SectionHeading>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-4 text-sm">
-                            <p><strong className="block text-white/50 text-xs uppercase tracking-widest mb-1">Adresa</strong>Odborárska 52, 831 02 Bratislava, Nové Mesto</p>
+                            <p><strong className="block text-[#1D1D1B]/65 text-xs uppercase tracking-widest mb-1">Adresa</strong>Odborárska 52, 831 02 Bratislava, Nové Mesto</p>
                             <p>
-                                <strong className="block text-white/50 text-xs uppercase tracking-widest mb-1">Telefón</strong>
-                                <a href={PHONE_HREF} data-phone-location={`${k}_kde`} className="text-white font-bold hover:text-[#E31C25]">{PHONE_TEXT}</a>
+                                <strong className="block text-[#1D1D1B]/65 text-xs uppercase tracking-widest mb-1">Telefón</strong>
+                                <a href={PHONE_HREF} data-phone-location={`${k}_kde`} className="text-[#1D1D1B] font-bold hover:text-[#E31C25]">{PHONE_TEXT}</a>
                             </p>
-                            <p><strong className="block text-white/50 text-xs uppercase tracking-widest mb-1">Otváracie hodiny</strong>{HOURS}</p>
+                            <p><strong className="block text-[#1D1D1B]/65 text-xs uppercase tracking-widest mb-1">Otváracie hodiny</strong>{HOURS}</p>
                             {areas.length > 0 && (
                                 <div>
-                                    <strong className="block text-white/50 text-xs uppercase tracking-widest mb-2">Dojazd autom</strong>
-                                    <ul className="space-y-1 text-white/75">
+                                    <strong className="block text-[#1D1D1B]/65 text-xs uppercase tracking-widest mb-2">Dojazd autom</strong>
+                                    <ul className="space-y-1 text-[#1D1D1B]/75">
                                         {areas.map((a) => (
                                             <li key={a.slug}>
                                                 {a.name}: {a.driveTime}{a.route ? `, ${a.route.charAt(0).toLowerCase()}${a.route.slice(1)}` : ''}
@@ -283,7 +286,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                                 </div>
                             )}
                         </div>
-                        <div className="relative w-full min-h-[260px] rounded-sm overflow-hidden border border-white/10">
+                        <div className="relative w-full min-h-[260px] rounded-sm overflow-hidden border border-black/10">
                             <iframe
                                 src="https://maps.google.com/maps?q=Ludato+Family+Autoservis,Odbor%C3%A1rska%2052,%20831%2002%20Bratislava&t=&z=16&ie=UTF8&iwloc=&output=embed"
                                 title="Mapa: Ludato Family Autoservis a Pneuservis, Odborárska 52"
@@ -297,14 +300,14 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
             </section>
 
             {/* 8. FAQ */}
-            <section className="px-4 sm:px-6 py-16 bg-[#0a0a0a]">
+            <section className="px-4 sm:px-6 py-16 bg-[#F4F4F3]">
                 <div className="max-w-3xl mx-auto">
                     <SectionHeading>Časté otázky</SectionHeading>
                     <div className="space-y-3">
                         {config.faq.map((f) => (
-                            <div key={f.q} className="border border-white/10 rounded-sm bg-white/5 px-5 py-4">
-                                <h3 className="text-white font-bold text-sm sm:text-base mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>{f.q}</h3>
-                                <p className="text-white/65 text-sm leading-relaxed">{f.a}</p>
+                            <div key={f.q} className="border border-black/10 rounded-sm bg-white px-5 py-4">
+                                <h3 className="text-[#1D1D1B] font-bold text-sm sm:text-base mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>{f.q}</h3>
+                                <p className="text-[#1D1D1B]/75 text-sm leading-relaxed">{f.a}</p>
                             </div>
                         ))}
                     </div>
@@ -314,7 +317,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
             {/* 9. Closing CTA */}
             <section className="px-4 sm:px-6 py-16 bg-[#E31C25]">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="uppercase text-2xl md:text-3xl font-black mb-6" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                    <h2 className="text-white uppercase text-2xl md:text-3xl font-black mb-6" style={{ fontFamily: 'var(--font-montserrat)' }}>
                         {config.closingHeading}
                     </h2>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -326,30 +329,30 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                         >
                             Zavolať {PHONE_TEXT}
                         </a>
-                        <BookingButton placement={`${k}_zaver`} />
+                        <BookingButton placement={`${k}_zaver`} onRed />
                     </div>
                 </div>
             </section>
 
             {/* NAP plus small links to the homepage and the privacy page */}
-            <footer className="px-4 sm:px-6 py-8 text-center text-xs text-white/50 space-y-2">
-                <p className="text-white/80 font-semibold">Ludato Family Autoservis a Pneuservis</p>
+            <footer className="px-4 sm:px-6 py-8 text-center text-xs text-[#1D1D1B]/70 space-y-2 bg-white">
+                <p className="text-[#1D1D1B] font-semibold">Ludato Family Autoservis a Pneuservis</p>
                 <p>Odborárska 52, 831 02 Bratislava</p>
                 <p>
-                    <a href={PHONE_HREF} data-phone-location={`${k}_paticka`} className="text-white/80 hover:text-white">{PHONE_TEXT}</a>
+                    <a href={PHONE_HREF} data-phone-location={`${k}_paticka`} className="text-[#1D1D1B] hover:text-[#E31C25]">{PHONE_TEXT}</a>
                 </p>
                 <p>
-                    <a href="/" className="underline hover:text-white">ludato.sk</a>
+                    <a href="/" className="underline hover:text-[#E31C25]">ludato.sk</a>
                     <span className="mx-2" aria-hidden="true">·</span>
-                    <a href="/ochrana-osobnych-udajov" className="underline hover:text-white">Ochrana osobných údajov</a>
+                    <a href="/ochrana-osobnych-udajov" className="underline hover:text-[#E31C25]">Ochrana osobných údajov</a>
                 </p>
-                <CookieSettingsButton className="underline hover:text-white" />
+                <CookieSettingsButton className="underline hover:text-[#E31C25]" />
             </footer>
 
             {/* Mobile sticky bar: call + book */}
             <div
                 data-phone-location={`${k}_spodny_pruh`}
-                className="lg:hidden fixed bottom-0 left-0 right-0 z-[90] grid grid-cols-2 bg-[#E31C25] shadow-[0_-8px_30px_rgba(0,0,0,0.35)]"
+                className="lg:hidden fixed bottom-0 left-0 right-0 z-[90] grid grid-cols-2 bg-[#E31C25] shadow-[0_-8px_30px_rgba(0,0,0,0.15)]"
                 style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
             >
                 <a href={PHONE_HREF} className="flex items-center justify-center py-5 text-white font-black text-sm tracking-widest uppercase border-r border-white/25" style={{ fontFamily: 'var(--font-montserrat)' }}>
