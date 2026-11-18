@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import OnlineBookingLink from '@/components/OnlineBookingLink';
+import LpQuoteForm from '@/components/lp/LpQuoteForm';
 import CookieSettingsButton from '@/components/CookieSettingsButton';
 import { getCategory, formatPrice, formatPriceWithVat, type PriceItem } from '@/lib/pricing';
 import { GOOGLE_RATING, GOOGLE_REVIEWS, REPAIRED_CARS } from '@/lib/trust';
@@ -21,6 +22,10 @@ export type PriceTable = { heading: string; rows: PriceRef[]; footnotes?: string
 export type LandingConfig = {
     /** Where the page is, sent with GA4 phone_click / online_booking_click. */
     key: 'lp_autoservis' | 'lp_pneuservis' | 'lp_prezutie';
+    /** Main button in the hero, closing section and mobile bar. 'quote' also
+     * puts the quote form on the page; the second button is always the other
+     * of call / booking (call for quote and booking, booking for call). */
+    primaryCta: 'quote' | 'booking' | 'call';
     /** Name of the review to show first (the one closest to the page topic). */
     leadReview?: string;
     h1: string;
@@ -46,14 +51,25 @@ function priceItem(ref: PriceRef): PriceItem {
     return item;
 }
 
-function PhoneButton({ location, className }: { location: string; className?: string }) {
+const QUOTE_ANCHOR = 'cenova-ponuka';
+
+function ctaClass(primary: boolean, onRed: boolean) {
+    const base = 'inline-flex items-center justify-center gap-3 font-bold px-8 text-sm tracking-widest uppercase rounded-sm transition-colors';
+    if (onRed) {
+        return `${base} ${primary ? 'bg-white text-[#E31C25] py-4' : 'border-2 border-white/80 hover:border-white text-white py-[14px]'}`;
+    }
+    return `${base} ${
+        primary
+            ? 'bg-[#E31C25] hover:bg-[#c0151d] text-white py-4'
+            : 'border-2 border-[#1D1D1B] hover:bg-[#1D1D1B] hover:text-white text-[#1D1D1B] py-[14px]'
+    }`;
+}
+
+const MONT = { fontFamily: 'var(--font-montserrat)' };
+
+function PhoneButton({ location, primary, onRed = false }: { location: string; primary: boolean; onRed?: boolean }) {
     return (
-        <a
-            href={PHONE_HREF}
-            data-phone-location={location}
-            className={`inline-flex items-center justify-center gap-3 bg-[#E31C25] hover:bg-[#c0151d] text-white font-bold px-8 py-4 text-sm tracking-widest uppercase rounded-sm transition-colors ${className ?? ''}`}
-            style={{ fontFamily: 'var(--font-montserrat)' }}
-        >
+        <a href={PHONE_HREF} data-phone-location={location} className={ctaClass(primary, onRed)} style={MONT}>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
@@ -62,18 +78,81 @@ function PhoneButton({ location, className }: { location: string; className?: st
     );
 }
 
-function BookingButton({ placement, onRed = false, className }: { placement: string; onRed?: boolean; className?: string }) {
-    const tone = onRed
-        ? 'border-white/80 hover:border-white text-white'
-        : 'border-[#1D1D1B] hover:bg-[#1D1D1B] hover:text-white text-[#1D1D1B]';
+function BookingButton({ placement, primary, onRed = false }: { placement: string; primary: boolean; onRed?: boolean }) {
     return (
-        <OnlineBookingLink
-            placement={placement}
-            className={`inline-flex items-center justify-center gap-2 border-2 ${tone} font-bold px-8 py-[14px] text-sm tracking-widest uppercase rounded-sm transition-colors ${className ?? ''}`}
-            style={{ fontFamily: 'var(--font-montserrat)' }}
-        >
+        <OnlineBookingLink placement={placement} className={ctaClass(primary, onRed)} style={MONT}>
             Rezervovať termín
         </OnlineBookingLink>
+    );
+}
+
+function QuoteButton({ onRed = false }: { onRed?: boolean }) {
+    return (
+        <a href={`#${QUOTE_ANCHOR}`} className={ctaClass(true, onRed)} style={MONT}>
+            Nezáväzná cenová ponuka
+        </a>
+    );
+}
+
+/** Main button first, second button after it (hero and closing section). */
+function CtaButtons({ config, place, onRed = false }: { config: LandingConfig; place: string; onRed?: boolean }) {
+    const where = `${config.key}_${place}`;
+    if (config.primaryCta === 'quote') {
+        return (
+            <>
+                <QuoteButton onRed={onRed} />
+                <PhoneButton location={where} primary={false} onRed={onRed} />
+            </>
+        );
+    }
+    if (config.primaryCta === 'booking') {
+        return (
+            <>
+                <BookingButton placement={where} primary onRed={onRed} />
+                <PhoneButton location={where} primary={false} onRed={onRed} />
+            </>
+        );
+    }
+    return (
+        <>
+            <PhoneButton location={where} primary onRed={onRed} />
+            <BookingButton placement={where} primary={false} onRed={onRed} />
+        </>
+    );
+}
+
+/** Mobile sticky bar: main action red, second action white. */
+function StickyBar({ config }: { config: LandingConfig }) {
+    const k = config.key;
+    const half = (primary: boolean) =>
+        `flex items-center justify-center py-5 font-black text-sm tracking-widest uppercase ${
+            primary ? 'bg-[#E31C25] text-white' : 'bg-white text-[#1D1D1B] border-t border-black/15'
+        }`;
+    const call = (primary: boolean) => (
+        <a key="call" href={PHONE_HREF} className={half(primary)} style={MONT}>
+            Zavolať
+        </a>
+    );
+    const book = (primary: boolean) => (
+        <OnlineBookingLink key="book" placement={`${k}_spodny_pruh`} className={half(primary)} style={MONT}>
+            Rezervovať
+        </OnlineBookingLink>
+    );
+    const quote = (
+        <a key="quote" href={`#${QUOTE_ANCHOR}`} className={half(true)} style={MONT}>
+            Cenová ponuka
+        </a>
+    );
+    const items =
+        config.primaryCta === 'quote' ? [quote, call(false)] : config.primaryCta === 'booking' ? [book(true), call(false)] : [call(true), book(false)];
+    return (
+        <div
+            data-phone-location={`${k}_spodny_pruh`}
+            className="lg:hidden fixed bottom-0 left-0 right-0 z-[90] grid grid-cols-2 shadow-[0_-8px_30px_rgba(0,0,0,0.15)]"
+            style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+        >
+            {items}
+        </div>
     );
 }
 
@@ -142,8 +221,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                     </ul>
                     {config.heroNote && <p className="text-[#1D1D1B]/65 text-xs mb-8">{config.heroNote}</p>}
                     <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-                        <PhoneButton location={`${k}_hero`} />
-                        <BookingButton placement={`${k}_hero`} />
+                        <CtaButtons config={config} place="hero" />
                     </div>
                 </div>
             </section>
@@ -173,6 +251,17 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                     </div>
                 </div>
             </section>
+
+            {/* 3b. Quote form (Autoservis) */}
+            {config.primaryCta === 'quote' && (
+                <section id={QUOTE_ANCHOR} className="scroll-mt-4 px-4 sm:px-6 pb-16">
+                    <div className="max-w-2xl mx-auto bg-[#F4F4F3] border border-black/10 rounded-sm p-6 sm:p-8">
+                        <SectionHeading>Nezáväzná cenová ponuka</SectionHeading>
+                        <p className="text-[#1D1D1B] font-semibold -mt-4 mb-6">Cenovú ponuku pošleme do 48 hodín.</p>
+                        <LpQuoteForm lpKey={k} />
+                    </div>
+                </section>
+            )}
 
             {/* 4. Prices */}
             <section className="px-4 sm:px-6 py-16 bg-[#F4F4F3]">
@@ -321,15 +410,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                         {config.closingHeading}
                     </h2>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                        <a
-                            href={PHONE_HREF}
-                            data-phone-location={`${k}_zaver`}
-                            className="inline-flex items-center justify-center gap-3 bg-white text-[#E31C25] font-bold px-8 py-4 text-sm tracking-widest uppercase rounded-sm"
-                            style={{ fontFamily: 'var(--font-montserrat)' }}
-                        >
-                            Zavolať {PHONE_TEXT}
-                        </a>
-                        <BookingButton placement={`${k}_zaver`} onRed />
+                        <CtaButtons config={config} place="zaver" onRed />
                     </div>
                 </div>
             </section>
@@ -348,20 +429,8 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                 </p>
                 <CookieSettingsButton className="underline hover:text-[#E31C25]" />
             </footer>
-
-            {/* Mobile sticky bar: call + book */}
-            <div
-                data-phone-location={`${k}_spodny_pruh`}
-                className="lg:hidden fixed bottom-0 left-0 right-0 z-[90] grid grid-cols-2 bg-[#E31C25] shadow-[0_-8px_30px_rgba(0,0,0,0.15)]"
-                style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
-            >
-                <a href={PHONE_HREF} className="flex items-center justify-center py-5 text-white font-black text-sm tracking-widest uppercase border-r border-white/25" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                    Zavolať
-                </a>
-                <OnlineBookingLink placement={`${k}_spodny_pruh`} className="flex items-center justify-center py-5 text-white font-black text-sm tracking-widest uppercase" style={{ fontFamily: 'var(--font-montserrat)' }}>
-                    Rezervovať
-                </OnlineBookingLink>
-            </div>
+            {/* Mobile sticky bar: main action + second action */}
+            <StickyBar config={config} />
         </main>
     );
 }

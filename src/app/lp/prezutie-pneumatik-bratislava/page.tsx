@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
 const config: LandingConfig = {
     key: 'lp_prezutie',
+    primaryCta: 'booking',
     h1: 'Prezutie pneumatík Bratislava',
     heroText: 'Prezutie a vyváženie kolies na Odborárskej 52 v Novom Meste.',
     heroPoints: [

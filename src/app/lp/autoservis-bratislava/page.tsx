@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 
 const config: LandingConfig = {
     key: 'lp_autoservis',
+    primaryCta: 'quote',
     h1: 'Autoservis Bratislava',
     heroText:
         'Rodinný autoservis na Odborárskej 52 v Novom Meste pre autá všetkých značiek. Pred každou opravou vám povieme, čo treba urobiť a koľko to bude stáť.',

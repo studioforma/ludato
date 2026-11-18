@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 
 const config: LandingConfig = {
     key: 'lp_pneuservis',
+    primaryCta: 'call',
     h1: 'Pneuservis Bratislava',
     heroText:
         'Oprava defektu, vyváženie a prehodenie kolies, prezutie aj uskladnenie pneumatík na Odborárskej 52 v Novom Meste.',
