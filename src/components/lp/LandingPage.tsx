@@ -327,12 +327,17 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                 </div>
             </section>
 
-            {/* NAP only */}
+            {/* NAP plus small links to the homepage and the privacy page */}
             <footer className="px-4 sm:px-6 py-8 text-center text-xs text-white/50 space-y-2">
                 <p className="text-white/80 font-semibold">Ludato Family Autoservis a Pneuservis</p>
                 <p>Odborárska 52, 831 02 Bratislava</p>
                 <p>
                     <a href={PHONE_HREF} data-phone-location={`${k}_paticka`} className="text-white/80 hover:text-white">{PHONE_TEXT}</a>
+                </p>
+                <p>
+                    <a href="/" className="underline hover:text-white">ludato.sk</a>
+                    <span className="mx-2" aria-hidden="true">·</span>
+                    <a href="/ochrana-osobnych-udajov" className="underline hover:text-white">Ochrana osobných údajov</a>
                 </p>
                 <CookieSettingsButton className="underline hover:text-white" />
             </footer>
