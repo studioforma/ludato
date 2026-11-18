@@ -26,6 +26,12 @@ const cookies = [
         type: 'Analytické, len so súhlasom',
     },
     {
+        name: '_clck, _clsk, CLID, MUID',
+        provider: 'Microsoft Clarity (Microsoft)',
+        purpose: 'Analytika správania na webe: kliky, posúvanie stránky (scroll) a záznamy návštev.',
+        type: 'Analytické, len so súhlasom',
+    },
+    {
         name: 'ludato_zdroj',
         provider: 'ludato.sk',
         purpose: 'Odkiaľ ste na web prišli (napríklad vyhľadávač alebo reklama) a vstupná stránka, pre štatistiku dopytov z formulárov. Ukladá sa v úložisku prehliadača a vymaže sa po zatvorení karty.',
@@ -134,6 +140,11 @@ export default function OchranaOsobnychUdajov() {
                             prehliadača nič neukladajú (tzv. režim súhlasu Google, consent mode v2). Právnym
                             základom je váš súhlas podľa čl. 6 ods. 1 písm. a) GDPR.
                         </p>
+                        <p>
+                            Ak súhlasíte s cookies, používame aj Microsoft Clarity od spoločnosti Microsoft na
+                            analytiku správania na webe (kliky, posúvanie stránky a záznamy návštev). Bez súhlasu
+                            sa Microsoft Clarity nenačíta.
+                        </p>
 
                         <div className="overflow-x-auto -mx-4 sm:mx-0">
                             <table className="w-full min-w-[560px] text-sm border border-white/10">
@@ -178,7 +189,7 @@ export default function OchranaOsobnychUdajov() {
                         <p>
                             Údaje spracúvajú aj služby, ktoré používame na prevádzku webu: Vercel (hosting webu),
                             Resend (odosielanie formulárov e-mailom) a Google (Analytics, Ads, Mapy, e-mailová
-                            schránka). Niektoré z nich môžu údaje prenášať mimo Európskej únie, najmä do USA.
+                            schránka) a Microsoft (Clarity, len so súhlasom s cookies). Niektoré z nich môžu údaje prenášať mimo Európskej únie, najmä do USA.
                             Deje sa tak na základe štandardných zmluvných doložiek alebo rámca EU-US Data Privacy
                             Framework.
                         </p>
