@@ -11,7 +11,7 @@ const content: ServiceContent = [
     {
         type: 'cta',
         heading: 'Potrebujete vymeniť olej?',
-        text: 'Starý olej prestáva mazať a motor sa opotrebúva s každým kilometrom. Olej a filtre pripravíme podľa EČV presne pre vaše auto.',
+        text: 'Starý olej prestáva mazať a motor sa opotrebúva s každým kilometrom. Olej a filtre pripravíme podľa ŠPZ presne pre vaše auto.',
         points: [
             'Výmena oleja a olejového filtra od 35 €',
             'Olej a filtre podľa špecifikácie výrobcu',
@@ -38,7 +38,7 @@ const content: ServiceContent = [
         items: [
             {
                 title: 'Motorový olej',
-                text: 'Motorový olej vyberáme podľa presnej špecifikácie výrobcu vášho vozidla, nie univerzálne. Bežne pracujeme s viskozitami ako 0W20 alebo 5W30, konkrétny typ a objem zistíme podľa EČV vozidla, aby motor dostal presne to, čo má predpísané.',
+                text: 'Motorový olej vyberáme podľa presnej špecifikácie výrobcu vášho vozidla, nie univerzálne. Bežne pracujeme s viskozitami ako 0W20 alebo 5W30, konkrétny typ a objem zistíme podľa ŠPZ vozidla, aby motor dostal presne to, čo má predpísané.',
             },
             {
                 title: 'Olejový filter',
@@ -63,8 +63,8 @@ const content: ServiceContent = [
         heading: 'Ako to u nás prebieha',
         steps: [
             {
-                title: 'Kontrola podľa EČV',
-                text: 'Podľa EČV vozidla zistíme presnú špecifikáciu, objem oleja a zoznam filtrov, ktoré vaše vozidlo potrebuje.',
+                title: 'Kontrola podľa ŠPZ',
+                text: 'Podľa ŠPZ vozidla zistíme presnú špecifikáciu, objem oleja a zoznam filtrov, ktoré vaše vozidlo potrebuje.',
             },
             {
                 title: 'Vypustenie starého oleja a výmena filtrov',
@@ -99,7 +99,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Ako vyberáme správny olej',
         paragraphs: [
-            'Nesprávny olej vie motoru uškodiť rovnako ako olej, ktorý sa dlho nemenil. Preto sa vždy riadime špecifikáciou výrobcu vozidla, nie len viskozitou napísanou na kanistri. Bežné motorové oleje, s ktorými pracujeme, sú napríklad 0W20 pre novšie motory s nižšou viskozitou alebo 5W30 pre širšiu skupinu bežných benzínových aj naftových motorov. Presný typ, viskozitu aj objem oleja vám vieme povedať podľa EČV vozidla ešte pred samotnou výmenou.',
+            'Nesprávny olej vie motoru uškodiť rovnako ako olej, ktorý sa dlho nemenil. Preto sa vždy riadime špecifikáciou výrobcu vozidla, nie len viskozitou napísanou na kanistri. Bežné motorové oleje, s ktorými pracujeme, sú napríklad 0W20 pre novšie motory s nižšou viskozitou alebo 5W30 pre širšiu skupinu bežných benzínových aj naftových motorov. Presný typ, viskozitu aj objem oleja vám vieme povedať podľa ŠPZ vozidla ešte pred samotnou výmenou.',
         ],
     },
     {
@@ -160,11 +160,11 @@ const content: ServiceContent = [
             },
             {
                 q: 'Aký olej u vás dostanem?',
-                a: 'Olej vyberáme podľa špecifikácie výrobcu vášho vozidla. Bežne pracujeme s viskozitami ako 0W20 alebo 5W30, presný typ a objem zistíme podľa EČV.',
+                a: 'Olej vyberáme podľa špecifikácie výrobcu vášho vozidla. Bežne pracujeme s viskozitami ako 0W20 alebo 5W30, presný typ a objem zistíme podľa ŠPZ.',
             },
             {
                 q: 'Prečo nie je cena v cenníku konečná?',
-                a: 'Uvedená cena je za prácu, materiál (olej a filtre) naceňujeme individuálne podľa EČV vozidla, keďže sa líši typ, objem aj počet potrebných filtrov.',
+                a: 'Uvedená cena je za prácu, materiál (olej a filtre) naceňujeme individuálne podľa ŠPZ vozidla, keďže sa líši typ, objem aj počet potrebných filtrov.',
             },
             {
                 q: 'Musím sa objednať vopred?',

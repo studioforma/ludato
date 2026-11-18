@@ -70,7 +70,7 @@ export const pricingCategories: PricingCategory[] = [
             { service: 'Výmena oleja + olejový filter + vzduchový filter + kabínový filter', price: '55' },
             { service: 'Kompletný servis (vrátane palivového filtra)', price: '65' },
         ],
-        footnote: '* Materiál naceňujeme individuálne podľa EČV',
+        footnote: '* Materiál naceňujeme individuálne podľa ŠPZ',
     },
     {
         category: 'Brzdy',

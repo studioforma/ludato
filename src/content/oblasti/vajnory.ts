@@ -55,7 +55,7 @@ const content: ServiceContent = [
         items: [
             {
                 title: 'Výmena oleja',
-                text: 'Výmena oleja a olejového filtra od 35 €, so vzduchovým filtrom 45 €, s kabínovým 55 € a kompletný servis vrátane palivového filtra 65 €. Olej vyberáme podľa EČV vášho auta.',
+                text: 'Výmena oleja a olejového filtra od 35 €, so vzduchovým filtrom 45 €, s kabínovým 55 € a kompletný servis vrátane palivového filtra 65 €. Olej vyberáme podľa ŠPZ vášho auta.',
             },
             {
                 title: 'Prezutie',

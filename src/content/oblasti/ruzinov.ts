@@ -177,7 +177,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Vymeníte mi aj olej?',
-                a: 'Áno, výmena oleja a olejového filtra stojí od 35 €. Olej a filtre pripravíme podľa EČV vášho auta.',
+                a: 'Áno, výmena oleja a olejového filtra stojí od 35 €. Olej a filtre pripravíme podľa ŠPZ vášho auta.',
             },
             {
                 q: 'Musím sa objednať vopred?',
