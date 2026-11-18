@@ -103,7 +103,7 @@ export default function OchranaOsobnychUdajov() {
                         <p>
                             Keď nám pošlete správu cez kontaktný formulár alebo žiadosť o cenovú ponuku, spracúvame
                             údaje, ktoré do formulára vyplníte: meno, e-mail, telefónne číslo (ak ho uvediete),
-                            text správy a vybrané služby.
+                            ŠPZ alebo VIN vozidla, text správy a vybrané služby.
                         </p>
                         <p>
                             Údaje používame len na to, aby sme vám odpovedali, pripravili cenovú ponuku a dohodli

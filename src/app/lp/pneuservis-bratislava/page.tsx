@@ -21,6 +21,7 @@ const config: LandingConfig = {
     h1: 'Pneuservis Bratislava',
     heroText:
         'Oprava defektu, vyváženie a prehodenie kolies, prezutie aj uskladnenie pneumatík na Odborárskej 52 v Novom Meste.',
+    heroImage: { src: '/lp/ludato-pneuservis-prezutie.jpg', alt: 'Subaru na zdviháku a mechanik pri prezúvačke pneumatík v dielni Ludato' },
     heroPoints: [
         'Oprava defektu, ak to stav pneumatiky dovoľuje. Cenu povieme po obhliadke.',
         `Vyváženie kolies na presnom stroji, preváženie kolies na diskoch od 40 € (s DPH od ${withVat('40')} €)`,

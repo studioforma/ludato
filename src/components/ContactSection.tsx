@@ -8,15 +8,20 @@ import { readLeadOrigin } from '@/lib/leadOrigin';
 // On /kontakt the section heading is the page H1; on the homepage it stays an H2.
 // The Google Ads landing pages use the same form with formOnly (no heading,
 // contact pills or map, the LP has its own) and variant="light" (light page).
+// quote turns it into the quote form (LP Autoservis): phone and "ŠPZ alebo VIN"
+// required, email optional, sent as formType 'quote'. The plate or VIN goes only
+// into the email, never into the lead statistics sheet.
 // Defaults keep the homepage and /kontakt exactly as they are.
 export default function ContactSection({
     asPageHeading = false,
     variant = 'dark',
     formOnly = false,
+    quote = false,
 }: {
     asPageHeading?: boolean;
     variant?: 'dark' | 'light';
     formOnly?: boolean;
+    quote?: boolean;
 }) {
     const Heading = asPageHeading ? 'h1' : 'h2';
     const light = variant === 'light';
@@ -26,13 +31,15 @@ export default function ContactSection({
         phone: '',
         message: '',
         source: '',
+        plate: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState('');
 
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: name === 'plate' ? value.toUpperCase() : value }));
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -49,8 +56,11 @@ export default function ContactSection({
                     phone: formData.phone,
                     message: formData.message,
                     source: formData.source || undefined,
-                    subject: `Nová správa od ${formData.name} – LUDATO Cars Services`,
-                    formType: 'contact',
+                    subject: quote
+                        ? `Nová žiadosť o cenovú ponuku od ${formData.name} – LUDATO Cars Services`
+                        : `Nová správa od ${formData.name} – LUDATO Cars Services`,
+                    formType: quote ? 'quote' : 'contact',
+                    plate: quote ? formData.plate : undefined,
                     // Statistics only (no personal data), see lib/leadStats.ts.
                     stranka: window.location.pathname,
                     zdroj: readLeadOrigin(),
@@ -91,22 +101,30 @@ export default function ContactSection({
                 </div>
                 <div>
                     <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
-                        Telefón
+                        {quote ? 'Telefón *' : 'Telefón'}
                     </label>
-                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+421 9XX XXX XXX" className={inputClass} />
+                    <input type="tel" name="phone" required={quote} value={formData.phone} onChange={handleChange} placeholder="+421 9XX XXX XXX" className={inputClass} />
                 </div>
             </div>
             <div>
                 <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
-                    Email *
+                    {quote ? 'Email' : 'Email *'}
                 </label>
-                <input type="email" name="email" required value={formData.email} onChange={handleChange} placeholder="vas@email.sk" className={inputClass} />
+                <input type="email" name="email" required={!quote} value={formData.email} onChange={handleChange} placeholder="vas@email.sk" className={inputClass} />
             </div>
+            {quote && (
+                <div>
+                    <label htmlFor="kontakt-spz" className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
+                        ŠPZ alebo VIN *
+                    </label>
+                    <input id="kontakt-spz" type="text" name="plate" required maxLength={25} autoComplete="off" value={formData.plate} onChange={handleChange} placeholder="BA123AB alebo VIN" className={inputClass} />
+                </div>
+            )}
             <div>
                 <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
                     Správa *
                 </label>
-                <textarea name="message" required rows={5} value={formData.message} onChange={handleChange} placeholder="Opíšte váš problém alebo otázku..." className={`${inputClass} resize-none`} />
+                <textarea name="message" required rows={5} value={formData.message} onChange={handleChange} placeholder={quote ? 'Opíšte, čo treba na aute urobiť' : 'Opíšte váš problém alebo otázku...'} className={`${inputClass} resize-none`} />
             </div>
             <div>
                 <label htmlFor="kontakt-zdroj" className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>

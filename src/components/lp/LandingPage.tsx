@@ -34,6 +34,8 @@ export type LandingConfig = {
     /** Short highlighted lines in the hero (offer, prices). */
     heroPoints: string[];
     heroNote?: string;
+    /** Real workshop photo next to the hero text (desktop) or under the buttons (mobile). 1200 × 628 in /public/lp. */
+    heroImage: { src: string; alt: string };
     reasons: { title: string; text: string }[];
     priceIntro: string;
     priceTables: PriceTable[];
@@ -204,7 +206,8 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
 
             {/* 1. Hero */}
             <section className="px-4 sm:px-6 pt-12 pb-14 lg:pt-20 lg:pb-20 bg-gradient-to-b from-white to-[#F4F4F3] border-b border-black/10">
-                <div className="max-w-3xl mx-auto text-center">
+                <div className="max-w-6xl mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+                <div className="max-w-3xl mx-auto text-center lg:text-left">
                     <p className="text-[#C0151D] text-xs md:text-sm tracking-[0.25em] uppercase mb-5 font-semibold" style={{ fontFamily: 'var(--font-montserrat)' }}>
                         Odborárska 52, Nové Mesto
                     </p>
@@ -221,9 +224,22 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                         ))}
                     </ul>
                     {config.heroNote && <p className="text-[#1D1D1B]/65 text-sm mb-8">{config.heroNote}</p>}
-                    <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+                    <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-3 justify-center lg:justify-start">
                         <CtaButtons config={config} place="hero" />
                     </div>
+                </div>
+                {/* Under the buttons on mobile, so call / quote stay on the first screen. */}
+                <div className="mt-10 lg:mt-0 max-w-3xl mx-auto w-full">
+                    <Image
+                        src={config.heroImage.src}
+                        alt={config.heroImage.alt}
+                        width={1200}
+                        height={628}
+                        sizes="(min-width: 1152px) 552px, (min-width: 1024px) 45vw, (min-width: 768px) 720px, 100vw"
+                        loading="eager"
+                        className="w-full h-auto rounded-sm border border-black/10 shadow-[0_20px_50px_rgba(0,0,0,0.12)]"
+                    />
+                </div>
                 </div>
             </section>
 
@@ -426,7 +442,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                     <div className="max-w-2xl mx-auto bg-[#F4F4F3] border border-black/10 rounded-sm p-6 sm:p-8">
                         <SectionHeading>Nezáväzná cenová ponuka</SectionHeading>
                         <p className="text-[#1D1D1B] font-semibold -mt-4 mb-6">Cenovú ponuku pošleme do 48 hodín.</p>
-                        <ContactSection variant="light" formOnly />
+                        <ContactSection variant="light" formOnly quote />
                         <p className="text-center text-base mt-5">
                             <OnlineBookingLink placement={`${k}_formular`} className="text-[#1D1D1B] font-semibold underline hover:text-[#C0151D]">
                                 Radšej si rezervujte termín online

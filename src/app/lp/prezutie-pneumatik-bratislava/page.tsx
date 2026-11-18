@@ -17,6 +17,7 @@ const config: LandingConfig = {
     primaryCta: 'booking',
     h1: 'Prezutie pneumatík Bratislava',
     heroText: 'Prezutie a vyváženie kolies na Odborárskej 52 v Novom Meste.',
+    heroImage: { src: '/lp/ludato-pneuservis-prezutie.jpg', alt: 'Subaru na zdviháku a mechanik pri prezúvačke pneumatík v dielni Ludato' },
     heroPoints: [
         `Kompletné prezutie od 45 € vrátane vyváženia (s DPH od ${withVat('45')} €)`,
         `Kolesá na diskoch: preváženie a prehodenie od 40 € (s DPH od ${withVat('40')} €)`,

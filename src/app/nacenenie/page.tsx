@@ -58,7 +58,6 @@ export default function QuotePage() {
         const fullMessage = `
 Vybrané služby: ${selectedServices || 'Žiadne'}
 Auto: ${formState.car || 'Neuvedené'}
-EČV: ${formState.plate || 'Neuvedené'}
 Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
         `.trim();
 
@@ -74,6 +73,8 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                     message: fullMessage,
                     source: formState.source || undefined,
                     formType: 'quote',
+                    // ŠPZ or VIN: only into the email, not into the statistics.
+                    plate: formState.plate,
                     // Statistics only (no personal data), see lib/leadStats.ts.
                     sluzby: formState.services,
                     stranka: window.location.pathname,
@@ -251,14 +252,16 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                         </div>
                                         <div>
                                             <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                                EČV
+                                                ŠPZ alebo VIN *
                                             </label>
                                             <input
                                                 type="text"
+                                                required
+                                                autoComplete="off"
                                                 value={formState.plate}
                                                 onChange={(e) => setFormState(prev => ({ ...prev, plate: e.target.value.toUpperCase() }))}
-                                                placeholder="BA123XY"
-                                                maxLength={10}
+                                                placeholder="BA123AB alebo VIN"
+                                                maxLength={25}
                                                 className={inputClass}
                                                 style={{ fontFamily: 'var(--font-inter)' }}
                                             />
@@ -268,11 +271,10 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div>
                                             <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                                Email *
+                                                Email
                                             </label>
                                             <input
                                                 type="email"
-                                                required
                                                 value={formState.email}
                                                 onChange={(e) => setFormState(prev => ({ ...prev, email: e.target.value }))}
                                                 placeholder="vas@email.sk"

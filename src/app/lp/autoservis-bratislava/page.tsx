@@ -17,6 +17,7 @@ const config: LandingConfig = {
     h1: 'Autoservis Bratislava',
     heroText:
         'Rodinný autoservis na Odborárskej 52 v Novom Meste pre autá všetkých značiek. Pred každou opravou vám povieme, čo treba urobiť a koľko to bude stáť.',
+    heroImage: { src: '/lp/ludato-podvozok-brzdy.jpg', alt: 'Ford na zdviháku v dielni Ludato počas opravy podvozku a bŕzd' },
     heroPoints: ['Cenová ponuka do 48 hodín', 'Diagnostika riadiacej jednotky za 40 €', 'Výmena oleja a olejového filtra od 35 €'],
     heroNote: 'Uvedené ceny sú bez DPH.',
     reasons: [
