@@ -1,7 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
 import { Resend } from 'resend';
 import { buildContactEmailHtml, buildContactEmailText } from '@/lib/contact-email';
 import { cleanLeadSource } from '@/lib/leadSource';
+import { buildLeadStatsRow, sendLeadStats } from '@/lib/leadStats';
 
 interface ContactPayload {
     name: string;
@@ -55,6 +56,11 @@ export async function POST(request: NextRequest) {
         if (error) {
             return NextResponse.json({ success: false, error: error.message }, { status: 502 });
         }
+
+        // One statistics row for the Google Sheet, written after the response
+        // is sent so it can never delay or break the email above.
+        const statsRow = buildLeadStatsRow(payload as unknown as Record<string, unknown>);
+        after(() => sendLeadStats(statsRow));
 
         return NextResponse.json({ success: true });
     } catch {

@@ -5,6 +5,7 @@ import CookieBanner from "@/components/CookieBanner";
 import CallNumberSwap from "@/components/CallNumberSwap";
 import PhoneClickTracking from "@/components/PhoneClickTracking";
 import StickyCallBar from "@/components/StickyCallBar";
+import LeadOriginCapture from "@/components/LeadOriginCapture";
 import { services } from "@/lib/services";
 import { SITE, BUSINESS_ID, areaServedSchema } from "@/lib/schema";
 
@@ -249,6 +250,7 @@ export default function RootLayout({
         <StickyCallBar />
         <CallNumberSwap />
         <PhoneClickTracking />
+        <LeadOriginCapture />
       </body>
     </html>
   );

@@ -26,6 +26,12 @@ const cookies = [
         type: 'Analytické, len so súhlasom',
     },
     {
+        name: 'ludato_zdroj',
+        provider: 'ludato.sk',
+        purpose: 'Odkiaľ ste na web prišli (napríklad vyhľadávač alebo reklama) a vstupná stránka, pre štatistiku dopytov z formulárov. Ukladá sa v úložisku prehliadača a vymaže sa po zatvorení karty.',
+        type: 'Analytické, len so súhlasom',
+    },
+    {
         name: '_gcl_au, _gcl_aw a ďalšie',
         provider: 'Google Ads',
         purpose: 'Meranie účinnosti reklamy, vrátane toho, či hovor alebo objednávka prišli z reklamy.',
@@ -109,6 +115,15 @@ export default function OchranaOsobnychUdajov() {
                         <p>
                             Formulár sa odosiela ako e-mail cez službu Resend priamo do našej schránky. Údaje
                             nepredávame ani neposkytujeme tretím stranám na marketing.
+                        </p>
+                        <p>
+                            Pri odoslaní formulára si do vlastnej tabuľky zapisujeme aj anonymnú štatistiku: na
+                            ktorej stránke ste formulár odoslali, ktorú službu ste vybrali a čo ste uviedli
+                            v otázke „Ako ste sa o nás dozvedeli?“. Ak ste súhlasili s cookies, zapíšeme aj to,
+                            odkiaľ ste na náš web prišli (napríklad z vyhľadávača alebo z reklamy). Údaj o zdroji
+                            návštevy sa ukladá len s vaším súhlasom, dočasne v pamäti prehliadača (sessionStorage),
+                            a vymaže sa po zatvorení karty. Záznam v tabuľke neobsahuje vaše meno, telefón, e-mail
+                            ani text správy a používame ho len na vyhodnotenie, ktoré kanály nám prinášajú dopyty.
                         </p>
                     </Section>
 
