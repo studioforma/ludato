@@ -108,7 +108,7 @@ export default function OchranaOsobnychUdajov() {
                     <Section title="Aké údaje spracúvame z formulárov">
                         <p>
                             Keď nám pošlete správu cez kontaktný formulár alebo žiadosť o cenovú ponuku, spracúvame
-                            údaje, ktoré do formulára vyplníte: meno, e-mail, telefónne číslo (ak ho uvediete),
+                            údaje, ktoré do formulára vyplníte: meno, e-mail, telefónne číslo,
                             ŠPZ alebo VIN vozidla, text správy a vybrané služby.
                         </p>
                         <p>

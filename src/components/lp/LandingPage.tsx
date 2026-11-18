@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import OnlineBookingLink from '@/components/OnlineBookingLink';
 import ContactSection from '@/components/ContactSection';
 import InlineCta from '@/components/InlineCta';
@@ -165,7 +166,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
             className="uppercase text-2xl md:text-3xl font-black mb-8 text-[#1D1D1B]"
             style={{ fontFamily: 'var(--font-montserrat)' }}
         >
-            <span className="text-[#E31C25]">//</span> {children}
+            <span className="text-[#E31C25]">{'//'}</span> {children}
         </h2>
     );
 }
@@ -458,7 +459,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                     <a href={PHONE_HREF} data-phone-location={`${k}_paticka`} className="text-[#1D1D1B] hover:text-[#E31C25]">{PHONE_TEXT}</a>
                 </p>
                 <p>
-                    <a href="/" className="underline hover:text-[#E31C25]">ludato.sk</a>
+                    <Link href="/" className="underline hover:text-[#E31C25]">ludato.sk</Link>
                     <span className="mx-2" aria-hidden="true">·</span>
                     <a href="/ochrana-osobnych-udajov" className="underline hover:text-[#E31C25]">Ochrana osobných údajov</a>
                 </p>
