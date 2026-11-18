@@ -98,7 +98,7 @@ const content: ServiceContent = [
         heading: 'Cesta do zahraničia',
         paragraphs: [
             'Každá krajina má vlastné pravidlá o povinnej výbave, diaľničných poplatkoch a jazde so svetlami. Pred cestou si ich overte pre všetky krajiny, cez ktoré budete prechádzať, aj tranzitné. Myslite aj na elektronické diaľničné známky, ktoré sa kupujú vopred online.',
-            'Ak by vás porucha napriek tomu zastihla v zahraničí, vieme zabezpečiť [odťah auta](/sluzby/odtah-vozidla-bratislava) aj zo zahraničia za 1,50 € za kilometer a auto opraviť u nás.',
+            'Ak by vás porucha napriek tomu zastihla v zahraničí, vieme zabezpečiť [odťah auta](/sluzby/odtah-vozidla-bratislava) aj zo zahraničia za 1,50 € za km a auto opraviť u nás.',
         ],
     },
     {
@@ -189,7 +189,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Čo ak sa mi auto pokazí v zahraničí?',
-                a: 'Vieme zabezpečiť odťah aj zo zahraničia za 1,50 € za kilometer a auto opraviť u nás.',
+                a: 'Vieme zabezpečiť odťah aj zo zahraničia za 1,50 € za km a auto opraviť u nás.',
             },
             {
                 q: 'Môžem kontrolu spojiť s výmenou oleja?',

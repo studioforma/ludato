@@ -15,7 +15,7 @@ const content: ServiceContent = [
         points: [
             'Vyzdvihnutie auta v Bratislave a okolí za 50 €',
             'Odťah nepojazdného auta za 170 €',
-            'Odťah zo zahraničia za 1,50 € za kilometer',
+            'Odťah zo zahraničia za 1,50 € za km',
         ],
         secondaryHref: '/nacenenie?sluzba=pickup',
         secondaryLabel: 'Objednať vyzdvihnutie',
@@ -46,7 +46,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Odťah zo zahraničia za 1,50 € za km',
-                text: 'Porucha na dovolenke alebo na služobnej ceste je nepríjemná, o to viac v cudzej krajine, kde nepoznáte servisy ani ceny. Odťah zabezpečíme aj mimo Slovenska a účtujeme ho podľa vzdialenosti, 1,50 € za kilometer. Auto potom opravíme u nás, kde sa s vami vieme normálne dohodnúť.',
+                text: 'Porucha na dovolenke alebo na služobnej ceste je nepríjemná, o to viac v cudzej krajine, kde nepoznáte servisy ani ceny. Odťah zabezpečíme aj mimo Slovenska a účtujeme ho podľa vzdialenosti, 1,50 € za km. Auto potom opravíme u nás, kde sa s vami vieme normálne dohodnúť.',
             },
             {
                 title: 'Náhradné vozidlo počas opravy',
@@ -151,7 +151,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Ako ďaleko po auto prídete?',
-                a: 'Vyzdvihnutie robíme v rámci Bratislavy a okolia. Odťah zabezpečíme aj z väčšej vzdialenosti, vrátane zahraničia, kde účtujeme 1,50 € za kilometer.',
+                a: 'Vyzdvihnutie robíme v rámci Bratislavy a okolia. Odťah zabezpečíme aj z väčšej vzdialenosti, vrátane zahraničia, kde účtujeme 1,50 € za km.',
             },
             {
                 q: 'Čo ak auto nenaštartuje?',
@@ -163,7 +163,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Odtiahnete auto aj zo zahraničia?',
-                a: 'Áno. Odťah zo zahraničia účtujeme podľa vzdialenosti, 1,50 € za kilometer.',
+                a: 'Áno. Odťah zo zahraničia účtujeme podľa vzdialenosti, 1,50 € za km.',
             },
             {
                 q: 'Je cena odťahu zahrnutá v oprave?',

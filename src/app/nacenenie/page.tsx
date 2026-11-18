@@ -116,7 +116,7 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                         className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        <span className="font-black">//</span> Nezáväzná kalkulácia a rezervácia
+                        <span className="font-black">//</span> Nezáväzná kalkulácia a objednávka
                     </p>
                     <h1
                         className="uppercase text-3xl sm:text-4xl font-black text-white"
@@ -136,7 +136,7 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                         placement="nacenenie"
                         className="font-semibold text-white underline decoration-[#E31C25] underline-offset-4 hover:text-[#FF5A60] whitespace-nowrap"
                     >
-                        Rezervovať online →
+                        Rezervovať termín →
                     </OnlineBookingLink>
                 </div>
 

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import OnlineBookingLink from '@/components/OnlineBookingLink';
 
 import { formatPriceWithVat, pricingCategories, withVat, type PriceItem, type PricingCategory } from '@/lib/pricing';
 
@@ -77,7 +78,7 @@ function PriceRow({ item }: { item: PriceItem }) {
                                 className="text-white/35 text-sm font-medium line-through decoration-[#E31C25]/70"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                {item.oldPrice} €
+                                {item.oldPrice} €
                             </span>
                         )}
                         <span
@@ -87,7 +88,7 @@ function PriceRow({ item }: { item: PriceItem }) {
                             style={{ fontFamily: 'var(--font-montserrat)' }}
                         >
                             {item.price}
-                            <span className="text-base">€</span>
+                            <span className="text-base">{' '}€</span>
                             {item.unit && (
                                 <span className="text-sm font-medium text-white/50">{item.unit}</span>
                             )}
@@ -231,7 +232,7 @@ export default function CennikPage() {
                                         className={`text-3xl font-black ${tier.accent ? 'text-[#E31C25]' : 'text-white'}`}
                                         style={{ fontFamily: 'var(--font-montserrat)' }}
                                     >
-                                        {tier.price}<span className="text-xl">€</span>
+                                        {tier.price}<span className="text-xl">{' '}€</span>
                                         <span className="text-sm font-medium text-white/40">/NH</span>
                                     </span>
                                     <span
@@ -411,13 +412,13 @@ export default function CennikPage() {
                             </li>
                         </ul>
                         <div className="mt-6">
-                            <a
-                                href="/#kontakt"
+                            <OnlineBookingLink
+                                placement="cennik"
                                 className="inline-flex items-center gap-2 bg-[#E31C25] hover:bg-[#c0151d] text-white font-bold text-sm md:text-xs max-md:min-h-[48px] px-5 py-3 rounded-sm tracking-widest uppercase transition-all duration-300 hover:shadow-lg hover:shadow-[#E31C25]/40"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                REZERVOVAŤ TERMÍN
-                            </a>
+                                Rezervovať termín
+                            </OnlineBookingLink>
                         </div>
                     </div>
                 </div>

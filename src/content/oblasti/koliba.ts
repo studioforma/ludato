@@ -29,7 +29,7 @@ const content: ServiceContent = [
         heading: 'Spojka a dvojhmotový zotrvačník',
         paragraphs: [
             'Koliba leží na svahu nad mestom a rozjazd do kopca je pre spojku najväčšia záťaž. Opotrebovanú spojku spoznáte podľa toho, že motor zvyšuje otáčky, no auto nezrýchľuje primerane, pedál zaberá až vysoko alebo pri rozjazde cítiť zápach spáleného obloženia.',
-            'Pri mnohých autách sa spolu so spojkou kontroluje aj dvojhmotový zotrvačník. Výmenu spojky účtujeme ako náročný zásah podľa normohodín, 45 € za hodinu, a celkovú cenu vrátane dielov vám povieme vopred podľa vášho auta. Viac v časti [prevodovka a spojka](/sluzby/prevodovka-spojka-bratislava).',
+            'Pri mnohých autách sa spolu so spojkou kontroluje aj dvojhmotový zotrvačník. Výmenu spojky účtujeme ako náročný zásah podľa normohodín, 45 €/NH, a celkovú cenu vrátane dielov vám povieme vopred podľa vášho auta. Viac v časti [prevodovka a spojka](/sluzby/prevodovka-spojka-bratislava).',
         ],
     },
     {
@@ -79,7 +79,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Robíte aj výmenu spojky a dvojhmotového zotrvačníka?',
-                a: 'Áno. Účtujeme ich podľa normohodín za náročné zásahy, 45 € za hodinu, a celkovú cenu vám povieme vopred.',
+                a: 'Áno. Účtujeme ich podľa normohodín za náročné zásahy, 45 €/NH, a celkovú cenu vám povieme vopred.',
             },
             {
                 q: 'Ako často meniť brzdovú kvapalinu?',

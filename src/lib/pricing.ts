@@ -119,7 +119,7 @@ export const pricingCategories: PricingCategory[] = [
     {
         category: 'Uskladnenie a oprava pneumatík',
         items: [
-            { service: 'Sezónne uskladnenie pneumatík', price: '40', unit: '/sezóna' },
+            { service: 'Sezónne uskladnenie pneumatík', price: '40', unit: '/sezónu' },
             { service: 'Oprava defektu', price: null },
         ],
         footnote: '* Oprava defektu – individuálne nacenenie podľa stavu pneumatiky',

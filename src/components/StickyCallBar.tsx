@@ -60,7 +60,7 @@ export default function StickyCallBar() {
                         className="flex items-center justify-center px-5 bg-[#1D1D1B] text-white text-xs font-bold tracking-widest uppercase active:bg-black transition-colors"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        Objednať
+                        Objednať sa
                     </Link>
                 </div>
             </div>

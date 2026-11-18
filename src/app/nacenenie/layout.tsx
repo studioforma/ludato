@@ -5,7 +5,7 @@ import NacenenieInfo from '@/components/NacenenieInfo';
 export const metadata: Metadata = {
     title: 'Nezáväzné nacenenie opravy auta Bratislava – Nové Mesto | Vyberte službu, doplňte auto a my vám pripravíme cenu | Ludato Family Autoservis a Pneuservis',
     description:
-        'Nezáväzná kalkulácia a rezervácia v autoservise Ludato Family v Bratislave, Novom Meste. Vyberte službu, opíšte problém a pošlite žiadosť o cenovú ponuku.',
+        'Nezáväzná kalkulácia a objednávka v autoservise Ludato Family v Bratislave, Novom Meste. Vyberte službu, opíšte problém a pošlite žiadosť o cenovú ponuku.',
     alternates: { canonical: '/nacenenie' },
 };
 

@@ -78,7 +78,7 @@ const config: LandingConfig = {
             q: 'Vyvažujete kolesá pri každom prezutí?',
             a: 'Áno, každé koleso vyvážime na presnom stroji priamo v rámci prezutia, aby pri jazde nevibroval volant.',
         },
-        { q: 'Ponúkate aj uskladnenie pneumatík?', a: 'Áno, sezónne uskladnenie pneumatík stojí 40 € za sezónu.' },
+        { q: 'Ponúkate aj uskladnenie pneumatík?', a: 'Áno, sezónne uskladnenie pneumatík stojí 40 € na sezónu.' },
         { q: 'Prezúvate aj Run Flat pneumatiky?', a: 'Nie, pneumatiky Run Flat neprezúvame.' },
     ],
     closingHeading: 'Čas na prezutie?',

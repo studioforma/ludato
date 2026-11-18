@@ -30,7 +30,7 @@ export const areas: AreaMeta[] = [
         nameAcc: 'Raču',
         h1: 'Autoservis a pneuservis pre Raču',
         h1Accent: 'Raču',
-        title: 'Autoservis Rača, 10 až 15 minút na Odborársku 52 | Prezutie od 45 €, kontrola bŕzd 35 €, uskladnenie pneu 40 € na sezónu, odťah 170 € | Ludato Family Autoservis',
+        title: 'Autoservis Rača, 10 až 15 minút na Odborársku 52 | Prezutie od 45 €, kontrola bŕzd 35 €, uskladnenie pneumatík 40 € na sezónu, odťah 170 € | Ludato Family Autoservis',
         description:
             'Autoservis a pneuservis pre Raču, Krasňany aj Východné. Na Odborárskej v Novom Meste sme orientačne 10 až 15 minút autom. Brzdy, prezutie, diagnostika, výmena oleja.',
         driveTime: 'orientačne 10 až 15 minút autom',

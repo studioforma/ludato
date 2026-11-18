@@ -146,7 +146,7 @@ export default function InlineCta({
                             placement="cta"
                             className="basis-full text-center text-white text-sm font-semibold underline decoration-white/50 underline-offset-4 hover:decoration-white"
                         >
-                            Objednať sa online →
+                            Rezervovať termín →
                         </OnlineBookingLink>
                     )}
                 </div>

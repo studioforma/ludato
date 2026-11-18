@@ -144,7 +144,7 @@ const content: ServiceContent = [
         items: [
             {
                 q: 'Koľko stojí výmena spojky?',
-                a: 'Závisí od auta, typu spojky a od toho, či treba meniť aj dvojhmotový zotrvačník. Prácu účtujeme podľa normohodín za náročné zásahy, 45 € za hodinu, a celkovú cenu vám povieme vopred.',
+                a: 'Závisí od auta, typu spojky a od toho, či treba meniť aj dvojhmotový zotrvačník. Prácu účtujeme podľa normohodín za náročné zásahy, 45 €/NH, a celkovú cenu vám povieme vopred.',
             },
             {
                 q: 'Ako dlho vydrží spojka?',

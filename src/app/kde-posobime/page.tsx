@@ -50,7 +50,7 @@ type Area = {
 const whyNoveMesto = [
     {
         title: 'Skúsenosť, ktorú tu zúročujeme',
-        text: 'Naša rodina sa venuje autám už viac ako 10 rokov. Túto skúsenosť teraz uplatňujeme priamo tu, v Novom Meste, na Odborárskej 52.',
+        text: 'Svoju skúsenosť s autami uplatňujeme priamo tu, v Novom Meste, na Odborárskej 52.',
     },
     {
         title: 'Sme tu doma',
@@ -352,8 +352,8 @@ export default function KdePosobime() {
                                 v skratke svojho názvu.
                             </p>
                             <p>
-                                Naša rodina sa autám venuje viac ako 10 rokov a túto skúsenosť
-                                teraz zúročujeme priamo tu, v Novom Meste, na Odborárskej 52.
+                                Svoju skúsenosť s autami zúročujeme priamo tu, v Novom Meste,
+                                na Odborárskej 52.
                                 Odmietame filozofiu veľkých korporácií s anonymným zákazníckym
                                 servisom. Kto k nám prišiel raz, spravidla sa vracia, pretože
                                 presne vie, s kým hovorí a čo sa s jeho autom deje.
