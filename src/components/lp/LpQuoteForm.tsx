@@ -51,9 +51,9 @@ export default function LpQuoteForm({ lpKey }: { lpKey: string }) {
         }
     };
 
-    const label = 'block text-[#1D1D1B]/75 text-xs tracking-widest uppercase mb-2 font-semibold';
+    const label = 'block text-[#1D1D1B]/75 text-sm tracking-wider uppercase mb-2 font-semibold';
     const input =
-        'w-full bg-white border border-black/20 hover:border-[#E31C25]/50 focus:border-[#E31C25] focus:outline-none text-[#1D1D1B] placeholder-[#1D1D1B]/45 px-4 py-3 rounded-sm text-sm transition-colors';
+        'w-full bg-white border border-black/20 hover:border-[#E31C25]/50 focus:border-[#E31C25] focus:outline-none text-[#1D1D1B] placeholder-[#1D1D1B]/45 px-4 py-3 rounded-sm text-base transition-colors';
     const mont = { fontFamily: 'var(--font-montserrat)' };
 
     return (
@@ -87,17 +87,17 @@ export default function LpQuoteForm({ lpKey }: { lpKey: string }) {
                     ))}
                 </select>
             </div>
-            {error && <p className="text-[#C0151D] text-sm" role="alert">{error}</p>}
+            {error && <p className="text-[#C0151D] text-base" role="alert">{error}</p>}
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#E31C25] hover:bg-[#c0151d] disabled:opacity-60 text-white font-black py-4 rounded-sm tracking-widest uppercase text-sm transition-colors"
+                className="w-full bg-[#E31C25] hover:bg-[#c0151d] disabled:opacity-60 text-white font-black py-4 min-h-[48px] rounded-sm tracking-wider uppercase text-base transition-colors"
                 style={mont}
             >
                 {isSubmitting ? 'Odosiela sa...' : 'Odoslať správu'}
             </button>
-            <p className="text-[#1D1D1B]/65 text-xs text-center">* Povinné polia. Vaše údaje sú v bezpečí.</p>
-            <p className="text-center text-sm">
+            <p className="text-[#1D1D1B]/65 text-sm text-center">* Povinné polia. Vaše údaje sú v bezpečí.</p>
+            <p className="text-center text-base">
                 <OnlineBookingLink placement={`${lpKey}_formular`} className="text-[#1D1D1B] font-semibold underline hover:text-[#C0151D]">
                     Radšej si rezervujte termín online
                 </OnlineBookingLink>

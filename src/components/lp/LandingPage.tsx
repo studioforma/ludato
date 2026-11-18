@@ -54,7 +54,7 @@ function priceItem(ref: PriceRef): PriceItem {
 const QUOTE_ANCHOR = 'cenova-ponuka';
 
 function ctaClass(primary: boolean, onRed: boolean) {
-    const base = 'inline-flex items-center justify-center gap-3 font-bold px-8 text-sm tracking-widest uppercase rounded-sm transition-colors';
+    const base = 'inline-flex items-center justify-center gap-3 font-bold px-5 sm:px-8 min-h-[48px] text-base tracking-wider uppercase rounded-sm transition-colors';
     if (onRed) {
         return `${base} ${primary ? 'bg-white text-[#E31C25] py-4' : 'border-2 border-white/80 hover:border-white text-white py-[14px]'}`;
     }
@@ -125,7 +125,7 @@ function CtaButtons({ config, place, onRed = false }: { config: LandingConfig; p
 function StickyBar({ config }: { config: LandingConfig }) {
     const k = config.key;
     const half = (primary: boolean) =>
-        `flex items-center justify-center py-5 font-black text-sm tracking-widest uppercase ${
+        `flex items-center justify-center py-5 min-h-[56px] font-black text-base tracking-wider uppercase ${
             primary ? 'bg-[#E31C25] text-white' : 'bg-white text-[#1D1D1B] border-t border-black/15'
         }`;
     const call = (primary: boolean) => (
@@ -193,7 +193,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                     <a
                         href={PHONE_HREF}
                         data-phone-location={`${k}_hlavicka`}
-                        className="hidden sm:inline-flex text-white font-bold text-sm tracking-widest hover:text-[#E31C25] transition-colors"
+                        className="hidden sm:inline-flex text-white font-bold text-base tracking-widest hover:text-[#E31C25] transition-colors"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
                         {PHONE_TEXT}
@@ -204,7 +204,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
             {/* 1. Hero */}
             <section className="px-4 sm:px-6 pt-12 pb-14 lg:pt-20 lg:pb-20 bg-gradient-to-b from-white to-[#F4F4F3] border-b border-black/10">
                 <div className="max-w-3xl mx-auto text-center">
-                    <p className="text-[#C0151D] text-xs tracking-[0.4em] uppercase mb-5 font-semibold" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                    <p className="text-[#C0151D] text-sm tracking-[0.25em] uppercase mb-5 font-semibold" style={{ fontFamily: 'var(--font-montserrat)' }}>
                         Odborárska 52, Nové Mesto
                     </p>
                     <h1 className="text-[#1D1D1B] uppercase text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6" style={{ fontFamily: 'var(--font-montserrat)' }}>
@@ -219,7 +219,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                             </li>
                         ))}
                     </ul>
-                    {config.heroNote && <p className="text-[#1D1D1B]/65 text-xs mb-8">{config.heroNote}</p>}
+                    {config.heroNote && <p className="text-[#1D1D1B]/65 text-sm mb-8">{config.heroNote}</p>}
                     <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
                         <CtaButtons config={config} place="hero" />
                     </div>
@@ -228,7 +228,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
 
             {/* 2. Trust row */}
             <section className="border-b border-black/10 bg-white px-4 sm:px-6 py-5">
-                <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-[#1D1D1B]/75">
+                <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-base text-[#1D1D1B]/75">
                     <span><Stars /> <strong className="text-[#1D1D1B]">{GOOGLE_RATING}</strong> na Google, {GOOGLE_REVIEWS} recenzií</span>
                     <span><strong className="text-[#1D1D1B]">{REPAIRED_CARS}</strong> opravených áut</span>
                     <span>Autá všetkých značiek</span>
@@ -245,7 +245,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                                 <h3 className="uppercase font-black text-[#1D1D1B] mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
                                     {r.title}
                                 </h3>
-                                <p className="text-[#1D1D1B]/75 text-sm leading-relaxed">{r.text}</p>
+                                <p className="text-[#1D1D1B]/75 text-base leading-relaxed">{r.text}</p>
                             </div>
                         ))}
                     </div>
@@ -267,11 +267,11 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
             <section className="px-4 sm:px-6 py-16 bg-[#F4F4F3]">
                 <div className="max-w-5xl mx-auto">
                     <SectionHeading>Ceny</SectionHeading>
-                    <p className="text-[#1D1D1B]/75 text-sm mb-8">{config.priceIntro}</p>
+                    <p className="text-[#1D1D1B]/75 text-base leading-relaxed mb-8">{config.priceIntro}</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {config.priceTables.map((t) => (
                             <div key={t.heading}>
-                                <h3 className="uppercase text-[#1D1D1B]/70 text-xs tracking-[0.3em] font-bold mb-3" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                <h3 className="uppercase text-[#1D1D1B]/70 text-sm tracking-[0.2em] font-bold mb-3" style={{ fontFamily: 'var(--font-montserrat)' }}>
                                     {t.heading}
                                 </h3>
                                 <ul className="space-y-2">
@@ -280,30 +280,30 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                                         const vat = formatPriceWithVat(item);
                                         return (
                                             <li key={ref.category + ref.service} className="flex items-start justify-between gap-4 bg-white border border-black/10 rounded-sm px-4 py-3">
-                                                <span className="text-sm text-[#1D1D1B] font-semibold">
+                                                <span className="text-base leading-snug text-[#1D1D1B] font-semibold">
                                                     {ref.label ?? item.service}
-                                                    {item.sub && <span className="block text-[#1D1D1B]/65 text-xs font-normal mt-0.5">{item.sub}</span>}
+                                                    {item.sub && <span className="block text-[#1D1D1B]/65 text-sm font-normal mt-0.5">{item.sub}</span>}
                                                 </span>
                                                 <span className="text-right shrink-0">
-                                                    <span className="block text-[#1D1D1B] font-black" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                                    <span className="block text-lg text-[#1D1D1B] font-black whitespace-nowrap" style={{ fontFamily: 'var(--font-montserrat)' }}>
                                                         {formatPrice(item)}
                                                     </span>
-                                                    {vat && <span className="block text-[#1D1D1B]/65 text-xs">{vat}</span>}
+                                                    {vat && <span className="block text-[#1D1D1B]/65 text-sm whitespace-nowrap">{vat}</span>}
                                                 </span>
                                             </li>
                                         );
                                     })}
                                 </ul>
                                 {t.footnotes?.map((f) => (
-                                    <p key={f} className="text-[#1D1D1B]/65 text-xs mt-2">{f}</p>
+                                    <p key={f} className="text-[#1D1D1B]/65 text-sm mt-2">{f}</p>
                                 ))}
                             </div>
                         ))}
                     </div>
                     <div className="mt-6 space-y-1">
-                        <p className="text-[#1D1D1B]/65 text-xs">Ceny sú uvedené bez DPH, pod každou nájdete aj sumu s DPH 23 %.</p>
+                        <p className="text-[#1D1D1B]/65 text-sm">Ceny sú uvedené bez DPH, pod každou nájdete aj sumu s DPH 23 %.</p>
                         {config.priceNotes?.map((n) => (
-                            <p key={n} className="text-[#1D1D1B]/65 text-xs">{n}</p>
+                            <p key={n} className="text-[#1D1D1B]/65 text-sm">{n}</p>
                         ))}
                     </div>
                 </div>
@@ -322,7 +322,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                                 <h3 className="uppercase font-black text-[#1D1D1B] mt-2 mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>
                                     {s.title}
                                 </h3>
-                                <p className="text-[#1D1D1B]/75 text-sm leading-relaxed">{s.text}</p>
+                                <p className="text-[#1D1D1B]/75 text-base leading-relaxed">{s.text}</p>
                             </li>
                         ))}
                     </ol>
@@ -339,10 +339,10 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                             .map((r) => (
                             <figure key={r.name} className="flex flex-col border border-black/10 rounded-sm p-6 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
                                 <Stars />
-                                <blockquote className="text-[#1D1D1B]/75 text-sm leading-relaxed mt-3 mb-4 flex-1">{r.text}</blockquote>
-                                <figcaption className="text-[#1D1D1B] text-sm font-bold" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                <blockquote className="text-[#1D1D1B]/75 text-base leading-relaxed mt-3 mb-4 flex-1">{r.text}</blockquote>
+                                <figcaption className="text-[#1D1D1B] text-base font-bold" style={{ fontFamily: 'var(--font-montserrat)' }}>
                                     {r.name}
-                                    <span className="block text-[#1D1D1B]/65 text-xs font-normal">Recenzia na Google</span>
+                                    <span className="block text-[#1D1D1B]/65 text-sm font-normal">Recenzia na Google</span>
                                 </figcaption>
                             </figure>
                         ))}
@@ -355,16 +355,16 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                 <div className="max-w-5xl mx-auto">
                     <SectionHeading>Kde nás nájdete</SectionHeading>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="space-y-4 text-sm">
-                            <p><strong className="block text-[#1D1D1B]/65 text-xs uppercase tracking-widest mb-1">Adresa</strong>Odborárska 52, 831 02 Bratislava, Nové Mesto</p>
+                        <div className="space-y-4 text-base leading-relaxed">
+                            <p><strong className="block text-[#1D1D1B]/65 text-sm uppercase tracking-widest mb-1">Adresa</strong>Odborárska 52, 831 02 Bratislava, Nové Mesto</p>
                             <p>
-                                <strong className="block text-[#1D1D1B]/65 text-xs uppercase tracking-widest mb-1">Telefón</strong>
+                                <strong className="block text-[#1D1D1B]/65 text-sm uppercase tracking-widest mb-1">Telefón</strong>
                                 <a href={PHONE_HREF} data-phone-location={`${k}_kde`} className="text-[#1D1D1B] font-bold hover:text-[#E31C25]">{PHONE_TEXT}</a>
                             </p>
-                            <p><strong className="block text-[#1D1D1B]/65 text-xs uppercase tracking-widest mb-1">Otváracie hodiny</strong>{HOURS}</p>
+                            <p><strong className="block text-[#1D1D1B]/65 text-sm uppercase tracking-widest mb-1">Otváracie hodiny</strong>{HOURS}</p>
                             {areas.length > 0 && (
                                 <div>
-                                    <strong className="block text-[#1D1D1B]/65 text-xs uppercase tracking-widest mb-2">Dojazd autom</strong>
+                                    <strong className="block text-[#1D1D1B]/65 text-sm uppercase tracking-widest mb-2">Dojazd autom</strong>
                                     <ul className="space-y-1 text-[#1D1D1B]/75">
                                         {areas.map((a) => (
                                             <li key={a.slug}>
@@ -395,8 +395,8 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                     <div className="space-y-3">
                         {config.faq.map((f) => (
                             <div key={f.q} className="border border-black/10 rounded-sm bg-white px-5 py-4">
-                                <h3 className="text-[#1D1D1B] font-bold text-sm sm:text-base mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>{f.q}</h3>
-                                <p className="text-[#1D1D1B]/75 text-sm leading-relaxed">{f.a}</p>
+                                <h3 className="text-[#1D1D1B] font-bold text-base sm:text-lg leading-snug mb-2" style={{ fontFamily: 'var(--font-montserrat)' }}>{f.q}</h3>
+                                <p className="text-[#1D1D1B]/75 text-base leading-relaxed">{f.a}</p>
                             </div>
                         ))}
                     </div>
@@ -416,7 +416,7 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
             </section>
 
             {/* NAP plus small links to the homepage and the privacy page */}
-            <footer className="px-4 sm:px-6 py-8 text-center text-xs text-[#1D1D1B]/70 space-y-2 bg-white">
+            <footer className="px-4 sm:px-6 py-8 text-center text-sm text-[#1D1D1B]/70 space-y-2 bg-white">
                 <p className="text-[#1D1D1B] font-semibold">Ludato Family Autoservis a Pneuservis</p>
                 <p>Odborárska 52, 831 02 Bratislava</p>
                 <p>
