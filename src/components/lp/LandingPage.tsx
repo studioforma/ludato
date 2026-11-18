@@ -306,6 +306,10 @@ export default function LandingPage({ config }: { config: LandingConfig }) {
                             <p key={n} className="text-[#1D1D1B]/65 text-sm">{n}</p>
                         ))}
                     </div>
+                    {/* Same buttons as the hero, right after the prices */}
+                    <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+                        <CtaButtons config={config} place="ceny" />
+                    </div>
                 </div>
             </section>
 
