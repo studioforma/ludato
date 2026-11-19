@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { Heading } from '@/components/service/ServicePage';
 import { areas } from '@/lib/areas';
-import { getService } from '@/lib/services';
+import { services } from '@/lib/services';
 import { SITE, BUSINESS_ID, breadcrumbSchema } from '@/lib/schema';
 
 const contactPageSchema = {
@@ -28,18 +28,7 @@ export const metadata: Metadata = {
     alternates: { canonical: '/kontakt' },
 };
 
-// Main services linked from /kontakt (a pick, not all of them).
-const KONTAKT_SERVICES = [
-    'pneuservis-bratislava',
-    'vymena-oleja-bratislava',
-    'brzdy-bratislava',
-    'pocitacova-diagnostika-bratislava',
-    'servis-klimatizacie-bratislava',
-    'geometria-bratislava',
-    'stk-ek-bratislava',
-    'odtah-vozidla-bratislava',
-];
-
+// /kontakt links every service and every area page (Samuel's rule).
 const chip =
     'text-white/70 hover:text-white text-sm border border-white/10 hover:border-[#E31C25]/50 rounded-sm px-4 py-2 transition-colors duration-300';
 
@@ -63,24 +52,20 @@ export default function Kontakt() {
                                 </Link>
                             ))}
                             <Link href="/kde-posobime" className={chip}>
-                                Všetky mestské časti →
+                                Prehľad mestských častí →
                             </Link>
                         </div>
                     </div>
                     <div>
                         <Heading>Naše služby</Heading>
                         <div className="flex flex-wrap gap-2" style={{ fontFamily: 'var(--font-inter)' }}>
-                            {KONTAKT_SERVICES.map((slug) => {
-                                const s = getService(slug);
-                                if (!s) throw new Error(`Missing service ${slug}`);
-                                return (
-                                    <Link key={slug} href={`/sluzby/${slug}`} className={chip}>
-                                        {s.name}
-                                    </Link>
-                                );
-                            })}
+                            {services.map((s) => (
+                                <Link key={s.slug} href={`/sluzby/${s.slug}`} className={chip}>
+                                    {s.name}
+                                </Link>
+                            ))}
                             <Link href="/sluzby" className={chip}>
-                                Všetky služby →
+                                Prehľad služieb →
                             </Link>
                         </div>
                     </div>
