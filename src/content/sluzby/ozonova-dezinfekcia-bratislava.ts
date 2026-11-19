@@ -202,7 +202,7 @@ const content: ServiceContent = [
         paragraphs: [
             'Sme na Odborárskej 52 v Bratislave, Novom Meste. Autom k nám chodia zákazníci z celej Bratislavy aj okolia, prehľad mestských častí s časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime). Ak nemáte čas prísť, auto si vyzdvihneme v rámci Bratislavy a okolia za 50 €.',
             'Z [Ružinova](/kde-posobime/ruzinov) sme orientačne 15 minút autom.',
-            'Pôsobíme aj v týchto častiach Bratislavy: [Rača](/kde-posobime/raca) a [Kramáre](/kde-posobime/kramare).',
+            'Pôsobíme aj v týchto častiach Bratislavy: [Rača](/kde-posobime/raca), [Kramáre](/kde-posobime/kramare) a [Staré Mesto](/kde-posobime/stare-mesto).',
         ],
     },
 ];

@@ -219,6 +219,7 @@ const content: ServiceContent = [
         paragraphs: [
             'Sme na Odborárskej 52 v Bratislave, Novom Meste. Autom k nám chodia zákazníci aj z okolitých mestských častí, prehľad aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
             'Podvozok patrí medzi služby, ktoré najčastejšie riešime pre [Staré Mesto](/kde-posobime/stare-mesto) aj [Karlovu Ves](/kde-posobime/karlova-ves).',
+            'Pôsobíme aj v týchto častiach Bratislavy: [Kramáre](/kde-posobime/kramare) a [Koliba](/kde-posobime/koliba).',
         ],
     },
 ];
