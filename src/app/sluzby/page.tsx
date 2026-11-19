@@ -163,6 +163,41 @@ export default function Sluzby() {
                         </Link>
                         .
                     </p>
+
+                    <p
+                        className="text-white/40 text-sm mt-4 text-center"
+                        style={{ fontFamily: 'var(--font-inter)' }}
+                    >
+                        Do servisu k nám chodia zákazníci z celej Bratislavy, napríklad z{' '}
+                        <Link href="/kde-posobime/raca" className="text-[#E31C25] hover:text-white transition-colors underline">
+                            Rače
+                        </Link>
+                        {', '}
+                        <Link href="/kde-posobime/ruzinov" className="text-[#E31C25] hover:text-white transition-colors underline">
+                            Ružinova
+                        </Link>
+                        {', '}
+                        <Link href="/kde-posobime/vajnory" className="text-[#E31C25] hover:text-white transition-colors underline">
+                            Vajnor
+                        </Link>
+                        {', '}
+                        <Link href="/kde-posobime/stare-mesto" className="text-[#E31C25] hover:text-white transition-colors underline">
+                            Starého Mesta
+                        </Link>
+                        {', '}
+                        <Link href="/kde-posobime/karlova-ves" className="text-[#E31C25] hover:text-white transition-colors underline">
+                            Karlovej Vsi
+                        </Link>
+                        {' a '}
+                        <Link href="/kde-posobime/dubravka" className="text-[#E31C25] hover:text-white transition-colors underline">
+                            Dúbravky
+                        </Link>
+                        . Prehľad všetkých mestských častí je na stránke{' '}
+                        <Link href="/kde-posobime" className="text-[#E31C25] hover:text-white transition-colors underline">
+                            Kde pôsobíme
+                        </Link>
+                        .
+                    </p>
                 </div>
             </div>
 
