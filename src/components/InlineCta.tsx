@@ -5,12 +5,17 @@ import { hasOnlineBooking } from '@/lib/booking';
 import OnlineBookingLink from '@/components/OnlineBookingLink';
 
 export type InlineCtaProps = {
-    heading: string;
+    /** Optional only for the landing pages, which show just the proof row and buttons. */
+    heading?: string;
     /** Supports inline links in markdown form: [text](/cesta). */
-    text: string;
+    text?: string;
     points?: string[];
-    secondaryHref: string;
+    secondaryHref?: string;
     secondaryLabel: string;
+    /** Landing pages: the second button opens Termino (placement for the event) instead of a page link. */
+    secondaryBooking?: string;
+    /** Landing pages: the second button is the main one (solid, first), the phone the outlined one. */
+    secondaryFirst?: boolean;
     /**
      * Shows the "book online" link. Defaults to on when secondaryHref points to
      * a service bookable in Termino (pneuservis, olej, diagnostika, klimatizácia).
@@ -21,8 +26,20 @@ export type InlineCtaProps = {
 // Red call-to-action box used inside service pages and the area page. The
 // phone is written exactly as 0944 236 257 so Google Ads call tracking
 // can swap it (see README).
-export default function InlineCta({ heading, text, points, secondaryHref, secondaryLabel, onlineBooking }: InlineCtaProps) {
-    const showBooking = onlineBooking ?? hasOnlineBooking(secondaryHref);
+export default function InlineCta({
+    heading,
+    text,
+    points,
+    secondaryHref,
+    secondaryLabel,
+    secondaryBooking,
+    secondaryFirst = false,
+    onlineBooking,
+}: InlineCtaProps) {
+    const showBooking = onlineBooking ?? (secondaryHref ? hasOnlineBooking(secondaryHref) : false);
+    const solid = 'bg-white hover:bg-[#1D1D1B] text-[#E31C25] hover:text-white font-bold';
+    const outline = 'border border-white/60 hover:border-white hover:bg-white/10 text-white font-semibold';
+    const secondaryClass = `sm:flex-1 lg:flex-none inline-flex items-center justify-center ${secondaryFirst ? `${solid} text-center` : `${outline} whitespace-nowrap`} px-7 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300`;
     return (
         <aside className="mb-14 relative overflow-hidden rounded-sm bg-[#E31C25] px-6 py-8 sm:px-12 sm:py-12 shadow-[0_20px_60px_rgba(227,28,37,0.25)]">
             {/* Slash accent, same motif as the rest of the site */}
@@ -35,18 +52,22 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
             </span>
             <div className="relative lg:grid lg:grid-cols-[1fr_auto] lg:items-center lg:gap-12">
                 <div>
-                    <h2
-                        className="relative text-2xl sm:text-3xl font-black text-white mb-3 leading-tight"
-                        style={{ fontFamily: 'var(--font-montserrat)' }}
-                    >
-                        {heading}
-                    </h2>
-                    <p
-                        className="relative text-white leading-relaxed mb-5"
-                        style={{ fontFamily: 'var(--font-inter)' }}
-                    >
-                        <RichText text={text} />
-                    </p>
+                    {heading && (
+                        <h2
+                            className="relative text-2xl sm:text-3xl font-black text-white mb-3 leading-tight"
+                            style={{ fontFamily: 'var(--font-montserrat)' }}
+                        >
+                            {heading}
+                        </h2>
+                    )}
+                    {text && (
+                        <p
+                            className="relative text-white leading-relaxed mb-5"
+                            style={{ fontFamily: 'var(--font-inter)' }}
+                        >
+                            <RichText text={text} />
+                        </p>
+                    )}
                     {points && (
                         <ul className="relative space-y-2 mb-5">
                             {points.map((p) => (
@@ -94,7 +115,7 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                 <div className="relative flex flex-col sm:flex-row sm:flex-wrap lg:flex-col lg:flex-nowrap gap-3 lg:min-w-[280px]">
                     <a
                         href="tel:+421944236257"
-                        className="sm:flex-1 lg:flex-none inline-flex items-center justify-center gap-3 bg-white hover:bg-[#1D1D1B] text-[#E31C25] hover:text-white font-bold px-7 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300 hover:-translate-y-0.5"
+                        className={`${secondaryFirst ? 'order-2' : ''} sm:flex-1 lg:flex-none inline-flex items-center justify-center gap-3 ${secondaryFirst ? outline : solid} px-7 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300 hover:-translate-y-0.5`}
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -102,20 +123,30 @@ export default function InlineCta({ heading, text, points, secondaryHref, second
                         </svg>
                         0944 236 257
                     </a>
-                    <Link
-                        href={secondaryHref}
-                        className="sm:flex-1 lg:flex-none inline-flex items-center justify-center border border-white/60 hover:border-white hover:bg-white/10 text-white font-semibold px-7 py-4 text-sm tracking-widest uppercase rounded-sm transition-all duration-300 whitespace-nowrap"
-                        style={{ fontFamily: 'var(--font-montserrat)' }}
-                    >
-                        {showBooking ? 'Naceniť zákrok' : secondaryLabel}
-                    </Link>
+                    {secondaryBooking ? (
+                        <OnlineBookingLink
+                            placement={secondaryBooking}
+                            className={`${secondaryFirst ? 'order-1' : ''} ${secondaryClass}`}
+                            style={{ fontFamily: 'var(--font-montserrat)' }}
+                        >
+                            {secondaryLabel}
+                        </OnlineBookingLink>
+                    ) : (
+                        <Link
+                            href={secondaryHref ?? '/nacenenie'}
+                            className={`${secondaryFirst ? 'order-1' : ''} ${secondaryClass}`}
+                            style={{ fontFamily: 'var(--font-montserrat)' }}
+                        >
+                            {showBooking ? 'Naceniť zákrok' : secondaryLabel}
+                        </Link>
+                    )}
                     {/* Bookable services: text link to the Termino calendar under the buttons */}
                     {showBooking && (
                         <OnlineBookingLink
                             placement="cta"
                             className="basis-full text-center text-white text-sm font-semibold underline decoration-white/50 underline-offset-4 hover:decoration-white"
                         >
-                            Objednať sa online →
+                            Rezervovať termín →
                         </OnlineBookingLink>
                     )}
                 </div>

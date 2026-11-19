@@ -16,8 +16,8 @@ const faq = [
         a: 'Ozveme sa vám do 48 hodín, rovnako ako pri správe z kontaktného formulára. Ak to súrne potrebujete, zavolajte na 0944 236 257.',
     },
     {
-        q: 'Prečo chcete auto a EČV?',
-        a: 'Cena dielov aj práce závisí od konkrétneho auta a motora. Podľa typu auta a EČV vieme vybrať správne diely a nacenenie je presnejšie.',
+        q: 'Prečo chcete auto a ŠPZ alebo VIN?',
+        a: 'Cena dielov aj práce závisí od konkrétneho auta a motora. Podľa typu auta a ŠPZ alebo VIN vieme vybrať správne diely a nacenenie je presnejšie.',
     },
     {
         q: 'Sú ceny na webe s DPH?',
@@ -56,7 +56,7 @@ export default function NacenenieInfo() {
                     </h2>
                     <ol className="space-y-3 text-white/70 text-sm leading-relaxed list-decimal pl-5">
                         <li>Vyberiete jednu alebo viac služieb, prípadne opíšete problém vlastnými slovami.</li>
-                        <li>Doplníte auto, EČV a kontakt, aby sme vedeli vybrať správne diely.</li>
+                        <li>Doplníte auto, ŠPZ alebo VIN a kontakt, aby sme vedeli vybrať správne diely.</li>
                         <li>Pripravíme vám cenu a ozveme sa do 48 hodín. Termín si potom dohodneme podľa vás.</li>
                     </ol>
                 </div>

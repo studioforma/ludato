@@ -107,7 +107,7 @@ const content: ServiceContent = [
         type: 'text',
         heading: 'Kombinácia s vyzdvihnutím auta',
         paragraphs: [
-            'Ak nemáte čas priviezť auto k nám, vyzdvihneme ho v rámci Bratislavy a okolia za 50 €. Keď je auto nepojazdné, zabezpečíme odťah, v Bratislave a okolí za 170 € a do zahraničia za 1,50 € za kilometer.',
+            'Ak nemáte čas priviezť auto k nám, vyzdvihneme ho v rámci Bratislavy a okolia za 50 €. Keď je auto nepojazdné, zabezpečíme odťah, v Bratislave a okolí za 170 € a do zahraničia za 1,50 € za km.',
             'Náhradné vozidlo a vyzdvihnutie sa dajú dohodnúť spolu, takže celú opravu vybavíte bez toho, aby ste museli do servisu chodiť osobne viac, než je nutné. Podrobnosti dohodneme pri objednaní.',
         ],
     },
@@ -205,7 +205,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Môžete moje auto aj vyzdvihnúť?',
-                a: 'Áno, v rámci Bratislavy a okolia za 50 €. Nepojazdné auto odtiahneme za 170 €, do zahraničia za 1,50 € za kilometer.',
+                a: 'Áno, v rámci Bratislavy a okolia za 50 €. Nepojazdné auto odtiahneme za 170 €, do zahraničia za 1,50 € za km.',
             },
             {
                 q: 'Pri akej oprave sa náhradné vozidlo oplatí?',
@@ -222,6 +222,8 @@ const content: ServiceContent = [
         heading: 'Kde nás nájdete',
         paragraphs: [
             'Sme na Odborárskej 52 v Bratislave, Novom Meste. Autom k nám chodia zákazníci aj z okolitých mestských častí, prehľad aj s orientačným časom dojazdu nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Náhradné vozidlo patrí medzi služby, ktoré najčastejšie riešime pre [Vajnory](/kde-posobime/vajnory) a [Karlovu Ves](/kde-posobime/karlova-ves).',
+            'Pôsobíme aj v týchto častiach Bratislavy: [Dúbravka](/kde-posobime/dubravka) a [Rača](/kde-posobime/raca).',
         ],
     },
 ];

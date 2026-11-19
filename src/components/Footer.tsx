@@ -119,8 +119,8 @@ export default function Footer() {
                                 <span className="text-[#E31C25] mt-0.5">🕐</span>
                                 <span>
                                     Pondelok–Štvrtok: 9:00–19:00<br />
-                                    Pi: 7:00–16:00<br />
-                                    So–Ne: zatvorené
+                                    Piatok: 7:00–16:00<br />
+                                    Sobota–Nedeľa: zatvorené
                                 </span>
                             </li>
                         </ul>
@@ -154,6 +154,14 @@ export default function Footer() {
                             className="text-white/60 hover:text-[#E31C25] transition-colors"
                         >
                             Vytvorilo Studio Forma
+                        </a>
+                        <a
+                            href="https://www.klick.sk"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white/60 hover:text-[#E31C25] transition-colors"
+                        >
+                            Na vrchol Googlu dostal Klick.sk
                         </a>
                     </div>
                 </div>

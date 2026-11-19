@@ -59,7 +59,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Výmena oleja',
-                text: 'Výmena oleja a olejového filtra od 35 €, kompletný servis vrátane palivového filtra 65 €. Olej a filtre pripravíme podľa EČV vášho auta.',
+                text: 'Výmena oleja a olejového filtra od 35 €, kompletný servis vrátane palivového filtra 65 €. Olej a filtre pripravíme podľa ŠPZ vášho auta.',
             },
             {
                 title: 'Podvozok',

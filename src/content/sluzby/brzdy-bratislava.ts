@@ -102,6 +102,7 @@ const content: ServiceContent = [
         paragraphs: [
             'Pískanie alebo škrípanie pri brzdení je najčastejší prvý signál, že platničky sú na hranici opotrebenia. Vibrácie v pedáli alebo volante počas brzdenia zvyčajne znamenajú deformovaný alebo opotrebovaný kotúč.',
             'Dlhšia brzdná dráha, než ste zvyknutí, a mäkký, „hubovitý“ pocit v pedáli sú signály, ktoré sa oplatí riešiť čo najskôr, môžu súvisieť s brzdovou kvapalinou alebo vzduchom v systéme. V oboch prípadoch odporúčame nečakať na najbližší plánovaný servis.',
+            'Keď sa na palubnej doske rozsvieti kontrolka ABS, chyby z riadiacej jednotky načítame [počítačovou diagnostikou](/sluzby/pocitacova-diagnostika-bratislava).',
         ],
     },
     {
@@ -156,6 +157,7 @@ const content: ServiceContent = [
         categories: ['Brzdy'],
         ownPartsNote: true,
     },
+    { type: 'reviews', ids: ['ema-f', 'cyntia', 'boris-b'] },
     {
         type: 'faq',
         heading: 'Časté otázky',

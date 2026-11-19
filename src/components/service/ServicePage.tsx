@@ -14,6 +14,7 @@ import { OWN_PARTS_SHORT } from '@/lib/ownParts';
 import { getRelated, type ServiceMeta } from '@/lib/services';
 import { SITE, areaServedSchema } from '@/lib/schema';
 import type { Section, ServiceContent } from '@/content/sluzby/types';
+import { TOPIC_REVIEWS } from '@/lib/topicReviews';
 
 
 export function Heading({ children }: { children: React.ReactNode }) {
@@ -300,6 +301,34 @@ export function SectionBlock({ section }: { section: Section }) {
                     <FaqAccordion items={section.items} />
                 </div>
             );
+
+        case 'reviews': {
+            const items = section.ids.map((id) => TOPIC_REVIEWS[id]);
+            return (
+                <div className="mb-14">
+                    <Heading>Recenzie z Google</Heading>
+                    <div className={`grid grid-cols-1 gap-4 ${items.length > 1 ? 'md:grid-cols-2' : ''} ${items.length > 2 ? 'xl:grid-cols-3' : ''}`}>
+                        {items.map((r) => (
+                            <figure key={r.name} className="flex flex-col bg-white/5 border border-white/10 rounded-sm p-6">
+                                <span className="text-[#F5B301] tracking-widest" aria-hidden="true">
+                                    ★★★★★
+                                </span>
+                                <blockquote
+                                    className="text-white/80 text-base leading-relaxed mt-3 mb-4 flex-1"
+                                    style={{ fontFamily: 'var(--font-inter)' }}
+                                >
+                                    {r.text}
+                                </blockquote>
+                                <figcaption className="text-white text-sm font-bold" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                    {r.name}
+                                    <span className="block text-white/60 text-xs font-normal mt-0.5">Recenzia na Google · {r.date}</span>
+                                </figcaption>
+                            </figure>
+                        ))}
+                    </div>
+                </div>
+            );
+        }
 
         case 'cta':
             return <InlineCta {...section} />;

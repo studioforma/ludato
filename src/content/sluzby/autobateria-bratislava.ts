@@ -185,6 +185,8 @@ const content: ServiceContent = [
         heading: 'Kde nás nájdete',
         paragraphs: [
             'Sme na Odborárskej 52 v Bratislave, Novom Meste, kúsok od Račianskej a Vajnorskej. Ak auto nenaštartuje a neviete k nám prísť, pozrite si [odťah a vyzdvihnutie auta](/sluzby/odtah-vozidla-bratislava). Prehľad mestských častí, odkiaľ k nám zákazníci chodia, nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Z [Rače](/kde-posobime/raca) sme orientačne 10 až 15 minút autom, z [Vajnor](/kde-posobime/vajnory) 15 až 20 minút.',
+            'Pôsobíme aj v týchto častiach Bratislavy: [Kramáre](/kde-posobime/kramare) a [Staré Mesto](/kde-posobime/stare-mesto).',
         ],
     },
 ];

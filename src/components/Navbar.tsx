@@ -74,7 +74,7 @@ export default function Navbar() {
                                 <rect x="3" y="5" width="18" height="16" rx="2" strokeWidth={2} />
                                 <path strokeLinecap="round" strokeWidth={2} d="M3 10h18M8 3v4M16 3v4" />
                             </svg>
-                            Online rezervácia
+                            Rezervovať termín
                         </OnlineBookingLink>
                     </div>
                     <SocialIcons className="flex-shrink-0 text-white" iconClassName="w-4 h-4" />
@@ -165,7 +165,7 @@ export default function Navbar() {
                                 className="text-white/90 hover:text-[#E31C25] font-semibold tracking-widest uppercase text-sm py-2 border-b border-white/10 transition-colors"
                                 style={{ fontFamily: 'var(--font-montserrat)' }}
                             >
-                                Online rezervácia ↗
+                                Rezervovať termín ↗
                             </OnlineBookingLink>
                             <a
                                 href="tel:+421944236257"

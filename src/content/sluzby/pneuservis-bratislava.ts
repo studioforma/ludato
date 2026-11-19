@@ -127,6 +127,7 @@ const content: ServiceContent = [
             'Uskladnenie a oprava pneumatík',
         ],
     },
+    { type: 'reviews', ids: ['sabina-d', 'robert-p', 'ivana-s'] },
     {
         type: 'faq',
         heading: 'Časté otázky',
@@ -141,7 +142,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Ponúkate aj uskladnenie pneumatík?',
-                a: 'Áno, sezónne uskladnenie pneumatík stojí 40 € za sezónu. Podrobnosti nájdete na stránke o uskladnení pneumatík.',
+                a: 'Áno, sezónne uskladnenie pneumatík stojí 40 € na sezónu. Podrobnosti nájdete na stránke o uskladnení pneumatík.',
             },
             {
                 q: 'Opravíte defekt na pneumatike?',

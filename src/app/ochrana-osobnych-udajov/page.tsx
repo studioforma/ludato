@@ -26,6 +26,18 @@ const cookies = [
         type: 'Analytické, len so súhlasom',
     },
     {
+        name: '_clck, _clsk, CLID, MUID',
+        provider: 'Microsoft Clarity (Microsoft)',
+        purpose: 'Analytika správania na webe: kliky, posúvanie stránky (scroll) a záznamy návštev.',
+        type: 'Analytické, len so súhlasom',
+    },
+    {
+        name: 'ludato_zdroj',
+        provider: 'ludato.sk',
+        purpose: 'Odkiaľ ste na web prišli (napríklad vyhľadávač alebo reklama) a vstupná stránka, pre štatistiku dopytov z formulárov. Ukladá sa v úložisku prehliadača a vymaže sa po zatvorení karty.',
+        type: 'Analytické, len so súhlasom',
+    },
+    {
         name: '_gcl_au, _gcl_aw a ďalšie',
         provider: 'Google Ads',
         purpose: 'Meranie účinnosti reklamy, vrátane toho, či hovor alebo objednávka prišli z reklamy.',
@@ -96,8 +108,8 @@ export default function OchranaOsobnychUdajov() {
                     <Section title="Aké údaje spracúvame z formulárov">
                         <p>
                             Keď nám pošlete správu cez kontaktný formulár alebo žiadosť o cenovú ponuku, spracúvame
-                            údaje, ktoré do formulára vyplníte: meno, e-mail, telefónne číslo (ak ho uvediete),
-                            text správy a vybrané služby.
+                            údaje, ktoré do formulára vyplníte: meno, e-mail, telefónne číslo,
+                            ŠPZ alebo VIN vozidla, text správy a vybrané služby.
                         </p>
                         <p>
                             Údaje používame len na to, aby sme vám odpovedali, pripravili cenovú ponuku a dohodli
@@ -110,6 +122,15 @@ export default function OchranaOsobnychUdajov() {
                             Formulár sa odosiela ako e-mail cez službu Resend priamo do našej schránky. Údaje
                             nepredávame ani neposkytujeme tretím stranám na marketing.
                         </p>
+                        <p>
+                            Pri odoslaní formulára si do vlastnej tabuľky zapisujeme aj anonymnú štatistiku: na
+                            ktorej stránke ste formulár odoslali, ktorú službu ste vybrali a čo ste uviedli
+                            v otázke „Ako ste sa o nás dozvedeli?“. Ak ste súhlasili s cookies, zapíšeme aj to,
+                            odkiaľ ste na náš web prišli (napríklad z vyhľadávača alebo z reklamy). Údaj o zdroji
+                            návštevy sa ukladá len s vaším súhlasom, dočasne v pamäti prehliadača (sessionStorage),
+                            a vymaže sa po zatvorení karty. Záznam v tabuľke neobsahuje vaše meno, telefón, e-mail
+                            ani text správy a používame ho len na vyhodnotenie, ktoré kanály nám prinášajú dopyty.
+                        </p>
                     </Section>
 
                     <Section title="Súbory cookies">
@@ -118,6 +139,11 @@ export default function OchranaOsobnychUdajov() {
                             na spodku stránky. Kým nesúhlasíte, Google Analytics ani Google Ads si do vášho
                             prehliadača nič neukladajú (tzv. režim súhlasu Google, consent mode v2). Právnym
                             základom je váš súhlas podľa čl. 6 ods. 1 písm. a) GDPR.
+                        </p>
+                        <p>
+                            Ak súhlasíte s cookies, používame aj Microsoft Clarity od spoločnosti Microsoft na
+                            analytiku správania na webe (kliky, posúvanie stránky a záznamy návštev). Bez súhlasu
+                            sa Microsoft Clarity nenačíta.
                         </p>
 
                         <div className="overflow-x-auto -mx-4 sm:mx-0">
@@ -163,7 +189,7 @@ export default function OchranaOsobnychUdajov() {
                         <p>
                             Údaje spracúvajú aj služby, ktoré používame na prevádzku webu: Vercel (hosting webu),
                             Resend (odosielanie formulárov e-mailom) a Google (Analytics, Ads, Mapy, e-mailová
-                            schránka). Niektoré z nich môžu údaje prenášať mimo Európskej únie, najmä do USA.
+                            schránka) a Microsoft (Clarity, len so súhlasom s cookies). Niektoré z nich môžu údaje prenášať mimo Európskej únie, najmä do USA.
                             Deje sa tak na základe štandardných zmluvných doložiek alebo rámca EU-US Data Privacy
                             Framework.
                         </p>

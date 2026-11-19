@@ -152,6 +152,7 @@ const content: ServiceContent = [
         categories: ['Kontroly vozidla'],
         only: ['Diagnostika riadiacej jednotky', 'Kontrola elektroniky a osvetlenia'],
     },
+    { type: 'reviews', ids: ['roman-k'] },
     {
         type: 'faq',
         heading: 'Časté otázky',

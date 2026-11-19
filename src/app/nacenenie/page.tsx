@@ -6,25 +6,8 @@ import OnlineBookingLink from '@/components/OnlineBookingLink';
 import { getOrderPrefill } from '@/lib/orderPrefill';
 import { trackLeadThen } from '@/lib/analytics';
 import { LEAD_SOURCES, LEAD_SOURCE_LABEL } from '@/lib/leadSource';
-
-const servicesOptions = [
-    'Diagnostika vozidla',
-    'Kontrola pred STK + EK',
-    'Sprostredkovanie STK + EK',
-    'Olejový servis (výmena oleja + filtre)',
-    'Výmena bŕzd + odvzdušnenie',
-    'Geometria',
-    'Kompletné prezutie kolies',
-    'Preváženie a prehodenie kolies na disku',
-    'Oprava podvozku',
-    'Výmena náplne prevodovky',
-    'Ozónová dezinfekcia interiéru',
-    'Tepovanie',
-    'Čistenie interiéru + vysávanie',
-    'Výmena batérie',
-    'Pickup / odťah vozidla',
-    'Iné (špecifikujte v správe)',
-];
+import { QUOTE_SERVICES } from '@/lib/quoteServices';
+import { readLeadOrigin } from '@/lib/leadOrigin';
 
 export default function QuotePage() {
     const [step, setStep] = useState(1);
@@ -75,7 +58,6 @@ export default function QuotePage() {
         const fullMessage = `
 Vybrané služby: ${selectedServices || 'Žiadne'}
 Auto: ${formState.car || 'Neuvedené'}
-EČV: ${formState.plate || 'Neuvedené'}
 Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
         `.trim();
 
@@ -91,6 +73,12 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                     message: fullMessage,
                     source: formState.source || undefined,
                     formType: 'quote',
+                    // ŠPZ or VIN: only into the email, not into the statistics.
+                    plate: formState.plate,
+                    // Statistics only (no personal data), see lib/leadStats.ts.
+                    sluzby: formState.services,
+                    stranka: window.location.pathname,
+                    zdroj: readLeadOrigin(),
                 }),
             });
             const result = await response.json();
@@ -128,7 +116,7 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                         className="text-[#FF5A60] text-xs tracking-[0.4em] uppercase mb-4 font-semibold"
                         style={{ fontFamily: 'var(--font-montserrat)' }}
                     >
-                        <span className="font-black">//</span> Nezáväzná kalkulácia a rezervácia
+                        <span className="font-black">//</span> Nezáväzná kalkulácia a objednávka
                     </p>
                     <h1
                         className="uppercase text-3xl sm:text-4xl font-black text-white"
@@ -148,7 +136,7 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                         placement="nacenenie"
                         className="font-semibold text-white underline decoration-[#E31C25] underline-offset-4 hover:text-[#FF5A60] whitespace-nowrap"
                     >
-                        Rezervovať online →
+                        Rezervovať termín →
                     </OnlineBookingLink>
                 </div>
 
@@ -167,7 +155,7 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                     <h2 className="text-xl font-bold text-white mb-6" style={{ fontFamily: 'var(--font-montserrat)' }}>Krok 1: O aké služby máte záujem?</h2>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" style={{ fontFamily: 'var(--font-inter)' }}>
-                                        {servicesOptions.map((service) => {
+                                        {QUOTE_SERVICES.map((service) => {
                                             const isSelected = formState.services.includes(service);
                                             return (
                                                 <button
@@ -264,14 +252,16 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                         </div>
                                         <div>
                                             <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                                EČV
+                                                ŠPZ alebo VIN *
                                             </label>
                                             <input
                                                 type="text"
+                                                required
+                                                autoComplete="off"
                                                 value={formState.plate}
                                                 onChange={(e) => setFormState(prev => ({ ...prev, plate: e.target.value.toUpperCase() }))}
-                                                placeholder="BA123XY"
-                                                maxLength={10}
+                                                placeholder="BA123AB alebo VIN"
+                                                maxLength={25}
                                                 className={inputClass}
                                                 style={{ fontFamily: 'var(--font-inter)' }}
                                             />
@@ -281,11 +271,10 @@ Doplňujúce info: ${formState.otherDetails || 'Žiadne'}
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div>
                                             <label className={labelClass} style={{ fontFamily: 'var(--font-montserrat)' }}>
-                                                Email *
+                                                Email
                                             </label>
                                             <input
                                                 type="email"
-                                                required
                                                 value={formState.email}
                                                 onChange={(e) => setFormState(prev => ({ ...prev, email: e.target.value }))}
                                                 placeholder="vas@email.sk"

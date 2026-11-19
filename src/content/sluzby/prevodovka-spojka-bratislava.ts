@@ -144,7 +144,7 @@ const content: ServiceContent = [
         items: [
             {
                 q: 'Koľko stojí výmena spojky?',
-                a: 'Závisí od auta, typu spojky a od toho, či treba meniť aj dvojhmotový zotrvačník. Prácu účtujeme podľa normohodín za náročné zásahy, 45 € za hodinu, a celkovú cenu vám povieme vopred.',
+                a: 'Závisí od auta, typu spojky a od toho, či treba meniť aj dvojhmotový zotrvačník. Prácu účtujeme podľa normohodín za náročné zásahy, 45 €/NH, a celkovú cenu vám povieme vopred.',
             },
             {
                 q: 'Ako dlho vydrží spojka?',
@@ -185,6 +185,7 @@ const content: ServiceContent = [
         heading: 'Kde nás nájdete',
         paragraphs: [
             'Sme na Odborárskej 52 v Bratislave, Novom Meste. Ak sa auto nepohne, zabezpečíme odťah priamo k nám. O tom, ako kopcovitý terén zaťažuje spojku, píšeme aj na stránkach pre [Karlovu Ves](/kde-posobime/karlova-ves) a [Kolibu](/kde-posobime/koliba). Prehľad mestských častí, odkiaľ k nám zákazníci chodia, nájdete na stránke [Kde pôsobíme](/kde-posobime).',
+            'Pôsobíme aj v týchto častiach Bratislavy: [Rača](/kde-posobime/raca) a [Dúbravka](/kde-posobime/dubravka).',
         ],
     },
 ];

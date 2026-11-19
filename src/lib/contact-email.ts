@@ -7,8 +7,11 @@ export interface ContactEmailFields {
     eyebrow: string;
     title: string;
     name: string;
-    email: string;
+    /** Optional on quote forms. */
+    email?: string;
     phone?: string;
+    /** ŠPZ or VIN, quote forms only. */
+    plate?: string;
     message: string;
     /** Answer to "Ako ste sa o nás dozvedeli?", optional. */
     source?: string;
@@ -39,7 +42,7 @@ function row(label: string, value: string, href?: string) {
     `;
 }
 
-export function buildContactEmailHtml({ eyebrow, title, name, email, phone, message, source }: ContactEmailFields) {
+export function buildContactEmailHtml({ eyebrow, title, name, email, phone, plate, message, source }: ContactEmailFields) {
     return `
         <!DOCTYPE html>
         <html>
@@ -71,8 +74,9 @@ export function buildContactEmailHtml({ eyebrow, title, name, email, phone, mess
                                 <td style="padding:8px 32px 0 32px;">
                                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                                         ${row('Meno', name)}
-                                        ${row('Email', email, `mailto:${email}`)}
+                                        ${email ? row('Email', email, `mailto:${email}`) : ''}
                                         ${phone ? row('Telefón', phone, `tel:${phone.replace(/\s/g, '')}`) : ''}
+                                        ${plate ? row('ŠPZ alebo VIN', plate) : ''}
                                         ${source ? row('Ako sa o nás dozvedel', source) : ''}
                                     </table>
                                 </td>
@@ -104,14 +108,15 @@ ${escapeHtml(message)}
     `;
 }
 
-export function buildContactEmailText({ eyebrow, title, name, email, phone, message, source }: ContactEmailFields) {
+export function buildContactEmailText({ eyebrow, title, name, email, phone, plate, message, source }: ContactEmailFields) {
     return [
         `${eyebrow.toUpperCase()}`,
         title.toUpperCase(),
         '',
         `Meno: ${name}`,
-        `Email: ${email}`,
+        email ? `Email: ${email}` : '',
         phone ? `Telefón: ${phone}` : '',
+        plate ? `ŠPZ alebo VIN: ${plate}` : '',
         source ? `Ako sa o nás dozvedel: ${source}` : '',
         '',
         'Správa:',

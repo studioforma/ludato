@@ -70,7 +70,7 @@ export const pricingCategories: PricingCategory[] = [
             { service: 'Výmena oleja + olejový filter + vzduchový filter + kabínový filter', price: '55' },
             { service: 'Kompletný servis (vrátane palivového filtra)', price: '65' },
         ],
-        footnote: '* Materiál naceňujeme individuálne podľa EČV',
+        footnote: '* Materiál naceňujeme individuálne podľa ŠPZ',
     },
     {
         category: 'Brzdy',
@@ -119,7 +119,7 @@ export const pricingCategories: PricingCategory[] = [
     {
         category: 'Uskladnenie a oprava pneumatík',
         items: [
-            { service: 'Sezónne uskladnenie pneumatík', price: '40', unit: '/sezóna' },
+            { service: 'Sezónne uskladnenie pneumatík', price: '40', unit: '/sezónu' },
             { service: 'Oprava defektu', price: null },
         ],
         footnote: '* Oprava defektu – individuálne nacenenie podľa stavu pneumatiky',

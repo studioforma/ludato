@@ -92,7 +92,7 @@ export default function HeroSection() {
                                 {stat.value}
                             </div>
                             <div
-                                className="text-[10px] leading-tight sm:text-xs text-white/70 mt-1 tracking-wide uppercase"
+                                className="text-xs leading-tight text-white/70 mt-1 tracking-wide uppercase"
                                 style={{ fontFamily: 'var(--font-inter)' }}
                             >
                                 {stat.label}
