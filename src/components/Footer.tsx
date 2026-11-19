@@ -155,6 +155,17 @@ export default function Footer() {
                         >
                             Vytvorilo Studio Forma
                         </a>
+                        <span className="text-white/60">
+                            Na vrchol Googlu ho dostal{' '}
+                            <a
+                                href="https://www.klick.sk"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-[#E31C25] transition-colors"
+                            >
+                                Klick.sk
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>
