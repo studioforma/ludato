@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   // Resolves relative canonicals to the one production host (https + www).
   metadataBase: new URL("https://www.ludato.sk"),
   title:
-    "NAJLEPŠÍ Autoservis Bratislava – Nové Mesto | Ak hľadáte - Diagnostika, Brzdy, Rozvody, Podvozok, Klimatizácia, Pneuservis, blízko mňa - Ludato Family Autoservis a Pneuservis je to správne miesto",
+    "NAJLEPŠÍ Autoservis Bratislava – Nové Mesto, Odborárska 52 | Ak hľadáte diagnostiku, brzdy, rozvody, klimatizáciu alebo pneuservis blízko mňa, Ludato Family je to správne miesto",
   description:
     "Rodinný autoservis a pneuservis na Odborárskej 52 v Bratislave, Novom Meste. Diagnostika, brzdy, olej, rozvody, klimatizácia aj prezutie. Cenu povieme vopred.",
   keywords:
