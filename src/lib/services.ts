@@ -374,10 +374,10 @@ export const services: ServiceMeta[] = [
         name: 'Autobatéria',
         h1: 'Výmena autobatérie Bratislava – Nové Mesto',
         h1Accent: 'Bratislava',
-        title: 'Výmena autobatérie Bratislava – Nové Mesto | Výmena batérie od 30 €, kontrola nabíjania, keď auto ráno nenaštartuje | Ludato Family Autoservis a Pneuservis',
+        title: 'Výmena autobatérie Bratislava – Nové Mesto | Batériu dodáme aj namontujeme, práca od 30 €, kontrola nabíjania, keď auto ráno nenaštartuje | Ludato Family Autoservis a Pneuservis',
         description:
-            'Výmena autobatérie v Bratislave, Novom Meste od 30 €. Auto ťažko štartuje, batéria sa vybíja alebo vás nechala stáť? Zistíme príčinu a batériu vymeníme.',
-        teaser: 'Výmena batérie od 30 € a hľadanie príčiny, keď sa auto opakovane vybíja.',
+            'Výmena autobatérie v Bratislave, Novom Meste. Novú batériu dodáme aj namontujeme, práca od 30 €. Auto ťažko štartuje alebo sa vybíja? Zistíme príčinu.',
+        teaser: 'Novú batériu dodáme aj namontujeme, práca od 30 €. Hľadáme aj príčinu, keď sa auto vybíja.',
         category: 'motor',
         heroImage: {
             src: '/sluzby/autobateria-motorovy-priestor-ludato-bratislava.webp',
