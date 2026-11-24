@@ -80,7 +80,7 @@ const text = 'text-white/70 text-base leading-relaxed space-y-4';
 const section = 'mb-14 max-w-3xl mx-auto';
 
 // Real photos from the workshop (gbp archiv/spracovane and public/), cropped
-// to 4:3, licence plates blurred, no faces.
+// to 4:3, licence plates blurred or empty, no faces.
 type Photo = { src: string; alt: string; width: number; height: number };
 
 const photos = {
@@ -108,11 +108,17 @@ const photos = {
         width: 1200,
         height: 900,
     },
-    nahradneAuta: {
-        src: '/o-nas/nahradne-auta-skoda-fabia-ludato-bratislava.webp',
-        alt: 'Dve červené náhradné autá Škoda Fabia s logom Ludato Family pred autoservisom',
-        width: 1200,
-        height: 900,
+    passatModry: {
+        src: '/o-nas/nahradne-vozidlo-vw-passat-modry-ludato-bratislava.webp',
+        alt: 'Náhradné vozidlo VW Passat Variant v modrej farbe pre zákazníkov autoservisu Ludato',
+        width: 795,
+        height: 596,
+    },
+    passatSedy: {
+        src: '/o-nas/nahradne-vozidlo-vw-passat-sedy-ludato-bratislava.webp',
+        alt: 'Náhradné vozidlo VW Passat Variant v striebornej farbe pre zákazníkov autoservisu Ludato',
+        width: 790,
+        height: 592,
     },
 } satisfies Record<string, Photo>;
 
@@ -311,7 +317,7 @@ export default function ONas() {
                                 nezoženú.
                             </p>
                         </div>
-                        <PhotoRow photos={[photos.mechanik]} />
+                        <PhotoRow photos={[photos.mechanik, photos.diagnostika]} />
                     </div>
 
                     <div className={section}>
@@ -334,7 +340,7 @@ export default function ONas() {
                                 </li>
                             ))}
                         </ol>
-                        <PhotoRow photos={[photos.diagnostika, photos.nahradneAuta]} />
+                        <PhotoRow photos={[photos.passatModry, photos.passatSedy]} />
                     </div>
 
                     <div className={section}>
