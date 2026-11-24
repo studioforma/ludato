@@ -7,7 +7,7 @@ import CookieSettingsButton from '@/components/CookieSettingsButton';
 
 const navLinks = [
     { href: '/sluzby', label: 'Služby' },
-    { href: '/#o-nas', label: 'O nás' },
+    { href: '/o-nas', label: 'O nás' },
     { href: '/cennik', label: 'Cenník' },
     { href: '/kde-posobime', label: 'Kde pôsobíme' },
     { href: '/#recenzie', label: 'Recenzie' },
