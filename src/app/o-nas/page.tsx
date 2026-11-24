@@ -120,6 +120,12 @@ const photos = {
         width: 790,
         height: 592,
     },
+    fabie: {
+        src: '/o-nas/nahradne-vozidla-skoda-fabia-ludato-bratislava.webp',
+        alt: 'Náhradné vozidlá Škoda Fabia pre zákazníkov autoservisu Ludato',
+        width: 1200,
+        height: 900,
+    },
 } satisfies Record<string, Photo>;
 
 function PhotoRow({ photos: row }: { photos: Photo[] }) {
@@ -341,6 +347,7 @@ export default function ONas() {
                             ))}
                         </ol>
                         <PhotoRow photos={[photos.passatModry, photos.passatSedy]} />
+                        <PhotoRow photos={[photos.fabie]} />
                     </div>
 
                     <div className={section}>
