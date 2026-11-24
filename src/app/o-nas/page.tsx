@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -77,6 +78,61 @@ const oNasBreadcrumb = breadcrumbSchema([
 const link = 'text-[#E31C25] hover:text-white transition-colors underline';
 const text = 'text-white/70 text-base leading-relaxed space-y-4';
 const section = 'mb-14 max-w-3xl mx-auto';
+
+// Real photos from the workshop (gbp archiv/spracovane and public/), cropped
+// to 4:3, licence plates blurred, no faces.
+type Photo = { src: string; alt: string; width: number; height: number };
+
+const photos = {
+    dielna: {
+        src: '/o-nas/dielna-odborarska-52-ludato-bratislava.webp',
+        alt: 'Dielňa Ludato Family na Odborárskej 52 v Bratislave so zdvihákom, prezúvačkou pneumatík a regálom s náhradnými dielmi',
+        width: 545,
+        height: 409,
+    },
+    cakaren: {
+        src: '/cakaren-2.webp',
+        alt: 'Čakáreň autoservisu Ludato Family s televízorom a sedením, Bratislava Nové Mesto',
+        width: 1600,
+        height: 1200,
+    },
+    mechanik: {
+        src: '/o-nas/mechanik-pri-praci-ludato-bratislava.webp',
+        alt: 'Mechanik Ludato Family pod autom na zdviháku pri výmene spojky, vedľa vymontovaná prevodovka',
+        width: 1152,
+        height: 864,
+    },
+    diagnostika: {
+        src: '/o-nas/diagnostika-ludato-bratislava.webp',
+        alt: 'Počítačová diagnostika auta na notebooku v autoservise Ludato Family v Bratislave',
+        width: 1200,
+        height: 900,
+    },
+    nahradneAuta: {
+        src: '/o-nas/nahradne-auta-skoda-fabia-ludato-bratislava.webp',
+        alt: 'Dve červené náhradné autá Škoda Fabia s logom Ludato Family pred autoservisom',
+        width: 1200,
+        height: 900,
+    },
+} satisfies Record<string, Photo>;
+
+function PhotoRow({ photos: row }: { photos: Photo[] }) {
+    return (
+        <div className={`mt-8 grid gap-4 ${row.length > 1 ? 'sm:grid-cols-2' : ''}`}>
+            {row.map((p) => (
+                <div key={p.src} className="relative aspect-[4/3] overflow-hidden rounded-sm border border-white/10">
+                    <Image
+                        src={p.src}
+                        alt={p.alt}
+                        fill
+                        sizes={row.length > 1 ? '(max-width: 640px) 100vw, 380px' : '(max-width: 800px) 100vw, 768px'}
+                        className="object-cover"
+                    />
+                </div>
+            ))}
+        </div>
+    );
+}
 const inter = { fontFamily: 'var(--font-inter)' };
 
 const steps: { title: string; body: React.ReactNode }[] = [
@@ -197,6 +253,7 @@ export default function ONas() {
                                 teda veľké opravy, pri ktorých rozhoduje skúsenosť a poriadna diagnostika.
                             </p>
                         </div>
+                        <PhotoRow photos={[photos.dielna, photos.cakaren]} />
                     </div>
 
                     <div className={section}>
@@ -254,6 +311,7 @@ export default function ONas() {
                                 nezoženú.
                             </p>
                         </div>
+                        <PhotoRow photos={[photos.mechanik]} />
                     </div>
 
                     <div className={section}>
@@ -276,6 +334,7 @@ export default function ONas() {
                                 </li>
                             ))}
                         </ol>
+                        <PhotoRow photos={[photos.diagnostika, photos.nahradneAuta]} />
                     </div>
 
                     <div className={section}>
