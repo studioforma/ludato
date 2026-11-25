@@ -34,12 +34,12 @@ export const metadata: Metadata = {
   title:
     "NAJLEPŠÍ Autoservis Bratislava – Nové Mesto, Odborárska 52 | Ak hľadáte diagnostiku, brzdy, rozvody, klimatizáciu alebo pneuservis blízko mňa, Ludato Family je to správne miesto",
   description:
-    "Rodinný autoservis a pneuservis na Odborárskej 52 v Bratislave, Novom Meste. Diagnostika, brzdy, olej, rozvody, klimatizácia aj prezutie. Cenu povieme vopred.",
+    "Ludato Family opravuje a servisuje osobné autá všetkých značiek pre vodičov z Bratislavy a okolia, v dielni na Odborárskej 52 v Novom Meste.",
   keywords:
     "autoservis bratislava, autoservis nové mesto, pneuservis bratislava, diagnostika auta bratislava, oprava bŕzd bratislava, servis klimatizácie bratislava, LUDATO, rodinný autoservis",
   openGraph: {
     title: "Ludato Family Autoservis a Pneuservis – Autoservis Bratislava, Nové Mesto",
-    description: "Autám rozumieme a prácu na nich berieme osobne. Poctivá práca bez kompromisov.",
+    description: "Ludato Family opravuje a servisuje osobné autá všetkých značiek pre vodičov z Bratislavy a okolia, v dielni na Odborárskej 52 v Novom Meste.",
     locale: "sk_SK",
     type: "website",
   },
@@ -58,7 +58,7 @@ const localBusinessSchema = {
   legalName: "Ludato Family s. r. o.",
   alternateName: ["LUDATO FAMILY Cars Services", "Ludato"],
   description:
-    "Rodinný autoservis a pneuservis na Odborárskej 52 v Bratislave, Novom Meste, pre autá všetkých značiek z celej Bratislavy aj okolia. Diagnostika, výmena oleja, brzdy, podvozok, geometria, rozvody, spojka, turbodúchadlá, vstrekovače, klimatizácia, STK a EK, pneuservis a predaj pneumatík, odťah a náhradné vozidlo.",
+    "Ludato Family opravuje a servisuje osobné autá všetkých značiek pre vodičov z Bratislavy a okolia, v dielni na Odborárskej 52 v Novom Meste.",
   taxID: "2122815046",
   telephone: "+421944236257",
   email: "ludato.recepcia@gmail.com",
