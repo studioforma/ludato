@@ -1,12 +1,11 @@
 import type { ServiceContent } from './types';
-import { OWN_PARTS_POLICY } from '@/lib/ownParts';
 
 const content: ServiceContent = [
     {
         type: 'intro',
         paragraphs: [
             'Batéria je diel, na ktorý si spomenieme až vtedy, keď ráno otočíme kľúčom a namiesto motora sa ozve len cvaknutie. Väčšinou sa to stane v najhoršej chvíli: v prvý mrazivý deň, pred dôležitou cestou alebo na parkovisku ďaleko od domu. Pritom sa slabnúca batéria zvyčajne ohlasuje vopred, len jej signály ľahko prehliadneme.',
-            'V Bratislave, Novom Meste, vám batériu vymeníme od 30 € za prácu. Ak sa auto vybíja opakovane, nezostaneme len pri výmene. Zistíme, či je chyba naozaj v batérii, alebo ju vybíja niečo iné, aby vás nová batéria nenechala stáť rovnako ako tá stará.',
+            'V Bratislave, Novom Meste, vám novú batériu dodáme aj namontujeme. Cenu batérie povieme podľa auta, práca na výmene stojí od 30 €. Ak sa auto vybíja opakovane, nezostaneme len pri výmene. Zistíme, či je chyba naozaj v batérii, alebo ju vybíja niečo iné, aby vás nová batéria nenechala stáť rovnako ako tá stará.',
         ],
     },
     {
@@ -14,7 +13,7 @@ const content: ServiceContent = [
         heading: 'Auto ráno ťažko štartuje?',
         text: 'Batéria, ktorá štartuje čoraz ťažšie, vás najbližšie mrazivé ráno nechá stáť. Príďte skôr, než budete volať odťah.',
         points: [
-            'Výmena batérie od 30 €',
+            'Dodanie a montáž batérie, práca od 30 €',
             'Kontrola elektroniky a osvetlenia za 30 €',
             'Diagnostika riadiacej jednotky za 40 €',
         ],
@@ -25,7 +24,7 @@ const content: ServiceContent = [
         type: 'list',
         heading: 'Čo pri batérii riešime',
         items: [
-            'Výmena autobatérie',
+            'Dodanie a montáž novej autobatérie',
             'Kontrola, či auto štartuje ťažko kvôli batérii, alebo inej príčine',
             'Hľadanie dôvodu, prečo sa auto opakovane vybíja',
             'Kontrola elektroniky a osvetlenia',
@@ -77,7 +76,7 @@ const content: ServiceContent = [
             },
             {
                 title: 'Výmena batérie',
-                text: 'Ak je chyba v batérii, vymeníme ju. Postupujeme tak, aby auto po výmene fungovalo bez nečakaných chýb.',
+                text: 'Ak je chyba v batérii, dodáme novú a vymeníme ju. Postupujeme tak, aby auto po výmene fungovalo bez nečakaných chýb.',
             },
             {
                 title: 'Kontrola po výmene',
@@ -136,7 +135,7 @@ const content: ServiceContent = [
         type: 'prices',
         heading: 'Orientačné ceny',
         categories: ['Ďalšie služby', 'Kontroly vozidla'],
-        only: ['Výmena batérie', 'Kontrola elektroniky a osvetlenia', 'Diagnostika riadiacej jednotky'],
+        only: ['Výmena batérie (práca)', 'Kontrola elektroniky a osvetlenia', 'Diagnostika riadiacej jednotky'],
     },
     {
         type: 'faq',
@@ -144,7 +143,7 @@ const content: ServiceContent = [
         items: [
             {
                 q: 'Koľko stojí výmena batérie?',
-                a: 'Práca na výmene batérie stojí od 30 €. Konečná suma závisí od auta, pri niektorých modeloch je batéria ťažšie prístupná.',
+                a: 'Práca na výmene batérie stojí od 30 €, cenu samotnej batérie povieme podľa auta. Konečná suma závisí od auta, pri niektorých modeloch je batéria ťažšie prístupná.',
             },
             {
                 q: 'Ako dlho vydrží autobatéria?',
@@ -160,7 +159,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Môžem si doniesť vlastnú batériu?',
-                a: OWN_PARTS_POLICY,
+                a: 'Vlastné batérie ani iné diely bežne neprijímame. Pracujeme s dielmi, ktoré poznáme, aby sme za výmenou vedeli stáť. Novú batériu vám dodáme aj namontujeme. Ak sa výnimočne dohodneme na montáži dielu, ktorý prinesiete, cena práce je o 100 % vyššia.',
             },
             {
                 q: 'Svieti mi po výmene batérie kontrolka, čo s tým?',

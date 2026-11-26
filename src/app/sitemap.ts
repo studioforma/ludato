@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { path: '/cennik', priority: 0.8, changeFrequency: 'monthly' as const },
         { path: '/kde-posobime', priority: 0.8, changeFrequency: 'monthly' as const },
         { path: '/kontakt', priority: 0.7, changeFrequency: 'monthly' as const },
+        { path: '/o-nas', priority: 0.6, changeFrequency: 'monthly' as const },
         { path: '/nacenenie', priority: 0.7, changeFrequency: 'monthly' as const },
         { path: '/ochrana-osobnych-udajov', priority: 0.2, changeFrequency: 'yearly' as const },
     ];

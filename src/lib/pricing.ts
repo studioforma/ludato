@@ -164,7 +164,7 @@ export const pricingCategories: PricingCategory[] = [
             { service: 'Čistenie interiéru + vysávanie', price: '45' },
             { service: 'Pickup vozidla', price: '50' },
             { service: 'Odťah vozidla', price: '170' },
-            { service: 'Výmena batérie', price: '30', prefix: 'od' },
+            { service: 'Výmena batérie (práca)', price: '30', prefix: 'od' },
         ],
         footnote: '* Pickup v rámci Bratislavy a okolia. Odťah zabezpečíme aj mimo Slovenska, cena podľa vzdialenosti.',
     },

@@ -274,7 +274,7 @@ export default function CennikPage() {
                                     className="text-white font-bold text-sm mb-1"
                                     style={{ fontFamily: 'var(--font-montserrat)' }}
                                 >
-                                    Vlastné diely neprijímame
+                                    Vlastné diely bežne neprijímame
                                 </p>
                                 <p className="text-white/80 text-sm leading-relaxed">{OWN_PARTS_POLICY_DETAIL}</p>
                             </div>

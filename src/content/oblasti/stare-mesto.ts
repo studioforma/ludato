@@ -43,7 +43,7 @@ const content: ServiceContent = [
         items: [
             '[Počítačová diagnostika](/sluzby/pocitacova-diagnostika-bratislava), keď svieti kontrolka',
             '[Výmena oleja a filtrov](/sluzby/vymena-oleja-bratislava) pri krátkych mestských trasách',
-            'Výmena batérie od 30 €',
+            'Výmena batérie (práca) od 30 €',
             'Kontrola a oprava [podvozku](/sluzby/podvozok-bratislava)',
             'Sezónne [prezutie a vyváženie kolies](/sluzby/pneuservis-bratislava)',
             'Pickup auta priamo z centra',

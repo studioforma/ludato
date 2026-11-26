@@ -45,7 +45,7 @@ const content: ServiceContent = [
             'Sezónne [prezutie a vyváženie kolies](/sluzby/pneuservis-bratislava)',
             '[Diagnostika](/sluzby/pocitacova-diagnostika-bratislava), keď sa rozsvieti kontrolka',
             'Výmena oleja a filtrov',
-            'Výmena batérie od 30 €',
+            'Výmena batérie (práca) od 30 €',
             'Pickup auta a náhradné vozidlo',
         ],
     },

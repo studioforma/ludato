@@ -45,7 +45,7 @@ const content: ServiceContent = [
             'Sezónne [prezutie a vyváženie kolies](/sluzby/pneuservis-bratislava)',
             '[Diagnostika](/sluzby/pocitacova-diagnostika-bratislava), keď sa rozsvieti kontrolka',
             'Kontrola a výmena bŕzd',
-            'Výmena batérie od 30 €',
+            'Výmena batérie (práca) od 30 €',
             'Pickup auta priamo z Vajnor',
         ],
     },
