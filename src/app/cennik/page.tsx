@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import CennikPage from '@/components/CennikPage';
-import { pricingCategories } from '@/lib/pricing';
+import { priceNumber, pricingCategories } from '@/lib/pricing';
 import { SITE, BUSINESS_ID, breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ const cennikSchema = {
                     '@type': item.unit ? 'UnitPriceSpecification' : 'PriceSpecification',
                     priceCurrency: 'EUR',
                     valueAddedTaxIncluded: false,
-                    ...(item.prefix ? { minPrice: Number(item.price) } : { price: Number(item.price) }),
+                    ...(item.prefix ? { minPrice: priceNumber(item.price) } : { price: priceNumber(item.price) }),
                     ...(item.unit ? { unitText: item.unit.replace('/', '') } : {}),
                 },
             })),

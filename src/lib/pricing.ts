@@ -14,6 +14,11 @@ export type PriceItem = {
     sub?: string;
     /** Renders instead of a numeric price, e.g. "Zadarmo" */
     priceLabel?: string;
+    /**
+     * Price with VAT as agreed with the client, when it is the round number and
+     * the price without VAT is derived from it (75 € s DPH -> 60,98 € bez DPH).
+     */
+    vatPrice?: string;
 };
 
 export type PricingCategory = {
@@ -103,10 +108,11 @@ export const pricingCategories: PricingCategory[] = [
         category: 'Kompletné prezutie',
         items: [
             { service: '12" – 14"', price: '45', sub: '1 ks pneumatika a disk: 11,25 €' },
-            { service: '15" – 17"', price: '55', sub: '1 ks pneumatika a disk: 13,55 €' },
-            { service: '18" – 21"', price: '65', sub: '1 ks pneumatika a disk: 16,25 €' },
+            { service: '15" – 16"', price: '55', sub: '1 ks pneumatika a disk: 13,55 €' },
+            { service: '17" – 18"', price: '60,98', vatPrice: '75,00', sub: '1 ks pneumatika a disk: 15,24 €' },
+            { service: '19" – 20"', price: '73,17', vatPrice: '90,00', sub: '1 ks pneumatika a disk: 18,29 €' },
         ],
-        footnote: '* Pneumatiky Run Flat neprezúvame.',
+        footnote: '* Pneumatiky Run Flat neprezúvame. Disky 21" už neprezúvame.',
     },
     {
         category: 'Preváženie a prehodenie kolies na disku',
@@ -199,7 +205,13 @@ export function withVat(price: string): string {
 export function formatPriceWithVat(item: PriceItem): string | null {
     if (item.priceLabel || item.price === null) return null;
     const prefix = item.prefix ? item.prefix + ' ' : '';
-    return `s DPH ${prefix}${withVat(item.price)} €${item.unit ?? ''}`;
+    return `s DPH ${prefix}${item.vatPrice ?? withVat(item.price)} €${item.unit ?? ''}`;
+}
+
+/** '60,98' -> 60.98 for JSON-LD (prices are written with a decimal comma). */
+export function priceNumber(price: string | null): number {
+    // Same as the old Number(item.price) for null rows (0), which callers filter out.
+    return price === null ? 0 : Number(price.replace(',', '.'));
 }
 
 export function getCategory(name: string): PricingCategory | undefined {
