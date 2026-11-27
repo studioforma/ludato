@@ -27,6 +27,23 @@ export type PricingCategory = {
     footnote?: string;
 };
 
+/** Slovak standard VAT. Prices in this file are without VAT. */
+export const VAT_RATE = 0.23;
+
+/**
+ * One row of a complete tyre change (4 wheels). The total price decides; the
+ * per-wheel line is computed from it so the two never disagree. When the client
+ * agreed a round price with VAT (vatPrice), the per-wheel price comes from that
+ * total: 75 € s DPH / 4 = 18,75 € s DPH = 15,24 € bez DPH.
+ */
+function tyreSet(service: string, price: string, vatPrice?: string): PriceItem {
+    const perWheel = vatPrice
+        ? Number(vatPrice.replace(',', '.')) / 4 / (1 + VAT_RATE)
+        : Number(price.replace(',', '.')) / 4;
+    const sub = `1 ks pneumatika a disk: ${perWheel.toFixed(2).replace('.', ',')} €`;
+    return { service, price, ...(vatPrice ? { vatPrice } : {}), sub };
+}
+
 export const pricingCategories: PricingCategory[] = [
     {
         category: 'Normohodiny',
@@ -107,10 +124,10 @@ export const pricingCategories: PricingCategory[] = [
     {
         category: 'Kompletné prezutie',
         items: [
-            { service: '12" – 14"', price: '45', sub: '1 ks pneumatika a disk: 11,25 €' },
-            { service: '15" – 16"', price: '55', sub: '1 ks pneumatika a disk: 13,55 €' },
-            { service: '17" – 18"', price: '60,98', vatPrice: '75,00', sub: '1 ks pneumatika a disk: 15,24 €' },
-            { service: '19" – 20"', price: '73,17', vatPrice: '90,00', sub: '1 ks pneumatika a disk: 18,29 €' },
+            tyreSet('12" – 14"', '45'),
+            tyreSet('15" – 16"', '55'),
+            tyreSet('17" – 18"', '60,98', '75,00'),
+            tyreSet('19" – 20"', '73,17', '90,00'),
         ],
         footnote: '* Pneumatiky Run Flat neprezúvame. Disky 21" už neprezúvame.',
     },
@@ -192,9 +209,6 @@ export function formatPrice(item: PriceItem): string {
     const unit = item.unit ?? '';
     return `${prefix}${item.price} €${unit}`;
 }
-
-/** Slovak standard VAT. Prices in this file are without VAT. */
-export const VAT_RATE = 0.23;
 
 /** '35' -> '43,05' (price including VAT, Slovak decimal comma). */
 export function withVat(price: string): string {
