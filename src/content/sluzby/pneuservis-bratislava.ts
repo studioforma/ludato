@@ -154,7 +154,7 @@ const content: ServiceContent = [
             },
             {
                 q: 'Aké veľkosti diskov zvládnete?',
-                a: 'Bežné veľkosti od 12" do 21".',
+                a: 'Kompletné prezutie robíme na diskoch od 12" do 20", 21" už neprezúvame. Kolesá na diskoch prevážime a prehodíme od 12" do 21".',
             },
             {
                 q: 'Prezúvate aj Run Flat pneumatiky?',

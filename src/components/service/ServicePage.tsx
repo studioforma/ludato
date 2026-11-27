@@ -8,7 +8,7 @@ import FaqAccordion from '@/components/FaqAccordion';
 import Breadcrumbs from '@/components/service/Breadcrumbs';
 import RichText from '@/components/service/RichText';
 import InlineCta from '@/components/InlineCta';
-import { formatPrice, formatPriceWithVat, getCategory, type PricingCategory } from '@/lib/pricing';
+import { formatPrice, formatPriceWithVat, getCategory, priceNumber, type PricingCategory } from '@/lib/pricing';
 import { stripLinks } from '@/lib/richText';
 import { OWN_PARTS_SHORT } from '@/lib/ownParts';
 import { getRelated, type ServiceMeta } from '@/lib/services';
@@ -381,7 +381,7 @@ export default function ServicePage({
                           priceCurrency: 'EUR',
                           // Cennik prices are quoted without VAT.
                           valueAddedTaxIncluded: false,
-                          ...(item.prefix ? { minPrice: Number(item.price) } : { price: Number(item.price) }),
+                          ...(item.prefix ? { minPrice: priceNumber(item.price) } : { price: priceNumber(item.price) }),
                           ...(item.unit ? { unitText: item.unit.replace('/', '') } : {}),
                       },
                   }))

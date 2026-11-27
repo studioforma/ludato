@@ -160,7 +160,7 @@ const content: ServiceContent = [
         type: 'prices',
         heading: 'Orientačné ceny montáže',
         categories: ['Kompletné prezutie', 'Uskladnenie a oprava pneumatík'],
-        only: ['12" – 14"', '15" – 17"', '18" – 21"', 'Sezónne uskladnenie pneumatík'],
+        only: ['12" – 14"', '15" – 16"', '17" – 18"', '19" – 20"', 'Sezónne uskladnenie pneumatík'],
     },
     {
         type: 'faq',
